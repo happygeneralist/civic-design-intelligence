@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Templates/Study_template.md",
+                "file": "Readme.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Study_template"
+              "title": "Readme"
             }
           }
         ]
@@ -110,7 +110,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Templates/Study_template.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -120,7 +119,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for Study_template"
+              "title": "Backlinks"
             }
           },
           {
@@ -129,12 +128,11 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Templates/Study_template.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from Study_template"
+              "title": "Outgoing links"
             }
           },
           {
@@ -158,13 +156,12 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Templates/Study_template.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Study_template"
+              "title": "Outline"
             }
           }
         ]
@@ -184,10 +181,15 @@
       "graph:Open graph view": false
     }
   },
-  "active": "321111b3a783e626",
+  "active": "3c8432ca7408c1fa",
   "lastOpenFiles": [
-    "Templates/Evidence_template.md",
+    "Readme.md",
+    "docs/Governance_legal_basis.md",
+    "docs/Compliance_checklist.md",
+    "docs/Researcher_input_checklist.md",
+    "docs",
     "Templates/Study_template.md",
+    "Templates/Evidence_template.md",
     "Templates/Behaviour_template.md",
     "Templates/Insight_template.md",
     "Templates/Pain_point_template.md",
@@ -201,13 +203,9 @@
     "005_Pain_point",
     "002_Evidence/Quote001.md",
     "003_User_needs/UN001.md",
-    "Compliance_checklist.md",
     "008_Personas",
     "007_Themes",
     "Templates",
-    "Governance_legal_basis.md",
-    "Researcher_input_checklist.md",
-    "Readme.md",
     "006_Insights/Insight001.md",
     "009_Journeys",
     "004_Behaviours",
