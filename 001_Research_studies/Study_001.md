@@ -15,20 +15,20 @@ related_needs: [NEED_001]
 tags: [parent, send, qualitative, emotional_regulation, home_environment]
 ---
 
-## 🎯 Research Purpose
+## Research Purpose
 Describe the **intent** of the study in one or two sentences.  
 > To understand how parents experience and respond to emotional regulation challenges at home, and how support from schools and services influences this.
 
 ---
 
-## 🔍 Research Questions
+## Research Questions
 - How do parents describe their child’s regulation challenges at home?  
 - What support do they currently receive from schools or services?  
 - What strategies or coping mechanisms do families use?  
 
 ---
 
-## 🧩 Methods
+## Methods
 | Aspect | Details |
 |---------|----------|
 | **Approach** | Semi-structured interviews (45–60 min) |
