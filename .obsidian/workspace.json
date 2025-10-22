@@ -14,12 +14,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "006_Insights/Insight_001.md",
+                "file": "009_Journeys/Pathway_planning.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Insight_001"
+              "title": "Pathway_planning"
             }
           }
         ]
@@ -95,7 +95,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "006_Insights/Insight_001.md",
+                "file": "009_Journeys/Pathway_planning.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -105,7 +105,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for Insight_001"
+              "title": "Backlinks for Pathway_planning"
             }
           },
           {
@@ -114,12 +114,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "006_Insights/Insight_001.md",
+                "file": "009_Journeys/Pathway_planning.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from Insight_001"
+              "title": "Outgoing links from Pathway_planning"
             }
           },
           {
@@ -143,13 +143,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "006_Insights/Insight_001.md",
+                "file": "009_Journeys/Pathway_planning.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Insight_001"
+              "title": "Outline of Pathway_planning"
             }
           }
         ]
@@ -171,13 +171,15 @@
   },
   "active": "321111b3a783e626",
   "lastOpenFiles": [
-    "006_Insights/Regulation management.md",
+    "008_Personas/Persona.md",
+    "009_Journeys/Pathway_planning.md",
+    "002_Evidence/Quote_001.md",
     "006_Insights/Insight_001.md",
+    "006_Insights/Regulation management.md",
     "Templates/Insight_template.md",
     "006_Insights/Insight001.md",
     "Templates/Behaviour_template.md",
     "002_Evidence/Quote_003.md",
-    "002_Evidence/Quote_001.md",
     "002_Evidence/Quote_002.md",
     "004_Behaviours/BEH_001.md",
     "002_Evidence/Quotes",
@@ -196,8 +198,6 @@
     "Templates/User_need_template.md",
     "003_User_needs/UN002.md",
     "003_User_needs/Untitled 3.md",
-    "Readme.md",
-    "docs/Governance_legal_basis.md",
     "docs",
     "005_Pain_point",
     "008_Personas",
