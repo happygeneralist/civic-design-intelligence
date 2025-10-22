@@ -14,12 +14,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "002_Evidence/Quote_003.md",
+                "file": "006_Insights/Insight_001.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Quote_003"
+              "title": "Insight_001"
             }
           }
         ]
@@ -95,7 +95,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "002_Evidence/Quote_003.md",
+                "file": "006_Insights/Insight_001.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -105,7 +105,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for Quote_003"
+              "title": "Backlinks for Insight_001"
             }
           },
           {
@@ -114,12 +114,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "002_Evidence/Quote_003.md",
+                "file": "006_Insights/Insight_001.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from Quote_003"
+              "title": "Outgoing links from Insight_001"
             }
           },
           {
@@ -143,13 +143,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "002_Evidence/Quote_003.md",
+                "file": "006_Insights/Insight_001.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Quote_003"
+              "title": "Outline of Insight_001"
             }
           }
         ]
@@ -171,15 +171,18 @@
   },
   "active": "321111b3a783e626",
   "lastOpenFiles": [
+    "006_Insights/Regulation management.md",
+    "006_Insights/Insight_001.md",
+    "Templates/Insight_template.md",
+    "006_Insights/Insight001.md",
+    "Templates/Behaviour_template.md",
+    "002_Evidence/Quote_003.md",
     "002_Evidence/Quote_001.md",
     "002_Evidence/Quote_002.md",
     "004_Behaviours/BEH_001.md",
     "002_Evidence/Quotes",
-    "002_Evidence/Quote_003.md",
     "Templates/Evidence_template.md",
     "Templates/Pain_point_template.md",
-    "Templates/Behaviour_template.md",
-    "Templates/Insight_template.md",
     "003_User_needs/UN_001.md",
     "001_Research_studies/Study_001.md",
     "Templates/Study_template.md",
@@ -187,8 +190,6 @@
     "Templates/Theme_template.md",
     "005_Pain_point/Pain_point_template 1.md",
     "004_Behaviours/BEH_002.md",
-    "006_Insights/Insight001.md",
-    "006_Insights/Regulation management.md",
     "001_Research_studies/Study_002.md",
     "002_Evidence/Quote001.md",
     "003_User_needs/UN001.md",
