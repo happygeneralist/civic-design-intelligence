@@ -26,30 +26,26 @@ tags:
 # SEND Survey
 
 ### Purpose
-> Explain **why this research was done**.  
-> What question or problem were you trying to understand?  
-> Example: “To understand how parents experience and respond to emotional regulation challenges at home.”
+To understand young people's plans and aspirations for the future and understand how that might change over time.  
+
 
 ### Research questions
-> List the **specific questions** this study explored.  
-> Example:
-> - How do parents describe their child’s regulation challenges?  
-> - What strategies do families use to manage them?
+How do young people find information to support decision making? 
+Which information sources are most valuable to young people and why?
+Who do young people go to for help with their decision making?
 
 ### Method summary
-> Outline how the research was carried out.  
-> Include:
-> - **Approach:** e.g. semi-structured interviews, survey  
-> - **Recruitment:** where participants came from  
-> - **Sample:** how many and who  
-> - **Data collected:** e.g. transcripts, survey responses  
-> - **Analysis approach:** e.g. thematic coding, grounded analysis
 
-### Key findings
-> Summarise the **main findings or patterns** from this study (3–5 bullets max).  
-> Example:
-> 1. Parents feel unsupported in managing regulation.  
-> 2. Emotional stress often stems from inconsistent school support.
+Approach: online survey
+Recruitment: multiple communications channels - social media, research panel, newsletters
+Sample: *** ca 150 completes, young people aged 8-20 / population size 14581
+Data collected: Survey responses  
+Analysis approach: quant data analysis
+
+Key findings
+1. Most** young people have clear aspirations for their future  
+2. The level of aspiration changes with age
+3. The perception of valuable information sources changes with age
 
 ### Illustrative quotes
 > Add 1–3 powerful quotes that bring the findings to life.  
