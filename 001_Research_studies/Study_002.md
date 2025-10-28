@@ -1,13 +1,13 @@
 ---
 type: research_study
 id: RS_002
-title: Parent Interviews – Emotional Regulation and Home Support
+title: Parent Interviews – supporting their children through transitions into the future
 research_lead:
   - Your Name
 date_range: 2024-03 – 2024-05
 method: Semi-structured interviews
-participants: 10 parents of children with SEND (ages 5–11)
-setting: In-home interviews, South London
+participants: 10 parents of children with SEND (ages 12-18)
+setting: Online interviews
 status: Completed
 confidence: High
 related_evidence:
@@ -24,27 +24,27 @@ tags:
   - emotional_regulation
 ---
 
-# Parent Interviews – Emotional Regulation and Home Support
+# Parent Interviews – Supporting their children through transitions into the future
 
 ### Purpose
-To understand how parents experience and respond to their children’s emotional regulation challenges at home, and how schools or services influence this experience.
+To understand how parents experience transitions in their young people's lives, and how they navigate decision-making.
 
 ### Research questions
-- How do parents describe their child’s emotional regulation challenges?  
-- What strategies do families use to manage them?  
-- How do schools and professionals currently support (or fail to support) families?
+- What options are parents and young people considering for the future?
+- What helps them make decisions?
+- What barriers exist to decision-making?
 
 ### Method summary
 - **Approach:** Semi-structured interviews (45–60 minutes)  
 - **Recruitment:** Through local SEND parent networks  
 - **Sample:** 10 parents across multiple school types  
 - **Data collected:** Audio recordings, transcripts, observation notes  
-- **Analysis approach:** Thematic coding in Obsidian using #regulation, #support_gap  
+- **Analysis approach:** Thematic coding
 
 ### Key findings
-1. Children’s regulation difficulties often reflect stress from external environments (especially school).  
-2. Parents feel isolated and unsupported in addressing regulation challenges.  
-3. Families improvise coping strategies without clear professional guidance.  
+1. Parents find that their interactions with schools and the local authority is a struggle and a fight.
+2. Parents are firefighting for so much of the time that they don't have the ability to plan in advance. However, they recognise the need for forward planning is much greater than for young people without SEND.
+3. Parents don't know where to go for reliable information.
 
 ### Illustrative quotes
 > “There is more and more outside the house that she can't control so she is trying to control more and more in the house.”  
