@@ -22,18 +22,19 @@ related_behaviours:
 related_pain_points:
 related_insights:
 related_value_dimensions:
-related_solution_options:
 tags:
   - send
 ---
 
 # Opportunity title
 
-An opportunity suggests a possible area for design, service, policy, technical or research intervention. It is not a decision or commitment.
+An opportunity suggests a possible area for future design, service, policy, technical or research work. It is not a solution, decision or commitment.
 
 ## Opportunity hypothesis
 
 What area of possible intervention does the evidence suggest?
+
+Keep this problem-space focused. Do not turn the opportunity into a solution option.
 
 ## Linked needs and evidence
 
@@ -49,15 +50,15 @@ What value might this opportunity create? What burden, harm, friction or capabil
 
 ## Risks and assumptions
 
-What would need to be true for this opportunity to be worth pursuing?
+What would need to be true for this opportunity to be worth exploring?
 
-## Not yet a solution
+## Boundaries
 
-Explain what this opportunity does not decide.
+What does this opportunity not decide?
 
-## Possible solution directions
+## Future connection points
 
-List possible directions without treating them as decisions.
+What kinds of future solution-mapping, policy, service, technical or product work might need to connect to this opportunity later?
 
 ## Review notes
 
