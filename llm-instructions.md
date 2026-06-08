@@ -8,6 +8,8 @@ The repository is the source of truth. The LLM is not evidence and must not be t
 
 Every meaningful claim must either be traceable to evidence or clearly marked as an assumption.
 
+When drafting or altering user needs, follow `docs/User_needs_writing_rules.md`.
+
 ## Operating principle
 
 The repository should support:
@@ -65,7 +67,7 @@ The LLM must not:
 - materially alter validated claims without review
 - add unsupported claims without marking them as assumptions
 - merge assumptions into validated notes
-- infer lived experience, diagnoses, demographics or protected characteristics without evidence
+- infer sensitive personal characteristics without evidence
 - store raw transcripts, recordings or identifiable participant data
 - bypass the review process
 - hide the fact that an item was LLM-assisted
