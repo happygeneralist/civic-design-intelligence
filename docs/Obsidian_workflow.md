@@ -7,7 +7,7 @@ Obsidian is the working environment. GitHub is the audit trail.
 ## Workflow overview
 
 ```text
-capture evidence -> create candidate analysis objects -> link evidence -> review -> validate -> publish outputs
+loose capture -> LLM-supported structuring -> candidate analysis objects -> link evidence -> review -> validate -> publish outputs
 ```
 
 The repository should support fast-moving research breakdown without losing rigour.
@@ -18,23 +18,64 @@ The operating principle is:
 fast creation, slow validation
 ```
 
-This means many candidate or placeholder analysis objects may be created quickly, especially with LLM support. They do not all need immediate review. The important thing is that their status, evidence strength, review state and history are visible.
+This means messy or partial notes can be captured quickly, then structured later with LLM support and templates. Many candidate or placeholder analysis objects may be created quickly. They do not all need immediate review. The important thing is that their status, evidence strength, review state and history are visible.
 
 ## Daily workflow
 
 1. Open the repository as an Obsidian vault.
-2. Review the dashboard notes or Dataview queries.
-3. Capture new anonymised evidence in `002_Evidence/`.
-4. Link evidence to a research study.
+2. Capture loose notes, anonymised evidence or early synthesis quickly.
+3. Use LLM support to structure loose material into candidate analysis objects.
+4. Link evidence to a research study where possible.
 5. Use manual analysis or LLM support to create candidate user needs, behaviours, pain points, insights, themes or opportunities.
 6. Link evidence to the analysis objects where possible.
 7. Mark new synthesis as placeholder, candidate, draft or assumption as appropriate.
 8. Review and promote only when evidence supports it.
 9. Commit changes to GitHub through a branch or pull request.
 
+## Loose capture
+
+Loose capture is allowed and expected.
+
+Examples include:
+
+- rough research notes
+- workshop notes
+- meeting reflections
+- pasted anonymised snippets
+- early synthesis notes
+- daily notes
+- imported summaries
+
+Loose notes do not need full metadata at the point of capture.
+
+The priority is to avoid losing useful signals while keeping raw identifiable data out of the repository.
+
+Loose notes can later be structured by an LLM using the repository schema and templates.
+
+## LLM-supported structuring
+
+The LLM can help turn loose notes into structured repository objects.
+
+It may propose:
+
+- candidate user needs
+- candidate behaviours
+- candidate pain points
+- candidate insights
+- candidate themes
+- candidate opportunities
+- suggested evidence links
+- tags
+- actors
+- journey stages
+- review states
+- changelog entries
+
+The LLM should not validate these outputs.
+
 ## Capture evidence
 
-Create one evidence note for each meaningful quote, observation, survey result or data point.
+Create one evidence note for each meaningful quote, observation, survey result or data point when the evidence is worth preserving as a structured item.
 
 Evidence should remain close to the source. Do not over-interpret in the evidence note.
 
