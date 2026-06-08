@@ -11,6 +11,7 @@ The LLM must:
 - keep evidence and interpretation separate
 - avoid treating LLM output as evidence
 - avoid validating anything
+- never use `evidence_basis: validated` unless a human reviewer has explicitly completed validation
 - mark unsupported items as assumptions or candidates
 - use `creation_mode: llm_assisted`
 - use `llm_generated: true`
@@ -19,6 +20,16 @@ The LLM must:
 - preserve uncertainty
 - avoid solution-led framing
 - follow `docs/User_needs_writing_rules.md` when drafting user needs
+
+## Minimum viable first pass
+
+For most first-pass research breakdown work, use only:
+
+1. Prompt 1: first-pass breakdown
+2. Prompt 2: extract candidate user needs
+3. Prompt 8: create structured notes, but only for selected objects worth keeping
+
+Use the other prompts when you need more depth, review or decision-readiness.
 
 ## Prompt 1: first-pass breakdown
 
@@ -45,12 +56,12 @@ For each item, include:
 - actor, if known
 - journey stage, if known
 - need_level, if it is a user need
-- evidence_basis: none, indicative, traceable, substantiated or validated
+- evidence_basis: none, indicative, or traceable
 - status
 - analysis_state
 - confidence
 - review_status
-- related evidence or source references, if available
+- related evidence, source note or source study references, if available
 - uncertainty or caveats
 
 Use these defaults unless there is a clear reason not to:
@@ -66,6 +77,7 @@ review_status: not_reviewed
 
 Keep evidence and interpretation separate.
 Do not create solution options.
+Do not use evidence_basis: validated.
 ```
 
 ## Prompt 2: extract candidate user needs
@@ -84,6 +96,8 @@ Follow the repository's user-needs writing rules:
 - do not collapse experience, service, journey, page and interaction needs
 - preserve emotional, social, civic and experience meaning where relevant
 
+Treat LLM-generated user needs as candidate formulations, not final wording.
+
 For each candidate need, include:
 
 - need statement
@@ -91,17 +105,18 @@ For each candidate need, include:
 - journey_stage
 - need_level
 - parent_needs or likely parent level, if inferable
-- evidence_basis
+- evidence_basis: none, indicative, or traceable
 - evidence_scope_fit
 - wording_sensitivity
 - confidence
 - status
 - analysis_state
-- related evidence or source references
+- related evidence, source note or source study references, if available
 - wording rationale, if wording is sensitive
 - uncertainty
 
 Do not validate anything.
+Do not use evidence_basis: validated.
 Mark weak or unlinked needs as assumptions or candidates.
 ```
 
@@ -119,15 +134,16 @@ For each behaviour, include:
 - journey_stage
 - triggers or conditions
 - related needs, pain points or insights if visible
-- evidence_basis
+- evidence_basis: none, indicative, or traceable
 - confidence
 - status
 - analysis_state
-- related evidence or source references
+- related evidence, source note or source study references, if available
 - uncertainty
 
 Keep behaviours separate from pain points, needs and solutions.
 Do not validate anything.
+Do not use evidence_basis: validated.
 ```
 
 ## Prompt 4: extract pain points
@@ -145,15 +161,16 @@ For each pain point, include:
 - likely cause or condition, if visible
 - impact or burden
 - related needs, behaviours or insights if visible
-- evidence_basis
+- evidence_basis: none, indicative, or traceable
 - confidence
 - status
 - analysis_state
-- related evidence or source references
+- related evidence, source note or source study references, if available
 - uncertainty
 
 Keep pain points separate from user needs and solutions.
 Do not validate anything.
+Do not use evidence_basis: validated.
 ```
 
 ## Prompt 5: draft insights from evidence
@@ -176,13 +193,14 @@ For each insight, include:
 - related behaviours
 - related pain points
 - related themes
-- evidence_basis
+- evidence_basis: none, indicative, traceable, or substantiated
 - confidence
 - status
 - analysis_state
 - uncertainty
 
 Do not validate anything.
+Do not use evidence_basis: validated.
 Do not turn implications into solution options.
 ```
 
@@ -217,6 +235,7 @@ For each need, suggest:
 
 Do not force a complete hierarchy where evidence is thin.
 Do not treat solution requirements as user needs.
+Do not validate anything.
 ```
 
 ## Prompt 7: identify evidence gaps
@@ -226,15 +245,17 @@ Review these candidate objects and identify evidence gaps.
 
 For each object, identify:
 
-- whether the evidence is none, indicative, traceable, substantiated or validated
+- whether the evidence basis is none, indicative, traceable or substantiated
 - whether evidence is direct, partial, contextual or weak for the level of claim
 - missing evidence links
+- missing source note links
 - missing source study links
 - unsupported assumptions
 - contradictory or limiting evidence to look for
 - which objects should be deepened before being used for design, policy, prioritisation or stakeholder communication
 
 Do not upgrade status or evidence basis.
+Do not use evidence_basis: validated.
 ```
 
 ## Prompt 8: create structured notes
@@ -262,7 +283,10 @@ analysis_state: evidence_linked
 evidence_basis: traceable
 review_status: needs_review
 
+Preserve source traceability using `source_note` or `source_study` where possible.
+
 Do not validate anything.
+Do not use evidence_basis: validated.
 Do not create solution options.
 Include changelog entries for created notes.
 ```
@@ -292,6 +316,7 @@ For each need, suggest:
 - candidate parent or child need
 
 Do not materially reword reviewed or validated needs without flagging that review is required.
+Do not mark any need as final wording unless a human reviewer has confirmed it.
 ```
 
 ## Prompt 10: deepen selected object
