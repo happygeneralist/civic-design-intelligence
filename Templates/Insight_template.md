@@ -1,38 +1,74 @@
 ---
 type: insight
-id: INS_001
-actor: Parent
-journey_stage: University planning
-insight: Parents lack confidence in SEND transition planning due to fragmented information and limited institutional support
-related_needs: [UN_001]
-related_pain_points: [PP_001]
-related_behaviours: [BEH_001]
-related_evidence: [EVID_045, EVID_088, EVID_090]
-confidence: Medium
-status: Draft
-tags: [send, parent, university, confidence, transition]
+id: INS_000
+title:
+actor:
+journey_stage:
+status: assumption | draft | reviewed | validated | deprecated
+analysis_state: placeholder | candidate | drafted | evidence_linked | reviewed | validated | deprecated
+evidence_basis: none | indicative | traceable | substantiated | validated
+evidence_strength: none | weak | moderate | strong
+confidence: low | medium | high
+creation_mode: manual | llm_assisted | imported | migrated
+llm_generated: false
+human_reviewed: false
+review_status: not_reviewed | needs_review | reviewed | rejected
+change_level: none | minor | material | major
+supersedes:
+superseded_by:
+related_evidence:
+related_needs:
+related_behaviours:
+related_pain_points:
+related_themes:
+related_value_dimensions:
+related_solution_options:
+claims:
+tags:
+  - send
 ---
-# Parents lack confidence in SEND transition planning due to fragmented information and limited institutional support
 
-### Summary
-Parents describe feeling anxious and uncertain about how to plan for university transitions. They rely on informal channels and anecdotal experiences because schools and universities provide inconsistent or incomplete information about SEND provision.
+# Insight title
 
-%% 
-Summarise the pattern you see. Focus on the “why”: “Parents describe feeling unsupported and isolated when dealing with emotional regulation chall   enges at home. Schools provide inconsistent advice, leaving families to improvise.”
- %%
-### Why it matters
-This insight highlights a systemic coordination gap between schools, universities, and parents. The issue compounds over time, leading to delayed applications, limited choices, and emotional strain for families.
+An insight should explain a pattern, not merely repeat evidence.
 
-%% 
-Offer your analysis of what this means and how it might impact design or policy. Avoid solutions here.
-%%
+## Claim
 
-### Supporting evidence
-- “I had to email every university separately to find out what support they offer.”  
-- 67% of surveyed parents said they did not feel confident about SEND transition planning.  
-- [[EVID_045]] · [[EVID_088]]
+State the core insight clearly.
 
-### Implications
-- Improve communication channels between schools and universities.  
-- Centralise verified information about SEND support options.  
-- Offer earlier, clearer guidance to families.  
+## Evidence base
+
+- Supporting evidence:
+- Contextual evidence:
+- Contradictory or limiting evidence:
+
+## Interpretation
+
+Explain why this appears to be happening and why it matters.
+
+## What we are confident about
+
+## What remains uncertain
+
+## Implications
+
+Separate implications from solutions. Implications can point to design, service, policy, technical or research questions.
+
+## Related objects
+
+- User needs:
+- Behaviours:
+- Pain points:
+- Themes:
+- Value dimensions:
+- Solution options:
+
+## Review notes
+
+- Review date:
+- Reviewer:
+- Outcome:
+
+## Changelog
+
+- YYYY-MM-DD: Created as draft insight. Status: draft. Analysis state: drafted.
