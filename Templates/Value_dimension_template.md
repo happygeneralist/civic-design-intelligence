@@ -21,14 +21,15 @@ related_capabilities:
 related_civic_needs:
 related_outcomes:
 related_evidence:
-related_solution_options:
 tags:
   - send
 ---
 
 # Value dimension title
 
-A value dimension describes what matters when judging whether a solution, service, policy or intervention creates value.
+A value dimension describes what matters when assessing whether future service, policy, technical, content or product work would create value.
+
+It belongs in the problem space. It should not evaluate a specific solution option in this repository.
 
 ## Value statement
 
@@ -61,6 +62,10 @@ How might we know whether this value is being created or destroyed?
 ## Risks and trade-offs
 
 What could be harmed if this value is pursued too narrowly?
+
+## Future connection points
+
+What future solution-mapping, prioritisation or decision-evidence work may need to connect to this value dimension?
 
 ## Review notes
 
