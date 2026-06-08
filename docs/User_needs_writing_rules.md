@@ -117,21 +117,49 @@ Appropriate:
 I need to understand my right to appeal so I can challenge a decision safely.
 ```
 
-## Use Jobs to Be Done carefully
+## Use Jobs to Be Done and user needs together
 
-Jobs to Be Done can help reveal what the user is trying to accomplish, especially in innovation work.
+Jobs to Be Done and user needs can often be used interchangeably as ways of describing what a person is trying to get done, especially when the focus is the user's goal, progress, context and outcome.
 
-Use JTBD to understand:
+JTBD methods are useful because private-sector practice has developed strong tools for strategy, innovation, segmentation, value proposition design and opportunity framing.
 
-- the job the user is trying to get done
+Use JTBD tools to strengthen user needs work, especially to understand:
+
 - the situation that triggers the need
-- the progress the user is seeking
+- the progress the person is trying to make
+- functional, emotional and social dimensions of the need
 - pains, anxieties and barriers
 - desired gains and outcomes
+- forces that push, pull, block or create anxiety around change
 
-Do not let JTBD make the need too transactional or product-led.
+In value proposition design and journey mapping, the `job` can often be replaced with the `user need`, provided the context is handled carefully.
 
-A job can inform a user need, but the user need should remain solution-agnostic and grounded in context.
+For example:
+
+```text
+JTBD job: Check whether I am eligible before applying.
+User need: I need to check whether I am eligible before I spend time applying.
+```
+
+The important difference is contextual, not mechanical.
+
+In public services and SEND contexts, people often cannot choose whether they need the service, cannot freely choose between competing solutions, and may be navigating statutory, institutional or relational constraints. Many JTBD tools assume a market context where the aim is to pull a person towards a product or service. Use that logic carefully.
+
+Do not use JTBD to make the need product-led.
+
+Good use of JTBD:
+
+```text
+When planning a post-16 pathway, I need to compare realistic options so I can make a decision that protects future choices.
+```
+
+Poor use of JTBD:
+
+```text
+When planning a post-16 pathway, I want a personalised dashboard so I can compare options.
+```
+
+The dashboard may be a solution, but the need is about comparison, decision-making and protecting future choices.
 
 ## Separate user needs from user stories
 
@@ -271,6 +299,8 @@ When drafting user needs, the LLM should:
 - prefer action-oriented wording
 - avoid cognitive verbs unless justified
 - keep needs solution-agnostic
+- use JTBD tools where useful for context, progress, pains, gains and strategic opportunity framing
+- avoid importing market-led JTBD assumptions uncritically into public service or SEND contexts
 - distinguish user needs from policy requirements and user stories
 - set `need_level` where possible
 - preserve emotional and social meaning where relevant
@@ -292,6 +322,7 @@ Before promoting a user need, check:
 - [ ] Is the verb appropriate?
 - [ ] Are cognitive verbs justified?
 - [ ] Is the need scoped at the right level?
+- [ ] Has JTBD language been used appropriately for the context?
 - [ ] Is it distinct from a user story, feature or policy requirement?
 - [ ] Is emotional or social meaning preserved where relevant?
 - [ ] Does the evidence support this wording and level?
