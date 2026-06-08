@@ -1,22 +1,59 @@
 ---
 type: evidence
-id: EVID_XXX
-source_study: "[[Study_001]]"
-actor: Parent
-context: Home – evening routine
-journey_stage: Use
-confidence: Medium
+id: EVID_000
+source_study: "[[RS_000]]"
+evidence_kind: quote | observation | survey_result | statistic | document_extract | desk_research | professional_judgement
+actor:
+context:
+journey_stage:
+date_collected:
+method:
+sensitivity: low | medium | high
+anonymisation_checked: false
+confidence: low | medium | high
+status: captured | reviewed | deprecated
+analysis_state: captured | reviewed | deprecated
+creation_mode: manual | llm_assisted | imported | migrated
+llm_generated: false
+human_reviewed: false
+review_status: not_reviewed | needs_review | reviewed | rejected
+related_needs:
+related_behaviours:
+related_pain_points:
+related_insights:
 tags:
   - send
-  - emotional_regulation
 ---
-> Quote or other 
-> “There is more and more outside the house she can’t control…”
 
-### Notes
-Short researcher observation or tone (optional).  
-Example: Parent appears fatigued, child exhibits strong control behaviours when overwhelmed.
+# Evidence title
 
-### Linked items
-- **Behaviours:** BEH_045 (Seeks control-restoring routines)  
-- **Needs:** NEED_010 (Enable co-regulation routines that restore emotional safety)
+Follow `docs/Evidence_standards.md`.
+
+## Evidence
+
+Capture the quote, observation, data point or document extract here.
+
+Do not rewrite participant quotes except for anonymisation.
+
+## Source context
+
+Where did this come from? Include study, method, actor group and context.
+
+## Interpretation notes
+
+Keep interpretation brief. Deeper interpretation should live in user needs, behaviours, pain points or insights.
+
+## Related objects
+
+- User needs:
+- Behaviours:
+- Pain points:
+- Insights:
+
+## Anonymisation and sensitivity notes
+
+What was anonymised? Are there any remaining sensitivity concerns?
+
+## Changelog
+
+- YYYY-MM-DD: Created as evidence item. Status: captured.

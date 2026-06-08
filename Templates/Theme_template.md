@@ -1,43 +1,65 @@
 ---
 type: theme
-id: THEME_001
-title: Emotional regulation and family stress
-related_needs: [UN_001, UN_004]
-related_pain_points: [PP_001, PP_007]
-related_behaviours: [BEH_002, BEH_006]
-related_insights: [INS_001, INS_005]
-journey_stages: [Ongoing support, Transition]
-tags: [send, emotional_regulation, wellbeing, family, coordination]
-status: Active
+id: TH_000
+title:
+status: assumption | draft | reviewed | validated | deprecated
+analysis_state: placeholder | candidate | drafted | evidence_linked | reviewed | validated | deprecated
+evidence_basis: none | indicative | traceable | substantiated | validated
+evidence_strength: none | weak | moderate | strong
+confidence: low | medium | high
+creation_mode: manual | llm_assisted | imported | migrated
+llm_generated: false
+human_reviewed: false
+review_status: not_reviewed | needs_review | reviewed | rejected
+change_level: none | minor | material | major
+supersedes:
+superseded_by:
+related_evidence:
+related_needs:
+related_behaviours:
+related_pain_points:
+related_insights:
+related_value_dimensions:
+tags:
+  - send
 ---
 
-# Emotional regulation and family stress
+# Theme title
 
-### Summary
-This theme captures patterns around emotional regulation challenges for children with SEND and their families. It includes how stress in school environments spills into home life, and how parents struggle to find coordinated emotional or behavioural support.  
-%% 
-Provide a brief narrative summarising the theme and why it matters. Describe any systemic factors or recurring barriers. 
-%%
+A theme groups related evidence and analysis objects. A theme should not imply validation of all items within it.
 
-### Why it matters
-The lack of coordinated regulation support across school and home environments creates compounding emotional strain for families. It also highlights how system fragmentation directly affects user outcomes and wellbeing.
+## Working formulation
 
-### Cross-cutting insights
-- [[INS_001 Parents need support in helping their child regulate emotions]]
-- [[INS_005 Parents seek consistent behavioural support from schools]]
+Describe the theme and why it appears useful.
 
-### Related user needs
-- [[UN_001 Support emotional regulation in daily routines]]
-- [[UN_004 Access consistent behavioural support across environments]]
+## Evidence and analysis basis
 
-### Opportunities
-- Develop parent–school co-regulation frameworks.  
-- Train educators in emotional safety and trauma-informed practices.  
-- Introduce joined-up communication protocols for families and services.
+- Related evidence:
+- Related needs:
+- Related behaviours:
+- Related pain points:
+- Related insights:
 
-### Evidence highlights
-- “We haven’t got any assistance from school or anywhere else.” ([[EVID_003]])  
-- “Her stress builds up all day and explodes when she gets home.” ([[EVID_008]])
+## Pattern
 
-### Notes
-Themes are living synthesis nodes — updated as new insights emerge or cross-project patterns strengthen.
+What connects the related objects?
+
+## Variation and exceptions
+
+Where does the theme not apply, or where is the pattern weaker?
+
+## Implications
+
+What does this theme suggest for research, service design, policy, technical work or value analysis?
+
+## What remains uncertain
+
+## Review notes
+
+- Review date:
+- Reviewer:
+- Outcome:
+
+## Changelog
+
+- YYYY-MM-DD: Created as candidate theme. Status: assumption. Analysis state: candidate.

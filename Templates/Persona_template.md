@@ -1,9 +1,8 @@
 ---
-type: behaviour
-id: BEH_000
-actor:
-journey_stage:
-behaviour:
+type: persona
+id: PER_000
+title:
+actor_group:
 status: assumption | draft | reviewed | validated | deprecated
 analysis_state: placeholder | candidate | drafted | evidence_linked | reviewed | validated | deprecated
 evidence_basis: none | indicative | traceable | substantiated | validated
@@ -14,27 +13,22 @@ llm_generated: false
 human_reviewed: false
 review_status: not_reviewed | needs_review | reviewed | rejected
 change_level: none | minor | material | major
-supersedes:
-superseded_by:
 related_evidence:
 related_needs:
+related_behaviours:
 related_pain_points:
 related_insights:
 tags:
   - send
 ---
 
-# Behaviour title
+# Persona or archetype title
 
-A behaviour should describe something a person does, avoids, repeats, compensates for or attempts in context.
+Use personas or archetypes carefully. In SEND work, avoid stereotyping, flattening or over-generalising people.
 
-## Working formulation
+## Purpose
 
-Describe the behaviour clearly.
-
-## Triggers and conditions
-
-What appears to trigger this behaviour? What conditions make it more or less likely?
+Why is this persona or archetype useful?
 
 ## Evidence basis
 
@@ -42,20 +36,20 @@ What appears to trigger this behaviour? What conditions make it more or less lik
 - Contextual evidence:
 - Contradictory or limiting evidence:
 
-## Interpretation
+## Description
 
-Why does this behaviour appear to happen? What barriers, motivations, anxieties or system conditions may shape it?
+Describe the archetype or situation without inventing personal details.
 
-## Observed or expected outcomes
-
-What does this behaviour lead to for the person, service or system?
-
-## Related objects
+## Needs, behaviours and pain points
 
 - User needs:
+- Behaviours:
 - Pain points:
 - Insights:
-- Value dimensions:
+
+## Risks and cautions
+
+What might this persona obscure, overstate or stereotype?
 
 ## What remains uncertain
 
@@ -67,4 +61,4 @@ What does this behaviour lead to for the person, service or system?
 
 ## Changelog
 
-- YYYY-MM-DD: Created as candidate behaviour. Status: assumption. Analysis state: candidate.
+- YYYY-MM-DD: Created as candidate persona/archetype. Status: assumption. Analysis state: candidate.
