@@ -20,6 +20,111 @@ The first validation layer focuses on:
 - unresolved wikilinks
 - unresolved relationship links
 
+## Validation philosophy
+
+The validator does not exist to make every research object complete before it can be committed.
+
+The repository is allowed to contain incomplete knowledge, weak signals, placeholders and LLM-assisted candidate objects.
+
+The validator exists to stop incomplete knowledge being mistaken for reviewed or validated knowledge.
+
+In short:
+
+```text
+Allow incomplete objects.
+Block misleading objects.
+```
+
+A candidate user need can exist without direct evidence links if it is clearly marked as a candidate or assumption.
+
+A user need must not be treated as reviewed, validated or decision-ready unless the required traceability, review state and evidence basis are present.
+
+The validator should therefore protect against category errors such as:
+
+- draft treated as validated
+- assumption treated as evidence
+- LLM output treated as research
+- weak traceability treated as strong evidence basis
+- review state hidden or misrepresented
+- wrong ID or type making an object hard to trace
+
+## Three validation layers
+
+### 1. Structural checks
+
+These are suitable for automated validation.
+
+Examples:
+
+- duplicate IDs
+- invalid ID format
+- missing required fields
+- invalid controlled values
+- ID prefix does not match object type
+- unresolved internal links
+
+### 2. Governance checks
+
+These are partly automatable.
+
+Examples:
+
+- `status: validated` requires `human_reviewed: true`
+- `evidence_basis: validated` requires `review_status: reviewed`
+- validated objects need a defensible evidence basis
+- LLM-generated objects should not appear human-reviewed unless a review has been explicitly completed
+
+### 3. Decision-readiness checks
+
+These are not fully automated in the first version.
+
+Decision-readiness means an object is being used for a higher-consequence purpose, such as:
+
+- page or content design
+- service design
+- policy challenge
+- prioritisation
+- stakeholder synthesis
+- value assessment
+- ministerial or senior decision support
+- validation
+
+The validator can check whether minimum conditions are present, but it cannot judge whether the research interpretation is substantively correct.
+
+The long-term pattern should be:
+
+```text
+machine checks presence and consistency
+human checks meaning and judgement
+```
+
+A future validator mode may check notes marked with fields such as:
+
+```yaml
+intended_use:
+  - policy_challenge
+  - service_design
+```
+
+or:
+
+```yaml
+decision_use: true
+```
+
+and require stricter metadata such as:
+
+- reviewed or validated status
+- traceable or substantiated evidence basis
+- human review
+- linked evidence
+- need level
+- parent needs where relevant
+- caveats or uncertainty
+- review notes for higher-risk claims
+
+Do not apply decision-readiness checks to every loose or candidate object.
+
 ## Running the validator
 
 From the repository root, run:
@@ -79,6 +184,20 @@ Examples:
 
 Warnings can be promoted to errors later by using `--warnings-as-errors`.
 
+## What should not be blocked by default
+
+Do not block ordinary commits merely because:
+
+- a candidate user need has no direct evidence link yet
+- a placeholder object has no parent need yet
+- an LLM-assisted object is not reviewed yet
+- an insight is still a draft
+- a value dimension is indicative rather than substantiated
+
+These are acceptable if the metadata makes the incompleteness visible.
+
+Block or fail only when the metadata overclaims reliability, review state or traceability.
+
 ## Incremental adoption
 
 The validator is intentionally lightweight and should support incremental cleanup.
@@ -103,6 +222,7 @@ The first version does not fully check:
 - whether personal data has been fully anonymised
 - whether a note should be split or merged
 - whether a relationship is conceptually correct
+- whether an object is substantively decision-ready
 
 These still need human review.
 
