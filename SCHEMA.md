@@ -124,6 +124,38 @@ change_level: none | minor | material | major
 - `material`: changes the interpretation, wording, evidence links, confidence, status or evidence strength.
 - `major`: substantially reframes, splits, merges, replaces or deprecates an item, changes validated content or affects published outputs.
 
+### `need_level`
+
+```yaml
+need_level: capability | civic | experience | service | journey | task | page | interaction | content | solution_requirement
+```
+
+Use `need_level` to show the scope and hierarchy of a user need or closely related analysis object.
+
+- `capability`: broad human-development requirement, such as dignity, agency, affiliation or control.
+- `civic`: institutional obligation, such as dignified access, navigational agency or redressability.
+- `experience`: what the person must be able to experience, preserve or recover before any specific service response.
+- `service`: what a service must enable across an end-to-end service relationship.
+- `journey`: what is needed at a specific journey stage or transition.
+- `task`: what the person must do or understand in a specific task.
+- `page`: what a page or bounded content context must help the person understand or do.
+- `interaction`: what a component, form, filter, prompt or interaction must support.
+- `content`: what a content item, explanation or message must support.
+- `solution_requirement`: what a specific product, policy, process or intervention must do.
+
+### `evidence_scope_fit`
+
+```yaml
+evidence_scope_fit: direct | partial | contextual | weak
+```
+
+Use this when evidence supports a need at one level more directly than another.
+
+- `direct`: evidence directly supports this level and wording of need.
+- `partial`: evidence supports part of the need, but not the full formulation.
+- `contextual`: evidence helps explain context but does not directly prove the need.
+- `weak`: evidence is relevant but too indirect to rely on without more work.
+
 ### Boolean fields
 
 ```yaml
@@ -181,6 +213,33 @@ tags:
 ```
 
 This common structure allows rapid LLM-assisted creation while keeping maturity, evidence, review state and history visible.
+
+## Needs hierarchy fields
+
+Use these fields for user needs and closely related objects where useful.
+
+```yaml
+need_level:
+parent_needs:
+child_needs:
+related_capabilities:
+related_civic_needs:
+related_rights:
+related_outcomes:
+evidence_scope_fit:
+wording_sensitivity: low | medium | high
+```
+
+Minimum useful fields for structured user needs:
+
+```yaml
+need_level:
+parent_needs:
+```
+
+Do not force every need to complete every hierarchy field during loose capture. These fields can be added by an LLM or during review as the repository matures.
+
+See `docs/Needs_hierarchy.md` for guidance.
 
 ## Object types
 
@@ -240,6 +299,15 @@ id: UN_001
 actor:
 journey_stage:
 need:
+need_level: capability | civic | experience | service | journey | task | page | interaction | content | solution_requirement
+parent_needs:
+child_needs:
+related_capabilities:
+related_civic_needs:
+related_rights:
+related_outcomes:
+evidence_scope_fit: direct | partial | contextual | weak
+wording_sensitivity: low | medium | high
 status: draft | assumption | reviewed | validated | deprecated
 analysis_state: placeholder | candidate | drafted | evidence_linked | reviewed | validated | deprecated
 evidence_strength: none | weak | moderate | strong
@@ -262,6 +330,8 @@ tags:
 A user need should describe what a person needs to achieve, understand, decide, access, feel or recover from. It should not be written as a solution, feature request or organisational objective.
 
 User needs may be created as placeholders or candidates during rapid research breakdown. They can be incrementally updated as new evidence or thinking emerges, provided the changelog records material changes.
+
+Do not collapse page-level needs, service-level needs and experience-level needs. They operate at different levels and support different decisions.
 
 ### Behaviour
 
@@ -454,6 +524,14 @@ placeholder -> candidate -> drafted -> evidence_linked -> reviewed -> validated
 ```
 
 Not all objects need to reach validation. Some may remain as candidates, assumptions or weak signals until they become important enough to review.
+
+## Needs visibility and tending
+
+Staleness is not the current priority.
+
+A need may remain valuable even if it has not been recently edited. The immediate problem is lack of visibility, not too many needs.
+
+Prioritise making needs visible, connected, scoped and evidence-aware. Tend the repository by linking, pruning, splitting, merging, reviewing or deepening needs when the work requires it.
 
 ## Splitting, merging and supersession
 
