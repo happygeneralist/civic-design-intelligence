@@ -1,8 +1,10 @@
 # ECC Research Repository
 
-This repository is an Obsidian-compatible research and insights repository for SEND-related service design work.
+This repository is an Obsidian-compatible research and insights repository for SEND-related service design, policy and decision-support work.
 
-It is intended to help researchers, designers and service teams capture anonymised evidence, connect it to user needs, behaviours, pain points and insights, and maintain a clear audit trail for how research knowledge develops over time.
+It is intended to help researchers, designers, product/service teams and decision-makers capture anonymised evidence, connect it to user needs, behaviours, pain points, insights, value dimensions and solution assessments, and maintain a clear audit trail for how research knowledge develops over time.
+
+The repository is not only for designing good services. It should also provide the human intelligence needed to challenge weak, harmful or solution-led decisions with a defensible evidence base.
 
 ## What this repository is for
 
@@ -17,10 +19,12 @@ Use this repository to store and work with:
 - themes
 - personas
 - journeys
+- value dimensions
+- solution options and assessments
 - review notes
 - synthesis outputs
 
-The repository should support evidence-based service design, reduce duplicated research, and make it easier to understand what is known, what is assumed, and what still needs validation.
+The repository should support evidence-based service design, reduce duplicated research, make value visible, and make it easier to understand what is known, what is assumed, what is contested, and what still needs validation.
 
 ## What this repository is not for
 
@@ -32,6 +36,7 @@ Do not store:
 - special category personal data that has not been anonymised
 - unsupported claims presented as validated findings
 - LLM-generated synthesis without clear status and review metadata
+- politically preferred solution ideas presented as evidence-backed recommendations
 
 ## Repository structure
 
@@ -60,6 +65,8 @@ The repository distinguishes between:
 - assumptions
 - reviewed analysis
 - validated findings
+- value dimensions
+- solution options and recommendations
 - deprecated or superseded material
 
 ## How to use this repository
@@ -68,13 +75,15 @@ The repository distinguishes between:
 2. Link evidence to studies, actors, journey stages and tags.
 3. Code evidence into user needs, behaviours and pain points.
 4. Draft insights from linked evidence.
-5. Review assumptions, evidence strength and confidence.
-6. Promote reviewed work to validated status only when the evidence supports it.
-7. Record meaningful changes in both entry-level changelogs and the global `CHANGELOG.md`.
+5. Connect needs and insights to value dimensions where useful.
+6. Assess solution options against needs, value, evidence, risks and assumptions.
+7. Review assumptions, evidence basis and confidence.
+8. Promote reviewed work to validated status only when the evidence supports it.
+9. Record meaningful changes in both entry-level changelogs and the global `CHANGELOG.md`.
 
 ## Working with Obsidian
 
-This repository is designed to work as an Obsidian vault. Use links, backlinks, properties and Dataview queries to navigate between evidence, needs, behaviours and insights.
+This repository is designed to work as an Obsidian vault. Use links, backlinks, properties and Dataview queries to navigate between evidence, needs, behaviours, insights, value dimensions and solution assessments.
 
 See `docs/Obsidian_workflow.md` for the recommended workflow.
 
@@ -94,3 +103,4 @@ See `llm-instructions.md` and `docs/LLM_safety_model.md`.
 - `CHANGELOG.md` records repository-level changes.
 - `docs/Evidence_standards.md` defines what counts as evidence.
 - `docs/Review_process.md` defines review and validation steps.
+- `docs/Value_and_decision_evidence.md` defines how value, solution assessment and decision evidence are handled.
