@@ -2,6 +2,8 @@
 
 This file defines how repository items move from capture, placeholder or draft into reviewed and validated states.
 
+For common valid combinations of `status`, `analysis_state` and `review_status`, see `docs/Lifecycle_states.md`.
+
 ## Review purpose
 
 Review protects the repository from:
