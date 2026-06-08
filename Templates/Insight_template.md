@@ -22,7 +22,6 @@ related_behaviours:
 related_pain_points:
 related_themes:
 related_value_dimensions:
-related_solution_options:
 claims:
 tags:
   - send
@@ -54,14 +53,13 @@ Explain why this appears to be happening and why it matters.
 
 Separate implications from solutions. Implications can point to design, service, policy, technical or research questions.
 
-## Related objects
+## Related problem-space objects
 
 - User needs:
 - Behaviours:
 - Pain points:
 - Themes:
 - Value dimensions:
-- Solution options:
 
 ## Review notes
 
