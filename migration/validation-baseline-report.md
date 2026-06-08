@@ -23,42 +23,42 @@ Do not use `--warnings-as-errors` for the first baseline. The first pass should 
 ## Baseline status
 
 ```text
-Baseline run date:
-Run by:
-Branch or commit:
-Validator command:
-Errors:
-Warnings:
+Baseline run date: Pending CI run
+Run by: GitHub Actions validation workflow
+Branch or commit: audit/validation-baseline
+Validator command: python3 tools/validate_repository.py
+Errors: Pending
+Warnings: Pending
 ```
 
 ## Summary
 
 | Finding group | Count | Severity | Migration action |
 |---|---:|---|---|
-| Missing required fields | TBD | Error | Fix in metadata batch |
-| Invalid ID format | TBD | Error | Fix in ID batch |
-| Duplicate IDs | TBD | Error | Human review before migration |
-| Wrong ID prefix for type | TBD | Error | Fix in ID batch |
-| Invalid controlled values | TBD | Error | Fix in metadata batch |
-| Lifecycle contradictions | TBD | Error | Human review before promotion/demotion |
-| `evidence_basis: validated` without review | TBD | Error | Human review before correction |
-| Unresolved wikilinks | TBD | Warning | Link mapping batch |
-| Unresolved relationship links | TBD | Warning | Link mapping batch |
-| Filename/ID mismatch | TBD | Warning | Filename migration batch |
+| Missing required fields | Pending | Error | Fix in metadata batch |
+| Invalid ID format | Pending | Error | Fix in ID batch |
+| Duplicate IDs | Pending | Error | Human review before migration |
+| Wrong ID prefix for type | Pending | Error | Fix in ID batch |
+| Invalid controlled values | Pending | Error | Fix in metadata batch |
+| Lifecycle contradictions | Pending | Error | Human review before promotion/demotion |
+| `evidence_basis: validated` without review | Pending | Error | Human review before correction |
+| Unresolved wikilinks | Pending | Warning | Link mapping batch |
+| Unresolved relationship links | Pending | Warning | Link mapping batch |
+| Filename/ID mismatch | Pending | Warning | Filename migration batch |
 
 ## Full validator output
 
-Paste or summarise validator output here.
+Validator output will be populated from the GitHub Actions run for this branch.
 
 ```text
-TBD
+Pending CI run
 ```
 
 ## Findings by file
 
 | File | Finding | Severity | Proposed class | Proposed action | Notes |
 |---|---|---|---|---|---|
-| TBD | TBD | TBD | TBD | TBD | TBD |
+| Pending | Pending | Pending | Pending | Pending | Pending |
 
 ## Finding classes
 
@@ -102,7 +102,7 @@ Record findings that should not be fixed without judgement.
 
 | Finding | Why mechanical fixing is risky | Required review |
 |---|---|---|
-| TBD | TBD | TBD |
+| Pending | Pending | Pending |
 
 ## Audit decision
 
