@@ -1,4 +1,4 @@
-# ECC Research Repository
+# ECC Civic design intelligence system
 
 This repository is an Obsidian-compatible civic design intelligence system for SEND-related service design, policy and decision-support work.
 
