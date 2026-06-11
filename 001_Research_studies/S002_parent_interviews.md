@@ -8,13 +8,26 @@ date_range: 2024-03 – 2024-05
 method: Semi-structured interviews
 participants: 10 parents of children with SEND (ages 12-18)
 setting: Online interviews
+source_context:
+  geographic_scope: unclear
+  primary_locale:
+  locales:
+  institution_scope: community_research
+  source_type: primary_research
+  commissioning_or_source_body:
+applicability:
+  transferability: unclear
+  limits:
+    - Online interview setting is captured, but locality is not specified.
+    - Recruitment is described as through local SEND parent networks, but the local area is unclear.
+  notes: The source appears relevant to SEND transition planning, but locality and institutional context need review before using it as cross-context evidence.
 status: captured
 analysis_state: captured
 confidence: high
 creation_mode: migrated
 llm_generated: false
 human_reviewed: false
-review_status: not_reviewed
+review_status: needs_review
 related_evidence:
   - EVID_001
   - EVID_002
