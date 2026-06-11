@@ -206,6 +206,14 @@
       font-size: 16px;
     }
 
+    .breakdown {
+      margin-top: 36px;
+    }
+
+    .breakdown:first-child {
+      margin-top: 0;
+    }
+
     table {
       width: 100%;
       margin-top: 24px;
@@ -371,13 +379,15 @@
       const entries = Object.entries(data || {}).sort((a, b) => b[1] - a[1]);
       if (!entries.length) return '';
       return `
-        <h3>${title}</h3>
-        <table>
-          <thead><tr><th>Category</th><th>Count</th></tr></thead>
-          <tbody>
-            ${entries.map(([key, value]) => `<tr><td>${key}</td><td>${formatValue(value)}</td></tr>`).join('')}
-          </tbody>
-        </table>
+        <section class="breakdown">
+          <h3>${title}</h3>
+          <table>
+            <thead><tr><th>Category</th><th>Count</th></tr></thead>
+            <tbody>
+              ${entries.map(([key, value]) => `<tr><td>${key}</td><td>${formatValue(value)}</td></tr>`).join('')}
+            </tbody>
+          </table>
+        </section>
       `;
     }
 
