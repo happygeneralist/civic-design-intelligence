@@ -285,8 +285,8 @@
         <div>
           <h1>Build a shared understanding of public-service needs</h1>
           <p>Open knowledge infrastructure for public-service needs, evidence, pain and decisions.</p>
-          <a class="button" href="https://github.com/happygeneralist/ECC-civic-design-intelligence">View the repository</a>
-          <a class="button button--secondary" href="https://github.com/happygeneralist/ECC-civic-design-intelligence/blob/main/docs/Civic_design_intelligence_system.md">Read the strategic vision</a>
+          <a class="button" href="https://github.com/happygeneralist/civic-design-intelligence">View the repository</a>
+          <a class="button button--secondary" href="https://github.com/happygeneralist/civic-design-intelligence/blob/main/docs/Civic_design_intelligence_system.md">Read the strategic vision</a>
         </div>
         <img class="masthead-illustration" src="assets/civic_knowledge_map_masthead.svg" alt="Illustration showing a central civic knowledge map connected to evidence, lived experience, public contributions and decisions.">
       </div>
@@ -308,6 +308,42 @@
         <article class="card">
           <h3>Expose gaps and risk</h3>
           <p>Show where evidence is missing, where pain blocks value, and where public-service outcomes remain unsupported.</p>
+        </article>
+      </div>
+
+      <h2>Why it matters</h2>
+      <p class="lead">Public services need better outcomes, not just better documentation. Civic design intelligence helps teams understand what people need, where systems create burden, and which decisions are most likely to improve public value.</p>
+
+      <div class="grid">
+        <article class="card">
+          <h3>Improve outcomes</h3>
+          <p>Connect evidence and lived experience to the outcomes services are trying to change, so work is guided by impact rather than assumptions or organisational habit.</p>
+        </article>
+        <article class="card">
+          <h3>Focus effort</h3>
+          <p>Make it easier to see where needs are unsupported, where pain blocks value, and where policy or service attention could make the greatest difference.</p>
+        </article>
+        <article class="card">
+          <h3>Build accountability</h3>
+          <p>Create an auditable link between what is known, what is contested and what decisions are made, so public-service learning can compound over time.</p>
+        </article>
+      </div>
+
+      <h2>How AI enables it</h2>
+      <p class="lead">AI makes this approach practical. Public-service knowledge is usually spread across research reports, lived experience, complaints, policy documents and operational data. AI can help structure and connect that material at pace, while the repository keeps the work governed, traceable and reviewable.</p>
+
+      <div class="grid">
+        <article class="card">
+          <h3>Structure messy evidence</h3>
+          <p>AI helps turn varied source material into linked evidence, needs, behaviours, pain points and insights without making AI the source of truth.</p>
+        </article>
+        <article class="card">
+          <h3>Keep knowledge governed</h3>
+          <p>Objects keep their status, evidence basis, uncertainty and review state visible, so useful AI support does not become unmanaged synthesis.</p>
+        </article>
+        <article class="card">
+          <h3>Keep people accountable</h3>
+          <p>AI can help structure and test understanding, but people remain responsible for interpretation, validation and public-service decisions.</p>
         </article>
       </div>
 
@@ -349,83 +385,6 @@
     </div>
   </footer>
 
-  <script>
-    const statDefinitions = [
-      ['markdown_objects', 'Markdown objects', 'Files counted in numbered knowledge-object folders.'],
-      ['service_areas', 'Service areas', 'From service area or domain metadata.'],
-      ['repository_areas', 'Repository areas', 'Numbered knowledge-object areas.'],
-      ['user_needs', 'User needs', 'Classified by folder, metadata or ID.'],
-      ['civic_needs', 'Civic needs', 'Classified by metadata or CN IDs.'],
-      ['evidence', 'Evidence items', 'Evidence objects and files.'],
-      ['pain_points', 'Pain points', 'Pain-point objects and files.'],
-      ['insights', 'Insights', 'Insight objects and files.']
-    ];
-
-    function formatValue(value) {
-      return Number.isFinite(value) ? value.toLocaleString('en-GB') : '0';
-    }
-
-    function renderStats(stats) {
-      const totals = stats.totals || {};
-      const grid = document.getElementById('stats-grid');
-      grid.innerHTML = statDefinitions.map(([key, label, hint]) => `
-        <div class="stat">
-          <span class="stat__value">${formatValue(totals[key])}</span>
-          <span class="stat__label">${label}</span>
-          <span class="stat__hint">${hint}</span>
-        </div>
-      `).join('');
-
-      const generatedAt = stats.generated_at ? new Date(stats.generated_at).toLocaleString('en-GB') : 'unknown';
-      document.getElementById('stats-metadata').innerHTML = `
-        <strong>Last generated:</strong> ${generatedAt}<br>
-        <strong>Source:</strong> ${stats.generated_from || 'Repository markdown files'}<br>
-        ${stats.scope_note || ''}
-      `;
-
-      renderBreakdowns(stats);
-    }
-
-    function renderTable(title, data) {
-      const entries = Object.entries(data || {}).sort((a, b) => b[1] - a[1]);
-      if (!entries.length) return '';
-      return `
-        <section class="breakdown">
-          <h3>${title}</h3>
-          <table>
-            <thead><tr><th>Category</th><th>Count</th></tr></thead>
-            <tbody>
-              ${entries.map(([key, value]) => `<tr><td>${key}</td><td>${formatValue(value)}</td></tr>`).join('')}
-            </tbody>
-          </table>
-        </section>
-      `;
-    }
-
-    function renderBreakdowns(stats) {
-      document.getElementById('breakdowns').innerHTML = [
-        renderTable('By status', stats.by_status),
-        renderTable('By lifecycle state', stats.by_lifecycle_state),
-        renderTable('By evidence strength', stats.by_evidence_strength)
-      ].join('');
-    }
-
-    fetch('stats.json', { cache: 'no-store' })
-      .then((response) => {
-        if (!response.ok) throw new Error('Stats file not available yet');
-        return response.json();
-      })
-      .then(renderStats)
-      .catch((error) => {
-        document.getElementById('stats-grid').innerHTML = `
-          <div class="stat">
-            <span class="stat__value">-</span>
-            <span class="stat__label">Stats not generated yet</span>
-            <span class="stat__hint">Run the Build GitHub Pages stats workflow.</span>
-          </div>
-        `;
-        document.getElementById('stats-metadata').textContent = error.message;
-      });
-  </script>
+  <script src="assets/page-stats.js"></script>
 </body>
 </html>
