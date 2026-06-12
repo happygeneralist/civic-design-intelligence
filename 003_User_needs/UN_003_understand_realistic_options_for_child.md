@@ -1,13 +1,13 @@
 ---
 type: user_need
-id: UN_003
+id: UN_013
 actor: Parent/carer of a young person with SEND
 journey_stage: Pathway_planning
 need: A parent/carer of a young person with SEND needs to understand which options are realistic for their child's circumstances, so they can make decisions that fit the young person rather than a generic route.
 need_level: journey
 parent_needs:
 child_needs:
-  - "[[UN_004]]"
+  - "[[UN_014]]"
 related_capabilities:
   - agency
   - affiliation
@@ -32,7 +32,7 @@ change_level: none
 supersedes:
 superseded_by:
 related_evidence:
-  - "[[EVID_004]]"
+  - "[[EVID_005]]"
 related_behaviours:
 related_pain_points:
 related_insights:
@@ -57,7 +57,7 @@ The wording avoids saying that the user needs a `personalised helper`, which wou
 
 ## Evidence basis
 
-- Supporting evidence: [[EVID_004]]
+- Supporting evidence: [[EVID_005]]
 - Contextual evidence: [[RS_007]]
 - Contradictory or limiting evidence:
 
@@ -68,7 +68,7 @@ The evidence suggests that generic pathway guidance may not be enough when a par
 ## Need hierarchy
 
 - Parent needs:
-- Child needs: [[UN_004]]
+- Child needs: [[UN_014]]
 - Related capabilities: agency; affiliation; belonging
 - Related civic needs:
 - Related rights:
@@ -91,8 +91,9 @@ The evidence suggests that generic pathway guidance may not be enough when a par
 - Review date: TBC
 - Reviewer: TBC
 - Outcome: needs review
-- Notes: Check whether this should become a parent need for [[UN_004]] or remain a peer journey-level need.
+- Notes: Check whether this should become a parent need for [[UN_014]] or remain a peer journey-level need.
 
 ## Changelog
 
-- 2026-06-12: Created as draft user need from [[EVID_004]]. Status: draft. Analysis state: evidence_linked. Evidence strength: weak. Review status: needs_review.
+- 2026-06-12: Created as draft user need from [[EVID_005]]. Status: draft. Analysis state: evidence_linked. Evidence strength: weak. Review status: needs_review.
+- 2026-06-12: Renumbered from `UN_003` to `UN_013` to avoid collision with existing `UN_003.md`.
