@@ -32,7 +32,7 @@ change_level: none
 supersedes:
 superseded_by:
 related_evidence:
-  - "[[EVID_004]]"
+  - "[[EVID_005]]"
 related_behaviours:
 related_pain_points:
 related_insights:
@@ -60,7 +60,7 @@ The wording avoids over-specifying the mechanism and avoids implying that the pa
 
 ## Evidence basis
 
-- Supporting evidence: [[EVID_004]]
+- Supporting evidence: [[EVID_005]]
 - Contextual evidence: [[RS_007]]
 - Contradictory or limiting evidence:
 
@@ -98,4 +98,5 @@ The evidence suggests that pathway planning can create a sustained sense of doub
 
 ## Changelog
 
-- 2026-06-12: Created as draft user need from [[EVID_004]]. Status: draft. Analysis state: evidence_linked. Evidence strength: weak. Review status: needs_review.
+- 2026-06-12: Created as draft user need from [[EVID_005]]. Status: draft. Analysis state: evidence_linked. Evidence strength: weak. Review status: needs_review.
+- 2026-06-12: Updated evidence link from [[EVID_004]] to [[EVID_005]] after renumbering the new evidence summary to avoid duplicate IDs.
