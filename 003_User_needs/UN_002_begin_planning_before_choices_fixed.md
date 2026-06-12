@@ -1,6 +1,6 @@
 ---
 type: user_need
-id: UN_002
+id: UN_012
 actor: Parent/carer of a young person with SEND
 journey_stage: Pathway_planning
 need: A parent/carer of a young person with SEND needs to begin planning before key education choices become fixed, so they can make realistic decisions with enough time to act.
@@ -30,7 +30,7 @@ change_level: none
 supersedes:
 superseded_by:
 related_evidence:
-  - "[[EVID_004]]"
+  - "[[EVID_005]]"
 related_behaviours:
 related_pain_points:
 related_insights:
@@ -57,7 +57,7 @@ The phrase `before key education choices become fixed` preserves the evidence me
 
 ## Evidence basis
 
-- Supporting evidence: [[EVID_004]]
+- Supporting evidence: [[EVID_005]]
 - Contextual evidence: [[RS_007]]
 - Contradictory or limiting evidence:
 
@@ -96,4 +96,5 @@ The parent/carer evidence suggests that pathway planning can become high-stakes 
 
 ## Changelog
 
-- 2026-06-12: Created as draft user need from [[EVID_004]]. Status: draft. Analysis state: evidence_linked. Evidence strength: weak. Review status: needs_review.
+- 2026-06-12: Created as draft user need from [[EVID_005]]. Status: draft. Analysis state: evidence_linked. Evidence strength: weak. Review status: needs_review.
+- 2026-06-12: Renumbered from `UN_002` to `UN_012` to avoid collision with existing `UN_002.md`.
