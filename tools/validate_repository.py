@@ -355,9 +355,14 @@ def check_id(note: Note, id_index: Dict[str, List[Path]], include_templates: boo
     if note_id in id_index and len(id_index[note_id]) > 1:
         findings.append(Finding("error", note.path, f"duplicate id `{note_id}`"))
     filename_stem = note.path.stem
-    if ID_PATTERN.match(note_id) and filename_stem != note_id:
-        findings.append(Finding("warning", note.path, f"filename `{filename_stem}` does not match id `{note_id}`"))
+    if ID_PATTERN.match(note_id) and not filename_matches_id(filename_stem, note_id):
+        findings.append(Finding("warning", note.path, f"filename `{filename_stem}` should be `{note_id}` or start with `{note_id}_`"))
     return findings
+
+
+def filename_matches_id(filename_stem: str, note_id: str) -> bool:
+    """Allow either bare IDs or ID-prefixed readable filenames."""
+    return filename_stem == note_id or filename_stem.startswith(f"{note_id}_")
 
 
 def check_controlled_values(note: Note, include_templates: bool, include_docs: bool) -> List[Finding]:

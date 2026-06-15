@@ -24,6 +24,7 @@ Use entry-level changelogs inside individual notes for changes to specific evide
 
 - Normalised research study and review note templates to include current lifecycle, review, evidence strength, confidence and change-level fields.
 - Replaced the legacy `Study_template.md` example that used a live `RS_001` ID with a generic non-colliding study template.
+- Clarified that filenames may either match the stable object ID exactly or use an ID-prefixed readable slug, and updated repository validation to match that convention.
 
 ### Notes
 
