@@ -24,6 +24,8 @@ tags:
 
 # Persona or archetype title
 
+Persona and segment models are deferred during the current MVP. Do not use this template for canonical repository objects until the modelling approach has been developed and documented.
+
 Use personas or archetypes carefully. In SEND work, avoid stereotyping, flattening or over-generalising people.
 
 ## Purpose

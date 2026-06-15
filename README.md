@@ -45,7 +45,6 @@ Use this repository to store and work with:
 - pain points
 - insights
 - themes
-- personas
 - journeys
 - value dimensions
 - solution options and assessments
@@ -65,6 +64,7 @@ Do not store:
 - unsupported claims presented as validated findings
 - LLM-generated synthesis without clear status and review metadata
 - politically preferred solution ideas presented as evidence-backed recommendations
+- persona or segment models presented as canonical outputs before the modelling convention is agreed
 
 ## Repository structure
 
@@ -76,11 +76,13 @@ Do not store:
 005_Pain_point/         Pain points and barriers
 006_Insights/           Draft, reviewed and validated insights
 007_Themes/             Cross-cutting themes
-008_Personas/           Personas or archetypes where appropriate
+008_Personas/           Reserved for future persona or archetype work
 009_Journeys/           Journey maps and journey-stage analysis
 Templates/              Templates for creating structured notes
 docs/                   Supporting documentation and governance material
 ```
+
+Personas and segment models are deferred during the current MVP. They should not be created as canonical repository objects until the modelling approach has been developed, tested and documented.
 
 ## Core principle
 
@@ -127,9 +129,9 @@ If the change only affects formatting, metadata or validation hygiene, rely on G
 
 ## Working with Obsidian
 
-This repository is designed to work as an Obsidian vault. Use links, backlinks, properties and Dataview queries to navigate between evidence, needs, behaviours, insights, value dimensions and solution assessments.
+This repository is designed to work as an Obsidian vault. Use links, backlinks, properties and Bases to navigate between evidence, needs, behaviours, insights, value dimensions and solution assessments.
 
-See `docs/Obsidian_workflow.md` for the recommended workflow.
+Shared Obsidian settings and Bases should support common repository behaviour. Personal workspace state, local plugin state and local-only notes should stay out of shared history.
 
 ## Working with LLMs
 
@@ -143,7 +145,9 @@ See `llm-instructions.md` and `docs/LLM_safety_model.md`.
 
 - `docs/Civic_design_intelligence_system.md` defines the open civic design intelligence vision, contribution model and relationship to design histories.
 - `docs/Safe_research_ingestion_MVP.md` defines the minimum safe-ingestion workflow for the current SEND pathway-planning worked example.
-- `docs/Object_change_logs.md` defines when object-level changelogs are required and when Git/PR history is enough.
+- `docs/User_needs_writing_rules.md` defines user need wording, including the `short_name` convention.
+- `docs/Object_change_logs.md` defines when object-level changelogs are required and when Git and pull request history are enough.
+- `docs/Obsidian_workflow.md` defines the recommended Obsidian workflow.
 - `SCHEMA.md` defines object types, required fields and controlled values.
 - `GOVERNANCE.md` defines repository governance and review responsibilities.
 - `CONTRIBUTING.md` defines how to add and update material safely.

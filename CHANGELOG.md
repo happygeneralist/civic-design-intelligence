@@ -14,6 +14,7 @@ Use entry-level changelogs inside individual notes for changes to specific evide
 
 ### Changed
 
+- Consolidated the root README guidance, removed the duplicate `Readme.md` entry and documented persona or segment models as deferred during the current MVP.
 - Updated `.gitignore` to keep personal Obsidian workspace state, local plugin state, local-only notes and accidental untitled Bases out of shared history.
 - Stopped tracking personal Obsidian workspace files and root-level untitled Base files while preserving them locally for individual contributors.
 - Normalised research study and review note templates to include current lifecycle, review, evidence strength, confidence and change-level fields.

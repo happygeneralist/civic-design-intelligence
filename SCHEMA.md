@@ -35,7 +35,9 @@ The repository distinguishes between evidence and analysis.
 
 Evidence is captured as close to the source as possible.
 
-Analysis objects are interpreted research objects created from evidence, researcher judgement and synthesis. They include user needs, behaviours, pain points, insights, themes, journeys, personas and opportunities.
+Analysis objects are interpreted research objects created from evidence, researcher judgement and synthesis. They include user needs, behaviours, pain points, insights, themes, journeys and opportunities.
+
+Persona and segment models are deferred during the current MVP. The `persona` type remains reserved for future development, but canonical persona objects should not be created until the modelling approach is documented.
 
 The repository should support fast creation and incremental refinement of analysis objects without losing rigour.
 
@@ -178,7 +180,7 @@ BEH_001    behaviour
 PP_001     pain point
 INS_001    insight
 TH_001     theme
-PER_001    persona
+PER_001    persona (reserved)
 JNY_001    journey
 OPP_001    opportunity
 REV_001    review note
@@ -187,7 +189,7 @@ CLM_001    claim
 
 ## Common fields for analysis objects
 
-Use these fields across user needs, behaviours, pain points, insights, themes, journeys, personas and opportunities where relevant.
+Use these fields across user needs, behaviours, pain points, insights, themes, journeys, opportunities and future persona models where relevant.
 
 ```yaml
 type:

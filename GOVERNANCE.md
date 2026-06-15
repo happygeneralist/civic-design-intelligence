@@ -86,7 +86,6 @@ The repository may store:
 - pain points
 - insights
 - themes
-- personas
 - journeys
 - opportunities
 - review notes
@@ -110,7 +109,9 @@ Evidence and analysis must be kept distinct.
 
 Evidence notes should capture what was observed, said, measured or sourced.
 
-Analysis objects are interpreted research objects created from evidence, researcher judgement and synthesis. They include user needs, civic needs, behaviours, pain points, insights, themes, journeys, personas and opportunities.
+Analysis objects are interpreted research objects created from evidence, researcher judgement and synthesis. They include user needs, civic needs, behaviours, pain points, insights, themes, journeys and opportunities.
+
+Persona and segment models are deferred during the current MVP. They should not be created as canonical repository objects until the modelling approach has been developed, tested and documented.
 
 A claim without evidence may still be useful, but it must be marked as an assumption, candidate or placeholder as appropriate.
 
@@ -167,9 +168,11 @@ Material and major changes require a review trail.
 
 LLM-assisted changes must follow `llm-instructions.md`.
 
-LLMs may create and alter analysis objects, including user needs, behaviours, pain points, insights, themes, journeys, personas and opportunities.
+LLMs may create and alter analysis objects, including user needs, behaviours, pain points, insights, themes, journeys and opportunities.
 
 LLMs may create placeholder, candidate, drafted and evidence-linked objects at speed.
+
+LLMs must not create persona or segment objects under the current MVP conventions.
 
 They must not:
 

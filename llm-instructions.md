@@ -51,10 +51,11 @@ They include:
 - insights
 - themes
 - journeys
-- personas
 - opportunities
 
 LLMs may create and alter these objects, provided the item remains clearly marked by status, analysis state, evidence strength, confidence, creation mode and review status.
+
+Persona and segment models are currently deferred. LLMs must not create persona or segment objects unless a human reviewer explicitly points to updated persona guidance and asks for that work.
 
 ## What the LLM must not do
 
@@ -69,6 +70,7 @@ The LLM must not:
 - merge assumptions into validated notes
 - infer sensitive personal characteristics without evidence
 - store raw transcripts, recordings or identifiable participant data
+- create persona or segment models under the current MVP conventions
 - bypass the review process
 - hide the fact that an item was LLM-assisted
 
