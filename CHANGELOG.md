@@ -9,29 +9,25 @@ Use entry-level changelogs inside individual notes for changes to specific evide
 ### Added
 
 - Added a shared `Bases/` folder with starter Obsidian Bases for user needs, evidence, review queue and LLM-assisted objects.
+- Added `AGENTS.md` to define repository-specific Codex operating rules for branch use, changelogs, research safety and validation.
+- Added `.github/pull_request_template.md` with the repository compliance and review checklist.
 
 ### Changed
 
 - Updated `.gitignore` to keep personal Obsidian workspace state, local plugin state, local-only notes and accidental untitled Bases out of shared history.
 - Stopped tracking personal Obsidian workspace files and root-level untitled Base files while preserving them locally for individual contributors.
-
-### Notes
-
-- This is an Obsidian workflow and repository hygiene change.
-- Shared Obsidian configuration remains tracked where it supports common repository behaviour.
-- No research objects were semantically changed, promoted, validated, deprecated or marked as reviewed.
-### Changed
-
 - Normalised research study and review note templates to include current lifecycle, review, evidence strength, confidence and change-level fields.
 - Replaced the legacy `Study_template.md` example that used a live `RS_001` ID with a generic non-colliding study template.
 - Clarified that filenames may either match the stable object ID exactly or use an ID-prefixed readable slug, and updated repository validation to match that convention.
 - Added a `short_name` convention for user needs so Obsidian Bases, mapping and design artefacts can use compact `Need to + verb + object/context` labels while preserving the full canonical need.
+- Updated `docs/Codex_repository_automation.md` to point Codex and similar agents to the required branch, pull request, changelog and validation workflow.
 
 ### Notes
 
-- This is a template and repository-governance hygiene change.
+- This includes Obsidian workflow, template, repository hygiene and Codex workflow governance changes.
+- Shared Obsidian configuration remains tracked where it supports common repository behaviour.
 - No existing research objects were semantically changed, promoted, validated, deprecated or marked as reviewed.
-- Object-level changelog entries were not added because the change affects templates rather than the interpretation of existing research objects.
+- Object-level changelog entries were not added because these changes do not affect the interpretation of existing research objects.
 
 ## 2026-06-09
 
