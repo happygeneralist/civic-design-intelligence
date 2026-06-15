@@ -4,6 +4,19 @@ This changelog records repository-level changes.
 
 Use entry-level changelogs inside individual notes for changes to specific evidence, needs, behaviours, pain points, insights or review notes.
 
+## 2026-06-15
+
+### Changed
+
+- Normalised research study and review note templates to include current lifecycle, review, evidence strength, confidence and change-level fields.
+- Replaced the legacy `Study_template.md` example that used a live `RS_001` ID with a generic non-colliding study template.
+
+### Notes
+
+- This is a template and repository-governance hygiene change.
+- No existing research objects were semantically changed, promoted, validated, deprecated or marked as reviewed.
+- Object-level changelog entries were not added because the change affects templates rather than the interpretation of existing research objects.
+
 ## 2026-06-09
 
 ### Added
