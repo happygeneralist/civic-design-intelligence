@@ -20,10 +20,13 @@ applicability:
   notes:
 status: captured | reviewed | validated | deprecated
 analysis_state: captured | reviewed | validated | deprecated
+evidence_strength: none | weak | moderate | strong
+confidence: low | medium | high
 creation_mode: manual | llm_assisted | imported | migrated
 llm_generated: false
 human_reviewed: false
 review_status: not_reviewed | needs_review | reviewed | rejected
+change_level: none | minor | material | major
 related_evidence:
 related_insights:
 tags:
