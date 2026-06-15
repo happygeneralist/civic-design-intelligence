@@ -4,6 +4,23 @@ This changelog records repository-level changes.
 
 Use entry-level changelogs inside individual notes for changes to specific evidence, needs, behaviours, pain points, insights or review notes.
 
+## 2026-06-15
+
+### Added
+
+- Added a shared `Bases/` folder with starter Obsidian Bases for user needs, evidence, review queue and LLM-assisted objects.
+
+### Changed
+
+- Updated `.gitignore` to keep personal Obsidian workspace state, local plugin state, local-only notes and accidental untitled Bases out of shared history.
+- Stopped tracking personal Obsidian workspace files and root-level untitled Base files while preserving them locally for individual contributors.
+
+### Notes
+
+- This is an Obsidian workflow and repository hygiene change.
+- Shared Obsidian configuration remains tracked where it supports common repository behaviour.
+- No research objects were semantically changed, promoted, validated, deprecated or marked as reviewed.
+
 ## 2026-06-09
 
 ### Added
