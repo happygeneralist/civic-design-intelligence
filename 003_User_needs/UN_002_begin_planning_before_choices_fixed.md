@@ -1,6 +1,7 @@
 ---
 type: user_need
 id: UN_012
+short_name: Need to plan pathway options early
 actor: Parent/carer of a young person with SEND
 journey_stage: Pathway_planning
 need: A parent/carer of a young person with SEND needs to begin planning before key education choices become fixed, so they can make realistic decisions with enough time to act.
@@ -26,7 +27,7 @@ creation_mode: llm_assisted
 llm_generated: true
 human_reviewed: false
 review_status: needs_review
-change_level: none
+change_level: minor
 supersedes:
 superseded_by:
 related_evidence:
@@ -98,3 +99,4 @@ The parent/carer evidence suggests that pathway planning can become high-stakes 
 
 - 2026-06-12: Created as draft user need from [[EVID_005]]. Status: draft. Analysis state: evidence_linked. Evidence strength: weak. Review status: needs_review.
 - 2026-06-12: Renumbered from `UN_002` to `UN_012` to avoid collision with existing `UN_002.md`.
+- 2026-06-15: Added `short_name` as a compact mapping label. Canonical need wording, evidence links and review state unchanged.

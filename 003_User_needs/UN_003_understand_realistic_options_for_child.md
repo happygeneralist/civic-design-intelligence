@@ -1,6 +1,7 @@
 ---
 type: user_need
 id: UN_013
+short_name: Need to assess realistic options
 actor: Parent/carer of a young person with SEND
 journey_stage: Pathway_planning
 need: A parent/carer of a young person with SEND needs to understand which options are realistic for their child's circumstances, so they can make decisions that fit the young person rather than a generic route.
@@ -28,7 +29,7 @@ creation_mode: llm_assisted
 llm_generated: true
 human_reviewed: false
 review_status: needs_review
-change_level: none
+change_level: minor
 supersedes:
 superseded_by:
 related_evidence:
@@ -97,3 +98,4 @@ The evidence suggests that generic pathway guidance may not be enough when a par
 
 - 2026-06-12: Created as draft user need from [[EVID_005]]. Status: draft. Analysis state: evidence_linked. Evidence strength: weak. Review status: needs_review.
 - 2026-06-12: Renumbered from `UN_003` to `UN_013` to avoid collision with existing `UN_003.md`.
+- 2026-06-15: Added `short_name` as a compact mapping label. Canonical need wording, evidence links and review state unchanged.
