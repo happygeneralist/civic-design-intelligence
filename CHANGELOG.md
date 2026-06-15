@@ -20,6 +20,16 @@ Use entry-level changelogs inside individual notes for changes to specific evide
 - This is an Obsidian workflow and repository hygiene change.
 - Shared Obsidian configuration remains tracked where it supports common repository behaviour.
 - No research objects were semantically changed, promoted, validated, deprecated or marked as reviewed.
+### Changed
+
+- Normalised research study and review note templates to include current lifecycle, review, evidence strength, confidence and change-level fields.
+- Replaced the legacy `Study_template.md` example that used a live `RS_001` ID with a generic non-colliding study template.
+
+### Notes
+
+- This is a template and repository-governance hygiene change.
+- No existing research objects were semantically changed, promoted, validated, deprecated or marked as reviewed.
+- Object-level changelog entries were not added because the change affects templates rather than the interpretation of existing research objects.
 
 ## 2026-06-09
 

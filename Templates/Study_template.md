@@ -1,58 +1,54 @@
 ---
 type: research_study
-id: RS_001
-title: Parent Interviews – Emotional Regulation and Home Support
-research_lead: [Your Name]
-date_range: 2024-03 – 2024-05
-method: Semi-structured interviews
-participants: 10 parents of children with SEND (ages 5–11)
-setting: In-home interviews, South London
-status: Completed
-confidence: High
-related_evidence: [EVID_001, EVID_002, EVID_003]
-related_insights: [INS_001, INS_002]
-tags: [send, parent, qualitative, emotional_regulation]
+id: RS_999
+title:
+research_lead:
+date_range:
+method:
+participants:
+setting:
+status: captured | reviewed | validated | deprecated
+analysis_state: captured | reviewed | validated | deprecated
+evidence_strength: none | weak | moderate | strong
+confidence: low | medium | high
+creation_mode: manual | llm_assisted | imported | migrated
+llm_generated: false
+human_reviewed: false
+review_status: not_reviewed | needs_review | reviewed | rejected
+change_level: none | minor | material | major
+related_evidence:
+related_insights:
+tags:
+  - send
 ---
 
-# Parent Interviews – Emotional Regulation and Home Support
+# Study title
 
-### Purpose
-To understand how parents experience and respond to their children’s emotional regulation challenges at home, and how schools or services influence this experience.
+Use `Templates/Research_study_template.md` for the fuller current research-study template. Keep this short template for quick study capture only.
 
-### Research questions
-- How do parents describe their child’s emotional regulation challenges?  
-- What strategies do families use to manage them?  
-- How do schools and professionals currently support (or fail to support) families?
+## Purpose
 
-### Method summary
-- **Approach:** Semi-structured interviews (45–60 minutes)  
-- **Recruitment:** Through local SEND parent networks  
-- **Sample:** 10 parents across multiple school types  
-- **Data collected:** Audio recordings, transcripts, observation notes  
-- **Analysis approach:** Thematic coding in Obsidian using #regulation, #support_gap  
+What question, problem or decision did this study address?
 
-### Key findings
-1. Children’s regulation difficulties often reflect stress from external environments (especially school).  
-2. Parents feel isolated and unsupported in addressing regulation challenges.  
-3. Families improvise coping strategies without clear professional guidance.  
+## Research questions
 
-### Illustrative quotes
-> “There is more and more outside the house that she can't control so she is trying to control more and more in the house.”  
-> “School just tells us to be consistent, but they aren’t consistent with her.”
+- 
 
-### Next steps
-- Triangulate findings with young people focus group (RS_003).  
-- Identify service touchpoints where early regulation support could be introduced.  
+## Method summary
 
-#### Evidence
-LIST FROM "002_Evidence" WHERE source_study = this.file.link
+Describe the approach, sample, setting and limitations.
 
-#### Insights
-LIST FROM "005_Insights" WHERE any(related_evidence, ev => ev.source_study = this.file.link)
+## Evidence and outputs
 
-#### User needs
-LIST FROM "003_User_Needs" WHERE any(related_evidence, ev => ev.source_study = this.file.link)
+- Related evidence:
+- Related insights:
 
-#### Pain points
-LIST FROM "006_Pain_Points" WHERE any(related_evidence, ev => ev.source_study = this.file.link)
+## Review notes
 
+- Review date:
+- Reviewer:
+- Outcome:
+
+## Changelog
+
+- YYYY-MM-DD: Created as research study summary.

@@ -5,12 +5,16 @@ reviewed_item:
 reviewer:
 review_date:
 review_outcome: approved | changes_requested | rejected | deferred
-status:
-analysis_state:
+status: captured | draft | assumption | reviewed | validated | deprecated
+analysis_state: captured | placeholder | candidate | drafted | evidence_linked | reviewed | validated | deprecated
 evidence_basis:
-evidence_strength:
-confidence:
-change_level:
+evidence_strength: none | weak | moderate | strong
+confidence: low | medium | high
+creation_mode: manual | llm_assisted | imported | migrated
+llm_generated: false
+human_reviewed: false
+review_status: not_reviewed | needs_review | reviewed | rejected
+change_level: none | minor | material | major
 related_evidence:
 related_notes:
 tags:
@@ -46,3 +50,7 @@ List evidence, links and sources reviewed.
 ## Changelog impact
 
 What changelog entries or status changes are required?
+
+## Changelog
+
+- YYYY-MM-DD: Created as review note.
