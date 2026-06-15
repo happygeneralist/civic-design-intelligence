@@ -275,6 +275,27 @@ WHERE status = "validated"
 SORT file.name ASC
 ```
 
+### User needs for mapping
+
+Use `short_name` as the display label for needs in Bases, Dataview tables, maps and workshop exports. It is easier to scan than the full canonical need and safer than deriving meaning from the filename.
+
+```dataview
+TABLE short_name, need_level, status, analysis_state, evidence_strength, review_status
+FROM "003_User_needs"
+SORT short_name ASC
+```
+
+Useful follow-up views include:
+
+```dataview
+TABLE need, need_level, status, review_status
+FROM "003_User_needs"
+WHERE !short_name
+SORT file.name ASC
+```
+
+Filenames should remain readable for links and search, but frontmatter should remain the queryable source of truth. Prefer filenames based on `id` and the `short_name` slug, such as `UN_012_need_to_plan_options_early.md`.
+
 ## Backlinks and graph use
 
 Use backlinks to see what depends on a piece of evidence or an analysis object.

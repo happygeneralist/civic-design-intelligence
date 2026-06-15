@@ -178,12 +178,12 @@ When renaming an object, update:
 Use stable ID-prefixed filenames. The preferred pattern is:
 
 ```text
-UN_001_match_options_to_needs.md
+UN_001_need_to_match_options.md
 EVID_001_signposting_quote.md
 RS_001_send_survey.md
 ```
 
-Bare ID filenames such as `UN_001.md` are also valid. Avoid filenames where the ID is missing, malformed or different from the frontmatter `id`.
+For user needs, derive the readable slug from `short_name` where possible. Bare ID filenames such as `UN_001.md` are also valid. Avoid filenames where the ID is missing, malformed or different from the frontmatter `id`.
 
 ## Aliases
 

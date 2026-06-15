@@ -1,6 +1,7 @@
 ---
 type: user_need
 id: UN_000
+short_name:
 actor:
 journey_stage:
 need:
@@ -49,6 +50,18 @@ I need to [action] [object/context] so that [outcome/value].
 ```
 
 Do not force this structure where it would distort an experience, civic, emotional or social need.
+
+## Short name
+
+Use `short_name` as the compact label for mapping, Bases, workshops and design artefacts.
+
+Prefer:
+
+```text
+Need to [verb] [object/context]
+```
+
+Leave the actor, detailed evidence context and outcome/value in the full `need` field.
 
 ## Wording rationale
 
