@@ -20,6 +20,7 @@ Use entry-level changelogs inside individual notes for changes to specific evide
 - Replaced the legacy `Study_template.md` example that used a live `RS_001` ID with a generic non-colliding study template.
 - Clarified that filenames may either match the stable object ID exactly or use an ID-prefixed readable slug, and updated repository validation to match that convention.
 - Added a `short_name` convention for user needs so Obsidian Bases, mapping and design artefacts can use compact `Need to + verb + object/context` labels while preserving the full canonical need.
+- Piloted `short_name` on three pathway-planning user needs without changing canonical need wording, evidence links or review state.
 - Updated `docs/Codex_repository_automation.md` to point Codex and similar agents to the required branch, pull request, changelog and validation workflow.
 
 ### Notes
