@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-15T21:28:06.044Z",
+  "generated_at": "2026-06-15T21:49:11.191Z",
   "generated_from": "Repository markdown files in numbered knowledge-object folders",
   "scope_note": "Counts are generated from repository folders and frontmatter where available. Missing metadata is counted explicitly rather than inferred as reviewed or validated.",
   "totals": {
@@ -75,7 +75,7 @@
       "label": "Personas or archetypes",
       "dir": "008_Personas",
       "count": 0,
-      "exists": true
+      "exists": false
     },
     {
       "key": "journeys",
@@ -100,6 +100,7 @@
     "medium": 1
   },
   "warnings": [
+    "008_Personas was not found, so its count is zero.",
     "009_Journeys was not found, so its count is zero."
   ]
 }
