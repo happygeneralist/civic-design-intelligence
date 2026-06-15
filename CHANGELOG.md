@@ -6,6 +6,20 @@ Use entry-level changelogs inside individual notes for changes to specific evide
 
 ## 2026-06-15
 
+### Added
+
+- Added a shared `Bases/` folder with starter Obsidian Bases for user needs, evidence, review queue and LLM-assisted objects.
+
+### Changed
+
+- Updated `.gitignore` to keep personal Obsidian workspace state, local plugin state, local-only notes and accidental untitled Bases out of shared history.
+- Stopped tracking personal Obsidian workspace files and root-level untitled Base files while preserving them locally for individual contributors.
+
+### Notes
+
+- This is an Obsidian workflow and repository hygiene change.
+- Shared Obsidian configuration remains tracked where it supports common repository behaviour.
+- No research objects were semantically changed, promoted, validated, deprecated or marked as reviewed.
 ### Changed
 
 - Normalised research study and review note templates to include current lifecycle, review, evidence strength, confidence and change-level fields.

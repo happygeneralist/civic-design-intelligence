@@ -1,1 +1,21 @@
+# macOS
 .DS_Store
+
+# Local-only workspace notes and scratch space
+000_Local/
+
+# Obsidian personal workspace state
+.obsidian/workspace.json
+.obsidian/workspace-mobile.json
+.obsidian/graph.json
+.obsidian/bookmarks.json
+.obsidian/hotkeys.json
+.obsidian/appearance.json
+.obsidian/cache/
+
+# Obsidian local plugin state and installed plugin bundles
+.obsidian/plugins/
+
+# Personal or accidental Obsidian Bases
+Untitled*.base
+*.local.base
