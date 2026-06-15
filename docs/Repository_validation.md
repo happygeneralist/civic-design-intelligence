@@ -110,6 +110,8 @@ Examples:
 - ID prefix does not match object type
 - unresolved internal links
 
+Readable filenames are allowed when they preserve the stable object ID at the start of the filename. For example, both `UN_001.md` and `UN_001_need_to_match_options.md` are valid. Filenames that do not begin with the frontmatter ID should be treated as migration warnings because they make objects harder to trace. For user needs, the readable slug should normally derive from `short_name`, not from the full canonical need.
+
 ### 2. Governance checks
 
 These are partly automatable.

@@ -277,6 +277,60 @@ I need to check whether I am eligible for support before I spend time applying.
 
 But do not force every need into this exact structure. Experience, civic and emotional needs may need different phrasing.
 
+## Short names for mapping and design
+
+Use `short_name` as a compact version of the user need for Obsidian Bases, maps, workshops, post-it notes and design artefacts.
+
+The short name should still read as a need, not as a theme label or topic.
+
+Preferred pattern:
+
+```text
+Need to [verb] [object/context]
+```
+
+Good examples:
+
+```text
+Need to determine sailing area
+Need to choose a suitable supplier
+Need to choose matching equipment
+Need to set up navigational equipment
+Need to assess regional travel risk
+Need to choose payment model
+Need to evaluate the service
+```
+
+Short names deliberately strip out some context. This reduces cognitive load when moving needs around in mapping and prioritisation work. The full `need` field remains the canonical, evidence-sensitive formulation.
+
+Leave these out of the short name:
+
+- actor or persona
+- `so that` outcome or value
+- detailed evidence nuance
+- caveats and uncertainty
+- organisational or service goals
+
+Include only enough object or context to distinguish nearby needs.
+
+Be especially careful with cognitive verbs. Do not use short names such as `Need to understand options` by default. Prefer a more action-oriented verb such as `compare`, `choose`, `check`, `determine`, `assess`, `prepare`, `provide`, `secure` or `resolve`.
+
+Cognitive short names are acceptable only when comprehension itself is the real need, such as rights, consent, safety, consequences or informed decision-making.
+
+Example:
+
+```yaml
+id: UN_012
+short_name: Need to plan options early
+need: A parent/carer of a young person with SEND needs to begin planning before key education choices become fixed, so they can make realistic decisions with enough time to act.
+```
+
+Filename:
+
+```text
+UN_012_need_to_plan_options_early.md
+```
+
 ## Red flags
 
 Review or rewrite needs that include:
@@ -298,6 +352,7 @@ When drafting user needs, the LLM should:
 
 - prefer action-oriented wording
 - avoid cognitive verbs unless justified
+- create short names using `Need to + verb + object/context` where useful for mapping and Bases
 - keep needs solution-agnostic
 - use JTBD tools where useful for context, progress, pains, gains and strategic opportunity framing
 - avoid importing market-led JTBD assumptions uncritically into public service or SEND contexts

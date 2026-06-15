@@ -298,6 +298,7 @@ Evidence should preserve the meaning of what was captured. Participant quotes sh
 ```yaml
 type: user_need
 id: UN_001
+short_name:
 actor:
 journey_stage:
 need:
@@ -330,6 +331,8 @@ tags:
 ```
 
 A user need should describe what a person needs to achieve, understand, decide, access, feel or recover from. It should not be written as a solution, feature request or organisational objective.
+
+Use `short_name` as a compact working label for mapping, workshops, Obsidian Bases and design artefacts. It should preserve the shape of a need without carrying the full actor, evidence nuance or outcome statement. Prefer the pattern `Need to + verb + object/context`, for example `Need to compare realistic options`.
 
 User needs may be created as placeholders or candidates during rapid research breakdown. They can be incrementally updated as new evidence or thinking emerges, provided the changelog records material changes.
 
