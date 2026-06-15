@@ -57,7 +57,9 @@ Evidence is usually not `validated` in the same sense as an insight or user need
 
 ### Analysis objects
 
-Analysis objects include user needs, behaviours, pain points, insights, themes, journeys, personas and opportunities.
+Analysis objects include user needs, behaviours, pain points, insights, themes, journeys and opportunities.
+
+Persona and segment models are deferred during the current MVP and should not be reviewed as canonical objects until the modelling approach is documented.
 
 They may move through this path:
 
@@ -82,7 +84,7 @@ This is expected in a fast-moving repository.
 
 ## Review checklist for analysis objects
 
-Use this checklist for user needs, behaviours, pain points, insights, themes, journeys, personas and opportunities.
+Use this checklist for user needs, behaviours, pain points, insights, themes, journeys and opportunities.
 
 - [ ] The object type is correct.
 - [ ] The actor and journey stage are clear where relevant.

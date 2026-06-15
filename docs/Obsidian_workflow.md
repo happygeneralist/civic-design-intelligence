@@ -103,10 +103,11 @@ They include:
 - insights
 - themes
 - journeys
-- personas
 - opportunities
 
 These objects may be created manually or with LLM support.
+
+Persona and segment models are deferred during the current MVP. Do not create them as canonical Obsidian objects until the modelling approach has been developed and documented.
 
 When breaking down research quickly, it is acceptable to create placeholders or candidates that are not yet fully reviewed.
 

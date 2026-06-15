@@ -42,10 +42,11 @@ They include:
 - insights
 - themes
 - journeys
-- personas
 - opportunities
 
 The LLM may create, update, decompose, merge and refactor these objects, provided uncertainty and change history remain visible.
+
+Persona and segment models are deferred during the current MVP. The LLM should not create them unless updated repository guidance explicitly permits that work.
 
 ## Risk model
 
