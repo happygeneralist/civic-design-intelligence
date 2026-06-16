@@ -25,7 +25,7 @@ Command:
 python3 tools/validate_repository.py
 ```
 
-Current result:
+Pre-migration result:
 
 ```text
 Errors: 0
@@ -36,6 +36,10 @@ Warning groups:
 
 - 1 unresolved documentation example link in `SCHEMA.md`
 - 8 filename/frontmatter-ID mismatches
+
+The 2026-06-16 validation warning cleanup resolved these default validation
+warnings by renaming the remaining study and pain point files and replacing the
+broken `SCHEMA.md` example link with an existing user need ID.
 
 ## Migration Principles
 
@@ -48,7 +52,7 @@ Warning groups:
 - Record the migration in `CHANGELOG.md`.
 - Do not add object-level changelog entries unless the migration changes research meaning, source references, validated/reviewed objects or relationship semantics.
 
-## Proposed Rename Map
+## Completed Rename Map
 
 ### Research Studies
 
@@ -66,7 +70,7 @@ Warning groups:
 
 | Current path | ID | Proposed path | Risk | Notes |
 |---|---|---|---|---|
-| `005_Pain_point/Pain_point_template 1.md` | `PP_001` | `005_Pain_point/PP_001_pain_point_placeholder.md` | Medium | Filename suggests a template, but frontmatter says canonical `pain_point` with `PP_001`. Human review should confirm whether it is a real pain point or misplaced template before renaming. |
+| `005_Pain_point/Pain_point_template 1.md` | `PP_001` | `005_Pain_point/PP_001_fragmented_university_send_information.md` | Medium | Filename suggested a template, but frontmatter and body describe a concrete pain point. Renamed without changing the pain point wording, status or review state. |
 
 ## Link Update Notes
 
@@ -80,26 +84,28 @@ Recommended pre-migration check:
 rg -n "\\[\\[(Pain_point_template 1|S001_survey|S002_parent_interviews|S003_case_studies|S004_professionals_interviews|S005_focus_groups|S006_in-school_workshops|S007_pathway_planning_guidance_level_test)"
 ```
 
-## Proposed Migration Batches
+## Completed Migration Batches
 
 ### Batch 1: Research study filenames
 
-- Rename `S001` to `S007` study filenames to `RS_001` to `RS_007`.
-- Re-run link checks because studies are common source targets.
+- Completed 2026-06-16.
+- Renamed `S001` to `S007` study filenames to `RS_001` to `RS_007`.
+- Re-ran link checks because studies are common source targets.
 
 ### Batch 2: Pain point decision
 
-- Review `005_Pain_point/Pain_point_template 1.md`.
-- Decide whether to rename it as `PP_001_pain_point_placeholder.md`, move it back to `Templates/`, or replace it with a properly named pain point.
+- Completed 2026-06-16.
+- Reviewed `005_Pain_point/Pain_point_template 1.md`.
+- Treated it as a real `PP_001` pain point because frontmatter and body contain a concrete pain point statement.
+- Renamed it to `005_Pain_point/PP_001_fragmented_university_send_information.md`.
 
 ## Human Review Questions
 
 - Should research study filename slugs stay short, or include fuller titles?
-- Is `Pain_point_template 1.md` a real pain point or a misplaced template?
 - Should the actual migration be one PR or several small PRs?
 
 ## Recommendation
 
-Proceed with migration only after this plan is reviewed.
-
-Preferred next step: a small migration PR for Batch 1 research study filenames, followed by validation and Obsidian link review.
+No default-scope filename migration warnings remain after the 2026-06-16
+validation warning cleanup. Future filename migrations should continue to use
+small PRs with validation and Obsidian link review.
