@@ -6,6 +6,9 @@ actor: Parent/carer of a young person with SEND
 journey_stage: Pathway_planning
 need: A parent/carer of a young person with SEND needs to identify viable post-16 routes if expected grades are not achieved, so they can plan a credible next step.
 need_level: task
+need_shape:
+  - decision_support
+  - planning
 parent_needs:
   - "[[UN_013]]"
 child_needs:
@@ -28,7 +31,7 @@ creation_mode: llm_assisted
 llm_generated: true
 human_reviewed: false
 review_status: needs_review
-change_level: minor
+change_level: material
 supersedes:
 superseded_by:
 related_evidence:
@@ -63,7 +66,7 @@ The wording reframes the evidence as an action-oriented need: identifying viable
 
 ## Interpretation
 
-The evidence suggests that pathway planning is not credible if families do not know what options remain available when standard grades or entry requirements are not met. This is a concrete decision-support need within a broader need to understand realistic options.
+The evidence suggests that pathway planning is not credible if families do not know what options remain available when standard grades or entry requirements are not met. This is a concrete decision-support need within a broader need to compare realistic options.
 
 ## Need hierarchy
 
@@ -98,3 +101,4 @@ The evidence suggests that pathway planning is not credible if families do not k
 - 2026-06-12: Created as draft user need from [[EVID_005]]. Status: draft. Analysis state: evidence_linked. Evidence strength: weak. Review status: needs_review.
 - 2026-06-12: Renumbered from `UN_004` to `UN_014` to avoid collision with existing `UN_004.md`.
 - 2026-06-15: Added `short_name` as a compact mapping label. Canonical need wording, evidence links and review state unchanged.
+- 2026-06-16: Added `need_shape: decision_support` and `planning` to make the existing decision-support interpretation queryable. Canonical need wording, evidence links and review state unchanged.

@@ -20,6 +20,7 @@ The LLM must:
 - preserve uncertainty
 - avoid solution-led framing
 - follow `docs/User_needs_writing_rules.md` when drafting user needs
+- follow `docs/Decision_shaped_user_needs.md` when a user need involves choosing, deciding, comparing, committing, escalating or planning under uncertainty
 
 ## Minimum viable first pass
 
@@ -56,6 +57,7 @@ For each item, include:
 - actor, if known
 - journey stage, if known
 - need_level, if it is a user need
+- need_shape, if it is a user need with a clearly evidenced shape such as decision_support
 - evidence_basis: none, indicative, or traceable
 - status
 - analysis_state
@@ -95,6 +97,8 @@ Follow the repository's user-needs writing rules:
 - set need_level where possible
 - do not collapse experience, service, journey, page and interaction needs
 - preserve emotional, social, civic and experience meaning where relevant
+- use `need_shape: decision_support` where the evidence shows that the person needs to decide, choose, compare, commit, escalate or plan under uncertainty
+- keep decision-shaped needs direct and active; do not rewrite them as `understand` needs unless comprehension itself is the evidenced need
 
 Treat LLM-generated user needs as candidate formulations, not final wording.
 
@@ -104,6 +108,7 @@ For each candidate need, include:
 - actor
 - journey_stage
 - need_level
+- need_shape, where supported by evidence or existing interpretation
 - parent_needs or likely parent level, if inferable
 - evidence_basis: none, indicative, or traceable
 - evidence_scope_fit
@@ -305,6 +310,7 @@ Check:
 - whether JTBD language has been used appropriately for the context
 - whether emotional, social, civic and experience meaning has been preserved
 - whether one word change would alter the solution direction
+- whether decision-shaped needs have direct, active wording and avoid vague cognitive verbs unless justified
 
 For each need, suggest:
 
@@ -314,6 +320,7 @@ For each need, suggest:
 - split into multiple needs
 - merge with another need
 - candidate parent or child need
+- add, keep or remove `need_shape: decision_support`, where supported by evidence or existing interpretation
 
 Do not materially reword reviewed or validated needs without flagging that review is required.
 Do not mark any need as final wording unless a human reviewer has confirmed it.
