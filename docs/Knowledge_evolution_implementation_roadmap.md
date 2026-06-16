@@ -1,22 +1,63 @@
 # Knowledge evolution implementation roadmap
 
-This roadmap describes a staged implementation approach for knowledge evolution, user need persistence, pain point recurrence and LLM intervention logging.
+This roadmap describes a staged implementation approach for knowledge evolution, user need persistence, pain point recurrence, repository naming guardrails, safe research ingestion and LLM intervention logging.
 
 The aim is to establish useful governance without slowing down the current research migration work.
 
+## Current position: June 2026
+
+The repository has moved through a substantial normalisation pass.
+
+Completed or substantially complete:
+
+- user need `short_name` convention piloted and applied to early pathway-planning needs
+- major filename normalisation across insights, user needs, evidence, research studies and early legacy notes
+- validation filename warnings substantially reduced through focused migration PRs
+- early user needs `UN_001` to `UN_004` cleaned up and renamed using readable ID-prefixed filenames
+- Obsidian-oriented naming pattern established: stable ID plus readable slug
+- decision-shaped user needs captured as a user need shape rather than a separate Decision object
+- LLM-assisted work rules strengthened to preserve evidence, status, review state and naming conventions
+
+Active or pending:
+
+- merge the naming and linking guardrails PR, if still open
+- use the naming contract for all future structured objects
+- start a small safe-ingestion pass using SEND pathway-planning research
+- tighten validation only after the current object patterns have been used in practice
+
+The repository should now move from normalising existing structure to using the structure with real research.
+
+## Roadmap cursor
+
+Use `docs/Roadmap_cursor.md` as the current operational pointer.
+
+The cursor should answer:
+
+- what phase the repository is in now
+- what is next
+- what has intentionally been deferred
+- what must not be overbuilt yet
+
+Update the cursor after each meaningful roadmap shift, not after every administrative PR.
+
 ## Stage 1: Agree the model
+
+Status: mostly complete.
 
 Review and agree the core distinctions:
 
 - Git history is the technical audit trail.
 - Object change logs are the human-readable knowledge evolution trail.
 - LLM intervention logs are the semantic-risk and governance trail.
+- Filenames support human and Obsidian use, but frontmatter is the queryable data contract.
 
 Agree that first-class objects, especially user needs, should be persistent, traceable and supersedable.
 
 Agree that pain points should remain visible when resolved, dormant or at risk of recurring, because they can indicate coverage, regression risk and blocked value delivery.
 
 ## Stage 2: Establish minimum viable practice
+
+Status: substantially complete for naming, metadata hygiene and PR practice; still active for ingestion.
 
 Start with lightweight working rules before changing the schema.
 
@@ -28,8 +69,66 @@ Minimum viable practice:
 4. Do not create change events for metadata cleanup.
 5. Use LLM intervention logs only for material semantic risk.
 6. Treat resolved or dormant pain points as useful service intelligence, not waste.
+7. Use the naming and linking contract when creating, renaming or linking structured notes.
+8. Preserve Obsidian usability through readable filenames, aliases where needed and resolvable wikilinks.
+9. Treat frontmatter as the future API/database ingestion contract.
 
-## Stage 3: Update templates lightly
+## Stage 3: Stabilise naming and linking guardrails
+
+Status: active / near complete.
+
+The repository should avoid repeated filename migrations by making naming correctness a creation-time habit.
+
+Minimum viable guardrails:
+
+- structured notes must use stable frontmatter IDs
+- filenames must begin with the frontmatter ID
+- readable filename slugs should support Obsidian search and graph use
+- user need slugs should derive from `short_name`, not the full canonical `need`
+- aliases should preserve old ID-only links during and after migrations
+- LLM-assisted work must check naming rules before creating new files
+
+Useful next actions:
+
+1. Merge `docs/Naming_and_linking_contract.md` if it is still under review.
+2. Add a short pointer to the naming contract from `docs/Obsidian_workflow.md`.
+3. Add a short pointer from `docs/Repository_validation.md` explaining which naming rules are already checked and which remain procedural.
+4. Consider a later validator rule for user needs where the slug diverges from `short_name`, but only after more examples exist.
+
+Do not create another broad filename migration unless validation or Obsidian use reveals a concrete problem.
+
+## Stage 4: Start safe research ingestion
+
+Status: next recommended phase.
+
+Use `docs/Safe_research_ingestion_MVP.md` as the immediate operating guide.
+
+Start with a small SEND pathway-planning research sample and create only the strongest useful objects first:
+
+- evidence
+- behaviours
+- pain points
+- user needs
+- civic needs, where relevant
+- insights
+- themes
+
+The goal is to test whether the repository now supports useful research breakdown without creating naming debt, overclaiming confidence or forcing immature material into the wrong schema.
+
+Recommended first ingestion pass:
+
+1. Select one bounded research source or extract.
+2. Capture evidence notes only where the material is useful and anonymised.
+3. Extract candidate needs, behaviours and pain points with conservative metadata.
+4. Link each object back to evidence where possible.
+5. Use `short_name` and filename conventions at creation time.
+6. Record meaning changes in object change logs only where meaning changes.
+7. Use the PR summary for administrative cleanup.
+8. Leave uncertain or loose material in `000_Inbox/`.
+
+## Stage 5: Update templates lightly
+
+Status: do after one or two ingestion passes.
 
 Start with user needs only.
 
@@ -40,6 +139,8 @@ Update the user need template to include:
 
 - YYYY-MM-DD: Created/captured. Source: [study/evidence/insight]. Status: captured.
 ```
+
+Also check whether templates should include a creation-time naming checklist or a link to `docs/Naming_and_linking_contract.md`.
 
 Do not add complex event structures to every template yet.
 
@@ -58,7 +159,9 @@ Only require fields that are useful now. Optional fields should remain optional 
 
 Avoid adding `version` until there is a clear rule for when it increments. If versioning is introduced later, increment only for material or major meaning changes, not administrative edits.
 
-## Stage 4: Add LLM operating rules
+## Stage 6: Add LLM operating rules
+
+Status: partly complete; continue through practice.
 
 Before any LLM-assisted edit to first-class objects, require the LLM to state:
 
@@ -81,7 +184,11 @@ This does not require tooling immediately. It can begin as a working convention 
 
 Add the rule that LLMs must not mark objects as validated or reviewed unless a human has explicitly completed that review.
 
-## Stage 5: Create the change-events folder
+Also require LLMs to follow the naming and linking contract before creating or renaming structured notes.
+
+## Stage 7: Create the change-events folder
+
+Status: defer until ingestion creates real examples.
 
 Create:
 
@@ -105,7 +212,9 @@ Do not log administrative changes here.
 
 Treat the folder as optional and experimental until real examples show what needs to be validated.
 
-## Stage 6: Add pain point recurrence fields cautiously
+## Stage 8: Add pain point recurrence fields cautiously
+
+Status: defer until more pain point examples exist.
 
 Once examples exist, update the pain point template with optional fields such as:
 
@@ -120,7 +229,9 @@ Do not require these immediately for all existing pain points.
 
 Use them first where they support product/service analysis, such as identifying unresolved pain, value blockers or recurrence risk.
 
-## Stage 7: Add validator checks cautiously
+## Stage 9: Add validator checks cautiously
+
+Status: future work.
 
 Only add validator rules once the pattern has been tested manually.
 
@@ -131,10 +242,15 @@ Possible future checks:
 - if `lifecycle_state: dormant`, allow but do not require `recurrence_risk`
 - if `semantic_change_review: needs_review`, require `review_status: needs_review`
 - if `last_change_actor: llm_assisted` and `change_level: material`, require either a PR-level LLM note or a linked change event
+- if a structured filename does not start with its frontmatter `id`, warn or fail depending on validation mode
+- if a user need has `short_name`, check that the readable filename slug broadly follows it
+- if aliases are removed, check that old links no longer depend on them
 
 Avoid strict validation too early. The goal is to support research governance, not block useful work with premature schema constraints.
 
-## Stage 8: Query and reporting layer
+## Stage 10: Query and reporting layer
+
+Status: future work after ingestion.
 
 Once examples exist, build queries or scripts to report:
 
@@ -147,21 +263,37 @@ Once examples exist, build queries or scripts to report:
 - pain points blocking value delivery
 - needs that underpin product or service decisions
 - validated needs not yet covered by interventions or service responses
+- objects with missing `short_name` where one is required for mapping
+- objects with unresolved links or missing aliases after rename
 
 This is where the strategy becomes a source of product and service intelligence.
 
-## Recommended first implementation PR
+## Stage 11: Prepare for future data/API layer
 
-A practical first implementation PR could include:
+Status: future architecture work; do not build yet.
 
-1. `011_Change_events/README.md`
-2. `011_Change_events/LLM/.gitkeep`
-3. `011_Change_events/Objects/.gitkeep`
-4. `011_Change_events/Reviews/.gitkeep`
-5. A small update to `Templates/User_need_template.md` adding `## Change log`
-6. A short note in `docs/Repository_validation.md` explaining that change-event validation is future work
+Before building an API or database layer, define a lightweight export contract:
 
-Do not add strict validator rules in this first implementation PR.
+- which folders are canonical object collections
+- which frontmatter fields are required for each object type
+- which fields are controlled values
+- how links resolve from wikilinks, IDs and aliases
+- how lifecycle, review state and evidence maturity are represented
+- how supersession and deprecation are represented
+- how generated views should distinguish evidence from synthesis
+
+The repository should remain useful as Markdown and Obsidian first. A database or API should be an additional layer over the same knowledge objects, not a competing source of truth.
+
+## Recommended next implementation PRs
+
+Recommended immediate PRs after the current naming guardrail work:
+
+1. Add a pointer from `docs/Obsidian_workflow.md` to `docs/Naming_and_linking_contract.md`.
+2. Add a short validation note explaining which naming/link rules are procedural and which are automated.
+3. Start one bounded safe-ingestion PR using a SEND pathway-planning research extract.
+4. After that ingestion PR, review which template changes are actually needed.
+
+Avoid adding strict validator rules until after the first ingestion pass tests the conventions.
 
 ## What not to do yet
 
@@ -174,6 +306,8 @@ Do not immediately:
 - make the validator enforce rules before the team understands the workflow
 - add versioning before there is a clear version-increment rule
 - treat resolved pain points as if they should be deleted
+- start an API/database layer before the frontmatter contract is stable enough
+- do another broad filename migration without a concrete validation or Obsidian problem
 
 ## Success criteria
 
@@ -185,4 +319,7 @@ This system is working when:
 - Git is not duplicated inside notes
 - future analysis can distinguish mature knowledge from unreviewed synthesis
 - dashboards can show unresolved pain, recurrence risk and blocked value delivery
+- Obsidian links, aliases, Bases and readable filenames support day-to-day use
+- frontmatter can support future data/API ingestion without scraping meaning from filenames
+- LLM-assisted work can create new notes without introducing naming or link debt
 - the process is light enough that people actually use it
