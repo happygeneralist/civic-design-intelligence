@@ -18,6 +18,24 @@ Public secondary source archive
 
 The structured repository should not become a raw document dump.
 
+## Companion source archive
+
+The companion public source archive is:
+
+```text
+happygeneralist/civic-design-secondary-research
+```
+
+Use that repository for raw or lightly processed public secondary source material. Use this repository for the structured research intelligence derived from those sources.
+
+Current first source example in the companion archive:
+
+```text
+SRC_001_ofsted_essex_area_send_inspection_jan_2026
+```
+
+This source represents the Ofsted and Care Quality Commission Area SEND inspection of Essex Local Area Partnership, using the public Ofsted file URL as the source reference.
+
 ## Why separate source storage helps
 
 Public secondary sources such as Ofsted reports, inspection reports, local authority strategies, charity reports, academic papers and policy documents can be large, numerous and unevenly useful.
@@ -75,7 +93,7 @@ title: Ofsted local area SEND inspection report
 publisher: Ofsted
 publication_date:
 source_url:
-source_archive_ref:
+source_archive_ref: happygeneralist/civic-design-secondary-research/sources/SRC_001_ofsted_essex_area_send_inspection_jan_2026/
 retrieved_date:
 geographic_scope:
   - local_authority
@@ -107,7 +125,7 @@ Example:
 type: evidence
 id: EVID_082
 source: "[[RS_014_ofsted_local_area_send_inspection]]"
-source_archive_ref:
+source_archive_ref: happygeneralist/civic-design-secondary-research/sources/SRC_001_ofsted_essex_area_send_inspection_jan_2026/
 evidence_type: secondary_report_finding
 source_type: inspection_report
 reported_voice: inspector_synthesis
@@ -125,6 +143,20 @@ human_reviewed: false
 ```
 
 Use direct quotations only where short, lawful, necessary and useful. Otherwise paraphrase the finding and preserve the source location.
+
+## Evidence maps
+
+Each source folder in the companion archive should include an `evidence-map.md` file.
+
+That file is the bridge from the public source archive back to this repository. It should list:
+
+- the matching source or research-study record in this repository
+- evidence objects created from the source
+- linked user needs, civic needs, pain points, behaviours, insights and themes
+- current ingestion status
+- what has and has not been extracted
+
+The map should be updated when structured evidence or analysis objects are created, changed or superseded.
 
 ## Secondary evidence is not the same as primary evidence
 
@@ -209,9 +241,24 @@ For the first secondary-research ingestion PR:
 5. Mark all derived objects conservatively.
 6. Do not mark anything reviewed or validated unless human review has happened.
 7. Record uncertainties in the PR summary.
-8. Do not ingest an entire report exhaustively.
+8. Update the source `evidence-map.md` in the companion archive.
+9. Do not ingest an entire report exhaustively.
 
 The goal is to test the workflow, not to complete the whole SEND evidence base in one PR.
+
+## Future sync possibility
+
+A future workflow may help keep the roadmap, source inventory or evidence maps in sync across repositories.
+
+Possible later automation:
+
+- read source folders from `civic-design-secondary-research`
+- detect source folders without matching source records in this repository
+- detect evidence maps that reference missing or renamed evidence objects
+- update a generated source inventory
+- open a pull request rather than writing directly to `main`
+
+Do not build this yet. Test the manual workflow first with a small number of sources.
 
 ## What not to do yet
 
@@ -229,9 +276,9 @@ Do not immediately:
 
 These should be resolved through worked examples:
 
-- What should the public secondary-research repository be called?
 - Should source archive references use URLs, relative paths, checksums or source IDs?
 - Which secondary evidence types need controlled values?
 - When is a report finding strong enough to upgrade evidence strength?
 - How should conflicting findings across reports be represented?
 - When does a recurring secondary finding become an established pattern rather than an emerging one?
+- What should be generated automatically once several sources have been ingested?
