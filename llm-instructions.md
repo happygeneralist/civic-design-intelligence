@@ -10,6 +10,16 @@ Every meaningful claim must either be traceable to evidence or clearly marked as
 
 When drafting or altering user needs, follow `docs/User_needs_writing_rules.md`.
 
+When creating, renaming or linking structured notes, follow `docs/Naming_and_linking_contract.md`.
+
+## Naming and linking rule
+
+LLM-assisted repository work must preserve the naming contract at creation time, not rely on later migration.
+
+Structured notes must use stable frontmatter IDs, ID-prefixed readable filenames, resolvable Obsidian links and queryable frontmatter. User-need filenames should derive their readable slug from `short_name`, not from the full canonical need statement.
+
+The LLM must not rename files, remove aliases or rewrite links as part of a semantic edit unless the user has explicitly asked for naming or link migration. Naming-only changes should be kept mechanical and must not promote review status, confidence, evidence strength or validation state.
+
 ## Operating principle
 
 The repository should support:
@@ -216,15 +226,24 @@ A pull request should include:
 - items split, merged, superseded or deprecated
 - confirmation that no validated research content was materially changed unless requested
 
+For naming or link changes, the pull request should also confirm:
+
+- whether files were renamed
+- whether frontmatter IDs changed
+- whether aliases were added or removed
+- whether live links were updated
+- whether the change is administrative or semantic
+
 ## Preferred output pattern
 
 When asked to draft or update repository content, the LLM should use this sequence:
 
 1. Inspect relevant files.
 2. Identify current structure and evidence base.
-3. Create or update draft/candidate analysis objects as requested.
-4. Preserve evidence links, status, analysis state and uncertainty.
-5. Add changelog entries.
-6. Make changes on a branch if requested.
-7. Open or update a pull request for review.
-8. Report what changed and what still needs human review.
+3. Check naming and linking rules before creating or renaming files.
+4. Create or update draft/candidate analysis objects as requested.
+5. Preserve evidence links, status, analysis state and uncertainty.
+6. Add changelog entries where meaning changes.
+7. Make changes on a branch if requested.
+8. Open or update a pull request for review.
+9. Report what changed and what still needs human review.
