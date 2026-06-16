@@ -11,6 +11,7 @@ Use entry-level changelogs inside individual notes for changes to specific evide
 - Added a shared `Bases/` folder with starter Obsidian Bases for user needs, evidence, review queue and LLM-assisted objects.
 - Added `AGENTS.md` to define repository-specific Codex operating rules for branch use, changelogs, research safety and validation.
 - Added `.github/pull_request_template.md` with the repository compliance and review checklist.
+- Added `migration/filename-migration-plan.md` to map filename/frontmatter-ID mismatches before any rename migration.
 
 ### Changed
 
