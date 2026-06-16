@@ -4,6 +4,12 @@ This changelog records repository-level changes.
 
 Use entry-level changelogs inside individual notes for changes to specific evidence, needs, behaviours, pain points, insights or review notes.
 
+## 2026-06-16
+
+### Changed
+
+- Renamed low-risk insight files to ID-prefixed readable filenames and updated the filename migration plan to remove completed insight migrations.
+
 ## 2026-06-15
 
 ### Added
@@ -40,7 +46,7 @@ Use entry-level changelogs inside individual notes for changes to specific evide
 - Added `scripts/build-stats.mjs` to generate repository object counts from numbered markdown object folders and available frontmatter.
 - Added `.github/workflows/build-pages-stats.yml` to rebuild `docs/stats.json` on pushes to `main` and on manual workflow dispatch.
 - Added `docs/Safe_research_ingestion_MVP.md` to define the minimum conventions for breaking a small SEND pathway-planning research sample into structured objects.
-- Added `docs/Object_change_logs.md` to define when object-level changelog entries are required and when Git and pull request summaries are enough.
+- Added `docs/Object_change_logs.md` to define when object-level changelogs are required and when Git and pull request summaries are enough.
 - Added `Templates/Civic_need_template.md` so civic needs can be created as first-class analysis objects during the MVP.
 
 ### Changed
