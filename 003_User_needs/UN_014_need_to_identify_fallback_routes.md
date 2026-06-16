@@ -8,7 +8,6 @@ need: A parent/carer of a young person with SEND needs to identify viable post-1
 need_level: task
 need_shape:
   - decision_support
-  - planning
 parent_needs:
   - "[[UN_013]]"
 child_needs:
@@ -102,3 +101,4 @@ The evidence suggests that pathway planning is not credible if families do not k
 - 2026-06-12: Renumbered from `UN_004` to `UN_014` to avoid collision with existing `UN_004.md`.
 - 2026-06-15: Added `short_name` as a compact mapping label. Canonical need wording, evidence links and review state unchanged.
 - 2026-06-16: Added `need_shape: decision_support` and `planning` to make the existing decision-support interpretation queryable. Canonical need wording, evidence links and review state unchanged.
+- 2026-06-16: Removed `planning` from `need_shape` because `decision_support` is the only formally introduced MVP value. Canonical need wording, evidence links and review state unchanged.

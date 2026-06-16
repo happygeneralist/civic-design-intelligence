@@ -41,11 +41,10 @@ This means:
 
 ## Immediate next actions
 
-1. Merge the naming and linking guardrails PR, if still open.
-2. Add pointers from `docs/Obsidian_workflow.md` and `docs/Repository_validation.md` to the naming contract.
-3. Select one bounded SEND pathway-planning research source or extract for ingestion.
-4. Create a small ingestion PR with evidence, candidate needs, behaviours and pain points.
-5. Review the ingestion PR to see which template or validation changes are genuinely needed.
+1. Add pointers from `docs/Obsidian_workflow.md` and `docs/Repository_validation.md` to the naming contract.
+2. Select one bounded SEND pathway-planning research source or extract for ingestion.
+3. Create a small ingestion PR with evidence, candidate needs, behaviours and pain points.
+4. Review the ingestion PR to see which template or validation changes are genuinely needed.
 
 ## Guardrails for the next PRs
 
