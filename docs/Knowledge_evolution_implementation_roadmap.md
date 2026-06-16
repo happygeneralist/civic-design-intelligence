@@ -17,6 +17,8 @@ Completed or substantially complete:
 - Obsidian-oriented naming pattern established: stable ID plus readable slug
 - decision-shaped user needs captured as a user need shape rather than a separate Decision object
 - LLM-assisted work rules strengthened to preserve evidence, status, review state and naming conventions
+- companion public secondary-research repository created: `happygeneralist/civic-design-secondary-research`
+- first companion source archive example created for the Essex Area SEND inspection: `SRC_001_ofsted_essex_area_send_inspection_jan_2026`
 
 Active or pending:
 
@@ -24,6 +26,7 @@ Active or pending:
 - start a small safe-ingestion pass using SEND pathway-planning research
 - preserve locality, service-area and organisation context as sensemaking context, not as the primary meaning of user needs
 - use public secondary research as traceable source material without turning this repository into a raw document archive
+- create matching source records and selected evidence extracts in this repository for companion archive sources when they are used
 - tighten validation only after the current object patterns have been used in practice
 
 The repository should now move from normalising existing structure to using the structure with real research.
@@ -53,6 +56,7 @@ Review and agree the core distinctions:
 - Filenames support human and Obsidian use, but frontmatter is the queryable data contract.
 - Evidence has an origin, needs have an applicability horizon and patterns emerge over time.
 - Public secondary sources are source material; selected extracts become evidence objects.
+- The companion secondary-research repository is a source archive, not a competing intelligence repository.
 
 Agree that first-class objects, especially user needs, should be persistent, traceable and supersedable.
 
@@ -77,7 +81,8 @@ Minimum viable practice:
 9. Treat frontmatter as the future API/database ingestion contract.
 10. Capture lived experience first, then map service, organisation and locality context around it.
 11. Keep structured source records, evidence extracts and derived knowledge objects in this repository.
-12. Keep raw or lightly processed public secondary research in a separate public secondary-research repository where useful.
+12. Keep raw or lightly processed public secondary research in `happygeneralist/civic-design-secondary-research` where useful.
+13. Use companion `evidence-map.md` files to link public source folders back to structured source, evidence and analysis objects in this repository.
 
 ## Stage 3: Stabilise naming and linking guardrails
 
@@ -129,9 +134,10 @@ Recommended first ingestion pass:
 5. Use `short_name` and filename conventions at creation time.
 6. Preserve service, organisation and locality context where it appears in evidence, but do not encode it into canonical need wording unless it is intrinsic.
 7. If using a secondary source, create a source record first, then selected evidence extracts, then derived analysis objects.
-8. Record meaning changes in object change logs only where meaning changes.
-9. Use the PR summary for administrative cleanup.
-10. Leave uncertain or loose material in `000_Inbox/`.
+8. If the source exists in `civic-design-secondary-research`, record the source archive reference and update the companion evidence map.
+9. Record meaning changes in object change logs only where meaning changes.
+10. Use the PR summary for administrative cleanup.
+11. Leave uncertain or loose material in `000_Inbox/`.
 
 ## Stage 5: Model context, locality and pattern sensemaking
 
@@ -184,18 +190,33 @@ Do not build a full locality, service-area or organisation taxonomy until resear
 
 ## Stage 6: Ingest public secondary research cautiously
 
-Status: direction captured; use as soon as Ofsted or other secondary sources are introduced.
+Status: direction captured; first companion archive source now exists.
 
 Use `docs/Secondary_research_ingestion.md` as the current concept note.
+
+The companion source archive is:
+
+```text
+happygeneralist/civic-design-secondary-research
+```
+
+The first source example is:
+
+```text
+SRC_001_ofsted_essex_area_send_inspection_jan_2026
+```
 
 The recommended split is:
 
 ```text
-public secondary-research repository
+civic-design-secondary-research
 → raw or lightly processed public source material
+→ source-level documentation
+→ candidate extracts
+→ evidence maps back to structured objects
 
-civic-design-intelligence repository
-→ source records, evidence extracts and structured knowledge objects
+civic-design-intelligence
+→ source records, selected evidence extracts and structured knowledge objects
 ```
 
 This repository should contain:
@@ -391,10 +412,31 @@ Once examples exist, build queries or scripts to report:
 - local evidence that may indicate national design or policy issues
 - secondary sources that have not yet been broken into evidence extracts
 - evidence extracts by source type, reported voice or locality
+- companion source folders without matching source records in this repository
+- evidence maps that reference missing or renamed structured objects
 
 This is where the strategy becomes a source of product and service intelligence.
 
-## Stage 13: Prepare for future data/API layer
+## Stage 13: Prepare for future cross-repository sync
+
+Status: future workflow; do not build yet.
+
+Once several sources have been added to `civic-design-secondary-research`, consider a lightweight sync or audit workflow.
+
+The workflow should not directly rewrite research objects. It should report gaps or open a reviewable pull request.
+
+Possible future checks:
+
+- source folders in `civic-design-secondary-research` without matching source records in this repository
+- source records in this repository with broken `source_archive_ref` values
+- companion `evidence-map.md` files that reference missing evidence or analysis objects
+- evidence objects that reference a secondary source but are missing source location or reported voice metadata
+- generated source inventory updates
+- roadmap or cursor reminders when source ingestion status changes materially
+
+Do not automate interpretation, evidence strength changes, review status changes or validation status changes.
+
+## Stage 14: Prepare for future data/API layer
 
 Status: future architecture work; do not build yet.
 
@@ -417,12 +459,13 @@ The repository should remain useful as Markdown and Obsidian first. A database o
 Recommended immediate PRs after the current naming guardrail work:
 
 1. Start one bounded safe-ingestion PR using a SEND pathway-planning research extract.
-2. If using an Ofsted report or other public secondary source, create one source record and a small number of selected evidence extracts first.
-3. During ingestion, test whether locality, service and organisation context can be captured as lightweight mappings without distorting need wording.
-4. After that ingestion PR, review which template changes are actually needed.
-5. Only then consider whether any context, secondary-evidence or validator fields should be introduced.
+2. If using the Essex Ofsted Area SEND report or another public secondary source, create one source record and a small number of selected evidence extracts first.
+3. Update the matching companion `evidence-map.md` after structured source and evidence objects are created.
+4. During ingestion, test whether locality, service and organisation context can be captured as lightweight mappings without distorting need wording.
+5. After that ingestion PR, review which template changes are actually needed.
+6. Only then consider whether any context, secondary-evidence, cross-repo sync or validator fields should be introduced.
 
-Avoid adding strict validator rules until after the first ingestion pass tests the conventions.
+Avoid adding strict validator rules or cross-repository sync until after the first ingestion pass tests the conventions.
 
 ## What not to do yet
 
@@ -440,6 +483,7 @@ Do not immediately:
 - create a full locality, service-area or organisation taxonomy before the repository has worked examples
 - create a full source ontology before secondary-source examples exist
 - import large public reports or raw document corpora into this repository
+- automate cross-repository sync before manual source ingestion has been tested
 - treat the first observed local context as the permanent boundary of a need
 - treat a report finding as a validated user need without review
 
@@ -459,4 +503,5 @@ This system is working when:
 - local evidence can contribute to wider pattern recognition without losing provenance
 - reusable lived-experience needs can be mapped to multiple service, organisation and locality contexts
 - public secondary sources can be used as traceable evidence without overwhelming the structured repository
+- companion source archive references and evidence maps make cross-repository provenance reviewable
 - the process is light enough that people actually use it

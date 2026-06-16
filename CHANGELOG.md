@@ -9,9 +9,12 @@ Use entry-level changelogs inside individual notes for changes to specific evide
 ### Added
 
 - Added a project-scoped Codex permission profile to support shared repository workflow, GitHub access and safer local automation.
+- Added documentation for the companion public secondary-research source archive, `happygeneralist/civic-design-secondary-research`, including the first source example `SRC_001_ofsted_essex_area_send_inspection_jan_2026`.
 
 ### Changed
 
+- Updated secondary-research ingestion guidance to name the companion source archive, describe the first Essex Ofsted SEND inspection source example and define future cross-repository evidence-map checks as deferred workflow automation.
+- Updated the roadmap and roadmap cursor to reflect the new companion secondary-research repository, the manual source-record/evidence-map workflow and the future possibility of cross-repository sync.
 - Added naming-contract pointers to the Obsidian workflow and repository validation docs, and advanced the roadmap cursor toward bounded research ingestion.
 - Updated template validation so template filenames and controlled-value option lists are handled as scaffolding, while real content notes still require selected values.
 - Aligned recent PR follow-up metadata by reclassifying early user-need cleanup changes as material, narrowing `need_shape` to the MVP value and marking the completed user-need rename plan as historical.
@@ -19,6 +22,12 @@ Use entry-level changelogs inside individual notes for changes to specific evide
 - Renamed low-risk insight files to ID-prefixed readable filenames and updated the filename migration plan to remove completed insight migrations.
 - Renamed the three pilot user need files to ID-prefixed `short_name` slugs and updated the filename migration plan to remove completed user need migrations.
 - Renamed evidence files to canonical ID-prefixed filenames and updated the filename migration plan to remove completed evidence migrations.
+
+### Notes
+
+- The companion secondary-research repository is a source archive, not a competing intelligence repository.
+- No research objects were changed, promoted, reviewed or validated by documenting the companion repository.
+- Cross-repository sync is intentionally deferred until the manual source archive to source record to evidence map workflow has been tested.
 
 ## 2026-06-15
 
