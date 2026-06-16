@@ -1,6 +1,8 @@
 ---
 type: user_need
 id: UN_002
+aliases:
+  - UN_002
 short_name: Need to access trusted service information
 actor: Support professional
 journey_stage: Pathway_planning

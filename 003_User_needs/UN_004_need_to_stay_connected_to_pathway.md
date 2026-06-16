@@ -1,6 +1,8 @@
 ---
 type: user_need
 id: UN_004
+aliases:
+  - UN_004
 short_name: Need to stay connected to pathway
 actor: Young person with SEND
 journey_stage: Pathway_planning
