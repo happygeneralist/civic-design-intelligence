@@ -39,6 +39,8 @@ This means:
 - use `short_name` and ID-prefixed readable filenames at creation time
 - distinguish lived-experience needs from service, organisation and locality context
 - preserve where evidence came from without treating the first observed context as the permanent boundary of a need
+- treat public secondary research as source material that must be broken into source records and selected evidence extracts before it supports needs, pain points or insights
+- keep the structured intelligence graph in this repository, while using a separate public secondary-research repository for raw or lightly processed public sources where useful
 - leave uncertain material in `000_Inbox/`
 - avoid marking anything reviewed or validated unless human review has happened
 
@@ -47,7 +49,8 @@ This means:
 1. Select one bounded SEND pathway-planning research source or extract for ingestion.
 2. Create a small ingestion PR with evidence, candidate needs, behaviours and pain points.
 3. During ingestion, watch for service, organisation and locality context without creating a full taxonomy yet.
-4. Review the ingestion PR to see which template, context or validation changes are genuinely needed.
+4. If using an Ofsted report or other secondary source, create a source record first, then selected evidence extracts, then derived analysis objects.
+5. Review the ingestion PR to see which template, context, secondary-evidence or validation changes are genuinely needed.
 
 ## Guardrails for the next PRs
 
@@ -60,6 +63,8 @@ For the next few PRs:
 - do not build an API/database layer yet
 - do not force loose research into canonical folders too early
 - do not encode service ownership, department names or locality into canonical need wording unless the evidence shows the need is inherently specific to that service or place
+- do not import large public reports or raw document corpora into this repository
+- do not treat report findings or inspection summaries as validated user needs without further review
 
 ## Things that can wait
 
@@ -74,6 +79,8 @@ These are important, but not next:
 - API/database implementation
 - cross-government taxonomy expansion
 - full locality, service-area or organisation taxonomy
+- full source ontology for public secondary research
+- automated ingestion of secondary research corpora
 
 ## Decision rule
 
@@ -85,6 +92,7 @@ When deciding what to do next, prefer work that helps answer:
 - Can LLM-assisted work create useful objects without semantic drift or naming debt?
 - Can the repository distinguish evidence origin from need applicability?
 - Can locally observed needs later become wider cross-service or cross-locality patterns without losing provenance?
+- Can public secondary research be used as traceable evidence without turning the repository into a raw document archive?
 - Can the repository remain Markdown-first while preparing for future data/API use?
 
 If a proposed change does not help with those questions, defer it.
@@ -101,3 +109,4 @@ At that point, decide whether the next step should be:
 - change-event scaffolding
 - more research ingestion
 - lightweight context fields for locality, service areas or organisation mappings
+- lightweight source and evidence fields for secondary research ingestion
