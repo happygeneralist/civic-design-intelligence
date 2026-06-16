@@ -29,13 +29,13 @@ Current result:
 
 ```text
 Errors: 0
-Warnings: 17
+Warnings: 14
 ```
 
 Warning groups:
 
 - 1 unresolved documentation example link in `SCHEMA.md`
-- 16 filename/frontmatter-ID mismatches
+- 13 filename/frontmatter-ID mismatches
 
 ## Migration Principles
 
@@ -49,16 +49,6 @@ Warning groups:
 - Do not add object-level changelog entries unless the migration changes research meaning, source references, validated/reviewed objects or relationship semantics.
 
 ## Proposed Rename Map
-
-### User Needs
-
-These should use the new `short_name` convention.
-
-| Current path | ID | Proposed path | Risk | Notes |
-|---|---|---|---|---|
-| `003_User_needs/UN_002_begin_planning_before_choices_fixed.md` | `UN_012` | `003_User_needs/UN_012_need_to_plan_pathway_options_early.md` | Medium | Uses pilot `short_name`. Check links after rename. |
-| `003_User_needs/UN_003_understand_realistic_options_for_child.md` | `UN_013` | `003_User_needs/UN_013_need_to_assess_realistic_options.md` | Medium | Uses pilot `short_name`. The old filename uses a cognitive verb; this is intentionally replaced by action-oriented wording. |
-| `003_User_needs/UN_004_identify_viable_routes_if_grades_not_achieved.md` | `UN_014` | `003_User_needs/UN_014_need_to_identify_fallback_routes.md` | Medium | Uses pilot `short_name`. Check parent/child need links after rename. |
 
 ### Evidence
 
@@ -104,29 +94,23 @@ rg -n "\\[\\[(Quote_001|Quote_002|Quote_003|EVID_DATA_001|Pain_point_template 1|
 
 ## Proposed Migration Batches
 
-### Batch 1: User need short-name filenames
-
-- Rename `UN_012`, `UN_013` and `UN_014` files using pilot `short_name` slugs.
-- Re-run validation and inspect Obsidian links.
-
-### Batch 2: Evidence filenames
+### Batch 1: Evidence filenames
 
 - Rename evidence notes to canonical `EVID_` filenames.
 - Add aliases for old `Quote_*` and `EVID_DATA_001` names if useful.
 
-### Batch 3: Research study filenames
+### Batch 2: Research study filenames
 
 - Rename `S001` to `S007` study filenames to `RS_001` to `RS_007`.
 - Re-run link checks because studies are common source targets.
 
-### Batch 4: Pain point decision
+### Batch 3: Pain point decision
 
 - Review `005_Pain_point/Pain_point_template 1.md`.
 - Decide whether to rename it as `PP_001_pain_point_placeholder.md`, move it back to `Templates/`, or replace it with a properly named pain point.
 
 ## Human Review Questions
 
-- Are the proposed user need filename slugs acceptable for Obsidian mapping?
 - Should evidence quote files preserve old names as aliases?
 - Should research study filename slugs stay short, or include fuller titles?
 - Is `Pain_point_template 1.md` a real pain point or a misplaced template?
@@ -136,4 +120,4 @@ rg -n "\\[\\[(Quote_001|Quote_002|Quote_003|EVID_DATA_001|Pain_point_template 1|
 
 Proceed with migration only after this plan is reviewed.
 
-Preferred next step: a small migration PR for Batch 1, followed by validation and Obsidian link review.
+Preferred next step: a small migration PR for Batch 1 evidence filenames, followed by validation and Obsidian link review.
