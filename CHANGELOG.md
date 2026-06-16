@@ -10,6 +10,7 @@ Use entry-level changelogs inside individual notes for changes to specific evide
 
 - Renamed low-risk insight files to ID-prefixed readable filenames and updated the filename migration plan to remove completed insight migrations.
 - Renamed the three pilot user need files to ID-prefixed `short_name` slugs and updated the filename migration plan to remove completed user need migrations.
+- Renamed evidence files to canonical ID-prefixed filenames and updated the filename migration plan to remove completed evidence migrations.
 
 ## 2026-06-15
 
