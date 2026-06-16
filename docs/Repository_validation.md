@@ -81,6 +81,14 @@ To include templates:
 python3 tools/validate_repository.py --include-templates
 ```
 
+Template validation is template-aware. It checks that templates have valid
+frontmatter structure, IDs, required fields and controlled-value options, but it
+does not treat template filenames such as `User_need_template.md` as object
+filename violations. It also allows frontmatter option lists such as
+`status: assumption | draft | reviewed | validated | deprecated` in templates,
+while continuing to warn if a real content note uses an option list instead of a
+selected value.
+
 To include documentation, migration notes and inbox notes:
 
 ```bash
@@ -94,6 +102,10 @@ python3 tools/validate_repository.py --include-templates --include-docs
 ```
 
 These flags are useful for separate quality checks, but they should not be used for the normal research-note migration baseline unless that is intentional.
+
+Use `--include-templates` after changing templates, schema fields or controlled
+values. Use `--include-docs` when intentionally cleaning documentation examples,
+migration records or inbox scaffolds.
 
 ## Three validation layers
 
