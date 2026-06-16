@@ -223,3 +223,132 @@ Use these levels:
 - journey
 - task
 - page
+- interaction
+- content
+
+For each need, suggest:
+
+- need_level
+- likely parent need or parent level
+- possible child needs
+- related capabilities
+- related civic needs
+- related rights or outcomes, if visible
+- evidence_scope_fit
+- wording_sensitivity
+- uncertainty
+
+Do not force a complete hierarchy where evidence is thin.
+Do not treat solution requirements as user needs.
+Do not validate anything.
+```
+
+## Prompt 7: identify evidence gaps
+
+```text
+Review these candidate objects and identify evidence gaps.
+
+For each object, identify:
+
+- whether the evidence basis is none, indicative, traceable or substantiated
+- whether evidence is direct, partial, contextual or weak for the level of claim
+- missing evidence links
+- missing source note links
+- missing source study links
+- unsupported assumptions
+- contradictory or limiting evidence to look for
+- which objects should be deepened before being used for design, policy, prioritisation or stakeholder communication
+
+Do not upgrade status or evidence basis.
+Do not use evidence_basis: validated.
+```
+
+## Prompt 8: create structured notes
+
+```text
+Using the relevant repository templates, create structured Markdown drafts for the selected candidate objects.
+
+Use the correct template shape for each object type.
+
+Set conservative default metadata:
+
+status: assumption
+analysis_state: candidate
+evidence_basis: indicative
+confidence: low
+creation_mode: llm_assisted
+llm_generated: true
+human_reviewed: false
+review_status: not_reviewed
+
+If an item has a specific evidence link, use:
+
+status: draft
+analysis_state: evidence_linked
+evidence_basis: traceable
+review_status: needs_review
+
+Preserve source traceability using `source_note` or `source_study` where possible.
+
+Do not validate anything.
+Do not use evidence_basis: validated.
+Do not create solution options.
+Include changelog entries for created notes.
+```
+
+## Prompt 9: review wording of user needs
+
+```text
+Review these candidate user needs for wording quality.
+
+Check:
+
+- whether the need is solution-agnostic
+- whether the verb is appropriate
+- whether cognitive verbs are justified
+- whether the need is scoped at the right level
+- whether JTBD language has been used appropriately for the context
+- whether emotional, social, civic and experience meaning has been preserved
+- whether one word change would alter the solution direction
+- whether decision-shaped needs have direct, active wording and avoid vague cognitive verbs unless justified
+
+For each need, suggest:
+
+- keep as written
+- minor wording refinement
+- material rewording needed
+- split into multiple needs
+- merge with another need
+- candidate parent or child need
+- add, keep or remove `need_shape: decision_support`, where supported by evidence or existing interpretation
+
+Do not materially reword reviewed or validated needs without flagging that review is required.
+Do not mark any need as final wording unless a human reviewer has confirmed it.
+```
+
+## Prompt 10: deepen selected object
+
+```text
+Deepen this selected candidate object for use in a design, policy, prioritisation or stakeholder decision.
+
+Do the following:
+
+- inspect linked evidence
+- identify whether the evidence directly supports the wording and level
+- identify missing or weak evidence
+- check related needs, behaviours, pain points and insights
+- check parent and child needs where relevant
+- identify contradictory or limiting evidence
+- refine wording only if necessary
+- propose evidence_basis, confidence and review_status
+- add wording rationale if the object is a user need and wording is sensitive
+- draft a changelog entry
+
+Do not validate the object unless a human reviewer has explicitly completed validation.
+```
+
+## Practical use
+
+For first-pass analysis, start with prompts 1 and 2.
+
+For a page, service or policy question, use prompts 7, 9 and 10 to deepen only the objects that matter.
