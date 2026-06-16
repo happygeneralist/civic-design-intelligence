@@ -20,6 +20,8 @@ fast creation, slow validation
 
 This means messy or partial notes can be captured quickly, then structured later with LLM support and templates. Many candidate or placeholder analysis objects may be created quickly. They do not all need immediate review. The important thing is that their status, evidence strength, review state and history are visible.
 
+For filenames, IDs, aliases and link style, follow `docs/Naming_and_linking_contract.md`. The short version is: stable frontmatter IDs provide traceability, ID-prefixed readable filenames support Obsidian use, and frontmatter remains the queryable source of truth.
+
 ## Daily workflow
 
 1. Open the repository as an Obsidian vault.

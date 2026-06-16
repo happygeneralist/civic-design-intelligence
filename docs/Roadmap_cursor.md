@@ -18,6 +18,7 @@ Recent work has largely completed the first naming and file-structure stabilisat
 - Obsidian use has been prioritised through readable names, aliases and links
 - frontmatter is being treated as the future data/API contract
 - LLM handling rules have been strengthened so future AI-assisted work should not recreate naming debt
+- Obsidian workflow and validation docs now point contributors to the naming contract
 
 The system is close enough to start using it with real research again.
 
@@ -41,10 +42,9 @@ This means:
 
 ## Immediate next actions
 
-1. Add pointers from `docs/Obsidian_workflow.md` and `docs/Repository_validation.md` to the naming contract.
-2. Select one bounded SEND pathway-planning research source or extract for ingestion.
-3. Create a small ingestion PR with evidence, candidate needs, behaviours and pain points.
-4. Review the ingestion PR to see which template or validation changes are genuinely needed.
+1. Select one bounded SEND pathway-planning research source or extract for ingestion.
+2. Create a small ingestion PR with evidence, candidate needs, behaviours and pain points.
+3. Review the ingestion PR to see which template or validation changes are genuinely needed.
 
 ## Guardrails for the next PRs
 

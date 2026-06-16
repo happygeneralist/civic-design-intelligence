@@ -10,6 +10,8 @@ Instead of manually guessing whether the repo is consistent, run the validator a
 
 The default validation layer focuses on real repository content notes, not templates, documentation examples or migration scaffolds.
 
+Naming and link checks should be read alongside `docs/Naming_and_linking_contract.md`, which defines the repository contract for stable IDs, ID-prefixed readable filenames, aliases and Obsidian links.
+
 It checks:
 
 - YAML frontmatter presence
