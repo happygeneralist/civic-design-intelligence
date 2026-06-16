@@ -1,6 +1,6 @@
 # Knowledge evolution implementation roadmap
 
-This roadmap describes a staged implementation approach for knowledge evolution, user need persistence, pain point recurrence, repository naming guardrails, safe research ingestion and LLM intervention logging.
+This roadmap describes a staged implementation approach for knowledge evolution, user need persistence, pain point recurrence, repository naming guardrails, safe research ingestion, context sensemaking, secondary research ingestion and LLM intervention logging.
 
 The aim is to establish useful governance without slowing down the current research migration work.
 
@@ -22,6 +22,8 @@ Active or pending:
 
 - use the naming contract for all future structured objects
 - start a small safe-ingestion pass using SEND pathway-planning research
+- preserve locality, service-area and organisation context as sensemaking context, not as the primary meaning of user needs
+- use public secondary research as traceable source material without turning this repository into a raw document archive
 - tighten validation only after the current object patterns have been used in practice
 
 The repository should now move from normalising existing structure to using the structure with real research.
@@ -49,6 +51,8 @@ Review and agree the core distinctions:
 - Object change logs are the human-readable knowledge evolution trail.
 - LLM intervention logs are the semantic-risk and governance trail.
 - Filenames support human and Obsidian use, but frontmatter is the queryable data contract.
+- Evidence has an origin, needs have an applicability horizon and patterns emerge over time.
+- Public secondary sources are source material; selected extracts become evidence objects.
 
 Agree that first-class objects, especially user needs, should be persistent, traceable and supersedable.
 
@@ -71,6 +75,9 @@ Minimum viable practice:
 7. Use the naming and linking contract when creating, renaming or linking structured notes.
 8. Preserve Obsidian usability through readable filenames, aliases where needed and resolvable wikilinks.
 9. Treat frontmatter as the future API/database ingestion contract.
+10. Capture lived experience first, then map service, organisation and locality context around it.
+11. Keep structured source records, evidence extracts and derived knowledge objects in this repository.
+12. Keep raw or lightly processed public secondary research in a separate public secondary-research repository where useful.
 
 ## Stage 3: Stabilise naming and linking guardrails
 
@@ -120,11 +127,121 @@ Recommended first ingestion pass:
 3. Extract candidate needs, behaviours and pain points with conservative metadata.
 4. Link each object back to evidence where possible.
 5. Use `short_name` and filename conventions at creation time.
-6. Record meaning changes in object change logs only where meaning changes.
-7. Use the PR summary for administrative cleanup.
-8. Leave uncertain or loose material in `000_Inbox/`.
+6. Preserve service, organisation and locality context where it appears in evidence, but do not encode it into canonical need wording unless it is intrinsic.
+7. If using a secondary source, create a source record first, then selected evidence extracts, then derived analysis objects.
+8. Record meaning changes in object change logs only where meaning changes.
+9. Use the PR summary for administrative cleanup.
+10. Leave uncertain or loose material in `000_Inbox/`.
 
-## Stage 5: Update templates lightly
+## Stage 5: Model context, locality and pattern sensemaking
+
+Status: direction captured; defer schema until examples exist.
+
+The repository should support sensemaking over time.
+
+A need may first be captured from local or service-specific evidence, but later be recognised as a wider pattern when similar evidence appears in other places, services or institutional contexts.
+
+The first observed context should be preserved as evidence provenance. It should not permanently define the scope of the need unless the need is inherently place-specific or service-specific.
+
+Use `docs/Context_and_pattern_sensemaking.md` as the current concept note.
+
+Near-term working rule:
+
+```text
+Capture lived-experience needs directly. Capture service areas, organisations and localities as context or mappings.
+```
+
+Possible future dimensions include:
+
+```yaml
+evidence_location:
+locality_contexts:
+service_contexts:
+organisation_contexts:
+applicability_scope:
+pattern_status:
+```
+
+Do not add these as required fields yet.
+
+During the first ingestion pass, simply observe where the distinction matters:
+
+- where evidence came from
+- whether the need appears local, service-specific or potentially reusable
+- whether similar needs may recur across service areas
+- whether a local finding may indicate a wider public-service pattern
+- whether a need is genuinely place-specific
+
+This layer should help the repository answer:
+
+- Which needs started as local but recur across places?
+- Which needs appear across multiple service areas?
+- Which local findings may indicate national design or policy issues?
+- Which national assumptions are contradicted by local evidence?
+- Which operational areas share the same lived-experience need?
+
+Do not build a full locality, service-area or organisation taxonomy until research examples show the minimum useful structure.
+
+## Stage 6: Ingest public secondary research cautiously
+
+Status: direction captured; use as soon as Ofsted or other secondary sources are introduced.
+
+Use `docs/Secondary_research_ingestion.md` as the current concept note.
+
+The recommended split is:
+
+```text
+public secondary-research repository
+→ raw or lightly processed public source material
+
+civic-design-intelligence repository
+→ source records, evidence extracts and structured knowledge objects
+```
+
+This repository should contain:
+
+- source or research-study records
+- selected evidence extracts
+- source URLs and archive references
+- source locations such as page, section or paragraph references
+- derived user needs, civic needs, pain points, behaviours, insights and themes
+
+The public secondary-research repository may contain:
+
+- public reports
+- source inventories
+- downloaded files
+- publisher metadata
+- checksums, where useful
+- bulk material that should not live in the structured intelligence repo
+
+A secondary source should not directly become a user need.
+
+Recommended chain:
+
+```text
+Ofsted report or secondary source
+→ source record
+→ selected evidence extracts
+→ candidate needs, pain points, behaviours, civic needs and insights
+→ cross-source patterns
+```
+
+Secondary evidence should be interpreted conservatively. An inspection finding, literature review or policy report may support a need or pain point, but it should not automatically validate one.
+
+Possible future dimensions include:
+
+```yaml
+source_type:
+evidence_type:
+reported_voice:
+source_archive_ref:
+source_location:
+```
+
+Do not add these as required fields until at least one secondary-source ingestion PR has tested the pattern.
+
+## Stage 7: Update templates lightly
 
 Status: do after one or two ingestion passes.
 
@@ -139,6 +256,8 @@ Update the user need template to include:
 ```
 
 Also check whether templates should include a creation-time naming checklist or a link to `docs/Naming_and_linking_contract.md`.
+
+After a secondary-source ingestion example, check whether the source and evidence templates need optional fields for `source_type`, `reported_voice`, `source_archive_ref` or `source_location`.
 
 Do not add complex event structures to every template yet.
 
@@ -157,7 +276,7 @@ Only require fields that are useful now. Optional fields should remain optional 
 
 Avoid adding `version` until there is a clear rule for when it increments. If versioning is introduced later, increment only for material or major meaning changes, not administrative edits.
 
-## Stage 6: Add LLM operating rules
+## Stage 8: Add LLM operating rules
 
 Status: partly complete; continue through practice.
 
@@ -184,7 +303,9 @@ Add the rule that LLMs must not mark objects as validated or reviewed unless a h
 
 Also require LLMs to follow the naming and linking contract before creating or renaming structured notes.
 
-## Stage 7: Create the change-events folder
+For secondary sources, require LLMs to distinguish source metadata, evidence extracts and derived analysis objects.
+
+## Stage 9: Create the change-events folder
 
 Status: defer until ingestion creates real examples.
 
@@ -210,7 +331,7 @@ Do not log administrative changes here.
 
 Treat the folder as optional and experimental until real examples show what needs to be validated.
 
-## Stage 8: Add pain point recurrence fields cautiously
+## Stage 10: Add pain point recurrence fields cautiously
 
 Status: defer until more pain point examples exist.
 
@@ -227,7 +348,7 @@ Do not require these immediately for all existing pain points.
 
 Use them first where they support product/service analysis, such as identifying unresolved pain, value blockers or recurrence risk.
 
-## Stage 9: Add validator checks cautiously
+## Stage 11: Add validator checks cautiously
 
 Status: future work.
 
@@ -243,10 +364,12 @@ Possible future checks:
 - if a structured filename does not start with its frontmatter `id`, warn or fail depending on validation mode
 - if a user need has `short_name`, check that the readable filename slug broadly follows it
 - if aliases are removed, check that old links no longer depend on them
+- if `applicability_scope` or `pattern_status` are introduced later, check they do not overclaim evidence maturity
+- if secondary-source fields are introduced later, check that source records and evidence extracts remain traceable
 
 Avoid strict validation too early. The goal is to support research governance, not block useful work with premature schema constraints.
 
-## Stage 10: Query and reporting layer
+## Stage 12: Query and reporting layer
 
 Status: future work after ingestion.
 
@@ -263,10 +386,15 @@ Once examples exist, build queries or scripts to report:
 - validated needs not yet covered by interventions or service responses
 - objects with missing `short_name` where one is required for mapping
 - objects with unresolved links or missing aliases after rename
+- needs first observed locally that later recur across places
+- needs that appear across multiple service areas
+- local evidence that may indicate national design or policy issues
+- secondary sources that have not yet been broken into evidence extracts
+- evidence extracts by source type, reported voice or locality
 
 This is where the strategy becomes a source of product and service intelligence.
 
-## Stage 11: Prepare for future data/API layer
+## Stage 13: Prepare for future data/API layer
 
 Status: future architecture work; do not build yet.
 
@@ -277,6 +405,8 @@ Before building an API or database layer, define a lightweight export contract:
 - which fields are controlled values
 - how links resolve from wikilinks, IDs and aliases
 - how lifecycle, review state and evidence maturity are represented
+- how context mappings are represented without making them canonical meaning
+- how source archive references are represented
 - how supersession and deprecation are represented
 - how generated views should distinguish evidence from synthesis
 
@@ -286,10 +416,11 @@ The repository should remain useful as Markdown and Obsidian first. A database o
 
 Recommended immediate PRs after the current naming guardrail work:
 
-1. Add a pointer from `docs/Obsidian_workflow.md` to `docs/Naming_and_linking_contract.md`.
-2. Add a short validation note explaining which naming/link rules are procedural and which are automated.
-3. Start one bounded safe-ingestion PR using a SEND pathway-planning research extract.
+1. Start one bounded safe-ingestion PR using a SEND pathway-planning research extract.
+2. If using an Ofsted report or other public secondary source, create one source record and a small number of selected evidence extracts first.
+3. During ingestion, test whether locality, service and organisation context can be captured as lightweight mappings without distorting need wording.
 4. After that ingestion PR, review which template changes are actually needed.
+5. Only then consider whether any context, secondary-evidence or validator fields should be introduced.
 
 Avoid adding strict validator rules until after the first ingestion pass tests the conventions.
 
@@ -306,6 +437,11 @@ Do not immediately:
 - treat resolved pain points as if they should be deleted
 - start an API/database layer before the frontmatter contract is stable enough
 - do another broad filename migration without a concrete validation or Obsidian problem
+- create a full locality, service-area or organisation taxonomy before the repository has worked examples
+- create a full source ontology before secondary-source examples exist
+- import large public reports or raw document corpora into this repository
+- treat the first observed local context as the permanent boundary of a need
+- treat a report finding as a validated user need without review
 
 ## Success criteria
 
@@ -320,4 +456,7 @@ This system is working when:
 - Obsidian links, aliases, Bases and readable filenames support day-to-day use
 - frontmatter can support future data/API ingestion without scraping meaning from filenames
 - LLM-assisted work can create new notes without introducing naming or link debt
+- local evidence can contribute to wider pattern recognition without losing provenance
+- reusable lived-experience needs can be mapped to multiple service, organisation and locality contexts
+- public secondary sources can be used as traceable evidence without overwhelming the structured repository
 - the process is light enough that people actually use it
