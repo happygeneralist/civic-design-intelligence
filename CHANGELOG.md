@@ -12,6 +12,7 @@ Use entry-level changelogs inside individual notes for changes to specific evide
 
 ### Changed
 
+- Renamed research study files and the `PP_001` pain point file to ID-prefixed readable filenames, and fixed a broken schema example wikilink.
 - Renamed low-risk insight files to ID-prefixed readable filenames and updated the filename migration plan to remove completed insight migrations.
 - Renamed the three pilot user need files to ID-prefixed `short_name` slugs and updated the filename migration plan to remove completed user need migrations.
 - Renamed evidence files to canonical ID-prefixed filenames and updated the filename migration plan to remove completed evidence migrations.

@@ -548,7 +548,7 @@ When an analysis object is split, merged, replaced or substantially reframed, re
 supersedes:
   - "[[UN_004]]"
 superseded_by:
-  - "[[UN_024]]"
+  - "[[UN_014]]"
 change_level: major
 ```
 
