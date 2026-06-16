@@ -12,6 +12,7 @@ Use entry-level changelogs inside individual notes for changes to specific evide
 
 ### Changed
 
+- Aligned recent PR follow-up metadata by reclassifying early user-need cleanup changes as material, narrowing `need_shape` to the MVP value and marking the completed user-need rename plan as historical.
 - Renamed research study files and the `PP_001` pain point file to ID-prefixed readable filenames, and fixed a broken schema example wikilink.
 - Renamed low-risk insight files to ID-prefixed readable filenames and updated the filename migration plan to remove completed insight migrations.
 - Renamed the three pilot user need files to ID-prefixed `short_name` slugs and updated the filename migration plan to remove completed user need migrations.

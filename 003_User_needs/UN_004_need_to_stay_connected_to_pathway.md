@@ -30,7 +30,7 @@ creation_mode: migrated
 llm_generated: false
 human_reviewed: false
 review_status: not_reviewed
-change_level: minor
+change_level: material
 supersedes:
 superseded_by:
 related_evidence:
@@ -75,3 +75,4 @@ Young people with SEND experience fluctuating motivation and mental health that 
 
 - Date unknown: Created during earlier repository capture/migration. Status: captured. Analysis state: captured. Review status: not reviewed.
 - 2026-06-16: Cleaned up frontmatter to add `short_name`, convert the fragment-style need into a full need statement, add current schema fields and normalise actor/tags. Review status unchanged.
+- 2026-06-16: Reclassified the cleanup as `change_level: material` because it added evidence basis, evidence strength and confidence fields that affect trust and interpretation. Evidence links and review status unchanged.

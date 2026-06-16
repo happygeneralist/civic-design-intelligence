@@ -30,7 +30,7 @@ creation_mode: migrated
 llm_generated: false
 human_reviewed: false
 review_status: not_reviewed
-change_level: minor
+change_level: material
 supersedes:
 superseded_by:
 related_evidence:
@@ -76,3 +76,4 @@ Parents report that simply being signposted to resources is not enough, they oft
 
 - Date unknown: Created during earlier repository capture/migration. Status: captured. Analysis state: captured. Review status: not reviewed.
 - 2026-06-16: Cleaned up frontmatter to add `short_name`, remove Markdown heading syntax from `need`, add current schema fields and normalise actor/tags. Canonical meaning, evidence link and review status unchanged.
+- 2026-06-16: Reclassified the cleanup as `change_level: material` because it added evidence basis, evidence strength and confidence fields that affect trust and interpretation. Canonical need wording, evidence links and review status unchanged.

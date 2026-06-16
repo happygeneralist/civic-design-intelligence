@@ -47,15 +47,7 @@ need_shape:
 
 This field highlights the shape of the need. It does not replace the `need`, `short_name`, `need_level`, evidence links or review fields.
 
-For needs where several shapes are useful, add only values that help retrieval or synthesis.
-
-```yaml
-need_shape:
-  - decision_support
-  - planning
-```
-
-During the MVP, `decision_support` is the only formally introduced `need_shape` value. Other values should not be standardised until they are needed across multiple real objects.
+During the MVP, `decision_support` is the only formally introduced `need_shape` value. Other values should not be standardised until they are needed across multiple real objects. Keep concepts such as planning, comparison or escalation in the need wording, tags or interpretation notes unless and until they become reviewed `need_shape` values.
 
 ## Example
 

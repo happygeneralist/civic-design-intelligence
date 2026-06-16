@@ -20,7 +20,6 @@ Completed or substantially complete:
 
 Active or pending:
 
-- merge the naming and linking guardrails PR, if still open
 - use the naming contract for all future structured objects
 - start a small safe-ingestion pass using SEND pathway-planning research
 - tighten validation only after the current object patterns have been used in practice
@@ -75,7 +74,7 @@ Minimum viable practice:
 
 ## Stage 3: Stabilise naming and linking guardrails
 
-Status: active / near complete.
+Status: current guardrails merged; procedural adoption ongoing.
 
 The repository should avoid repeated filename migrations by making naming correctness a creation-time habit.
 
@@ -90,10 +89,9 @@ Minimum viable guardrails:
 
 Useful next actions:
 
-1. Merge `docs/Naming_and_linking_contract.md` if it is still under review.
-2. Add a short pointer to the naming contract from `docs/Obsidian_workflow.md`.
-3. Add a short pointer from `docs/Repository_validation.md` explaining which naming rules are already checked and which remain procedural.
-4. Consider a later validator rule for user needs where the slug diverges from `short_name`, but only after more examples exist.
+1. Add a short pointer to the naming contract from `docs/Obsidian_workflow.md`.
+2. Add a short pointer from `docs/Repository_validation.md` explaining which naming rules are already checked and which remain procedural.
+3. Consider a later validator rule for user needs where the slug diverges from `short_name`, but only after more examples exist.
 
 Do not create another broad filename migration unless validation or Obsidian use reveals a concrete problem.
 
