@@ -29,13 +29,13 @@ Current result:
 
 ```text
 Errors: 0
-Warnings: 14
+Warnings: 9
 ```
 
 Warning groups:
 
 - 1 unresolved documentation example link in `SCHEMA.md`
-- 13 filename/frontmatter-ID mismatches
+- 8 filename/frontmatter-ID mismatches
 
 ## Migration Principles
 
@@ -49,18 +49,6 @@ Warning groups:
 - Do not add object-level changelog entries unless the migration changes research meaning, source references, validated/reviewed objects or relationship semantics.
 
 ## Proposed Rename Map
-
-### Evidence
-
-These are filename-only normalisations. Existing IDs already use `EVID_`.
-
-| Current path | ID | Proposed path | Risk | Notes |
-|---|---|---|---|---|
-| `002_Evidence/Quote_001.md` | `EVID_001` | `002_Evidence/EVID_001_quote_001.md` | Medium | Consider alias `Quote_001` during transition. |
-| `002_Evidence/Quote_002.md` | `EVID_002` | `002_Evidence/EVID_002_quote_002.md` | Medium | Consider alias `Quote_002` during transition. |
-| `002_Evidence/Quote_003.md` | `EVID_003` | `002_Evidence/EVID_003_quote_003.md` | Medium | Consider alias `Quote_003` during transition. |
-| `002_Evidence/EVID_DATA_001.md` | `EVID_004` | `002_Evidence/EVID_004_data_001.md` | Medium | Consider alias `EVID_DATA_001` during transition. |
-| `002_Evidence/EVID_004_p3_parent_pathway_planning_need_signals.md` | `EVID_005` | `002_Evidence/EVID_005_p3_parent_pathway_planning_need_signals.md` | Medium | Important because many pathway-planning needs link to `EVID_005` by ID. Filename should catch up with the existing ID. |
 
 ### Research Studies
 
@@ -89,29 +77,23 @@ The migration PR should still search for old basenames and update any new refere
 Recommended pre-migration check:
 
 ```bash
-rg -n "\\[\\[(Quote_001|Quote_002|Quote_003|EVID_DATA_001|Pain_point_template 1|S001_survey|S002_parent_interviews|S003_case_studies|S004_professionals_interviews|S005_focus_groups|S006_in-school_workshops|S007_pathway_planning_guidance_level_test)"
+rg -n "\\[\\[(Pain_point_template 1|S001_survey|S002_parent_interviews|S003_case_studies|S004_professionals_interviews|S005_focus_groups|S006_in-school_workshops|S007_pathway_planning_guidance_level_test)"
 ```
 
 ## Proposed Migration Batches
 
-### Batch 1: Evidence filenames
-
-- Rename evidence notes to canonical `EVID_` filenames.
-- Add aliases for old `Quote_*` and `EVID_DATA_001` names if useful.
-
-### Batch 2: Research study filenames
+### Batch 1: Research study filenames
 
 - Rename `S001` to `S007` study filenames to `RS_001` to `RS_007`.
 - Re-run link checks because studies are common source targets.
 
-### Batch 3: Pain point decision
+### Batch 2: Pain point decision
 
 - Review `005_Pain_point/Pain_point_template 1.md`.
 - Decide whether to rename it as `PP_001_pain_point_placeholder.md`, move it back to `Templates/`, or replace it with a properly named pain point.
 
 ## Human Review Questions
 
-- Should evidence quote files preserve old names as aliases?
 - Should research study filename slugs stay short, or include fuller titles?
 - Is `Pain_point_template 1.md` a real pain point or a misplaced template?
 - Should the actual migration be one PR or several small PRs?
@@ -120,4 +102,4 @@ rg -n "\\[\\[(Quote_001|Quote_002|Quote_003|EVID_DATA_001|Pain_point_template 1|
 
 Proceed with migration only after this plan is reviewed.
 
-Preferred next step: a small migration PR for Batch 1 evidence filenames, followed by validation and Obsidian link review.
+Preferred next step: a small migration PR for Batch 1 research study filenames, followed by validation and Obsidian link review.
