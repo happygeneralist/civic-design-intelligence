@@ -6,6 +6,10 @@ Use entry-level changelogs inside individual notes for changes to specific evide
 
 ## 2026-06-16
 
+### Added
+
+- Added a project-scoped Codex permission profile to support shared repository workflow, GitHub access and safer local automation.
+
 ### Changed
 
 - Renamed low-risk insight files to ID-prefixed readable filenames and updated the filename migration plan to remove completed insight migrations.

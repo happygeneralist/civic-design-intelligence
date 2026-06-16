@@ -1,0 +1,23 @@
+# Project-scoped Codex settings for the Civic Design Intelligence repository.
+# Keep workflow rules in AGENTS.md; keep personal preferences in user config.
+
+approval_policy = "on-request"
+default_permissions = "cdi-workspace"
+
+[permissions.cdi-workspace.filesystem]
+":minimal" = "read"
+":tmpdir" = "write"
+":slash_tmp" = "write"
+"~/.gitconfig" = "read"
+"~/.config/git" = "read"
+
+[permissions.cdi-workspace.filesystem.":workspace_roots"]
+"." = "write"
+"**/*.env" = "deny"
+
+[permissions.cdi-workspace.network]
+enabled = true
+
+[permissions.cdi-workspace.network.domains]
+"**.github.com" = "allow"
+"**.githubusercontent.com" = "allow"
