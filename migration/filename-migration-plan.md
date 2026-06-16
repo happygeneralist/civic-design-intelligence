@@ -29,13 +29,13 @@ Current result:
 
 ```text
 Errors: 0
-Warnings: 19
+Warnings: 17
 ```
 
 Warning groups:
 
 - 1 unresolved documentation example link in `SCHEMA.md`
-- 18 filename/frontmatter-ID mismatches
+- 16 filename/frontmatter-ID mismatches
 
 ## Migration Principles
 
@@ -72,13 +72,6 @@ These are filename-only normalisations. Existing IDs already use `EVID_`.
 | `002_Evidence/EVID_DATA_001.md` | `EVID_004` | `002_Evidence/EVID_004_data_001.md` | Medium | Consider alias `EVID_DATA_001` during transition. |
 | `002_Evidence/EVID_004_p3_parent_pathway_planning_need_signals.md` | `EVID_005` | `002_Evidence/EVID_005_p3_parent_pathway_planning_need_signals.md` | Medium | Important because many pathway-planning needs link to `EVID_005` by ID. Filename should catch up with the existing ID. |
 
-### Insights
-
-| Current path | ID | Proposed path | Risk | Notes |
-|---|---|---|---|---|
-| `006_Insights/INS001.md` | `INS_001` | `006_Insights/INS_001_level_of_aspiration_changes_with_age.md` | Low | Title-derived slug. |
-| `006_Insights/INS002.md` | `INS_002` | `006_Insights/INS_002_mental_health_barrier_to_pathway_planning.md` | Low | Title-derived slug. |
-
 ### Research Studies
 
 | Current path | ID | Proposed path | Risk | Notes |
@@ -106,32 +99,27 @@ The migration PR should still search for old basenames and update any new refere
 Recommended pre-migration check:
 
 ```bash
-rg -n "\\[\\[(Quote_001|Quote_002|Quote_003|EVID_DATA_001|INS001|INS002|Pain_point_template 1|S001_survey|S002_parent_interviews|S003_case_studies|S004_professionals_interviews|S005_focus_groups|S006_in-school_workshops|S007_pathway_planning_guidance_level_test)"
+rg -n "\\[\\[(Quote_001|Quote_002|Quote_003|EVID_DATA_001|Pain_point_template 1|S001_survey|S002_parent_interviews|S003_case_studies|S004_professionals_interviews|S005_focus_groups|S006_in-school_workshops|S007_pathway_planning_guidance_level_test)"
 ```
 
 ## Proposed Migration Batches
 
-### Batch 1: Low-risk display migration
-
-- Rename `INS001.md`
-- Rename `INS002.md`
-
-### Batch 2: User need short-name filenames
+### Batch 1: User need short-name filenames
 
 - Rename `UN_012`, `UN_013` and `UN_014` files using pilot `short_name` slugs.
 - Re-run validation and inspect Obsidian links.
 
-### Batch 3: Evidence filenames
+### Batch 2: Evidence filenames
 
 - Rename evidence notes to canonical `EVID_` filenames.
 - Add aliases for old `Quote_*` and `EVID_DATA_001` names if useful.
 
-### Batch 4: Research study filenames
+### Batch 3: Research study filenames
 
 - Rename `S001` to `S007` study filenames to `RS_001` to `RS_007`.
 - Re-run link checks because studies are common source targets.
 
-### Batch 5: Pain point decision
+### Batch 4: Pain point decision
 
 - Review `005_Pain_point/Pain_point_template 1.md`.
 - Decide whether to rename it as `PP_001_pain_point_placeholder.md`, move it back to `Templates/`, or replace it with a properly named pain point.
@@ -148,4 +136,4 @@ rg -n "\\[\\[(Quote_001|Quote_002|Quote_003|EVID_DATA_001|INS001|INS002|Pain_poi
 
 Proceed with migration only after this plan is reviewed.
 
-Preferred next step: a small migration PR for Batch 1 or Batch 2, followed by validation and Obsidian link review.
+Preferred next step: a small migration PR for Batch 1, followed by validation and Obsidian link review.
