@@ -1,18 +1,18 @@
 {
-  "generated_at": "2026-06-16T18:15:01.837Z",
+  "generated_at": "2026-06-16T18:17:47.755Z",
   "generated_from": "Repository markdown files in numbered knowledge-object folders",
   "scope_note": "Counts are generated from repository folders and frontmatter where available. Missing metadata is counted explicitly rather than inferred as reviewed or validated.",
   "totals": {
     "service_areas": 0,
     "repository_areas": 9,
     "knowledge_layers": 3,
-    "markdown_objects": 38,
+    "markdown_objects": 41,
     "research_studies": 7,
     "evidence": 5,
-    "user_needs": 14,
+    "user_needs": 15,
     "civic_needs": 0,
-    "behaviours": 8,
-    "pain_points": 1,
+    "behaviours": 9,
+    "pain_points": 2,
     "insights": 2,
     "themes": 1,
     "personas": 0,
@@ -39,21 +39,21 @@
       "key": "needs",
       "label": "Needs",
       "dir": "003_User_needs",
-      "count": 14,
+      "count": 15,
       "exists": true
     },
     {
       "key": "behaviours",
       "label": "Behaviours",
       "dir": "004_Behaviours",
-      "count": 8,
+      "count": 9,
       "exists": true
     },
     {
       "key": "pain_points",
       "label": "Pain points",
       "dir": "005_Pain_point",
-      "count": 1,
+      "count": 2,
       "exists": true
     },
     {
@@ -75,7 +75,7 @@
       "label": "Personas or archetypes",
       "dir": "008_Personas",
       "count": 0,
-      "exists": false
+      "exists": true
     },
     {
       "key": "journeys",
@@ -87,20 +87,19 @@
   ],
   "by_status": {
     "captured": 22,
-    "draft": 16
+    "draft": 19
   },
   "by_lifecycle_state": {
-    "No lifecycle metadata": 38
+    "No lifecycle metadata": 41
   },
   "by_evidence_strength": {
     "No evidence-strength metadata": 4,
     "high": 5,
     "low": 8,
-    "weak": 20,
+    "weak": 23,
     "medium": 1
   },
   "warnings": [
-    "008_Personas was not found, so its count is zero.",
     "009_Journeys was not found, so its count is zero."
   ]
 }
