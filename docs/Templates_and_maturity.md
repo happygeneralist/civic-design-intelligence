@@ -161,6 +161,17 @@ Template changes should be recorded in `CHANGELOG.md` when they affect:
 - evidence standards
 - LLM behaviour
 
+After changing templates, run:
+
+```bash
+python3 tools/validate_repository.py --include-templates
+```
+
+Template validation is allowed to use placeholder IDs, template filenames and
+controlled-value option lists. The check is intended to catch broken template
+structure or invalid options, not force templates to look like completed
+research objects.
+
 ## Suggested template structure
 
 Each analysis template should follow this general pattern:

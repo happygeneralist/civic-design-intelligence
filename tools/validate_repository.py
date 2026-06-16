@@ -63,6 +63,7 @@ TYPE_PREFIX = {
     "research_study": "RS",
     "evidence": "EVID",
     "user_need": "UN",
+    "civic_need": "CN",
     "behaviour": "BEH",
     "pain_point": "PP",
     "insight": "INS",
@@ -179,6 +180,7 @@ REQUIRED_BY_TYPE = {
     "research_study": {"title"},
     "evidence": {"source_study", "evidence_kind"},
     "user_need": {"need", "need_level"},
+    "civic_need": {"civic_need", "need_level"},
     "behaviour": {"behaviour"},
     "pain_point": {"pain_point"},
     "insight": {"title"},
@@ -355,7 +357,7 @@ def check_id(note: Note, id_index: Dict[str, List[Path]], include_templates: boo
     if note_id in id_index and len(id_index[note_id]) > 1:
         findings.append(Finding("error", note.path, f"duplicate id `{note_id}`"))
     filename_stem = note.path.stem
-    if ID_PATTERN.match(note_id) and not filename_matches_id(filename_stem, note_id):
+    if not is_template(note) and ID_PATTERN.match(note_id) and not filename_matches_id(filename_stem, note_id):
         findings.append(Finding("warning", note.path, f"filename `{filename_stem}` should be `{note_id}` or start with `{note_id}_`"))
     return findings
 
@@ -376,7 +378,16 @@ def check_controlled_values(note: Note, include_templates: bool, include_docs: b
         if not value:
             continue
         if " | " in value:
-            findings.append(Finding("warning", note.path, f"field `{field}` appears to contain template options, not a selected value"))
+            if is_template(note):
+                invalid_options = [
+                    option.strip()
+                    for option in value.split("|")
+                    if option.strip() and option.strip() not in allowed
+                ]
+                for option in invalid_options:
+                    findings.append(Finding("error", note.path, f"field `{field}` has invalid template option `{option}`"))
+            else:
+                findings.append(Finding("warning", note.path, f"field `{field}` appears to contain template options, not a selected value"))
             continue
         if value not in allowed:
             findings.append(Finding("error", note.path, f"field `{field}` has invalid value `{value}`"))

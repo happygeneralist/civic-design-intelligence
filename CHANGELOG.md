@@ -12,6 +12,7 @@ Use entry-level changelogs inside individual notes for changes to specific evide
 
 ### Changed
 
+- Updated template validation so template filenames and controlled-value option lists are handled as scaffolding, while real content notes still require selected values.
 - Aligned recent PR follow-up metadata by reclassifying early user-need cleanup changes as material, narrowing `need_shape` to the MVP value and marking the completed user-need rename plan as historical.
 - Renamed research study files and the `PP_001` pain point file to ID-prefixed readable filenames, and fixed a broken schema example wikilink.
 - Renamed low-risk insight files to ID-prefixed readable filenames and updated the filename migration plan to remove completed insight migrations.
