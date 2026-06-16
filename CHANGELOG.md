@@ -11,6 +11,7 @@ Use entry-level changelogs inside individual notes for changes to specific evide
 - Added a project-scoped Codex permission profile to support shared repository workflow, GitHub access and safer local automation.
 - Added documentation for the companion public secondary-research source archive, `happygeneralist/civic-design-secondary-research`, including the first source example `SRC_001_ofsted_essex_area_send_inspection_jan_2026`.
 - Added the first bounded primary-research safe-ingestion objects from `RS_002` / `EVID_003`: one draft user need, one draft behaviour and one draft pain point about parent/carer pathway navigation burden.
+- Added an MVP public roadmap and changelog page, linked from the public homepage footer, to communicate progress and next steps in chunks.
 
 ### Changed
 

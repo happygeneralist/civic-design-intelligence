@@ -21,6 +21,8 @@ Recent work has largely completed the first naming and file-structure stabilisat
 - Obsidian workflow and validation docs now point contributors to the naming contract
 - companion public secondary-research repository now exists: `happygeneralist/civic-design-secondary-research`
 - first companion source archive example now exists: `SRC_001_ofsted_essex_area_send_inspection_jan_2026`
+- first bounded primary-research ingestion slice from `RS_002` / `EVID_003` has been merged and is paused for team review
+- public roadmap and changelog communication page has been added so progress can be shared without creating another research dependency
 
 The system is close enough to start using it with real research again.
 
@@ -49,13 +51,14 @@ This means:
 
 ## Immediate next actions
 
-1. Select one bounded SEND pathway-planning research source or extract for ingestion.
-2. If using the Essex Ofsted Area SEND report, create a matching source record in this repository for `SRC_001_ofsted_essex_area_send_inspection_jan_2026`.
-3. Create a small ingestion PR with selected evidence extracts, candidate needs, behaviours and pain points.
-4. During ingestion, watch for service, organisation and locality context without creating a full taxonomy yet.
-5. If using an Ofsted report or other secondary source, create a source record first, then selected evidence extracts, then derived analysis objects.
-6. Update the companion source `evidence-map.md` after structured objects are created.
-7. Review the ingestion PR to see which template, context, secondary-evidence or validation changes are genuinely needed.
+1. Review and use the MVP public roadmap and changelog page as the current non-dependent communication slice.
+2. Review the first bounded primary-research ingestion slice with the team before adding more research objects.
+3. Select the next bounded SEND pathway-planning source or extract after team feedback.
+4. If using the Essex Ofsted Area SEND report, create a matching source record in this repository for `SRC_001_ofsted_essex_area_send_inspection_jan_2026`.
+5. During future ingestion, watch for service, organisation and locality context without creating a full taxonomy yet.
+6. If using an Ofsted report or other secondary source, create a source record first, then selected evidence extracts, then derived analysis objects.
+7. Update the companion source `evidence-map.md` after structured objects are created.
+8. Review future ingestion PRs to see which template, context, secondary-evidence or validation changes are genuinely needed.
 
 ## Guardrails for the next PRs
 
