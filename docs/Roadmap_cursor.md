@@ -1,6 +1,6 @@
 # Roadmap cursor
 
-Last updated: 2026-06-16
+Last updated: 2026-06-17
 
 This cursor records the current operational focus for the repository.
 
@@ -49,6 +49,18 @@ This means:
 - leave uncertain material in `000_Inbox/`
 - avoid marking anything reviewed or validated unless human review has happened
 
+## Current ingestion emphasis
+
+During the next research breakdown, test whether the repository can connect evidence, user needs, behaviours, pain points, civic needs and insights into a coherent problem-space graph.
+
+Pay particular attention to:
+
+- preserving pure user-need wording from the person's perspective
+- capturing policy, service, organisation and locality as context or external reference, not as the framing of the need
+- identifying where generic `related_*` links are not expressive enough
+- noting candidate relationship types that may be useful later, such as `blocked_by`, `supports`, `evidenced_by`, `challenged_by`, `local_variant_of` or `addressed_by`
+- creating civic needs only where the evidence points to institutional obligation, equity, access, rights, accountability or public value
+
 ## Immediate next actions
 
 1. Review and use the MVP public roadmap and changelog page as the current non-dependent communication slice.
@@ -58,7 +70,8 @@ This means:
 5. During future ingestion, watch for service, organisation and locality context without creating a full taxonomy yet.
 6. If using an Ofsted report or other secondary source, create a source record first, then selected evidence extracts, then derived analysis objects.
 7. Update the companion source `evidence-map.md` after structured objects are created.
-8. Review future ingestion PRs to see which template, context, secondary-evidence or validation changes are genuinely needed.
+8. Note any object relationships that need more precision than generic `related_*` links, but do not change the schema until real examples show the smallest useful convention.
+9. Review future ingestion PRs to see which template, context, secondary-evidence, relationship or validation changes are genuinely needed.
 
 ## Guardrails for the next PRs
 
@@ -74,6 +87,7 @@ For the next few PRs:
 - do not encode service ownership, department names or locality into canonical need wording unless the evidence shows the need is inherently specific to that service or place
 - do not import large public reports or raw document corpora into this repository
 - do not treat report findings or inspection summaries as validated user needs without further review
+- do not enforce typed relationships before there are enough real ingestion examples to justify the minimum useful vocabulary
 
 ## Things that can wait
 
@@ -91,6 +105,7 @@ These are important, but not next:
 - full source ontology for public secondary research
 - automated ingestion of secondary research corpora
 - automated cross-repository source or roadmap sync
+- enforced typed-relationship schema
 
 ## Decision rule
 
@@ -105,6 +120,7 @@ When deciding what to do next, prefer work that helps answer:
 - Can public secondary research be used as traceable evidence without turning the repository into a raw document archive?
 - Can companion source archive references and evidence maps make cross-repository provenance reviewable?
 - Can the repository remain Markdown-first while preparing for future data/API use?
+- Can the repository identify where future graph-ready relationship types are needed without overbuilding the schema now?
 
 If a proposed change does not help with those questions, defer it.
 
@@ -121,4 +137,5 @@ At that point, decide whether the next step should be:
 - more research ingestion
 - lightweight context fields for locality, service areas or organisation mappings
 - lightweight source and evidence fields for secondary research ingestion
+- lightweight relationship-type conventions based on real object examples
 - cross-repository source inventory or evidence-map checks
