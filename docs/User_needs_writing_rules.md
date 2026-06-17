@@ -197,6 +197,14 @@ User need:
 I need to provide the right evidence without making repeated or unnecessary submissions.
 ```
 
+## Policy, service and design-history references
+
+Policy documents, service decisions and design histories may reference user needs, but they should not determine the wording of user needs.
+
+A user need should remain grounded in what a person needs to achieve, preserve, recover, decide, access or sustain.
+
+If a policy, service model or operational process responds to a need, capture that response as a related policy, service, solution, decision-history or context object. Do not rewrite the user need to fit the institutional response.
+
 ## Scope the need correctly
 
 User needs exist at different levels.
@@ -357,6 +365,7 @@ When drafting user needs, the LLM should:
 - use JTBD tools where useful for context, progress, pains, gains and strategic opportunity framing
 - avoid importing market-led JTBD assumptions uncritically into public service or SEND contexts
 - distinguish user needs from policy requirements and user stories
+- keep policy, service, organisation and locality context outside the canonical wording unless it is intrinsic to the evidenced need
 - set `need_level` where possible
 - preserve emotional and social meaning where relevant
 - mark weak or unlinked needs as assumptions or candidates
@@ -366,6 +375,7 @@ The LLM should not:
 
 - convert solution ideas into user needs without reframing them
 - treat policy requirements as user needs
+- rewrite user needs to fit policy, service or design-history artefacts that reference them
 - remove emotional, social or civic meaning just to make a need more task-like
 - materially reword reviewed or validated needs without a changelog and review trail
 
@@ -379,6 +389,7 @@ Before promoting a user need, check:
 - [ ] Is the need scoped at the right level?
 - [ ] Has JTBD language been used appropriately for the context?
 - [ ] Is it distinct from a user story, feature or policy requirement?
+- [ ] Does the wording preserve the person's perspective rather than an institutional, policy or service framing?
 - [ ] Is emotional or social meaning preserved where relevant?
 - [ ] Does the evidence support this wording and level?
 - [ ] Would one word change alter the solution direction?
