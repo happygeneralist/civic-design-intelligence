@@ -59,6 +59,9 @@ Pay particular attention to:
 - capturing policy, service, organisation and locality as context or external reference, not as the framing of the need
 - identifying where generic `related_*` links are not expressive enough
 - noting candidate relationship types that may be useful later, such as `blocked_by`, `supports`, `evidenced_by`, `challenged_by`, `local_variant_of` or `addressed_by`
+- observing where a user need may be a context-specific expression of a wider reusable need pattern
+- watching where small wording changes alter the solution vector or outcome strategy
+- treating personas, segments and journey maps as generated or contextual views over evidence-backed objects, not as fixed canonical artefacts too early
 - creating civic needs only where the evidence points to institutional obligation, equity, access, rights, accountability or public value
 
 ## Immediate next actions
@@ -71,7 +74,8 @@ Pay particular attention to:
 6. If using an Ofsted report or other secondary source, create a source record first, then selected evidence extracts, then derived analysis objects.
 7. Update the companion source `evidence-map.md` after structured objects are created.
 8. Note any object relationships that need more precision than generic `related_*` links, but do not change the schema until real examples show the smallest useful convention.
-9. Review future ingestion PRs to see which template, context, secondary-evidence, relationship or validation changes are genuinely needed.
+9. Note any candidate need patterns, solution-vector sensitivity or segmentation dimensions that appear during ingestion, but do not add required fields until examples stabilise.
+10. Review future ingestion PRs to see which template, context, secondary-evidence, relationship, need-pattern, persona/journey or validation changes are genuinely needed.
 
 ## Guardrails for the next PRs
 
@@ -88,6 +92,8 @@ For the next few PRs:
 - do not import large public reports or raw document corpora into this repository
 - do not treat report findings or inspection summaries as validated user needs without further review
 - do not enforce typed relationships before there are enough real ingestion examples to justify the minimum useful vocabulary
+- do not create canonical personas or fixed journey maps before the underlying evidence, needs, behaviours, pain points and contexts are mature enough to support them
+- do not introduce a required need-pattern schema before reusable patterns have been tested through real object examples
 
 ## Things that can wait
 
@@ -106,6 +112,8 @@ These are important, but not next:
 - automated ingestion of secondary research corpora
 - automated cross-repository source or roadmap sync
 - enforced typed-relationship schema
+- dedicated need-pattern object type
+- formal causal or theory-of-change layer
 
 ## Decision rule
 
@@ -121,6 +129,9 @@ When deciding what to do next, prefer work that helps answer:
 - Can companion source archive references and evidence maps make cross-repository provenance reviewable?
 - Can the repository remain Markdown-first while preparing for future data/API use?
 - Can the repository identify where future graph-ready relationship types are needed without overbuilding the schema now?
+- Can the repository identify reusable need patterns without flattening situated needs?
+- Can the repository show when need wording changes the solution vector and outcome strategy?
+- Can personas, segments and journeys be generated from evidence-backed objects rather than becoming stale static artefacts?
 
 If a proposed change does not help with those questions, defer it.
 
@@ -138,4 +149,6 @@ At that point, decide whether the next step should be:
 - lightweight context fields for locality, service areas or organisation mappings
 - lightweight source and evidence fields for secondary research ingestion
 - lightweight relationship-type conventions based on real object examples
+- need-pattern conventions based on real object examples
+- segmentation and generated-view guidance for personas and journeys
 - cross-repository source inventory or evidence-map checks
