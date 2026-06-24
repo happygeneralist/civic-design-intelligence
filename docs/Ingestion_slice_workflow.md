@@ -6,6 +6,8 @@ Use it when turning evidence, source material, need-shaped input, research summa
 
 This is a practical workflow, not a heavy governance process.
 
+Read this with `docs/Input_and_evidence_classification.md` so the entry state, evidence voice and overclaiming risks are clear before decomposition starts.
+
 ## Purpose
 
 An ingestion slice should help the repository take in useful knowledge without creating object sprawl, losing provenance or making immature knowledge look settled.
@@ -61,6 +63,7 @@ Define the slice before using tools.
 Capture:
 
 - the input material
+- input classification and evidence voice
 - why this slice is useful now
 - known source or evidence links
 - likely actor or beneficiary
@@ -75,6 +78,8 @@ Example:
 
 Topic: Parent/carer navigation burden in SEND pathway planning
 Input material: EVID_003 and related need-shaped research summaries
+Input classification: evidence extract and need-shaped input
+Evidence voice: parent/carer perspective and LLM-assisted synthesis requiring review
 Likely objects to check: UN_015, BEH_009, PP_002
 Goal: Test whether navigation-burden evidence supports additional links, refinements or candidate objects
 ```
@@ -108,6 +113,7 @@ Do not edit files yet.
 
 Read:
 - docs/Non_linear_research_ingestion.md
+- docs/Input_and_evidence_classification.md
 - docs/Safe_research_ingestion_MVP.md
 - docs/User_needs_writing_rules.md
 - docs/Ingestion_slice_workflow.md
@@ -119,6 +125,7 @@ Produce a reconciliation brief only. Do not create or modify files.
 
 Codex should return:
 
+- input classification and evidence voice
 - existing objects checked
 - likely duplicates or overlaps
 - candidate objects that may be new
@@ -138,6 +145,14 @@ Use this structure:
 ## Slice scope
 
 ## Input material
+
+## Input classification
+
+Input type:
+Evidence voice:
+Source/provenance state:
+Likely object types:
+Main overclaiming risks:
 
 ## Existing objects checked
 
@@ -182,6 +197,7 @@ Review the reconciliation brief before files are changed.
 
 Check:
 
+- whether input classification and evidence voice are clear enough
 - whether candidate user needs follow `docs/User_needs_writing_rules.md`
 - whether emotional, social, relational or experiential meaning has been preserved
 - whether any user need contains solution-shaped wording
@@ -221,6 +237,7 @@ The PR should explain:
 
 - what changed
 - what did not change
+- which input types and evidence voices were handled
 - which existing objects were checked
 - which candidate objects were not created
 - what remains unresolved
@@ -236,6 +253,8 @@ Every ingestion PR should include:
 ```markdown
 ## Reconciliation notes
 
+- Input types handled:
+- Evidence voices represented:
 - New objects created:
 - Existing objects linked:
 - Existing objects updated:
@@ -291,6 +310,7 @@ Do not:
 An ingestion slice is complete when:
 
 - the slice scope is clear
+- input classification and evidence voice are clear enough for review
 - candidate objects have been compared with existing objects
 - new or updated objects are traceable where possible
 - unresolved provenance gaps are visible
