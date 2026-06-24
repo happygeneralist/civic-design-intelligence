@@ -25,6 +25,7 @@ Recent work has largely completed the first naming and file-structure stabilisat
 - public roadmap and changelog communication page has been added so progress can be shared without creating another research dependency
 - non-linear ingestion guidance now documents how partially structured research knowledge can enter before full traceability is complete
 - ingestion operating guidance now separates expert-assisted ingestion, guided contributor ingestion and future semi-automated ingestion
+- input and evidence classification guidance now helps choose an ingestion route based on entry state, evidence voice and overclaiming risk
 
 The system is ready to continue using real research, provided ingestion includes reconciliation with existing objects and does not become unreviewed object dumping.
 
@@ -40,6 +41,7 @@ This means:
 
 - continue ingestion because captured and draft objects have value before maturity
 - recognise that knowledge may enter as evidence, source material, need-shaped input, workshop output, collaborator observation, research summary or candidate object
+- classify input type and evidence voice before decomposition
 - keep traceability as the preferred state without blocking useful capture when provenance is incomplete
 - make gaps in evidence linkage, provenance, confidence or review state visible
 - generate full ingestion slices from partially structured inputs rather than copying them directly into canonical folders
@@ -59,6 +61,7 @@ Use these documents as the current operating guide for this phase:
 - `docs/Non_linear_research_ingestion.md`
 - `docs/Ingestion_operating_model.md`
 - `docs/Ingestion_slice_workflow.md`
+- `docs/Input_and_evidence_classification.md`
 - `docs/Safe_research_ingestion_MVP.md`
 - `docs/User_needs_writing_rules.md`
 
@@ -69,6 +72,7 @@ During the next research breakdown, test whether the repository can connect evid
 Pay particular attention to:
 
 - treating ingestion as extraction plus reconciliation, not extraction alone
+- classifying the input type, evidence voice and main overclaiming risks before creating candidate objects
 - preserving user-need wording from the person's perspective while recognising functional, emotional, social, relational, experiential and civic-adjacent needs
 - following `docs/User_needs_writing_rules.md` when deriving or refining candidate user needs
 - avoiding solution-shaped user needs
@@ -85,19 +89,20 @@ Pay particular attention to:
 
 ## Immediate next actions
 
-1. Use the non-linear ingestion and slice workflow guidance as the operating model for the next ingestion work.
+1. Use the non-linear ingestion, input classification and slice workflow guidance as the operating model for the next ingestion work.
 2. Use existing quote evidence and partially structured need-shaped research summaries to create a few more ingestion slices.
-3. For each slice, produce reconciliation notes before finalising the PR.
-4. Check candidate user needs against `docs/User_needs_writing_rules.md` and nearby existing user needs.
-5. Identify where existing objects should be linked, updated, split, merged, superseded or left unchanged.
-6. Record unresolved provenance or evidence-linking questions rather than pretending they are solved.
-7. If using the Essex Ofsted Area SEND report, create a matching source record in this repository for `SRC_001_ofsted_essex_area_send_inspection_jan_2026`.
-8. During future ingestion, watch for service, organisation and locality context without creating a full taxonomy yet.
-9. If using an Ofsted report or other secondary source, create a source record first, then selected evidence extracts, then derived analysis objects where possible.
-10. Update the companion source `evidence-map.md` after structured objects are created.
-11. Note any object relationships that need more precision than generic `related_*` links, but do not change the schema until real examples show the smallest useful convention.
-12. Note any candidate need patterns, solution-vector sensitivity or segmentation dimensions that appear during ingestion, but do not add required fields until examples stabilise.
-13. Review future ingestion PRs to see which template, context, secondary-evidence, relationship, need-pattern, persona/journey or validation changes are genuinely needed.
+3. For each slice, classify the input type, evidence voice and overclaiming risks before decomposition.
+4. For each slice, produce reconciliation notes before finalising the PR.
+5. Check candidate user needs against `docs/User_needs_writing_rules.md` and nearby existing user needs.
+6. Identify where existing objects should be linked, updated, split, merged, superseded or left unchanged.
+7. Record unresolved provenance or evidence-linking questions rather than pretending they are solved.
+8. If using the Essex Ofsted Area SEND report, create a matching source record in this repository for `SRC_001_ofsted_essex_area_send_inspection_jan_2026`.
+9. During future ingestion, watch for service, organisation and locality context without creating a full taxonomy yet.
+10. If using an Ofsted report or other secondary source, create a source record first, then selected evidence extracts, then derived analysis objects where possible.
+11. Update the companion source `evidence-map.md` after structured objects are created.
+12. Note any object relationships that need more precision than generic `related_*` links, but do not change the schema until real examples show the smallest useful convention.
+13. Note any candidate need patterns, solution-vector sensitivity or segmentation dimensions that appear during ingestion, but do not add required fields until examples stabilise.
+14. Review future ingestion PRs to see which template, context, secondary-evidence, relationship, need-pattern, persona/journey or validation changes are genuinely needed.
 
 ## Guardrails for the next PRs
 
@@ -115,6 +120,8 @@ For the next few PRs:
 - do not encode service ownership, department names or locality into canonical need wording unless the evidence shows the need is inherently specific to that service or place
 - do not import large public reports or raw document corpora into this repository
 - do not treat report findings or inspection summaries as validated user needs without further review
+- do not treat every input type as direct evidence
+- do not treat synthesis as validation
 - do not enforce typed relationships before there are enough real ingestion examples to justify the minimum useful vocabulary
 - do not create canonical personas or fixed journey maps before the underlying evidence, needs, behaviours, pain points and contexts are mature enough to support them
 - do not introduce a required need-pattern schema before reusable patterns have been tested through real object examples
@@ -145,6 +152,7 @@ When deciding what to do next, prefer work that helps answer:
 
 - Can we break real research and partially structured knowledge into defensible structured objects?
 - Can we preserve evidence, uncertainty and review state?
+- Can we classify input types and evidence voices before over-interpreting material?
 - Can we work backwards from useful knowledge to source and evidence links without overclaiming?
 - Can Obsidian users navigate and query the repository easily?
 - Can LLM-assisted work create useful ingestion slices without semantic drift, object sprawl or naming debt?
