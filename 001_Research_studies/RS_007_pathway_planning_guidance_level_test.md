@@ -157,8 +157,12 @@ A user-supplied p3 parent/carer extract has been captured separately as [[EVID_0
 - [[UN_007]] Reconcile pathway information from different sources
 - [[UN_008]] Assess whether pathway options are workable in daily life
 - [[UN_009]] Revisit pathway decisions after they have started
-- [[UN_010]] Consider the important steps, rights and adjustments
 - [[UN_011]] Recognise the young person as an individual
+- [[UN_016]] Check rights and entitlements
+
+## Deprecated draft user needs
+
+- [[UN_010]] Consider the important steps, rights and adjustments
 
 ## Limitations
 
@@ -180,3 +184,4 @@ A user-supplied p3 parent/carer extract has been captured separately as [[EVID_0
 - 2026-06-12: Created as research study summary from the Essex SEND design-history entry for the initial pathway-planning guidance level test. Status: captured. Analysis state: captured. Review status: needs_review. Missing participant count, date range and research lead marked as unknown or TBC rather than inferred.
 - 2026-06-12: Linked [[EVID_004]] and related draft user needs [[UN_002]] to [[UN_011]]. Study remains captured and needs_review. This update does not mark any findings, evidence or needs as reviewed or validated.
 - 2026-06-12: Updated links after renumbering new PR objects to [[EVID_005]], [[UN_012]], [[UN_013]] and [[UN_014]] to avoid duplicate IDs.
+- 2026-06-24: Moved [[UN_010]] from related draft user needs to deprecated draft user needs and added [[UN_016]] after splitting the bundled rights and entitlements signal from [[UN_010]]. Study status and review status unchanged.
