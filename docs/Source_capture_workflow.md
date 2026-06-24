@@ -127,22 +127,30 @@ Mitigation:
 - allow evidence relationships such as `limits`, `challenges` and `contradicts`
 - use review to ask what important evidence may have been left out
 
-### Public secondary sources can dominate lived experience
+### Sequencing public sources and lived experience
 
-Public reports and inspections are easier to capture than primary lived-experience research.
+It may be strategically useful to start with public secondary sources because there is already too much public information and not enough structure, traceability or operational intelligence.
+
+Near-term opportunity:
+
+- public material can help test source capture, evidence selection, reconciliation and stewardship workflows
+- structured public material can create a stable scaffold before adding more direct lived-experience material
+- the system can learn how to metabolise evidence before inviting or ingesting more sensitive contributions
 
 Long-term risk:
 
-- institutional voice may outweigh direct lived experience
+- institutional voice may shape the early repository model too strongly if the sequencing is not explicit
 - report findings may shape user need wording too strongly
-- secondary-source availability may distort the apparent evidence base
+- later lived-experience material may be forced into structures created mainly from public or institutional sources
 
 Mitigation:
 
+- treat public-secondary-first ingestion as a sequencing strategy, not a statement about evidence priority
 - classify evidence voice before decomposition
 - do not create user needs directly from public reports
 - distinguish institutional framing from lived-experience evidence
-- use secondary sources to support, contextualise or challenge objects rather than automatically validate them
+- design stewardship and review workflows before scaling direct lived-experience capture
+- revisit object wording and evidence balance when lived-experience material is added
 
 ### Markdown-first workflows may limit future scale
 
