@@ -1,6 +1,6 @@
 # Roadmap cursor
 
-Last updated: 2026-06-17
+Last updated: 2026-06-23
 
 This cursor records the current operational focus for the repository.
 
@@ -8,7 +8,7 @@ It is intentionally shorter than the full roadmap. Use it to decide what to do n
 
 ## Current phase
 
-The repository is moving from structural normalisation into safe research ingestion.
+The repository is moving from structural normalisation into safe-enough, non-linear research ingestion.
 
 Recent work has largely completed the first naming and file-structure stabilisation pass:
 
@@ -21,33 +21,39 @@ Recent work has largely completed the first naming and file-structure stabilisat
 - Obsidian workflow and validation docs now point contributors to the naming contract
 - companion public secondary-research repository now exists: `happygeneralist/civic-design-secondary-research`
 - first companion source archive example now exists: `SRC_001_ofsted_essex_area_send_inspection_jan_2026`
-- first bounded primary-research ingestion slice from `RS_002` / `EVID_003` has been merged and is paused for team review
+- first bounded primary-research ingestion slice from `RS_002` / `EVID_003` has been merged and reviewed as safe enough to continue cautiously
 - public roadmap and changelog communication page has been added so progress can be shared without creating another research dependency
+- non-linear ingestion guidance now documents how partially structured research knowledge can enter before full traceability is complete
 
-The system is close enough to start using it with real research again.
+The system is ready to continue using real research, provided ingestion includes reconciliation with existing objects and does not become unreviewed object dumping.
 
 ## Active focus
 
 The next focus is:
 
 ```text
-Use the repository on a bounded SEND pathway-planning research sample without creating new naming, metadata or evidence-maturity debt.
+Use the repository on SEND pathway-planning research inputs while supporting non-linear capture, backward evidence-linking and reconciliation against the existing object landscape.
 ```
 
 This means:
 
-- start with a small sample
-- create only useful evidence-derived objects
-- use conservative metadata
-- preserve links to evidence
+- continue ingestion because captured and draft objects have value before maturity
+- recognise that knowledge may enter as evidence, source material, need-shaped input, workshop output, collaborator observation, research summary or candidate object
+- keep traceability as the preferred state without blocking useful capture when provenance is incomplete
+- make gaps in evidence linkage, provenance, confidence or review state visible
+- generate full ingestion slices from partially structured inputs rather than copying them directly into canonical folders
+- compare candidate objects with existing user needs, civic needs, behaviours, pain points, insights, themes and evidence before finalising a PR
+- use conservative metadata where provenance, interpretation or object boundaries remain uncertain
 - use `short_name` and ID-prefixed readable filenames at creation time
 - distinguish lived-experience needs from service, organisation and locality context
 - preserve where evidence came from without treating the first observed context as the permanent boundary of a need
-- treat public secondary research as source material that must be broken into source records and selected evidence extracts before it supports needs, pain points or insights
+- treat public secondary research as source material that should be broken into source records and selected evidence extracts before it supports needs, pain points or insights where possible
 - keep the structured intelligence graph in this repository, while using `civic-design-secondary-research` for raw or lightly processed public sources where useful
 - update companion `evidence-map.md` files when source records, evidence objects or analysis objects are created from archived sources
-- leave uncertain material in `000_Inbox/`
+- leave unresolved or immature material in `000_Inbox/` when it cannot yet be responsibly reconciled
 - avoid marking anything reviewed or validated unless human review has happened
+
+Use `docs/Non_linear_research_ingestion.md` as the current operating guide for this phase.
 
 ## Current ingestion emphasis
 
@@ -55,7 +61,13 @@ During the next research breakdown, test whether the repository can connect evid
 
 Pay particular attention to:
 
-- preserving pure user-need wording from the person's perspective
+- treating ingestion as extraction plus reconciliation, not extraction alone
+- preserving user-need wording from the person's perspective while recognising functional, emotional, social, relational, experiential and civic-adjacent needs
+- following `docs/User_needs_writing_rules.md` when deriving or refining candidate user needs
+- avoiding solution-shaped user needs
+- not flattening emotional or social needs into functional task language where that changes meaning
+- checking neighbouring objects before creating new user needs, behaviours or pain points
+- treating severity, scope and lifecycle judgements as relative where they depend on comparison with existing objects
 - capturing policy, service, organisation and locality as context or external reference, not as the framing of the need
 - identifying where generic `related_*` links are not expressive enough
 - noting candidate relationship types that may be useful later, such as `blocked_by`, `supports`, `evidenced_by`, `challenged_by`, `local_variant_of` or `addressed_by`
@@ -66,16 +78,19 @@ Pay particular attention to:
 
 ## Immediate next actions
 
-1. Review and use the MVP public roadmap and changelog page as the current non-dependent communication slice.
-2. Review the first bounded primary-research ingestion slice with the team before adding more research objects.
-3. Select the next bounded SEND pathway-planning source or extract after team feedback.
-4. If using the Essex Ofsted Area SEND report, create a matching source record in this repository for `SRC_001_ofsted_essex_area_send_inspection_jan_2026`.
-5. During future ingestion, watch for service, organisation and locality context without creating a full taxonomy yet.
-6. If using an Ofsted report or other secondary source, create a source record first, then selected evidence extracts, then derived analysis objects.
-7. Update the companion source `evidence-map.md` after structured objects are created.
-8. Note any object relationships that need more precision than generic `related_*` links, but do not change the schema until real examples show the smallest useful convention.
-9. Note any candidate need patterns, solution-vector sensitivity or segmentation dimensions that appear during ingestion, but do not add required fields until examples stabilise.
-10. Review future ingestion PRs to see which template, context, secondary-evidence, relationship, need-pattern, persona/journey or validation changes are genuinely needed.
+1. Use the non-linear ingestion guidance as the operating model for the next ingestion work.
+2. Use existing quote evidence and partially structured need-shaped research summaries to create a few more ingestion slices.
+3. For each slice, produce reconciliation notes before finalising the PR.
+4. Check candidate user needs against `docs/User_needs_writing_rules.md` and nearby existing user needs.
+5. Identify where existing objects should be linked, updated, split, merged, superseded or left unchanged.
+6. Record unresolved provenance or evidence-linking questions rather than pretending they are solved.
+7. If using the Essex Ofsted Area SEND report, create a matching source record in this repository for `SRC_001_ofsted_essex_area_send_inspection_jan_2026`.
+8. During future ingestion, watch for service, organisation and locality context without creating a full taxonomy yet.
+9. If using an Ofsted report or other secondary source, create a source record first, then selected evidence extracts, then derived analysis objects where possible.
+10. Update the companion source `evidence-map.md` after structured objects are created.
+11. Note any object relationships that need more precision than generic `related_*` links, but do not change the schema until real examples show the smallest useful convention.
+12. Note any candidate need patterns, solution-vector sensitivity or segmentation dimensions that appear during ingestion, but do not add required fields until examples stabilise.
+13. Review future ingestion PRs to see which template, context, secondary-evidence, relationship, need-pattern, persona/journey or validation changes are genuinely needed.
 
 ## Guardrails for the next PRs
 
@@ -86,8 +101,10 @@ For the next few PRs:
 - do not add strict validator checks before the ingestion workflow has been tested
 - do not create a large change-event system before there are real semantic-change examples
 - do not build an API/database layer yet
-- do not build cross-repository sync yet
+- do not build automated cross-repository sync yet
 - do not force loose research into canonical folders too early
+- do not require linear source-to-evidence-to-object ordering when the work starts from partially structured knowledge
+- do not copy need-shaped inputs directly into first-class objects without an ingestion and reconciliation step
 - do not encode service ownership, department names or locality into canonical need wording unless the evidence shows the need is inherently specific to that service or place
 - do not import large public reports or raw document corpora into this repository
 - do not treat report findings or inspection summaries as validated user needs without further review
@@ -119,10 +136,11 @@ These are important, but not next:
 
 When deciding what to do next, prefer work that helps answer:
 
-- Can we break real research into defensible structured objects?
+- Can we break real research and partially structured knowledge into defensible structured objects?
 - Can we preserve evidence, uncertainty and review state?
+- Can we work backwards from useful knowledge to source and evidence links without overclaiming?
 - Can Obsidian users navigate and query the repository easily?
-- Can LLM-assisted work create useful objects without semantic drift or naming debt?
+- Can LLM-assisted work create useful ingestion slices without semantic drift, object sprawl or naming debt?
 - Can the repository distinguish evidence origin from need applicability?
 - Can locally observed needs later become wider cross-service or cross-locality patterns without losing provenance?
 - Can public secondary research be used as traceable evidence without turning the repository into a raw document archive?
@@ -137,7 +155,7 @@ If a proposed change does not help with those questions, defer it.
 
 ## Next review point
 
-Review this cursor after the first bounded safe-ingestion PR.
+Review this cursor after two or three non-linear ingestion slices using existing quote evidence and partially structured need-shaped research summaries.
 
 At that point, decide whether the next step should be:
 
