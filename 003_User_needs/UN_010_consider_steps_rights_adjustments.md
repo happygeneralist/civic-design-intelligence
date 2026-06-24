@@ -1,13 +1,13 @@
 ---
 type: user_need
 id: UN_010
+short_name: Deprecated bundled pathway planning need
 actor: Parent/carer of a young person with SEND
 journey_stage: Pathway_planning
-need: A parent/carer of a young person with SEND needs to know they have considered the important steps, rights and adjustments, so they can act with confidence rather than constant doubt.
+need: Deprecated bundled draft need from EVID_005. Use the superseding draft needs for active interpretation.
 need_level: journey
 parent_needs:
 child_needs:
-  - "[[UN_007]]"
 related_capabilities:
   - interpretability
   - agency
@@ -19,8 +19,8 @@ related_outcomes:
   - reduced self-discovery burden
 evidence_scope_fit: direct
 wording_sensitivity: high
-status: draft
-analysis_state: evidence_linked
+status: deprecated
+analysis_state: deprecated
 evidence_basis: traceable
 evidence_strength: weak
 confidence: low
@@ -28,9 +28,17 @@ creation_mode: llm_assisted
 llm_generated: true
 human_reviewed: false
 review_status: needs_review
-change_level: none
+change_level: material
 supersedes:
 superseded_by:
+  - "[[UN_012]]"
+  - "[[UN_013]]"
+  - "[[UN_014]]"
+  - "[[UN_007]]"
+  - "[[UN_008]]"
+  - "[[UN_009]]"
+  - "[[UN_011]]"
+  - "[[UN_016]]"
 related_evidence:
   - "[[EVID_005]]"
 related_behaviours:
@@ -44,19 +52,45 @@ tags:
   - rights
   - confidence
   - adjustments
+  - bundled-need
 ---
 
-# Consider the important steps, rights and adjustments
+# Deprecated bundled need about steps, rights and adjustments
 
 ## Working formulation
 
 A parent/carer of a young person with SEND needs to know they have considered the important steps, rights and adjustments, so they can act with confidence rather than constant doubt.
 
-## Wording rationale
+## Deprecation rationale
 
-This need uses `know` because the evidence is partly about confidence, rights, entitlements and assurance. The action is not simply information retrieval; it is reaching a defensible level of confidence that important steps and rights have not been missed.
+This object is deprecated because it bundles several distinct jobs into one user need.
 
-The wording avoids over-specifying the mechanism and avoids implying that the parent/carer should independently discover everything.
+It combines:
+
+- planning pathway steps
+- checking rights and entitlements
+- assessing or communicating adjustments and support needs
+- reconciling information from different sources
+- reducing doubt and increasing confidence
+
+Those signals are important, but they do not share one coherent solution vector. A single guide, local offer page or pathway-planning tool could contain responses to all of them, but that would be a container solution rather than evidence that they are one need.
+
+The original wording also uses the cognitive verb `know`. In this case, the wording hides more specific actions such as planning, checking, assessing, reconciling, revisiting and securing support.
+
+This object should not be promoted, validated or used as a stable need. Use the superseding draft needs instead, while preserving this object as a record of the earlier bundled interpretation.
+
+## Superseding draft needs
+
+This bundled need is decomposed across existing and new draft needs:
+
+- [[UN_012]]: planning before key education choices become fixed
+- [[UN_013]]: assessing realistic options for the young person's circumstances
+- [[UN_014]]: identifying viable routes if expected grades are not achieved
+- [[UN_007]]: reconciling pathway information from different sources
+- [[UN_008]]: assessing whether options are workable in daily life
+- [[UN_009]]: revisiting pathway decisions after they have started
+- [[UN_011]]: recognising the young person as an individual
+- [[UN_016]]: checking rights and entitlements
 
 ## Evidence basis
 
@@ -66,12 +100,14 @@ The wording avoids over-specifying the mechanism and avoids implying that the pa
 
 ## Interpretation
 
-The evidence suggests that pathway planning can create a sustained sense of doubt when families feel responsible for discovering every entitlement, adjustment or next step themselves. The need is for confidence and completeness in decision-making, not only access to information.
+The evidence remains useful, but the earlier interpretation was too broad. Confidence is better treated as an outcome or value dimension across more specific needs, rather than as the glue holding several different jobs together.
+
+The rights and entitlements signal is now captured separately in [[UN_016]]. Existing draft needs already cover pathway timing, realistic options, fallback routes, information reconciliation, practical feasibility, adaptation and recognition of the young person as an individual.
 
 ## Need hierarchy
 
 - Parent needs:
-- Child needs: [[UN_007]]
+- Child needs:
 - Related capabilities: interpretability; agency; minimum viable dignity
 - Related civic needs:
 - Related rights:
@@ -86,17 +122,20 @@ The evidence suggests that pathway planning can create a sustained sense of doub
 
 ## What remains uncertain
 
-- The exact rights, adjustments and decision steps need further breakdown from source material and policy context.
-- This may need a related civic need about making entitlements and routes legible without relying on informal privilege or persistence.
+- Further review should check whether a higher-level parent need about guidance through pathway planning is needed.
+- Further review should check whether one or more civic needs are needed around legible entitlements, navigable support and reduced reliance on informal advocacy capacity.
+- The evidence remains low confidence because [[EVID_005]] is an evidence summary rather than a checked original transcript.
 
 ## Review notes
 
 - Review date: TBC
 - Reviewer: TBC
-- Outcome: needs review
-- Notes: Review whether the cognitive verb `know` is justified or whether the need should be reframed around checking or confirming.
+- Outcome: deprecated; needs review
+- Notes: Deprecated because the object bundles multiple jobs and uses a cognitive formulation that hides more specific needs. This deprecation is an LLM-assisted semantic change and should be reviewed before treating the superseding structure as stable.
 
 ## Changelog
 
 - 2026-06-12: Created as draft user need from [[EVID_005]]. Status: draft. Analysis state: evidence_linked. Evidence strength: weak. Review status: needs_review.
 - 2026-06-12: Updated evidence link from [[EVID_004]] to [[EVID_005]] after renumbering the new evidence summary to avoid duplicate IDs.
+- 2026-06-24: Deprecated as a bundled draft need after applying user need quality tests. Superseded by existing draft needs [[UN_012]], [[UN_013]], [[UN_014]], [[UN_007]], [[UN_008]], [[UN_009]], [[UN_011]] and new draft need [[UN_016]]. This is a material semantic change and remains needs_review.
+- 2026-06-24: Updated the frontmatter `need` and `short_name` fields to make the deprecated state explicit while preserving the original bundled formulation in the body for traceability.
