@@ -1,10 +1,10 @@
 ---
 type: user_need
 id: UN_010
-short_name: Deprecated bundled need about steps rights and adjustments
+short_name: Deprecated bundled pathway planning need
 actor: Parent/carer of a young person with SEND
 journey_stage: Pathway_planning
-need: A parent/carer of a young person with SEND needs to know they have considered the important steps, rights and adjustments, so they can act with confidence rather than constant doubt.
+need: Deprecated bundled draft need from EVID_005. Use the superseding draft needs for active interpretation.
 need_level: journey
 parent_needs:
 child_needs:
@@ -138,3 +138,4 @@ The rights and entitlements signal is now captured separately in [[UN_016]]. Exi
 - 2026-06-12: Created as draft user need from [[EVID_005]]. Status: draft. Analysis state: evidence_linked. Evidence strength: weak. Review status: needs_review.
 - 2026-06-12: Updated evidence link from [[EVID_004]] to [[EVID_005]] after renumbering the new evidence summary to avoid duplicate IDs.
 - 2026-06-24: Deprecated as a bundled draft need after applying user need quality tests. Superseded by existing draft needs [[UN_012]], [[UN_013]], [[UN_014]], [[UN_007]], [[UN_008]], [[UN_009]], [[UN_011]] and new draft need [[UN_016]]. This is a material semantic change and remains needs_review.
+- 2026-06-24: Updated the frontmatter `need` and `short_name` fields to make the deprecated state explicit while preserving the original bundled formulation in the body for traceability.
