@@ -53,6 +53,132 @@ civic-design-intelligence
 
 Do not use the intelligence repository as a bulk document archive.
 
+## Known trade-offs and risks
+
+This split is intended to keep the intelligence repository focused and reviewable, but it has costs.
+
+### Cross-repository overhead
+
+Using two repositories means source material and structured intelligence can drift apart.
+
+Long-term risk:
+
+- source folders may exist without matching source records
+- source records may point to missing or renamed archive folders
+- evidence maps may become stale
+- reviewers may need to open multiple repositories to understand provenance
+
+Mitigation:
+
+- use stable source IDs
+- keep evidence maps lightweight
+- add future checks for missing or broken cross-repository references
+- avoid creating source folders unless they are likely to support evidence or ingestion work
+
+### Evidence-map duplication
+
+Evidence maps are useful navigation aids, but they can duplicate information already held in source records, evidence objects, PRs and backlinks.
+
+Long-term risk:
+
+- evidence maps become another manual place to update
+- contributors may treat evidence maps as canonical history
+- stale maps may reduce trust in provenance
+
+Mitigation:
+
+- treat evidence maps as navigational summaries, not the source of truth
+- keep them short
+- use them where cross-repository provenance needs to be reviewable
+- rely on Git and object links for detailed history
+
+### Source capture can become a dumping ground
+
+A source archive can gradually become a place where material is stored because it might be useful someday.
+
+Long-term risk:
+
+- source volume grows faster than ingestion capacity
+- important sources become hard to find
+- the archive creates a false sense that evidence has been analysed
+- maintenance work increases without improving intelligence
+
+Mitigation:
+
+- capture sources because they support a likely evidence, sensemaking or ingestion workflow
+- do not archive material just because it exists
+- use source-capture PR notes to say why the source was captured
+- review orphaned sources later if they are never used
+
+### Selected extraction can introduce bias
+
+The workflow deliberately avoids extracting everything. That keeps the system lightweight, but it introduces selection risk.
+
+Long-term risk:
+
+- extracts may over-represent striking examples
+- quieter or contradictory evidence may be missed
+- later users may mistake selected extracts for the full source picture
+
+Mitigation:
+
+- record why extracts were selected
+- preserve source location where possible
+- allow evidence relationships such as `limits`, `challenges` and `contradicts`
+- use review to ask what important evidence may have been left out
+
+### Public secondary sources can dominate lived experience
+
+Public reports and inspections are easier to capture than primary lived-experience research.
+
+Long-term risk:
+
+- institutional voice may outweigh direct lived experience
+- report findings may shape user need wording too strongly
+- secondary-source availability may distort the apparent evidence base
+
+Mitigation:
+
+- classify evidence voice before decomposition
+- do not create user needs directly from public reports
+- distinguish institutional framing from lived-experience evidence
+- use secondary sources to support, contextualise or challenge objects rather than automatically validate them
+
+### Markdown-first workflows may limit future scale
+
+Markdown and Git make the work transparent and reviewable, but they are not the final product architecture.
+
+Long-term risk:
+
+- cross-repository linking may become hard to query
+- evidence maps may not scale
+- public or partner contribution may need interfaces that non-technical contributors can use
+- future automation may need a more explicit data contract
+
+Mitigation:
+
+- keep frontmatter consistent enough for future export
+- avoid hiding meaning only in prose
+- keep source IDs stable
+- introduce automation and data/API layers only after real examples show the minimum useful structure
+
+### Conservative interpretation can slow throughput
+
+The workflow deliberately avoids automatic validation and premature object creation.
+
+Long-term risk:
+
+- ingestion may remain slower than desired
+- too much material may sit in partial states
+- reviewers may become bottlenecks
+
+Mitigation:
+
+- automate low-risk capture, mapping and checks first
+- use guided contributor workflows later
+- reserve human review for semantic risk, object boundaries, review status and public accountability
+- accept that some partial knowledge is useful if its limits are visible
+
 ## When to capture a source
 
 Capture a source when it is likely to be used as evidence, context or provenance for future analysis.
