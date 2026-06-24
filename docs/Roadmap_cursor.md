@@ -1,6 +1,6 @@
 # Roadmap cursor
 
-Last updated: 2026-06-23
+Last updated: 2026-06-24
 
 This cursor records the current operational focus for the repository.
 
@@ -24,6 +24,7 @@ Recent work has largely completed the first naming and file-structure stabilisat
 - first bounded primary-research ingestion slice from `RS_002` / `EVID_003` has been merged and reviewed as safe enough to continue cautiously
 - public roadmap and changelog communication page has been added so progress can be shared without creating another research dependency
 - non-linear ingestion guidance now documents how partially structured research knowledge can enter before full traceability is complete
+- ingestion operating guidance now separates expert-assisted ingestion, guided contributor ingestion and future semi-automated ingestion
 
 The system is ready to continue using real research, provided ingestion includes reconciliation with existing objects and does not become unreviewed object dumping.
 
@@ -53,7 +54,13 @@ This means:
 - leave unresolved or immature material in `000_Inbox/` when it cannot yet be responsibly reconciled
 - avoid marking anything reviewed or validated unless human review has happened
 
-Use `docs/Non_linear_research_ingestion.md` as the current operating guide for this phase.
+Use these documents as the current operating guide for this phase:
+
+- `docs/Non_linear_research_ingestion.md`
+- `docs/Ingestion_operating_model.md`
+- `docs/Ingestion_slice_workflow.md`
+- `docs/Safe_research_ingestion_MVP.md`
+- `docs/User_needs_writing_rules.md`
 
 ## Current ingestion emphasis
 
@@ -78,7 +85,7 @@ Pay particular attention to:
 
 ## Immediate next actions
 
-1. Use the non-linear ingestion guidance as the operating model for the next ingestion work.
+1. Use the non-linear ingestion and slice workflow guidance as the operating model for the next ingestion work.
 2. Use existing quote evidence and partially structured need-shaped research summaries to create a few more ingestion slices.
 3. For each slice, produce reconciliation notes before finalising the PR.
 4. Check candidate user needs against `docs/User_needs_writing_rules.md` and nearby existing user needs.
@@ -150,6 +157,7 @@ When deciding what to do next, prefer work that helps answer:
 - Can the repository identify reusable need patterns without flattening situated needs?
 - Can the repository show when need wording changes the solution vector and outcome strategy?
 - Can personas, segments and journeys be generated from evidence-backed objects rather than becoming stale static artefacts?
+- Can the ingestion workflow become less dependent on one expert over time?
 
 If a proposed change does not help with those questions, defer it.
 
@@ -170,3 +178,5 @@ At that point, decide whether the next step should be:
 - need-pattern conventions based on real object examples
 - segmentation and generated-view guidance for personas and journeys
 - cross-repository source inventory or evidence-map checks
+- guided contributor workflow design
+- safe source-capture automation
