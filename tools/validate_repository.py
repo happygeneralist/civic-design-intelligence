@@ -79,6 +79,29 @@ TYPE_PREFIX = {
 ID_PATTERN = re.compile(r"^[A-Z]+_\d{3}$")
 WIKILINK_PATTERN = re.compile(r"\[\[([^\]|#]+)(?:#[^\]|]+)?(?:\|[^\]]+)?\]\]")
 
+COGNITIVE_NEED_PATTERNS = [
+    re.compile(r"\bneeds? to know\b", re.IGNORECASE),
+    re.compile(r"\bneeds? to understand\b", re.IGNORECASE),
+    re.compile(r"\bneeds? to learn\b", re.IGNORECASE),
+    re.compile(r"\bneeds? to be aware of\b", re.IGNORECASE),
+]
+
+CONTAINER_SOLUTION_PATTERNS = [
+    re.compile(r"\bneeds? (?:a|an|the) dashboard\b", re.IGNORECASE),
+    re.compile(r"\bneeds? (?:a|an|the) portal\b", re.IGNORECASE),
+    re.compile(r"\bneeds? (?:a|an|the) app\b", re.IGNORECASE),
+    re.compile(r"\bneeds? (?:a|an|the) toolkit\b", re.IGNORECASE),
+    re.compile(r"\bneeds? (?:a|an|the) checklist\b", re.IGNORECASE),
+    re.compile(r"\bneeds? (?:a|an|the) page\b", re.IGNORECASE),
+    re.compile(r"\bneeds? (?:a|an|the) form\b", re.IGNORECASE),
+    re.compile(r"\bneeds? (?:a|an|the) guide\b", re.IGNORECASE),
+]
+
+KNOWN_BUNDLED_NEED_PHRASES = [
+    "steps, rights and adjustments",
+    "steps, rights, and adjustments",
+]
+
 CONTROLLED_VALUES = {
     "status": {
         "captured",
@@ -420,6 +443,51 @@ def check_lifecycle_rules(note: Note, include_templates: bool, include_docs: boo
     return findings
 
 
+def check_user_need_quality(note: Note, include_templates: bool, include_docs: bool) -> List[Finding]:
+    """Warn about user-need wording smells that require human review.
+
+    These checks are intentionally conservative warnings. They catch common signs
+    of poor scoping, cognitive-verb use, solution-shaped wording and bundling, but
+    they do not prove that a need is invalid.
+    """
+    findings: List[Finding] = []
+    if not is_structured_candidate(note, include_templates=include_templates, include_docs=include_docs) or not note.has_frontmatter:
+        return findings
+    if scalar(note.frontmatter, "type") != "user_need":
+        return findings
+
+    need = scalar(note.frontmatter, "need")
+    short_name = scalar(note.frontmatter, "short_name")
+    if not need:
+        return findings
+
+    for pattern in COGNITIVE_NEED_PATTERNS:
+        if pattern.search(need):
+            findings.append(Finding("warning", note.path, "user need uses a cognitive verb; check whether the person needs to act, check, confirm, decide, plan, challenge or communicate instead"))
+            break
+
+    for pattern in COGNITIVE_NEED_PATTERNS:
+        if short_name and pattern.search(short_name):
+            findings.append(Finding("warning", note.path, "short_name uses a cognitive verb; use `Need to + action + object/context` unless comprehension is genuinely the need"))
+            break
+
+    for pattern in CONTAINER_SOLUTION_PATTERNS:
+        if pattern.search(need):
+            findings.append(Finding("warning", note.path, "user need may name a container solution; check whether the underlying need can be met in multiple ways"))
+            break
+
+    lower_need = need.lower()
+    for phrase in KNOWN_BUNDLED_NEED_PHRASES:
+        if phrase in lower_need:
+            findings.append(Finding("warning", note.path, f"user need may bundle multiple jobs (`{phrase}`); check whether these need separate user needs"))
+            break
+
+    if lower_need.count(" and ") >= 3:
+        findings.append(Finding("warning", note.path, "user need contains several `and` joins; check for bundled jobs or mixed solution vectors"))
+
+    return findings
+
+
 def build_indexes(notes: List[Note], include_templates: bool, include_docs: bool) -> Tuple[Dict[str, List[Path]], Dict[str, Path]]:
     id_index: Dict[str, List[Path]] = {}
     link_targets: Dict[str, Path] = {}
@@ -476,6 +544,7 @@ def validate(include_templates: bool = False, include_docs: bool = False) -> Lis
         findings.extend(check_id(note, id_index, include_templates=include_templates, include_docs=include_docs))
         findings.extend(check_controlled_values(note, include_templates=include_templates, include_docs=include_docs))
         findings.extend(check_lifecycle_rules(note, include_templates=include_templates, include_docs=include_docs))
+        findings.extend(check_user_need_quality(note, include_templates=include_templates, include_docs=include_docs))
         findings.extend(check_wikilinks(note, link_targets, include_templates=include_templates, include_docs=include_docs))
         findings.extend(check_relationship_links(note, link_targets, include_templates=include_templates, include_docs=include_docs))
     return findings
