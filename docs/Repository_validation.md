@@ -12,6 +12,8 @@ The default validation layer focuses on real repository content notes, not templ
 
 Naming and link checks should be read alongside `docs/Naming_and_linking_contract.md`, which defines the repository contract for stable IDs, ID-prefixed readable filenames, aliases and Obsidian links.
 
+User need quality warnings should be read alongside `docs/User_need_quality_tests.md` and `docs/User_needs_writing_rules.md`.
+
 It checks:
 
 - YAML frontmatter presence
@@ -23,6 +25,7 @@ It checks:
 - lifecycle safety rules
 - unresolved wikilinks
 - unresolved relationship links
+- user need wording smells that need human review
 
 ## Validation philosophy
 
@@ -37,6 +40,7 @@ In short:
 ```text
 Allow incomplete objects.
 Block misleading objects.
+Warn about likely quality smells.
 ```
 
 A candidate user need can exist without direct evidence links if it is clearly marked as a candidate or assumption.
@@ -51,6 +55,7 @@ The validator should therefore protect against category errors such as:
 - weak traceability treated as strong evidence basis
 - review state hidden or misrepresented
 - wrong ID or type making an object hard to trace
+- solution-shaped or bundled user needs entering without review visibility
 
 ## Default validation scope
 
@@ -137,7 +142,23 @@ Examples:
 - validated objects need a defensible evidence basis
 - LLM-generated objects should not appear human-reviewed unless a review has been explicitly completed
 
-### 3. Decision-readiness checks
+### 3. User need quality warnings
+
+These are automated smell checks, not automated semantic judgements.
+
+The validator can warn when a user need may need review because it appears to:
+
+- use a cognitive verb such as `need to know` or `need to understand`
+- name a likely container solution such as a dashboard, portal, app, toolkit, checklist, page, form or guide
+- bundle known mixed objects such as `steps, rights and adjustments`
+- contain several `and` joins in the main need statement
+- use a cognitive verb in `short_name`
+
+These warnings should trigger review against `docs/User_need_quality_tests.md`.
+
+They do not automatically mean the need is wrong. A cognitive verb may be appropriate for rights, consent, safety or informed decision-making. A list may be acceptable when the listed items are criteria for one coherent job. The warning means the need should be checked for solution-shaping, bundling or poor granularity.
+
+### 4. Decision-readiness checks
 
 These are not fully automated in the first version.
 
@@ -157,7 +178,7 @@ The validator can check whether minimum conditions are present, but it cannot ju
 The long-term pattern should be:
 
 ```text
-machine checks presence and consistency
+machine checks presence, consistency and obvious smells
 human checks meaning and judgement
 ```
 
@@ -217,6 +238,7 @@ This is especially useful for:
 - template migration
 - adding new structured notes
 - checking LLM-generated candidate objects
+- checking candidate user need wording before it shapes the object landscape
 
 ## Error versus warning
 
@@ -244,6 +266,9 @@ Examples:
 - unresolved wikilink
 - relationship link target does not resolve
 - `evidence_strength: strong` with weak evidence basis
+- user need uses a cognitive verb that may hide a more actionable need
+- user need appears to name a container solution
+- user need appears to bundle multiple jobs or solution vectors
 
 Warnings can be promoted to errors later by using `--warnings-as-errors`.
 
@@ -256,8 +281,9 @@ Do not block ordinary commits merely because:
 - an LLM-assisted object is not reviewed yet
 - an insight is still a draft
 - a value dimension is indicative rather than substantiated
+- a user need triggers a wording-smell warning that has been reviewed and deliberately accepted
 
-These are acceptable if the metadata makes the incompleteness visible.
+These are acceptable if the metadata makes the incompleteness or review need visible.
 
 Block or fail only when the metadata overclaims reliability, review state or traceability.
 
@@ -271,23 +297,24 @@ A good migration workflow is:
 
 1. Run the validator.
 2. Fix high-confidence errors first.
-3. Leave ambiguous items for later audit.
-4. Commit fixes in focused batches.
-5. Tighten warnings only when the repository is ready.
+3. Review wording-smell warnings before creating or promoting user needs.
+4. Leave ambiguous items for later audit.
+5. Commit fixes in focused batches.
+6. Tighten warnings only when the repository is ready.
 
 ## What the validator does not do yet
 
-The first version does not fully check:
+The validator does not fully check:
 
-- semantic quality of user needs
 - whether evidence genuinely supports a claim
+- whether a user need has the right final wording
 - whether an insight is well interpreted
 - whether personal data has been fully anonymised
 - whether a note should be split or merged
 - whether a relationship is conceptually correct
 - whether an object is substantively decision-ready
 
-These still need human review.
+It can flag likely user need quality smells, but these still need human review.
 
 ## Recommended migration order
 
@@ -300,7 +327,8 @@ Use the tests to clean up in this order:
 5. Validated/review lifecycle contradictions.
 6. Broken source and relationship links.
 7. Filename and ID mismatches.
-8. Warnings that remain after migration.
+8. User need wording-smell warnings.
+9. Warnings that remain after migration.
 
 ## Practical rule
 
