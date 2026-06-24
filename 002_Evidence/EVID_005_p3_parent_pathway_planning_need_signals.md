@@ -26,8 +26,8 @@ related_needs:
   - "[[UN_007]]"
   - "[[UN_008]]"
   - "[[UN_009]]"
-  - "[[UN_010]]"
   - "[[UN_011]]"
+  - "[[UN_016]]"
 related_behaviours:
   - "[[BEH_003]]"
   - "[[BEH_004]]"
@@ -73,13 +73,16 @@ The supplied extract describes these evidence points:
 
 ## Interpretation notes
 
-This evidence summary supports candidate user needs about early planning, realistic options, accurate representation, relational knowledge, information reconciliation, practical feasibility, review and adaptation, confidence, entitlements and dignity.
+This evidence summary supports candidate user needs about planning before key choices become fixed, realistic options, accurate representation, relational knowledge, information reconciliation, practical feasibility, review and adaptation, entitlements and dignity.
+
+Earlier draft need [[UN_010]] bundled several of these signals into one broad confidence-oriented formulation. That object is now deprecated and should not be used as the active structured interpretation of this evidence.
 
 Because the original transcript is not present in the repository and anonymisation has not been independently checked, this evidence item should remain `captured`, `needs_review` and low confidence until reviewed against the source material.
 
 ## Related objects
 
-- User needs: [[UN_012]], [[UN_013]], [[UN_014]], [[UN_005]], [[UN_006]], [[UN_007]], [[UN_008]], [[UN_009]], [[UN_010]], [[UN_011]]
+- User needs: [[UN_012]], [[UN_013]], [[UN_014]], [[UN_005]], [[UN_006]], [[UN_007]], [[UN_008]], [[UN_009]], [[UN_011]], [[UN_016]]
+- Deprecated user needs: [[UN_010]]
 - Behaviours: [[BEH_003]], [[BEH_004]], [[BEH_005]], [[BEH_006]], [[BEH_007]], [[BEH_008]]
 - Pain points:
 - Insights:
@@ -95,3 +98,4 @@ No direct names were included in the supplied extract. The note includes referen
 - 2026-06-12: Created as evidence summary from a user-supplied anonymised parent/carer extract for the initial pathway-planning guidance level test. Status: captured. Review status: needs_review. Confidence: low. Original transcript not present in repository.
 - 2026-06-12: Renumbered from `EVID_004` to `EVID_005` to avoid collision with existing `EVID_DATA_001`.
 - 2026-06-12: Linked initial prioritised behaviour set [[BEH_003]] to [[BEH_008]]. Evidence remains captured and needs_review.
+- 2026-06-24: Replaced active related-need link to bundled draft [[UN_010]] with [[UN_016]] after [[UN_010]] was deprecated. [[UN_010]] remains listed as a deprecated user need for traceability. Evidence text unchanged.
