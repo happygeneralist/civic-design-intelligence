@@ -7,6 +7,7 @@ It should be read alongside:
 - `docs/Non_linear_research_ingestion.md`
 - `docs/Ingestion_operating_model.md`
 - `docs/Ingestion_slice_workflow.md`
+- `docs/Source_capture_workflow.md`
 - `docs/Safe_research_ingestion_MVP.md`
 - `docs/User_needs_writing_rules.md`
 
@@ -41,6 +42,8 @@ For example:
 
 Classify the entry state first. Then decide how to ingest, reconcile and review it.
 
+If the material is a raw source, public secondary source, uploaded file or source package, use `docs/Source_capture_workflow.md` before decomposition.
+
 ## Entry states
 
 ### Raw source
@@ -62,6 +65,7 @@ Default route:
 
 ```text
 raw source
+→ source capture workflow
 → source or research-study record
 → selected evidence extracts
 → candidate objects
@@ -286,6 +290,7 @@ Default route:
 
 ```text
 public secondary source
+→ source capture workflow
 → archive or reference source material
 → source record
 → selected evidence extracts
@@ -361,13 +366,14 @@ Before ingesting material, ask:
 1. What kind of input is this?
 2. Whose voice or perspective does it represent?
 3. Is it direct evidence, reported evidence, synthesis, interpretation or operational context?
-4. What object types might it imply?
-5. What existing objects might already cover this space?
-6. What evidence or provenance is missing?
-7. What should stay in the inbox?
-8. What should not be created yet?
-9. What needs human review?
-10. What would be dangerous to overclaim?
+4. Does the source capture workflow need to happen first?
+5. What object types might it imply?
+6. What existing objects might already cover this space?
+7. What evidence or provenance is missing?
+8. What should stay in the inbox?
+9. What should not be created yet?
+10. What needs human review?
+11. What would be dangerous to overclaim?
 
 ## Maturity and traceability
 
