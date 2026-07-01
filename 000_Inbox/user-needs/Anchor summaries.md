@@ -2,6 +2,8 @@
 
 > These have been summarised with the help of [Gov User Needs LLM](https://chatgpt.com/g/g-673f960b95b48191802b8036a6bdc3a8-gov-user-needs) and should be **handled as assumptions until fully anchored to the research**.
 
+Public-source reset note: retained as loose candidate civic knowledge. Source-specific evidence links were removed during the public-source reset. These notes should not be treated as evidence-linked until supported by public or explicitly authorised sources.
+
 ### Identity & Confidence
 
 - I need to feel like I have a future.

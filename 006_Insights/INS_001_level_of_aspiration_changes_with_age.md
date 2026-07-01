@@ -9,19 +9,26 @@ related_needs:
 related_pain_points:
 related_behaviours:
 related_evidence:
-confidence: medium
-status: captured
-analysis_state: captured
+confidence: low
+status: assumption
+analysis_state: candidate
+evidence_basis: none
+evidence_strength: none
 creation_mode: migrated
 llm_generated: false
 human_reviewed: false
-review_status: not_reviewed
+review_status: needs_review
 tags:
   - send
   - young person
   - career planning
+change_level: material
 ---
 # Level of aspiration changes with age
+
+## Public-source reset note
+
+Retained as a generic candidate civic knowledge object. Source-specific evidence links were removed during the public-source reset. This object should not be treated as evidence-linked until supported by public or explicitly authorised sources.
 
 ### Summary
 Young people with SEND often express high aspirations at earlier ages, but these can fade, narrow, or disappear entirely as they grow older — particularly when they encounter systemic barriers, mental health challenges, or exclusion from mainstream opportunities.
@@ -33,32 +40,13 @@ Young people with SEND often express high aspirations at earlier ages, but these
 - **External voices shape internal expectations.** What young people are told (or denied) shapes what they believe is possible.
 - **Maintaining aspiration is protective.** It supports emotional wellbeing, motivation, and longer-term engagement in pathways.
 
-### Supporting evidence
+### Candidate pattern
 
-**Earlier optimism**  
-   - Younger children often name ambitious or imaginative goals: “I want five jobs”, “I want to own a café/bookshop and host ND sessions.”
-   - These aspirations reflect creativity, curiosity, and a strong sense of possibility.
-
-**Later disillusionment**  
-   - As young people reach secondary age or experience school exclusion, aspirations often narrow or are lost altogether.  
-   - Quotes such as:  
-     - “She had a life plan... now it’s all evaporated.”  
-     - “I don’t know what I want anymore.”  
-     - “Any old job — I just hope someone gives me a chance.”
-
-3. **External influence over time**  
-
-   - Older young people report being steered away from preferred choices (“You won’t like drama”, “Do this, it’s easier”).  
-
-   - Some pathways are constrained by what’s available, accessible, or deemed appropriate due to their SEND status.
-
-  
-
-4. **Parents notice the shift**  
-
-   - Parents reflect on their children once having dreams, now replaced with fear, avoidance, or low expectations.  
-
-   - “I don’t want to give her hope — it hasn’t worked out before.”
+This insight is retained as a candidate pattern about aspiration changing over time. Source-specific quote material has been removed. It should be rebuilt from public or explicitly authorised evidence before being treated as evidence-linked.
 
 ### Implications
 -****
+
+## Changelog
+
+- 2026-06-24: Removed source-specific evidence links during public-source reset. Retained as a generic candidate civic knowledge object. Status changed to assumption; analysis_state changed to candidate; evidence_basis and evidence_strength changed to none. Review status remains needs_review.

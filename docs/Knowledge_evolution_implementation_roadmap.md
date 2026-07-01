@@ -1,5 +1,7 @@
 # Knowledge evolution implementation roadmap
 
+Public-source reset note: the repository is currently in a public-source-first rebuild. Retained candidate knowledge objects should not be treated as evidence-linked until supported by public, openly licensed or explicitly authorised sources.
+
 This roadmap describes a staged implementation approach for knowledge evolution, user need persistence, pain point recurrence, repository naming guardrails, safe research ingestion, context sensemaking, secondary research ingestion and LLM intervention logging.
 
 The aim is to establish useful governance without slowing down the current research migration work.
@@ -18,7 +20,7 @@ Completed or substantially complete:
 - decision-shaped user needs captured as a user need shape rather than a separate Decision object
 - LLM-assisted work rules strengthened to preserve evidence, status, review state and naming conventions
 - companion public secondary-research repository created: `happygeneralist/civic-design-secondary-research`
-- first companion source archive example created for the Essex Area SEND inspection: `SRC_001_ofsted_essex_area_send_inspection_jan_2026`
+- first companion source archive example created for the public-source ingestion workflow
 
 Active or pending:
 
@@ -459,7 +461,7 @@ The repository should remain useful as Markdown and Obsidian first. A database o
 Recommended immediate PRs after the current naming guardrail work:
 
 1. Start one bounded safe-ingestion PR using a SEND pathway-planning research extract.
-2. If using the Essex Ofsted Area SEND report or another public secondary source, create one source record and a small number of selected evidence extracts first.
+2. If using a public Ofsted/CQC Area SEND report or another public secondary source, create one source record and a small number of selected evidence extracts first.
 3. Update the matching companion `evidence-map.md` after structured source and evidence objects are created.
 4. During ingestion, test whether locality, service and organisation context can be captured as lightweight mappings without distorting need wording.
 5. After that ingestion PR, review which template changes are actually needed.

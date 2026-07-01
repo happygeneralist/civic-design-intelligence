@@ -4,21 +4,20 @@ id: PP_002
 actor: Parent/carer of a young person with SEND
 journey_stage: Pathway_planning
 pain_point: Parent/carer carries a high pathway navigation burden when support routes are unclear, fragmented or unresponsive.
-status: draft
-analysis_state: evidence_linked
-evidence_basis: traceable
-evidence_strength: weak
+status: assumption
+analysis_state: candidate
+evidence_basis: none
+evidence_strength: none
 confidence: low
 severity: high
 creation_mode: llm_assisted
 llm_generated: true
 human_reviewed: false
 review_status: needs_review
-change_level: none
+change_level: material
 supersedes:
 superseded_by:
 related_evidence:
-  - "[[EVID_003]]"
 related_needs:
   - "[[UN_015]]"
   - "[[UN_010]]"
@@ -32,24 +31,21 @@ tags:
   - navigation-burden
   - coordination
 ---
-
 # Parent carries pathway navigation burden
 
 ## Working formulation
 
 Parent/carer carries a high pathway navigation burden when support routes are unclear, fragmented or unresponsive.
 
-## Evidence basis
+## Public-source reset note
 
-- Supporting evidence: [[EVID_003]]
-- Contextual evidence: [[RS_002]]
-- Contradictory or limiting evidence:
+Retained as a generic candidate civic knowledge object. Source-specific evidence links were removed during the public-source reset. This object should not be treated as evidence-linked until supported by public or explicitly authorised sources.
 
 ## Impact
 
-This pain point can turn pathway planning into sustained unpaid coordination work for the parent/carer. The evidence links this burden to exhaustion, repeated chasing, uncertainty about whether they are speaking to the right people and reduced capacity to plan while also working and caring.
+This pain point can turn pathway planning into sustained unpaid coordination work for the parent/carer. This candidate frames the burden as involving exhaustion, repeated chasing, uncertainty about whether they are speaking to the right people and reduced capacity to plan while also working and caring.
 
-Severity is marked high because the burden appears to affect the parent/carer's ability to keep planning moving. Confidence remains low because the pain point is currently anchored to one evidence item.
+Severity is marked high because the burden appears to affect the parent/carer's ability to keep planning moving. Confidence remains low because this object is not currently linked to public or explicitly authorised evidence.
 
 ## Conditions and causes
 
@@ -83,4 +79,5 @@ The pain point appears to be worsened by:
 
 ## Changelog
 
-- 2026-06-16: Created as draft pain point from [[EVID_003]]. Status: draft. Analysis state: evidence_linked. Evidence strength: weak. Review status: needs_review.
+
+- 2026-06-24: Removed source-specific evidence links during public-source reset. Retained as a generic candidate civic knowledge object. Status changed to assumption; analysis_state changed to candidate; evidence_basis and evidence_strength changed to none. Review status remains needs_review.

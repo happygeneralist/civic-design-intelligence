@@ -17,20 +17,19 @@ related_outcomes:
   - reduced risk of unsupported transition
 evidence_scope_fit: direct
 wording_sensitivity: medium
-status: draft
-analysis_state: evidence_linked
-evidence_basis: traceable
-evidence_strength: weak
+status: assumption
+analysis_state: candidate
+evidence_basis: none
+evidence_strength: none
 confidence: low
 creation_mode: llm_assisted
 llm_generated: true
 human_reviewed: false
 review_status: needs_review
-change_level: none
+change_level: material
 supersedes:
 superseded_by:
 related_evidence:
-  - "[[EVID_005]]"
 related_behaviours:
 related_pain_points:
 related_insights:
@@ -43,7 +42,6 @@ tags:
   - transport
   - support-needs
 ---
-
 # Assess whether pathway options are workable in daily life
 
 ## Working formulation
@@ -54,15 +52,13 @@ A parent/carer of a young person with SEND needs to assess whether each pathway 
 
 The wording distinguishes between an option being formally available and being genuinely viable for the young person. It avoids listing every practical constraint in the need statement while preserving examples in the interpretation.
 
-## Evidence basis
+## Public-source reset note
 
-- Supporting evidence: [[EVID_005]]
-- Contextual evidence: [[RS_007]]
-- Contradictory or limiting evidence:
+Retained as a generic candidate civic knowledge object. Source-specific evidence links were removed during the public-source reset. This object should not be treated as evidence-linked until supported by public or explicitly authorised sources.
 
 ## Interpretation
 
-The evidence suggests that pathway options cannot be assessed only by course availability or entry requirements. Travel, bus use, anxiety, burnout, attendance patterns and support needs affect whether a route is realistically sustainable.
+This candidate assumes that pathway options cannot be assessed only by course availability or entry requirements. Travel, bus use, anxiety, burnout, attendance patterns and support needs affect whether a route is realistically sustainable.
 
 ## Need hierarchy
 
@@ -82,7 +78,7 @@ The evidence suggests that pathway options cannot be assessed only by course ava
 
 ## What remains uncertain
 
-- The relative importance of travel, anxiety, burnout and support needs should be checked against the original interview and wider experiment evidence.
+- The relative importance of travel, anxiety, burnout and support needs should be checked against public or explicitly authorised evidence.
 - This may connect to future pain points around transport, attendance or unsupported transitions.
 
 ## Review notes
@@ -94,5 +90,5 @@ The evidence suggests that pathway options cannot be assessed only by course ava
 
 ## Changelog
 
-- 2026-06-12: Created as draft user need from [[EVID_005]]. Status: draft. Analysis state: evidence_linked. Evidence strength: weak. Review status: needs_review.
-- 2026-06-12: Updated evidence link from [[EVID_004]] to [[EVID_005]] after renumbering the new evidence summary to avoid duplicate IDs.
+
+- 2026-06-24: Removed source-specific evidence links during public-source reset. Retained as a generic candidate civic knowledge object. Status changed to assumption; analysis_state changed to candidate; evidence_basis and evidence_strength changed to none. Review status remains needs_review.

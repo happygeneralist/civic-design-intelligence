@@ -20,20 +20,19 @@ related_outcomes:
   - reduced stereotyping or generic treatment
 evidence_scope_fit: direct
 wording_sensitivity: high
-status: draft
-analysis_state: evidence_linked
-evidence_basis: traceable
-evidence_strength: weak
+status: assumption
+analysis_state: candidate
+evidence_basis: none
+evidence_strength: none
 confidence: low
 creation_mode: llm_assisted
 llm_generated: true
 human_reviewed: false
 review_status: needs_review
-change_level: none
+change_level: material
 supersedes:
 superseded_by:
 related_evidence:
-  - "[[EVID_005]]"
 related_behaviours:
 related_pain_points:
 related_insights:
@@ -45,7 +44,6 @@ tags:
   - dignity
   - individuality
 ---
-
 # Recognise the young person as an individual
 
 ## Working formulation
@@ -58,15 +56,13 @@ The wording preserves the relational and dignity meaning in the evidence. It del
 
 This is marked high sensitivity because small wording changes could remove the dignity claim or unintentionally imply that diagnosis is irrelevant. The intended meaning is that diagnosis should not replace individual understanding.
 
-## Evidence basis
+## Public-source reset note
 
-- Supporting evidence: [[EVID_005]]
-- Contextual evidence: [[RS_007]]
-- Contradictory or limiting evidence:
+Retained as a generic candidate civic knowledge object. Source-specific evidence links were removed during the public-source reset. This object should not be treated as evidence-linked until supported by public or explicitly authorised sources.
 
 ## Interpretation
 
-The evidence suggests that parent/carers may need professionals and services to see the young person as themselves, not only through a diagnostic category or standardised pathway assumption. This supports dignified and contextually accurate planning.
+This candidate assumes that parent/carers may need professionals and services to see the young person as themselves, not only through a diagnostic category or standardised pathway assumption. This supports dignified and contextually accurate planning.
 
 ## Need hierarchy
 
@@ -98,5 +94,5 @@ The evidence suggests that parent/carers may need professionals and services to 
 
 ## Changelog
 
-- 2026-06-12: Created as draft user need from [[EVID_005]]. Status: draft. Analysis state: evidence_linked. Evidence strength: weak. Review status: needs_review.
-- 2026-06-12: Updated evidence link from [[EVID_004]] to [[EVID_005]] after renumbering the new evidence summary to avoid duplicate IDs.
+
+- 2026-06-24: Removed source-specific evidence links during public-source reset. Retained as a generic candidate civic knowledge object. Status changed to assumption; analysis_state changed to candidate; evidence_basis and evidence_strength changed to none. Review status remains needs_review.

@@ -60,11 +60,7 @@ broken `SCHEMA.md` example link with an existing user need ID.
 |---|---|---|---|---|
 | `001_Research_studies/S001_survey.md` | `RS_001` | `001_Research_studies/RS_001_send_survey.md` | Medium | Replaces legacy `S001` prefix with canonical `RS_001`. |
 | `001_Research_studies/S002_parent_interviews.md` | `RS_002` | `001_Research_studies/RS_002_parent_interviews.md` | Medium | Replaces legacy `S002` prefix with canonical `RS_002`. |
-| `001_Research_studies/S003_case_studies.md` | `RS_003` | `001_Research_studies/RS_003_case_studies.md` | Medium | Replaces legacy `S003` prefix with canonical `RS_003`. |
-| `001_Research_studies/S004_professionals_interviews.md` | `RS_004` | `001_Research_studies/RS_004_professionals_interviews.md` | Medium | Replaces legacy `S004` prefix with canonical `RS_004`. |
-| `001_Research_studies/S005_focus_groups.md` | `RS_005` | `001_Research_studies/RS_005_focus_groups.md` | Medium | Replaces legacy `S005` prefix with canonical `RS_005`. |
-| `001_Research_studies/S006_in-school_workshops.md` | `RS_006` | `001_Research_studies/RS_006_in_school_workshops.md` | Medium | Replaces legacy `S006` prefix with canonical `RS_006`; normalises hyphen to underscore in slug. |
-| `001_Research_studies/S007_pathway_planning_guidance_level_test.md` | `RS_007` | `001_Research_studies/RS_007_pathway_planning_guidance_level_test.md` | Medium | Replaces legacy `S007` prefix with canonical `RS_007`. |
+| Removed source-specific study records | Redacted | Removed from active content | Medium | Historical source-specific study identifiers removed during the public-source reset. |
 
 ### Pain Point
 
@@ -89,7 +85,7 @@ rg -n "\\[\\[(Pain_point_template 1|S001_survey|S002_parent_interviews|S003_case
 ### Batch 1: Research study filenames
 
 - Completed 2026-06-16.
-- Renamed `S001` to `S007` study filenames to `RS_001` to `RS_007`.
+- Renamed historical study filenames to canonical research-study filenames. Source-specific identifiers later removed from this migration note during the public-source reset.
 - Re-ran link checks because studies are common source targets.
 
 ### Batch 2: Pain point decision

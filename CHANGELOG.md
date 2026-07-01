@@ -10,12 +10,12 @@ Use entry-level changelogs inside individual notes for changes to specific evide
 
 - Added a project-scoped Codex permission profile to support shared repository workflow, GitHub access and safer local automation.
 - Added documentation for the companion public secondary-research source archive, `happygeneralist/civic-design-secondary-research`, including the first source example `SRC_001_ofsted_essex_area_send_inspection_jan_2026`.
-- Added the first bounded primary-research safe-ingestion objects from `RS_002` / `EVID_003`: one draft user need, one draft behaviour and one draft pain point about parent/carer pathway navigation burden.
+- Added the first bounded primary-research safe-ingestion objects. These have since been reset to unsupported candidate objects pending public or explicitly authorised evidence.
 - Added an MVP public roadmap and changelog page, linked from the public homepage footer, to communicate progress and next steps in chunks.
 
 ### Changed
 
-- Updated secondary-research ingestion guidance to name the companion source archive, describe the first Essex Ofsted SEND inspection source example and define future cross-repository evidence-map checks as deferred workflow automation.
+- Updated secondary-research ingestion guidance to name the companion source archive, describe a public-source inspection-report example and define future cross-repository evidence-map checks as deferred workflow automation.
 - Updated the roadmap and roadmap cursor to reflect the new companion secondary-research repository, the manual source-record/evidence-map workflow and the future possibility of cross-repository sync.
 - Added naming-contract pointers to the Obsidian workflow and repository validation docs, and advanced the roadmap cursor toward bounded research ingestion.
 - Updated template validation so template filenames and controlled-value option lists are handled as scaffolding, while real content notes still require selected values.
@@ -46,7 +46,7 @@ Use entry-level changelogs inside individual notes for changes to specific evide
 - Updated `.gitignore` to keep personal Obsidian workspace state, local plugin state, local-only notes and accidental untitled Bases out of shared history.
 - Stopped tracking personal Obsidian workspace files and root-level untitled Base files while preserving them locally for individual contributors.
 - Normalised research study and review note templates to include current lifecycle, review, evidence strength, confidence and change-level fields.
-- Replaced the legacy `Study_template.md` example that used a live `RS_001` ID with a generic non-colliding study template.
+- Replaced the legacy `Study_template.md` example that used a live source ID with a generic non-colliding study template.
 - Clarified that filenames may either match the stable object ID exactly or use an ID-prefixed readable slug, and updated repository validation to match that convention.
 - Added a `short_name` convention for user needs so Obsidian Bases, mapping and design artefacts can use compact `Need to + verb + object/context` labels while preserving the full canonical need.
 - Piloted `short_name` on three pathway-planning user needs without changing canonical need wording, evidence links or review state.

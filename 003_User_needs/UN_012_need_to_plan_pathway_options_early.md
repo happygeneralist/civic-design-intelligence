@@ -18,20 +18,19 @@ related_outcomes:
   - reduced late-stage decision pressure
 evidence_scope_fit: direct
 wording_sensitivity: medium
-status: draft
-analysis_state: evidence_linked
-evidence_basis: traceable
-evidence_strength: weak
+status: assumption
+analysis_state: candidate
+evidence_basis: none
+evidence_strength: none
 confidence: low
 creation_mode: llm_assisted
 llm_generated: true
 human_reviewed: false
 review_status: needs_review
-change_level: minor
+change_level: material
 supersedes:
 superseded_by:
 related_evidence:
-  - "[[EVID_005]]"
 related_behaviours:
 related_pain_points:
 related_insights:
@@ -43,7 +42,6 @@ tags:
   - timing
   - decision-making
 ---
-
 # Begin planning before key education choices become fixed
 
 ## Working formulation
@@ -56,11 +54,9 @@ The wording uses `begin planning` rather than `start pathway planning early` to 
 
 The phrase `before key education choices become fixed` preserves the evidence meaning that decisions can arrive too late or all at once, especially around GCSE and pathway decisions.
 
-## Evidence basis
+## Public-source reset note
 
-- Supporting evidence: [[EVID_005]]
-- Contextual evidence: [[RS_007]]
-- Contradictory or limiting evidence:
+Retained as a generic candidate civic knowledge object. Source-specific evidence links were removed during the public-source reset. This object should not be treated as evidence-linked until supported by public or explicitly authorised sources.
 
 ## Interpretation
 
@@ -85,7 +81,6 @@ The parent/carer evidence suggests that pathway planning can become high-stakes 
 ## What remains uncertain
 
 - The exact year group or transition point at which support should begin needs further evidence.
-- The source is currently a user-supplied extract, not a checked transcript.
 - The need may apply to young people as well as parent/carers, but this object is scoped to the parent/carer actor.
 
 ## Review notes
@@ -93,10 +88,10 @@ The parent/carer evidence suggests that pathway planning can become high-stakes 
 - Review date: TBC
 - Reviewer: TBC
 - Outcome: needs review
-- Notes: Check wording against the original p3 parent source before promotion.
 
 ## Changelog
 
-- 2026-06-12: Created as draft user need from [[EVID_005]]. Status: draft. Analysis state: evidence_linked. Evidence strength: weak. Review status: needs_review.
+
+- 2026-06-24: Removed source-specific evidence links during public-source reset. Retained as a generic candidate civic knowledge object. Status changed to assumption; analysis_state changed to candidate; evidence_basis and evidence_strength changed to none. Review status remains needs_review.
 - 2026-06-12: Renumbered from `UN_002` to `UN_012` to avoid collision with existing `UN_002.md`.
 - 2026-06-15: Added `short_name` as a compact mapping label. Canonical need wording, evidence links and review state unchanged.

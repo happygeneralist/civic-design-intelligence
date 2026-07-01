@@ -19,20 +19,19 @@ related_outcomes:
   - reduced harm from misunderstanding
 evidence_scope_fit: direct
 wording_sensitivity: high
-status: draft
-analysis_state: evidence_linked
-evidence_basis: traceable
-evidence_strength: weak
+status: assumption
+analysis_state: candidate
+evidence_basis: none
+evidence_strength: none
 confidence: low
 creation_mode: llm_assisted
 llm_generated: true
 human_reviewed: false
 review_status: needs_review
-change_level: none
+change_level: material
 supersedes:
 superseded_by:
 related_evidence:
-  - "[[EVID_005]]"
 related_behaviours:
 related_pain_points:
 related_insights:
@@ -44,7 +43,6 @@ tags:
   - communication
   - accurate-representation
 ---
-
 # Make decisions from an accurate view of the young person
 
 ## Working formulation
@@ -55,15 +53,13 @@ A parent/carer of a young person with SEND needs to make sure decisions are base
 
 The wording keeps the parent/carer as the actor while preserving the evidence about inaccurate representation in professional conversations. This is marked high sensitivity because wording can easily imply blame towards either the young person or professionals. The intended meaning is that planning should account for communication context and avoid decisions being built on misleading or partial information.
 
-## Evidence basis
+## Public-source reset note
 
-- Supporting evidence: [[EVID_005]]
-- Contextual evidence: [[RS_007]]
-- Contradictory or limiting evidence:
+Retained as a generic candidate civic knowledge object. Source-specific evidence links were removed during the public-source reset. This object should not be treated as evidence-linked until supported by public or explicitly authorised sources.
 
 ## Interpretation
 
-The evidence suggests that pathway planning can be undermined when conversations and reports do not reflect how the young person actually functions. The need is for decisions to be grounded in a truthful, contextual understanding of the young person, not a generic or one-off interaction.
+This candidate assumes that pathway planning can be undermined when conversations and reports do not reflect how the young person actually functions. The need is for decisions to be grounded in a truthful, contextual understanding of the young person, not a generic or one-off interaction.
 
 ## Need hierarchy
 
@@ -83,7 +79,6 @@ The evidence suggests that pathway planning can be undermined when conversations
 
 ## What remains uncertain
 
-- The specific interaction or report type needs checking against the original source.
 - Further evidence is needed to understand whether this is a repeated pattern across participants.
 
 ## Review notes
@@ -95,5 +90,5 @@ The evidence suggests that pathway planning can be undermined when conversations
 
 ## Changelog
 
-- 2026-06-12: Created as draft user need from [[EVID_005]]. Status: draft. Analysis state: evidence_linked. Evidence strength: weak. Review status: needs_review.
-- 2026-06-12: Updated evidence link from [[EVID_004]] to [[EVID_005]] after renumbering the new evidence summary to avoid duplicate IDs.
+
+- 2026-06-24: Removed source-specific evidence links during public-source reset. Retained as a generic candidate civic knowledge object. Status changed to assumption; analysis_state changed to candidate; evidence_basis and evidence_strength changed to none. Review status remains needs_review.

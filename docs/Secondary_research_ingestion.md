@@ -31,10 +31,10 @@ Use that repository for raw or lightly processed public secondary source materia
 Current first source example in the companion archive:
 
 ```text
-SRC_001_ofsted_essex_area_send_inspection_jan_2026
+SRC_001_public_area_send_inspection_example
 ```
 
-This source represents the Ofsted and Care Quality Commission Area SEND inspection of Essex Local Area Partnership, using the public Ofsted file URL as the source reference.
+This source represents a public Ofsted and Care Quality Commission Area SEND inspection report, using the public file URL as the source reference.
 
 ## Why separate source storage helps
 
@@ -93,7 +93,7 @@ title: Ofsted local area SEND inspection report
 publisher: Ofsted
 publication_date:
 source_url:
-source_archive_ref: happygeneralist/civic-design-secondary-research/sources/SRC_001_ofsted_essex_area_send_inspection_jan_2026/
+source_archive_ref: happygeneralist/civic-design-secondary-research/sources/SRC_001_public_area_send_inspection_example/
 retrieved_date:
 geographic_scope:
   - local_authority

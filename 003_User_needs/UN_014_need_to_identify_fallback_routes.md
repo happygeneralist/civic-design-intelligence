@@ -21,10 +21,10 @@ related_outcomes:
   - reduced late-stage uncertainty
 evidence_scope_fit: direct
 wording_sensitivity: medium
-status: draft
-analysis_state: evidence_linked
-evidence_basis: traceable
-evidence_strength: weak
+status: assumption
+analysis_state: candidate
+evidence_basis: none
+evidence_strength: none
 confidence: low
 creation_mode: llm_assisted
 llm_generated: true
@@ -34,7 +34,6 @@ change_level: material
 supersedes:
 superseded_by:
 related_evidence:
-  - "[[EVID_005]]"
 related_behaviours:
 related_pain_points:
 related_insights:
@@ -46,7 +45,6 @@ tags:
   - post-16
   - entry-requirements
 ---
-
 # Identify viable routes if expected grades are not achieved
 
 ## Working formulation
@@ -57,15 +55,13 @@ A parent/carer of a young person with SEND needs to identify viable post-16 rout
 
 The wording reframes the evidence as an action-oriented need: identifying viable routes. It avoids turning uncertainty about GCSE outcomes into a vague information need and avoids prescribing a specific service response.
 
-## Evidence basis
+## Public-source reset note
 
-- Supporting evidence: [[EVID_005]]
-- Contextual evidence: [[RS_007]]
-- Contradictory or limiting evidence:
+Retained as a generic candidate civic knowledge object. Source-specific evidence links were removed during the public-source reset. This object should not be treated as evidence-linked until supported by public or explicitly authorised sources.
 
 ## Interpretation
 
-The evidence suggests that pathway planning is not credible if families do not know what options remain available when standard grades or entry requirements are not met. This is a concrete decision-support need within a broader need to compare realistic options.
+This candidate assumes that pathway planning is not credible if families do not know what options remain available when standard grades or entry requirements are not met. This is a concrete decision-support need within a broader need to compare realistic options.
 
 ## Need hierarchy
 
@@ -85,7 +81,7 @@ The evidence suggests that pathway planning is not credible if families do not k
 
 ## What remains uncertain
 
-- The specific routes and entry requirement issues need checking against Essex pathway provision and the original interview source.
+- The specific routes and entry requirement issues need checking against public or explicitly authorised evidence.
 - This may need a related civic need if evidence shows a systemic obligation to make fallback routes visible.
 
 ## Review notes
@@ -97,7 +93,8 @@ The evidence suggests that pathway planning is not credible if families do not k
 
 ## Changelog
 
-- 2026-06-12: Created as draft user need from [[EVID_005]]. Status: draft. Analysis state: evidence_linked. Evidence strength: weak. Review status: needs_review.
+
+- 2026-06-24: Removed source-specific evidence links during public-source reset. Retained as a generic candidate civic knowledge object. Status changed to assumption; analysis_state changed to candidate; evidence_basis and evidence_strength changed to none. Review status remains needs_review.
 - 2026-06-12: Renumbered from `UN_004` to `UN_014` to avoid collision with existing `UN_004.md`.
 - 2026-06-15: Added `short_name` as a compact mapping label. Canonical need wording, evidence links and review state unchanged.
 - 2026-06-16: Added `need_shape: decision_support` and `planning` to make the existing decision-support interpretation queryable. Canonical need wording, evidence links and review state unchanged.

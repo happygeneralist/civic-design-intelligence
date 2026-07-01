@@ -20,20 +20,19 @@ related_outcomes:
   - sustained planning capacity
 evidence_scope_fit: direct
 wording_sensitivity: medium
-status: draft
-analysis_state: evidence_linked
-evidence_basis: traceable
-evidence_strength: weak
+status: assumption
+analysis_state: candidate
+evidence_basis: none
+evidence_strength: none
 confidence: low
 creation_mode: llm_assisted
 llm_generated: true
 human_reviewed: false
 review_status: needs_review
-change_level: none
+change_level: material
 supersedes:
 superseded_by:
 related_evidence:
-  - "[[EVID_003]]"
 related_behaviours:
   - "[[BEH_009]]"
 related_pain_points:
@@ -47,7 +46,6 @@ tags:
   - navigation-burden
   - coordination
 ---
-
 # Coordinate pathway next steps
 
 ## Working formulation
@@ -64,15 +62,13 @@ The wording uses `coordinate` because the evidence is about keeping pathway acti
 
 The phrase `without carrying the navigation burden alone` preserves the evidence signal that the parent/carer is doing substantial coordination work while already managing work and caring responsibilities. It avoids implying that the parent/carer is the problem or that a single information product would resolve the burden.
 
-## Evidence basis
+## Public-source reset note
 
-- Supporting evidence: [[EVID_003]]
-- Contextual evidence: [[RS_002]]
-- Contradictory or limiting evidence:
+Retained as a generic candidate civic knowledge object. Source-specific evidence links were removed during the public-source reset. This object should not be treated as evidence-linked until supported by public or explicitly authorised sources.
 
 ## Interpretation
 
-The evidence suggests that parent/carers may experience pathway planning as a sustained coordination burden. They are not only searching for information; they are trying to identify the right people, recover from being sent down the wrong route, chase actions and keep planning moving while exhausted.
+This candidate assumes that parent/carers may experience pathway planning as a sustained coordination burden. They are not only searching for information; they are trying to identify the right people, recover from being sent down the wrong route, chase actions and keep planning moving while exhausted.
 
 This need is related to information reconciliation and early planning, but it is distinct because the core progress problem is coordination and navigation load.
 
@@ -107,4 +103,5 @@ This need is related to information reconciliation and early planning, but it is
 
 ## Changelog
 
-- 2026-06-16: Created as draft user need from [[EVID_003]]. Status: draft. Analysis state: evidence_linked. Evidence strength: weak. Review status: needs_review.
+
+- 2026-06-24: Removed source-specific evidence links during public-source reset. Retained as a generic candidate civic knowledge object. Status changed to assumption; analysis_state changed to candidate; evidence_basis and evidence_strength changed to none. Review status remains needs_review.

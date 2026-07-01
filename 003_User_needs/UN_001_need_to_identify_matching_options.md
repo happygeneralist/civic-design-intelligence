@@ -21,20 +21,19 @@ related_outcomes:
   - better alignment between aspirations and chosen options
 evidence_scope_fit: partial
 wording_sensitivity: medium
-status: captured
-analysis_state: captured
-evidence_basis: indicative
-evidence_strength: weak
+status: assumption
+analysis_state: candidate
+evidence_basis: none
+evidence_strength: none
 confidence: low
 creation_mode: migrated
 llm_generated: false
 human_reviewed: false
-review_status: not_reviewed
+review_status: needs_review
 change_level: material
 supersedes:
 superseded_by:
 related_evidence:
-  - "[[EVID_001]]"
 related_behaviours:
   - "[[BEH_001]]"
 related_pain_points:
@@ -46,7 +45,6 @@ tags:
   - pathway-planning
   - guidance
 ---
-
 # Identify which options match the young person's needs and aspirations, so I can help them decide their next steps
 
 ## Summary
@@ -60,11 +58,9 @@ Parents report that simply being signposted to resources is not enough, they oft
 - **Measurement:** Uptake of planning tools; confidence levels in decision-making; reduced time spent searching.
 - **Decision rationale:** Prioritised due to strong emotional tone in user feedback and alignment with pathway improvement goals.
 
-## Evidence of success
+## Public-source reset note
 
-- Parents express frustration at being signposted to services where the receiving end doesn't know how to help.
-- Desire for a more interpretive or relational layer to guidance.
-- Emotional tone: stuck, unsupported, anxious about missing out on opportunities.
+Retained as a generic candidate civic knowledge object. Source-specific evidence links were removed during the public-source reset. This object should not be treated as evidence-linked until supported by public or explicitly authorised sources.
 
 ## Expected outcomes
 
@@ -74,6 +70,8 @@ Parents report that simply being signposted to resources is not enough, they oft
 
 ## Changelog
 
+
+- 2026-06-24: Removed source-specific evidence links during public-source reset. Retained as a generic candidate civic knowledge object. Status changed to assumption; analysis_state changed to candidate; evidence_basis and evidence_strength changed to none. Review status remains needs_review.
 - Date unknown: Created during earlier repository capture/migration. Status: captured. Analysis state: captured. Review status: not reviewed.
 - 2026-06-16: Cleaned up frontmatter to add `short_name`, remove Markdown heading syntax from `need`, add current schema fields and normalise actor/tags. Canonical meaning, evidence link and review status unchanged.
 - 2026-06-16: Reclassified the cleanup as `change_level: material` because it added evidence basis, evidence strength and confidence fields that affect trust and interpretation. Canonical need wording, evidence links and review status unchanged.

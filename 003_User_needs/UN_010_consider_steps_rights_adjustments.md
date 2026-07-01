@@ -4,7 +4,7 @@ id: UN_010
 short_name: Deprecated bundled pathway planning need
 actor: Parent/carer of a young person with SEND
 journey_stage: Pathway_planning
-need: Deprecated bundled draft need from EVID_005. Use the superseding draft needs for active interpretation.
+need: Deprecated bundled candidate need. Source-specific evidence links have been removed; use superseding candidate needs for active interpretation.
 need_level: journey
 parent_needs:
 child_needs:
@@ -21,8 +21,8 @@ evidence_scope_fit: direct
 wording_sensitivity: high
 status: deprecated
 analysis_state: deprecated
-evidence_basis: traceable
-evidence_strength: weak
+evidence_basis: none
+evidence_strength: none
 confidence: low
 creation_mode: llm_assisted
 llm_generated: true
@@ -40,7 +40,6 @@ superseded_by:
   - "[[UN_011]]"
   - "[[UN_016]]"
 related_evidence:
-  - "[[EVID_005]]"
 related_behaviours:
 related_pain_points:
 related_insights:
@@ -54,7 +53,6 @@ tags:
   - adjustments
   - bundled-need
 ---
-
 # Deprecated bundled need about steps, rights and adjustments
 
 ## Working formulation
@@ -92,15 +90,13 @@ This bundled need is decomposed across existing and new draft needs:
 - [[UN_011]]: recognising the young person as an individual
 - [[UN_016]]: checking rights and entitlements
 
-## Evidence basis
+## Public-source reset note
 
-- Supporting evidence: [[EVID_005]]
-- Contextual evidence: [[RS_007]]
-- Contradictory or limiting evidence:
+Retained as a generic candidate civic knowledge object. Source-specific evidence links were removed during the public-source reset. This object should not be treated as evidence-linked until supported by public or explicitly authorised sources.
 
 ## Interpretation
 
-The evidence remains useful, but the earlier interpretation was too broad. Confidence is better treated as an outcome or value dimension across more specific needs, rather than as the glue holding several different jobs together.
+The The earlier interpretation remains useful as a candidate, but the earlier interpretation was too broad. Confidence is better treated as an outcome or value dimension across more specific needs, rather than as the glue holding several different jobs together.
 
 The rights and entitlements signal is now captured separately in [[UN_016]]. Existing draft needs already cover pathway timing, realistic options, fallback routes, information reconciliation, practical feasibility, adaptation and recognition of the young person as an individual.
 
@@ -124,7 +120,6 @@ The rights and entitlements signal is now captured separately in [[UN_016]]. Exi
 
 - Further review should check whether a higher-level parent need about guidance through pathway planning is needed.
 - Further review should check whether one or more civic needs are needed around legible entitlements, navigable support and reduced reliance on informal advocacy capacity.
-- The evidence remains low confidence because [[EVID_005]] is an evidence summary rather than a checked original transcript.
 
 ## Review notes
 
@@ -135,7 +130,7 @@ The rights and entitlements signal is now captured separately in [[UN_016]]. Exi
 
 ## Changelog
 
-- 2026-06-12: Created as draft user need from [[EVID_005]]. Status: draft. Analysis state: evidence_linked. Evidence strength: weak. Review status: needs_review.
-- 2026-06-12: Updated evidence link from [[EVID_004]] to [[EVID_005]] after renumbering the new evidence summary to avoid duplicate IDs.
+
+- 2026-06-24: Removed source-specific evidence links during public-source reset. Retained as a deprecated lineage object for review. Evidence_basis and evidence_strength changed to none. Review status remains needs_review.
 - 2026-06-24: Deprecated as a bundled draft need after applying user need quality tests. Superseded by existing draft needs [[UN_012]], [[UN_013]], [[UN_014]], [[UN_007]], [[UN_008]], [[UN_009]], [[UN_011]] and new draft need [[UN_016]]. This is a material semantic change and remains needs_review.
 - 2026-06-24: Updated the frontmatter `need` and `short_name` fields to make the deprecated state explicit while preserving the original bundled formulation in the body for traceability.

@@ -8,7 +8,7 @@ It is intentionally shorter than the full roadmap. Use it to decide what to do n
 
 ## Current phase
 
-The repository is moving from structural normalisation into safe-enough, non-linear research ingestion.
+The repository is in public-source reset mode before the next safe-enough, non-linear research ingestion pass.
 
 Recent work has largely completed the first naming and file-structure stabilisation pass:
 
@@ -20,22 +20,22 @@ Recent work has largely completed the first naming and file-structure stabilisat
 - LLM handling rules have been strengthened so future AI-assisted work should not recreate naming debt
 - Obsidian workflow and validation docs now point contributors to the naming contract
 - companion public secondary-research repository now exists: `happygeneralist/civic-design-secondary-research`
-- first companion source archive example now exists: `SRC_001_ofsted_essex_area_send_inspection_jan_2026`
-- first bounded primary-research ingestion slice from `RS_002` / `EVID_003` has been merged and reviewed as safe enough to continue cautiously
+- first companion source archive example now exists for a public-source ingestion workflow
+- earlier primary-research ingestion slices have been reset to unsupported candidate objects pending public or explicitly authorised evidence
 - public roadmap and changelog communication page has been added so progress can be shared without creating another research dependency
 - non-linear ingestion guidance now documents how partially structured research knowledge can enter before full traceability is complete
 - ingestion operating guidance now separates expert-assisted ingestion, guided contributor ingestion and future semi-automated ingestion
 - input and evidence classification guidance now helps choose an ingestion route based on entry state, evidence voice and overclaiming risk
 - source capture guidance now describes how source material should be archived, mapped and prepared before evidence extraction or ingestion
 
-The system is ready to continue using real research, provided ingestion includes reconciliation with existing objects and does not become unreviewed object dumping.
+The system is ready to continue using public or explicitly authorised research, provided ingestion includes reconciliation with existing objects and does not become unreviewed object dumping.
 
 ## Active focus
 
 The next focus is:
 
 ```text
-Use the repository on SEND pathway-planning research inputs while supporting non-linear capture, backward evidence-linking and reconciliation against the existing object landscape.
+Rebuild SEND pathway-planning evidence links from public or explicitly authorised sources while supporting non-linear capture, backward evidence-linking and reconciliation against the existing object landscape.
 ```
 
 This means:
@@ -57,6 +57,8 @@ This means:
 - update companion `evidence-map.md` files when source records, evidence objects or analysis objects are created from archived sources
 - leave unresolved or immature material in `000_Inbox/` when it cannot yet be responsibly reconciled
 - avoid marking anything reviewed or validated unless human review has happened
+
+Near-term source inputs should be public only, for example public Ofsted/CQC area SEND inspection reports, public Local Government and Social Care Ombudsman decisions, public SEND statutory guidance, public Local Offer pages, public council scrutiny or cabinet papers, public consultation outputs, public charity reports, public parliamentary reports and explicitly published reusable user research.
 
 Use these documents as the current operating guide for this phase:
 
@@ -101,7 +103,7 @@ Pay particular attention to:
 6. Check candidate user needs against `docs/User_needs_writing_rules.md` and nearby existing user needs.
 7. Identify where existing objects should be linked, updated, split, merged, superseded or left unchanged.
 8. Record unresolved provenance or evidence-linking questions rather than pretending they are solved.
-9. If using the Essex Ofsted Area SEND report, create a matching source record in this repository for `SRC_001_ofsted_essex_area_send_inspection_jan_2026`.
+9. If using a public Ofsted/CQC Area SEND report, create a matching source record in this repository before extracting evidence.
 10. During future ingestion, watch for service, organisation and locality context without creating a full taxonomy yet.
 11. If using an Ofsted report or other secondary source, create a source record first, then selected evidence extracts, then derived analysis objects where possible.
 12. Update the companion source `evidence-map.md` after structured objects are created.
