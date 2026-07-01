@@ -20,10 +20,10 @@ related_outcomes:
   - increased confidence to ask for support
 evidence_scope_fit: direct
 wording_sensitivity: high
-status: draft
-analysis_state: evidence_linked
-evidence_basis: traceable
-evidence_strength: weak
+status: assumption
+analysis_state: candidate
+evidence_basis: none
+evidence_strength: none
 confidence: low
 creation_mode: llm_assisted
 llm_generated: true
@@ -34,7 +34,6 @@ supersedes:
   - "[[UN_010]]"
 superseded_by:
 related_evidence:
-  - "[[EVID_005]]"
 related_behaviours:
 related_pain_points:
 related_insights:
@@ -46,7 +45,6 @@ tags:
   - rights
   - entitlements
 ---
-
 # Check rights and entitlements
 
 ## Working formulation
@@ -61,17 +59,14 @@ This is separated from pathway-step planning and adjustments because rights and 
 
 The phrase `without relying on informal discovery` preserves the evidence signal that the parent/carer was researching things herself, did not know what she was entitled to ask for and felt left to work it out alone.
 
-## Evidence basis
+## Public-source reset note
 
-- Supporting evidence: [[EVID_005]]
-- Contextual evidence: [[RS_007]]
-- Contradictory or limiting evidence:
+Retained as a generic candidate civic knowledge object. Source-specific evidence links were removed during the public-source reset. This object should not be treated as evidence-linked until supported by public or explicitly authorised sources.
 
 ## Interpretation
 
-The evidence suggests that parent/carers may need to establish what rights, entitlements or requests are available during pathway planning. This is distinct from comparing options, assessing practical feasibility, coordinating next steps or communicating adjustments.
+This candidate assumes that parent/carers may need to establish what rights, entitlements or requests are available during pathway planning. This is distinct from comparing options, assessing practical feasibility, coordinating next steps or communicating adjustments.
 
-The need is still weak and needs review because [[EVID_005]] is an evidence summary rather than a checked original transcript.
 
 ## Need hierarchy
 
@@ -91,7 +86,6 @@ The need is still weak and needs review because [[EVID_005]] is an evidence summ
 
 ## What remains uncertain
 
-- The exact rights and entitlements in scope need checking against the original source material and statutory context.
 - Further evidence is needed to decide whether this should connect to a civic need about making entitlements legible without requiring informal privilege, advocacy capacity or persistence.
 - Review should check whether `ask for, secure or challenge support` is the right outcome wording or whether it over-extends the available evidence.
 
@@ -104,4 +98,5 @@ The need is still weak and needs review because [[EVID_005]] is an evidence summ
 
 ## Changelog
 
-- 2026-06-24: Created as draft user need from [[EVID_005]] to separate the rights and entitlements signal from bundled draft need [[UN_010]]. Status: draft. Analysis state: evidence_linked. Evidence strength: weak. Review status: needs_review.
+
+- 2026-06-24: Removed source-specific evidence links during public-source reset. Retained as a generic candidate civic knowledge object. Status changed to assumption; analysis_state changed to candidate; evidence_basis and evidence_strength changed to none. Review status remains needs_review.

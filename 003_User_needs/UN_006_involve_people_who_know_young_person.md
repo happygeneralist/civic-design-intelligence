@@ -19,20 +19,19 @@ related_outcomes:
   - better fit between support and daily life
 evidence_scope_fit: direct
 wording_sensitivity: medium
-status: draft
-analysis_state: evidence_linked
-evidence_basis: traceable
-evidence_strength: weak
+status: assumption
+analysis_state: candidate
+evidence_basis: none
+evidence_strength: none
 confidence: low
 creation_mode: llm_assisted
 llm_generated: true
 human_reviewed: false
 review_status: needs_review
-change_level: none
+change_level: material
 supersedes:
 superseded_by:
 related_evidence:
-  - "[[EVID_005]]"
 related_behaviours:
 related_pain_points:
 related_insights:
@@ -44,7 +43,6 @@ tags:
   - relational-support
   - contextual-knowledge
 ---
-
 # Involve people who know the young person well
 
 ## Working formulation
@@ -55,15 +53,13 @@ A parent/carer of a young person with SEND needs people who know the young perso
 
 The wording preserves the evidence that the useful contributor may not be a specific formal role. It avoids prescribing a SENCO meeting or any other fixed service mechanism.
 
-## Evidence basis
+## Public-source reset note
 
-- Supporting evidence: [[EVID_005]]
-- Contextual evidence: [[RS_007]]
-- Contradictory or limiting evidence:
+Retained as a generic candidate civic knowledge object. Source-specific evidence links were removed during the public-source reset. This object should not be treated as evidence-linked until supported by public or explicitly authorised sources.
 
 ## Interpretation
 
-The evidence suggests that pathway decisions need input from people who understand the young person's everyday functioning, communication and support needs. This need sits under a broader need for decisions to be based on an accurate view of the young person.
+This candidate assumes that pathway decisions need input from people who understand the young person's everyday functioning, communication and support needs. This need sits under a broader need for decisions to be based on an accurate view of the young person.
 
 ## Need hierarchy
 
@@ -95,5 +91,5 @@ The evidence suggests that pathway decisions need input from people who understa
 
 ## Changelog
 
-- 2026-06-12: Created as draft user need from [[EVID_005]]. Status: draft. Analysis state: evidence_linked. Evidence strength: weak. Review status: needs_review.
-- 2026-06-12: Updated evidence link from [[EVID_004]] to [[EVID_005]] after renumbering the new evidence summary to avoid duplicate IDs.
+
+- 2026-06-24: Removed source-specific evidence links during public-source reset. Retained as a generic candidate civic knowledge object. Status changed to assumption; analysis_state changed to candidate; evidence_basis and evidence_strength changed to none. Review status remains needs_review.

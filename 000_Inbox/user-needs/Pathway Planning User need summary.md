@@ -1,6 +1,8 @@
-This is a consolidated list of **pathway planning user needs** pulled from [Pathway Planning guidance](https://gatesheadcs.trixonline.co.uk/chapter/pathway-plan-guidance) and primary user research studies found in [001_Research_studies]. 
+This is a consolidated list of **pathway planning user needs** retained as loose candidate material during the public-source reset.
 
 > These have been summarised with the help of [Gov User Needs LLM](https://chatgpt.com/g/g-673f960b95b48191802b8036a6bdc3a8-gov-user-needs) and should be **handled as assumptions until fully anchored to the research**.
+
+Public-source reset note: source-specific evidence links were removed during the public-source reset. These loose needs should not be treated as evidence-linked until supported by public or explicitly authorised sources.
 
 ## A. Cross-cutting / high-level needs
 

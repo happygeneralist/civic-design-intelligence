@@ -17,20 +17,19 @@ related_outcomes:
   - reduced risk of unsuitable pathway continuation
 evidence_scope_fit: direct
 wording_sensitivity: medium
-status: draft
-analysis_state: evidence_linked
-evidence_basis: traceable
-evidence_strength: weak
+status: assumption
+analysis_state: candidate
+evidence_basis: none
+evidence_strength: none
 confidence: low
 creation_mode: llm_assisted
 llm_generated: true
 human_reviewed: false
 review_status: needs_review
-change_level: none
+change_level: material
 supersedes:
 superseded_by:
 related_evidence:
-  - "[[EVID_005]]"
 related_behaviours:
 related_pain_points:
 related_insights:
@@ -42,7 +41,6 @@ tags:
   - review
   - adaptation
 ---
-
 # Revisit pathway decisions after they have started
 
 ## Working formulation
@@ -53,15 +51,13 @@ A parent/carer of a young person with SEND needs to revisit pathway decisions af
 
 The wording avoids `a way to review`, which could imply a mechanism or product. It keeps the need focused on the action and outcome: revisiting and adapting decisions when the route is not working.
 
-## Evidence basis
+## Public-source reset note
 
-- Supporting evidence: [[EVID_005]]
-- Contextual evidence: [[RS_007]]
-- Contradictory or limiting evidence:
+Retained as a generic candidate civic knowledge object. Source-specific evidence links were removed during the public-source reset. This object should not be treated as evidence-linked until supported by public or explicitly authorised sources.
 
 ## Interpretation
 
-The evidence suggests that pathway planning is not a one-off decision. Families may need a reflection point where they can check whether a route is working and adjust support or choices if the original plan does not fit the young person's reality.
+This candidate assumes that pathway planning is not a one-off decision. Families may need a reflection point where they can check whether a route is working and adjust support or choices if the original plan does not fit the young person's reality.
 
 ## Need hierarchy
 
@@ -93,5 +89,5 @@ The evidence suggests that pathway planning is not a one-off decision. Families 
 
 ## Changelog
 
-- 2026-06-12: Created as draft user need from [[EVID_005]]. Status: draft. Analysis state: evidence_linked. Evidence strength: weak. Review status: needs_review.
-- 2026-06-12: Updated evidence link from [[EVID_004]] to [[EVID_005]] after renumbering the new evidence summary to avoid duplicate IDs.
+
+- 2026-06-24: Removed source-specific evidence links during public-source reset. Retained as a generic candidate civic knowledge object. Status changed to assumption; analysis_state changed to candidate; evidence_basis and evidence_strength changed to none. Review status remains needs_review.

@@ -21,15 +21,15 @@ related_outcomes:
   - greater continuity during setbacks
 evidence_scope_fit: partial
 wording_sensitivity: medium
-status: captured
-analysis_state: captured
-evidence_basis: indicative
-evidence_strength: weak
+status: assumption
+analysis_state: candidate
+evidence_basis: none
+evidence_strength: none
 confidence: low
 creation_mode: migrated
 llm_generated: false
 human_reviewed: false
-review_status: not_reviewed
+review_status: needs_review
 change_level: material
 supersedes:
 superseded_by:
@@ -45,7 +45,6 @@ tags:
   - mental-health
   - motivation
 ---
-
 # Stay connected to my pathway even when my mental health or motivation dips, so I don't lose progress or feel overwhelmed starting again
 
 ## Summary
@@ -59,11 +58,9 @@ Young people with SEND experience fluctuating motivation and mental health that 
 - **Measurement:** Frequency of re-engagement; drop-out recovery rates; user confidence in "getting back on track".
 - **Decision rationale:** Anchoring mechanisms can prevent disengagement from becoming permanent exclusion.
 
-## Evidence of success
+## Public-source reset note
 
-- Young people report feeling "still on track" even during setbacks.
-- Parents note reduced burnout and rework.
-- Improved continuity across education, health, and work planning stages.
+Retained as a generic candidate civic knowledge object. Source-specific evidence links were removed during the public-source reset. This object should not be treated as evidence-linked until supported by public or explicitly authorised sources.
 
 ## Expected outcomes
 
@@ -73,6 +70,8 @@ Young people with SEND experience fluctuating motivation and mental health that 
 
 ## Changelog
 
+
+- 2026-06-24: Removed source-specific evidence links during public-source reset. Retained as a generic candidate civic knowledge object. Status changed to assumption; analysis_state changed to candidate; evidence_basis and evidence_strength changed to none. Review status remains needs_review.
 - Date unknown: Created during earlier repository capture/migration. Status: captured. Analysis state: captured. Review status: not reviewed.
 - 2026-06-16: Cleaned up frontmatter to add `short_name`, convert the fragment-style need into a full need statement, add current schema fields and normalise actor/tags. Review status unchanged.
 - 2026-06-16: Reclassified the cleanup as `change_level: material` because it added evidence basis, evidence strength and confidence fields that affect trust and interpretation. Evidence links and review status unchanged.

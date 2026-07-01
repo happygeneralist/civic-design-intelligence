@@ -82,7 +82,7 @@ Likely references:
 - `003_User_needs/UN_002.md`
 - `003_User_needs/UN_012_need_to_plan_pathway_options_early.md`
 - `migration/validation-baseline-report.md`
-- `001_Research_studies/RS_007_pathway_planning_guidance_level_test.md`
+- removed source-specific research-study records
 
 ### `UN_003`
 

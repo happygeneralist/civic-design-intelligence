@@ -17,10 +17,10 @@ related_outcomes:
   - reduced information burden
 evidence_scope_fit: direct
 wording_sensitivity: medium
-status: draft
-analysis_state: evidence_linked
-evidence_basis: traceable
-evidence_strength: weak
+status: assumption
+analysis_state: candidate
+evidence_basis: none
+evidence_strength: none
 confidence: low
 creation_mode: llm_assisted
 llm_generated: true
@@ -30,7 +30,6 @@ change_level: material
 supersedes:
 superseded_by:
 related_evidence:
-  - "[[EVID_005]]"
 related_behaviours:
 related_pain_points:
 related_insights:
@@ -42,7 +41,6 @@ tags:
   - information-fragmentation
   - decision-making
 ---
-
 # Reconcile pathway information from different sources
 
 ## Working formulation
@@ -53,15 +51,13 @@ A parent/carer of a young person with SEND needs to reconcile information from d
 
 The wording avoids `in one place` because that may imply a content product or channel. The need is kept at the task level: reconciling fragmented information into a reliable picture for decision-making.
 
-## Evidence basis
+## Public-source reset note
 
-- Supporting evidence: [[EVID_005]]
-- Contextual evidence: [[RS_007]]
-- Contradictory or limiting evidence:
+Retained as a generic candidate civic knowledge object. Source-specific evidence links were removed during the public-source reset. This object should not be treated as evidence-linked until supported by public or explicitly authorised sources.
 
 ## Interpretation
 
-The evidence suggests the parent/carer is assembling partial advice from informal groups, friends, school contacts and independent research, but still lacks a full picture. The underlying need is not simply access to more information, but the ability to reconcile it into something trustworthy and usable.
+This candidate assumes the parent/carer is assembling partial advice from informal groups, friends, school contacts and independent research, but still lacks a full picture. The underlying need is not simply access to more information, but the ability to reconcile it into something trustworthy and usable.
 
 This need was previously linked as a child of [[UN_010]]. That parent link has been removed because [[UN_010]] is now deprecated as a bundled draft need. A future review may identify a cleaner parent need about pathway-planning guidance or support.
 
@@ -96,6 +92,6 @@ This need was previously linked as a child of [[UN_010]]. That parent link has b
 
 ## Changelog
 
-- 2026-06-12: Created as draft user need from [[EVID_005]]. Status: draft. Analysis state: evidence_linked. Evidence strength: weak. Review status: needs_review.
-- 2026-06-12: Updated evidence link from [[EVID_004]] to [[EVID_005]] after renumbering the new evidence summary to avoid duplicate IDs.
+
+- 2026-06-24: Removed source-specific evidence links during public-source reset. Retained as a generic candidate civic knowledge object. Status changed to assumption; analysis_state changed to candidate; evidence_basis and evidence_strength changed to none. Review status remains needs_review.
 - 2026-06-24: Removed [[UN_010]] from `parent_needs` because [[UN_010]] was deprecated as a bundled draft need. Need wording and evidence link unchanged. Review status remains needs_review.

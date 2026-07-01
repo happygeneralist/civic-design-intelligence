@@ -53,7 +53,7 @@ Use the smallest honest description of where the study evidence comes from.
 Use when one place is the main context, for example:
 
 ```yaml
-primary_locale: Essex
+primary_locale: Example local area
 ```
 
 Leave blank when there is no primary locale or it is unclear.
@@ -64,7 +64,7 @@ Use for the places explicitly represented by the evidence.
 
 ```yaml
 locales:
-  - Essex
+  - Example local area
   - South London
 ```
 
@@ -127,7 +127,7 @@ Use this for brief judgement about the study's applicability.
 Example:
 
 ```yaml
-notes: Essex-local evidence, but the underlying pattern may apply wherever families need to navigate fragmented post-16 options.
+notes: Local evidence may point to a wider pattern, but it should be compared with public or explicitly authorised evidence before being treated as cross-context.
 ```
 
 ## Relationship to knowledge objects
@@ -143,7 +143,7 @@ Example:
 ```yaml
 evidence_coverage:
   locales:
-    - Essex
+    - Example local area
   source_types:
     - primary_research
     - professional_knowledge
@@ -164,16 +164,16 @@ Use `locale_specific` or local variants only when locality changes meaning.
 ```yaml
 source_context:
   geographic_scope: local
-  primary_locale: Essex
+  primary_locale: Example local area
   locales:
-    - Essex
+    - Example local area
   institution_scope: community_research
   source_type: primary_research
 applicability:
   transferability: plausible_cross_context
   limits:
     - Recruited through local SEND parent networks.
-  notes: The evidence is Essex-local, but the need for reliable information about post-16 options is likely to apply beyond Essex.
+  notes: The evidence is local, but the need for reliable information about post-16 options may apply beyond one place.
 ```
 
 ### Local-only source
@@ -181,15 +181,15 @@ applicability:
 ```yaml
 source_context:
   geographic_scope: local
-  primary_locale: Essex
+  primary_locale: Example local area
   locales:
-    - Essex
+    - Example local area
   institution_scope: single_institution
   source_type: operational_data
 applicability:
   transferability: local_only
   limits:
-    - Depends on Essex-specific eligibility, workflow or commissioning rules.
+    - Depends on local eligibility, workflow or commissioning rules.
   notes: Useful for local delivery decisions but not a general SEND pathway claim.
 ```
 

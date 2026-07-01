@@ -9,15 +9,23 @@ related_needs:
 related_pain_points:
 related_behaviours:
 related_evidence:
-status: captured
-analysis_state: captured
+status: assumption
+analysis_state: candidate
+evidence_basis: none
+evidence_strength: none
+confidence: low
 creation_mode: migrated
 llm_generated: false
 human_reviewed: false
-review_status: not_reviewed
+review_status: needs_review
 tags:
+change_level: material
 ---
 # Mental health as a barrier to pathway planning
+
+## Public-source reset note
+
+Retained as a generic candidate civic knowledge object. Source-specific evidence links were removed during the public-source reset. This object should not be treated as evidence-linked until supported by public or explicitly authorised sources.
 
 ### Summary
 Mental health challenges make it extremely difficult for young people with SEND to think about, plan for, or act on their future pathways — and the current system assumes they can do so when they often can’t.
@@ -29,27 +37,9 @@ Mental health challenges make it extremely difficult for young people with SEND 
 - **Missed opportunities for intervention.** When mental health and pathway support are disconnected, early engagement and aspiration-building moments are lost.  
 - **This drives long-term disengagement.** The lack of coordinated, psychologically safe planning spaces contributes to NEET outcomes and chronic underemployment among SEND young people.
 
-## What the data shows
+## Candidate pattern
 
-Across all groups (mainstream, EHE, and specialist) a consistent pattern emerges:
-
-**Mental health crises or ongoing anxiety dominate daily life.**  
-- “They’re in crisis right now.”  
-- “She’s refusing school, she doesn’t feel she has a future.”
-
-**When mental health needs aren’t met, all future-oriented planning collapses.**  
-- “We need to stick with what’s the next step.”  
-- “It’s too overwhelming for them to make decisions.”  
-- “Because we can’t get her therapy, the system is holding her back.”
-  
-**Parents describe their children’s mental health as the ‘gatekeeper’ to progress.**  
-- They can’t focus on next steps until emotional stability returns.  
-- They feel unsupported and forced to “carry” their young person emotionally.  
-- They often postpone planning because their child “isn’t ready.”
-
-**Professionals and systems often separate ‘mental health support’ from ‘careers and transitions’.**  
-- Young people are expected to engage in pathway planning while unwell.  
-- There’s little coordination between therapeutic, educational, and career support.
+This insight is retained as a candidate pattern about mental health as a barrier to pathway planning. Source-specific quote material has been removed. It should be rebuilt from public or explicitly authorised evidence before being treated as evidence-linked.
   
 
 ## Underlying Dynamics
@@ -72,3 +62,7 @@ For many young people with SEND, pathway planning isn’t just about access to i
 - I need information that feels hopeful and not overwhelming.  
 - I need joined-up support between mental health, SEND, and careers teams.  
 - I need professionals to recognise when I’m not ready — and support me to get ready.
+
+## Changelog
+
+- 2026-06-24: Removed source-specific evidence links during public-source reset. Retained as a generic candidate civic knowledge object. Status changed to assumption; analysis_state changed to candidate; evidence_basis and evidence_strength changed to none. Review status remains needs_review.

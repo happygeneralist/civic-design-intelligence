@@ -44,7 +44,7 @@ A future optional frontmatter structure might look like this:
 ```yaml
 relationships:
   - type: evidenced_by
-    target: "[[EVID_005]]"
+    target: "[[EVID_000]]"
     note: Direct evidence for this wording and journey level.
   - type: blocked_by
     target: "[[PP_012]]"

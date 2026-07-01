@@ -20,20 +20,19 @@ related_outcomes:
   - personalised pathway planning
 evidence_scope_fit: direct
 wording_sensitivity: medium
-status: draft
-analysis_state: evidence_linked
-evidence_basis: traceable
-evidence_strength: weak
+status: assumption
+analysis_state: candidate
+evidence_basis: none
+evidence_strength: none
 confidence: low
 creation_mode: llm_assisted
 llm_generated: true
 human_reviewed: false
 review_status: needs_review
-change_level: minor
+change_level: material
 supersedes:
 superseded_by:
 related_evidence:
-  - "[[EVID_005]]"
 related_behaviours:
 related_pain_points:
 related_insights:
@@ -45,7 +44,6 @@ tags:
   - personalisation
   - options
 ---
-
 # Understand realistic options for the young person's circumstances
 
 ## Working formulation
@@ -56,15 +54,13 @@ A parent/carer of a young person with SEND needs to understand which options are
 
 The wording avoids saying that the user needs a `personalised helper`, which would turn an experimental proposition into a solution requirement. It preserves the underlying need for relevance to the young person's actual circumstances.
 
-## Evidence basis
+## Public-source reset note
 
-- Supporting evidence: [[EVID_005]]
-- Contextual evidence: [[RS_007]]
-- Contradictory or limiting evidence:
+Retained as a generic candidate civic knowledge object. Source-specific evidence links were removed during the public-source reset. This object should not be treated as evidence-linked until supported by public or explicitly authorised sources.
 
 ## Interpretation
 
-The evidence suggests that generic pathway guidance may not be enough when a parent/carer needs to judge what is realistic for a specific young person. The need is for interpretive relevance, not simply more information.
+This candidate assumes that generic pathway guidance may not be enough when a parent/carer needs to judge what is realistic for a specific young person. The need is for interpretive relevance, not simply more information.
 
 ## Need hierarchy
 
@@ -84,7 +80,6 @@ The evidence suggests that generic pathway guidance may not be enough when a par
 
 ## What remains uncertain
 
-- The evidence comes from one parent/carer extract and needs review against the original source.
 - The boundary between guidance, personalisation and one-to-one support needs further evidence from the full experiment.
 
 ## Review notes
@@ -96,6 +91,7 @@ The evidence suggests that generic pathway guidance may not be enough when a par
 
 ## Changelog
 
-- 2026-06-12: Created as draft user need from [[EVID_005]]. Status: draft. Analysis state: evidence_linked. Evidence strength: weak. Review status: needs_review.
+
+- 2026-06-24: Removed source-specific evidence links during public-source reset. Retained as a generic candidate civic knowledge object. Status changed to assumption; analysis_state changed to candidate; evidence_basis and evidence_strength changed to none. Review status remains needs_review.
 - 2026-06-12: Renumbered from `UN_003` to `UN_013` to avoid collision with existing `UN_003.md`.
 - 2026-06-15: Added `short_name` as a compact mapping label. Canonical need wording, evidence links and review state unchanged.
