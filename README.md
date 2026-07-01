@@ -8,6 +8,20 @@ It is intended to help researchers, designers, product/service teams and decisio
 
 The repository is not only for designing good services. It should also provide the human intelligence needed to challenge weak, harmful or solution-led decisions with a defensible evidence base.
 
+## Public-source posture
+
+Civic Design Intelligence treats user needs, civic needs, pain points, behaviours, insights and related design-intelligence objects as reusable civic knowledge objects.
+
+These objects are not treated as proprietary to a source organisation merely because they describe needs experienced in a public-service context. They may exist as generic candidate objects where they express a reusable public-service pattern.
+
+Evidence provenance is managed separately.
+
+A candidate object only becomes evidence-linked when it is supported by public, openly licensed or explicitly authorised sources. Evidence records, source records and research-study records must make provenance clear and must not rely on private employer, client, council, partner or unpublished research material unless permission, consent, ownership and publication constraints are explicit.
+
+The repository is public-source-first. Suitable evidence sources may include public inspection reports, Ombudsman decisions, statutory guidance, public consultation outputs, public council papers, openly published user research, charity reports, public datasets and other material that is lawful and appropriate to reuse.
+
+Candidate objects without public or authorised evidence remain assumptions or candidates. They must not be treated as reviewed, validated or evidence-linked knowledge until their provenance and evidence basis support that status.
+
 ## Strategic vision
 
 The repository is part of an emerging **civic design intelligence system**: open knowledge infrastructure for public-service needs, evidence, pain and decisions.
