@@ -1,14 +1,14 @@
 {
-  "generated_at": "2026-06-24T16:10:22.898Z",
+  "generated_at": "2026-07-01T18:54:10.989Z",
   "generated_from": "Repository markdown files in numbered knowledge-object folders",
   "scope_note": "Counts are generated from repository folders and frontmatter where available. Missing metadata is counted explicitly rather than inferred as reviewed or validated.",
   "totals": {
     "service_areas": 0,
     "repository_areas": 9,
     "knowledge_layers": 3,
-    "markdown_objects": 42,
-    "research_studies": 7,
-    "evidence": 5,
+    "markdown_objects": 30,
+    "research_studies": 0,
+    "evidence": 0,
     "user_needs": 16,
     "civic_needs": 0,
     "behaviours": 9,
@@ -25,15 +25,15 @@
       "key": "research_studies",
       "label": "Research studies",
       "dir": "001_Research_studies",
-      "count": 7,
-      "exists": true
+      "count": 0,
+      "exists": false
     },
     {
       "key": "evidence",
       "label": "Evidence items",
       "dir": "002_Evidence",
-      "count": 5,
-      "exists": true
+      "count": 0,
+      "exists": false
     },
     {
       "key": "needs",
@@ -86,21 +86,18 @@
     }
   ],
   "by_status": {
-    "captured": 22,
-    "draft": 19,
+    "assumption": 29,
     "deprecated": 1
   },
   "by_lifecycle_state": {
-    "No lifecycle metadata": 42
+    "No lifecycle metadata": 30
   },
   "by_evidence_strength": {
-    "No evidence-strength metadata": 4,
-    "high": 5,
-    "low": 8,
-    "weak": 24,
-    "medium": 1
+    "none": 30
   },
   "warnings": [
+    "001_Research_studies was not found, so its count is zero.",
+    "002_Evidence was not found, so its count is zero.",
     "008_Personas was not found, so its count is zero.",
     "009_Journeys was not found, so its count is zero."
   ]
