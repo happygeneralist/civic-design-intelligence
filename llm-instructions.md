@@ -67,6 +67,36 @@ LLMs may create and alter these objects, provided the item remains clearly marke
 
 Persona and segment models are currently deferred. LLMs must not create persona or segment objects unless a human reviewer explicitly points to updated persona guidance and asks for that work.
 
+## User need creation drift control
+
+When creating or revising user needs, the LLM must preserve meaning before improving wording.
+
+A user need describes what a person needs to achieve, preserve, recover or change in context. It must not describe a solution, feature, user story, content requirement, policy requirement, organisational objective, service mechanism or vague knowledge state.
+
+Before creating a new user need, the LLM must check nearby existing user needs, civic needs, pain points, behaviours, insights and evidence. Prefer linking, refining or extending an existing object when the meaning is already covered. Create a new need only when the actor, context, level or underlying progress sought is genuinely distinct.
+
+The LLM must not convert service mechanisms, policy requirements, administrative steps, solution objects or organisational needs into user needs. If the source material describes a dashboard, page, form, checklist, notification, policy duty, workflow or Local Offer requirement, first identify the underlying human need. Keep the proposed mechanism as a possible solution requirement, service response or related context.
+
+Use action-oriented wording wherever it preserves meaning. Prefer verbs such as `access`, `act`, `assess`, `check`, `choose`, `compare`, `complete`, `confirm`, `coordinate`, `decide`, `determine`, `find`, `maintain`, `prepare`, `recover`, `resolve`, `secure`, `submit` or `track`.
+
+Avoid cognitive verbs such as `know`, `understand`, `learn` or `be aware of` unless comprehension itself is the evidenced need, such as rights, consent, safety, consequences, appeal routes or informed decision-making.
+
+Always scope the need at the right level. Use `need_level` to distinguish capability, civic, experience, service, journey, task, page, interaction and content needs. Do not inflate page-level evidence into a service-level need, and do not collapse broad experience needs into solution requirements.
+
+Keep civic needs separate from user needs. A user need is about what a person needs to achieve, preserve, recover or change. A civic need is about what an institution, public service or system must uphold for dignity, access, agency, fairness, accountability, rights, redress, sufficiency or public value.
+
+Keep pain points separate from user needs. A pain point describes a condition, barrier, failure mode or risk. A user need describes the progress, protection, recovery or change the person needs in response to that condition.
+
+Use `short_name` as a compact mapping label in the form `Need to [verb] [object/context]`. The short name should still read as a need, not a theme, topic, service area or feature. User-need filenames should derive their readable slug from `short_name`, not from the full canonical need statement.
+
+Small wording changes can materially change the solution direction. For example, `know what options exist`, `compare options` and `understand which options are appropriate` point to different service responses. If a wording change affects interpretation, evidence basis, level, actor, maturity, lifecycle state or solution direction, treat it as a material change and propose a changelog entry.
+
+If evidence is weak, indirect or missing, underclaim. Use `status: assumption`, `analysis_state: candidate`, `evidence_basis: none`, `evidence_strength: none`, `confidence: low`, `creation_mode: llm_assisted`, `llm_generated: true`, `human_reviewed: false` and `review_status: not_reviewed` unless the evidence and review state justify stronger metadata.
+
+When proposing user needs, include the short name, canonical need, actor, need level, evidence basis, evidence scope fit, related existing objects, why this is a user need, why it is not a solution requirement, uncertainty, suggested lifecycle state and suggested changelog entry.
+
+Non-negotiable rule: fast creation is allowed; silent semantic drift is not.
+
 ## What the LLM must not do
 
 The LLM must not:
