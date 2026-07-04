@@ -11,6 +11,11 @@ Before editing files:
 3. If on `main`, create a focused `codex/*` branch before making changes.
 4. Identify unrelated local changes and leave them untouched.
 5. Confirm whether the work changes research meaning, repository infrastructure or both.
+6. For non-trivial work, check whether there is a linked issue before editing. If there is no issue, ask whether one should be created first.
+
+Typo fixes and tiny obvious edits do not need an issue. Use an issue when work is likely to touch multiple files, affect repository conventions, templates, roadmap, evidence handling, object meaning or validation, or needs clear scope boundaries.
+
+Issues should define the purpose, scope, out of scope items and acceptance criteria for the work. Git remains the technical audit trail for edits; issues are for work definition, sequencing and prioritisation, not edit history.
 
 ## Branch and pull request workflow
 
