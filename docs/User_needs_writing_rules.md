@@ -143,7 +143,7 @@ User need: I need to check whether I am eligible before I spend time applying.
 
 The important difference is contextual, not mechanical.
 
-In public services and SEND contexts, people often cannot choose whether they need the service, cannot freely choose between competing solutions, and may be navigating statutory, institutional or relational constraints. Many JTBD tools assume a market context where the aim is to pull a person towards a product or service. Use that logic carefully.
+In constrained public-service contexts, including SEND, people often cannot choose whether they need the service, cannot freely choose between competing solutions, and may be navigating statutory, institutional or relational constraints. Many JTBD tools assume a market context where the aim is to pull a person towards a product or service. Use that logic carefully.
 
 Do not use JTBD to make the need product-led.
 
@@ -224,7 +224,7 @@ These are connected, but they are not interchangeable.
 
 ## Use emotional and social needs carefully
 
-Emotional and social needs are valid, especially in SEND and public service contexts.
+Emotional and social needs are valid in public-service contexts, including SEND.
 
 Examples:
 
@@ -363,7 +363,7 @@ When drafting user needs, the LLM should:
 - create short names using `Need to + verb + object/context` where useful for mapping and Bases
 - keep needs solution-agnostic
 - use JTBD tools where useful for context, progress, pains, gains and strategic opportunity framing
-- avoid importing market-led JTBD assumptions uncritically into public service or SEND contexts
+- avoid importing market-led JTBD assumptions uncritically into public-service contexts, including SEND
 - distinguish user needs from policy requirements and user stories
 - keep policy, service, organisation and locality context outside the canonical wording unless it is intrinsic to the evidenced need
 - set `need_level` where possible

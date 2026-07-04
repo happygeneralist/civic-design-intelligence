@@ -1,6 +1,6 @@
 # Civic design intelligence system
 
-This repository is an Obsidian-compatible civic design intelligence system for SEND-related service design, policy and decision-support work.
+This repository is an Obsidian-compatible civic design intelligence system for public-service design, policy and decision-support work. The initial worked domain is SEND pathway planning.
 
 The repository is in a public-source-first rebuild. The initial domain remains SEND pathway planning, but active evidence should come only from public, openly licensed or explicitly authorised sources. Most needs, pain points, behaviours, insights and civic questions should be captured at the highest useful level, with local context added where it materially affects interpretation, evidence, delivery or decision-making.
 

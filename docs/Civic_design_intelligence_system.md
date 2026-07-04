@@ -153,7 +153,7 @@ The system should support open government by making public-service knowledge mor
 
 Where possible, knowledge objects and decision records should be public by default. However, public access must be balanced with privacy, safeguarding, legal and ethical constraints.
 
-SEND-related material may involve children, disability, family circumstances, trauma, legal disputes or rare combinations of details. Open does not mean unsafe disclosure.
+Some material may involve children, disability, family circumstances, trauma, legal disputes or rare combinations of details. Open does not mean unsafe disclosure.
 
 ## Safety and privacy
 
