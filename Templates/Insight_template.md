@@ -24,7 +24,6 @@ related_themes:
 related_value_dimensions:
 claims:
 tags:
-  - send
 ---
 
 # Insight title
