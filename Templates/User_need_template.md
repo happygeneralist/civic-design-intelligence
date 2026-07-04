@@ -32,7 +32,6 @@ related_pain_points:
 related_insights:
 importance: low | medium | high
 tags:
-  - send
 ---
 
 # User need title
