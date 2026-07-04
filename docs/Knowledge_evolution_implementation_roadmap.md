@@ -208,6 +208,8 @@ The first source example is:
 SRC_001_ofsted_essex_area_send_inspection_jan_2026
 ```
 
+This is a public Ofsted inspection-report example, not proprietary council, employer or unpublished research material.
+
 The recommended split is:
 
 ```text
