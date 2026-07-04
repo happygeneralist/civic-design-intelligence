@@ -93,7 +93,7 @@ Follow the repository's user-needs writing rules:
 - avoid cognitive verbs such as know, understand, learn or be aware of unless comprehension itself is the goal
 - keep needs solution-agnostic
 - use Jobs to Be Done tools where useful for context, progress, pains, gains and strategic opportunity framing
-- avoid importing market-led JTBD assumptions uncritically into public service or SEND contexts
+- avoid importing market-led JTBD assumptions uncritically into public-service contexts, including SEND
 - set need_level where possible
 - do not collapse experience, service, journey, page and interaction needs
 - preserve emotional, social, civic and experience meaning where relevant
