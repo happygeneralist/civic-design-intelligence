@@ -23,7 +23,7 @@ Value is not the same as user preference or stakeholder enthusiasm.
 
 Value is created when a policy, service, product, content pattern, process or intervention helps meet real needs, reduce burden, improve outcomes, protect capabilities, or make a system work better for the people affected by it.
 
-In public service and SEND contexts, value may include:
+In public-service contexts, including SEND, value may include:
 
 - reducing burden
 - improving access
