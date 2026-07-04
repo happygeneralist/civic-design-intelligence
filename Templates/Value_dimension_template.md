@@ -22,7 +22,6 @@ related_civic_needs:
 related_outcomes:
 related_evidence:
 tags:
-  - send
 ---
 
 # Value dimension title
