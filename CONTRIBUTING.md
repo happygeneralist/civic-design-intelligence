@@ -29,6 +29,14 @@ Prefer linking and extending existing notes where appropriate. Create new notes 
 
 For the current MVP, follow `docs/Safe_research_ingestion_MVP.md` before breaking research into structured objects.
 
+## Issue-first scoped work
+
+For non-trivial work, prefer creating or identifying a GitHub issue before implementation. Typo fixes and tiny obvious edits do not need issues.
+
+Use an issue when work is likely to touch multiple files, affect repository conventions, templates, roadmap, evidence handling, object meaning or validation, or needs explicit acceptance criteria. The issue should define purpose, scope, out of scope items and acceptance criteria.
+
+Git remains the technical audit trail for edits. Issues are for work definition, sequencing and prioritisation, not edit history.
+
 ## External contribution handling
 
 External contributions may come from the public, families, residents, third-sector organisations, advocates, professionals, partner agencies, academic sources, public reports or operational sources.
