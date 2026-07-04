@@ -22,7 +22,6 @@ related_behaviours:
 related_pain_points:
 related_insights:
 tags:
-  - send
 ---
 
 # Evidence title
