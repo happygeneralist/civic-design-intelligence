@@ -322,6 +322,8 @@ Example:
 SRC_001_ofsted_essex_area_send_inspection_jan_2026/
 ```
 
+This is a public Ofsted inspection-report example. A specific place name in a public source ID can be useful provenance; it should not imply that private council, employer or unpublished research material is being used.
+
 The folder name should support:
 
 - stable cross-repository reference
