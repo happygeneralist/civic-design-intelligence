@@ -4,6 +4,12 @@ This changelog records repository-level changes.
 
 Use entry-level changelogs inside individual notes for changes to specific evidence, needs, behaviours, pain points, insights or review notes.
 
+## 2026-07-04
+
+### Changed
+
+- Added lightweight issue-first workflow guidance to `AGENTS.md` and `CONTRIBUTING.md` for non-trivial scoped work, while keeping tiny obvious edits issue-optional.
+
 ## 2026-06-16
 
 ### Added
