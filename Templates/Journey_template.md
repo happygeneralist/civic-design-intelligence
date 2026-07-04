@@ -20,12 +20,11 @@ related_pain_points:
 related_insights:
 related_themes:
 tags:
-  - send
 ---
 
 # Journey title
 
-Journeys should show how needs, behaviours, pain points and evidence change across stages. Avoid implying that complex SEND experiences are always linear.
+Journeys should show how needs, behaviours, pain points and evidence change across stages. Avoid implying that complex public-service experiences are always linear.
 
 ## Journey scope
 
