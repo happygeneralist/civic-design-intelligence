@@ -21,7 +21,6 @@ related_needs:
 related_pain_points:
 related_insights:
 tags:
-  - send
 ---
 
 # Behaviour title

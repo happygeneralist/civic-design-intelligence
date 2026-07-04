@@ -22,7 +22,6 @@ related_needs:
 related_behaviours:
 related_insights:
 tags:
-  - send
 ---
 
 # Pain point title

@@ -18,7 +18,6 @@ change_level: none | minor | material | major
 related_evidence:
 related_notes:
 tags:
-  - send
 ---
 
 # Review note title

@@ -19,7 +19,6 @@ change_level: none | minor | material | major
 related_evidence:
 related_insights:
 tags:
-  - send
 ---
 
 # Study title

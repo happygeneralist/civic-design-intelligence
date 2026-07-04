@@ -30,7 +30,6 @@ related_insights:
 related_themes:
 importance: low | medium | high
 tags:
-  - send
 ---
 
 # Civic need title

@@ -23,7 +23,6 @@ related_pain_points:
 related_insights:
 related_value_dimensions:
 tags:
-  - send
 ---
 
 # Opportunity title

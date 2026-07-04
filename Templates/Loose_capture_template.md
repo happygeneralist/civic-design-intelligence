@@ -8,7 +8,6 @@ llm_generated: false
 human_reviewed: false
 review_status: not_reviewed
 tags:
-  - send
 ---
 
 # Loose capture note
