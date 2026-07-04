@@ -235,3 +235,13 @@ Questions for human review before any file moves:
 - Should migration records remain outside `docs/` or be mirrored in a documentation map?
 - What is the right convention for worked-domain examples as the system expands beyond SEND?
 - Which documents should Codex treat as current instruction by default?
+
+## 10. What this plan does not decide
+
+This planning PR does not yet decide:
+
+- whether the IA becomes physical folders, index/navigation pages or a hybrid
+- which documents are final sources of truth
+- which overlapping guidance should be reconciled first
+- whether generated public pages and Obsidian/public-site assets should remain under `docs/`
+- the final long-term documentation root structure
