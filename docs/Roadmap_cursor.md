@@ -8,54 +8,61 @@ It is intentionally shorter than the full roadmap. Use it to decide what to do n
 
 ## Current phase
 
-The repository is in a short ingestion-readiness reset before high-volume research ingestion resumes.
+The repository is in an ingestion-readiness reset before high-volume research ingestion resumes.
 
-The aim is not to keep refining the repository indefinitely. The aim is to finish just enough operating scaffolding so that a larger volume of public or explicitly authorised material can be ingested without creating avoidable drift, accidental exposure of protected orchestration methods, or unclear documentation authority.
+The aim is not to keep refining the repository indefinitely. The aim is to finish the minimum operating scaffolding needed so that a larger volume of public or explicitly authorised material can be ingested without avoidable documentation drift, unclear source-of-truth guidance, or accidental publication of protected orchestration methods.
 
 Recent work has completed or substantially advanced:
 
-- whole-system wording so the repository is framed as a reusable public-service design intelligence system, with SEND pathway planning as the initial worked domain
+- whole-system wording so the repository is framed as a reusable design intelligence system, with SEND pathway planning as the initial worked domain
 - public-source clarification for the Ofsted Essex source example
 - removal of SEND defaults from general templates
 - issue-first workflow guidance for non-trivial work
 - a documentation architecture plan for reducing docs sprawl and clarifying authority
 - a draft openness and protection model for distinguishing open civic knowledge from protected LLM orchestration
 
-The system should now move from repeated scaffolding into practical use again, but with two small readiness tasks completed first.
+The system should not jump straight from these planning documents into high-volume ingestion. The documentation and operating boundary work is not finished yet.
 
 ## Active focus
 
 The next focus is:
 
 ```text
-Finish the minimum documentation-authority and openness/protection guardrails, then resume small public-source ingestion slices for SEND pathway planning.
+Finish the minimum documentation-authority, documentation-inventory and private-orchestration boundary work, then resume small public-source ingestion slices for SEND pathway planning.
 ```
 
 This means:
 
 - finish the documentation authority map so contributors and LLM assistants know which documents to start from
-- finish the draft openness/protection position so detailed LLM prompts, ingestion routines and orchestration playbooks are not accidentally published
-- avoid physical folder restructuring until real use shows the navigation map is insufficient
-- avoid broad governance work before ingestion has resumed
-- resume ingestion with public or explicitly authorised sources only
-- keep each ingestion PR small enough to review for evidence provenance, object boundaries, naming, links and overclaiming risk
-- continue to treat SEND pathway planning as the worked domain, not the limit of the system
-- preserve the distinction between evidence origin, object meaning and future applicability
+- create a provisional documentation inventory before any folder restructuring
+- define the private orchestration component boundary so detailed LLM prompts, ingestion routines and orchestration playbooks are not accidentally published
+- finish or replace the draft openness/protection position
+- avoid physical folder restructuring until the inventory shows it is needed
+- avoid broad governance work beyond the minimum needed to make ingestion safe
+- resume ingestion only after the operating layer is clear enough to prevent avoidable drift
 
 ## Immediate next actions
 
 1. Review and merge PR #61 if the provisional documentation authority table is acceptable.
 2. Review and merge PR #63 if the draft openness/protection model is acceptable.
-3. Do not add folders or move documentation files yet.
-4. Use the authority map and documentation architecture plan as the operating scaffold for the next ingestion work.
-5. Select one bounded public or explicitly authorised source for the next ingestion slice.
-6. For the source, classify input type, evidence voice and overclaiming risk before decomposition.
-7. Create or confirm a source record before extracting evidence where the material is a public secondary source.
-8. Extract selected evidence only where it can support candidate research objects conservatively.
-9. Create or update candidate needs, pain points, behaviours, civic needs and insights only after reconciliation with nearby existing objects.
-10. Leave loose, unresolved or immature material in `000_Inbox/` rather than forcing it into a structured schema.
+3. Complete issue #65: create a provisional documentation inventory before folder restructuring.
+4. Complete issue #66: define the private orchestration component boundary, including the proposed `design-intelligence-orchestration` component.
+5. Update this cursor if those steps change the immediate operating sequence.
+6. Only then select one bounded public or explicitly authorised source for the next ingestion slice.
 
-## Current ingestion emphasis
+## Documentation and operating-layer readiness
+
+Before the next ingestion slice, the repository should have:
+
+- a documentation authority map
+- a provisional inventory of current docs by logical layer, authority category and semantic risk
+- a clear rule that folders or file moves are a separate future PR, not part of the authority-map PR
+- a clear public/private boundary for LLM orchestration material
+- an agreed location outside the public repo for detailed prompts, operating playbooks and orchestration routines
+
+This does not require a perfect long-term IA. It requires enough clarity to prevent the next ingestion work from making the public repository messier or exposing material that should remain protected.
+
+## Current ingestion emphasis once readiness is complete
 
 During the next ingestion slice, test whether the repository can connect public-source material, evidence extracts, user needs, behaviours, pain points, civic needs and insights into a coherent problem-space graph.
 
@@ -70,7 +77,7 @@ Pay particular attention to:
 - distinguishing service, organisation and locality context from canonical need wording
 - noting relationship types that might later need more precision, without changing the schema now
 - noting whether locally observed needs may later become wider cross-service or cross-locality patterns
-- using the documentation authority map rather than searching through every documentation file manually
+- using the documentation authority map and inventory rather than searching through every documentation file manually
 
 Near-term source inputs should remain public or explicitly authorised, for example public Ofsted/CQC Area SEND inspection reports, public Local Government and Social Care Ombudsman decisions, public SEND statutory guidance, public Local Offer pages, public council scrutiny or cabinet papers, public consultation outputs, public charity reports, public parliamentary reports and explicitly published reusable user research.
 
@@ -97,7 +104,9 @@ For the next few PRs:
 - use issues for non-trivial work
 - do not add detailed LLM ingestion prompts, system instructions, orchestration playbooks or automation recipes to the public repository while issue #62 remains open
 - do not create a private/public split inside the public repository and assume it protects sensitive material
-- do not create folders or move documentation files until navigation/index work has been tested
+- do not create folders or move documentation files until issue #65 has created a provisional inventory and a human has reviewed the need for moves
+- do not treat PR #61 as completing the whole documentation IA; it is an authority/navigation step only
+- do not treat PR #63 as completing the private operating layer; issue #66 still needs to define the separate component boundary
 - do not do another broad filename migration unless validation or Obsidian use reveals a concrete problem
 - do not add strict validator checks before the ingestion workflow has been tested on more examples
 - do not build an API/database layer yet
@@ -136,15 +145,14 @@ These are important, but not next:
 
 When deciding what to do next, prefer work that helps answer:
 
-- Can we ingest real public or explicitly authorised material without semantic drift?
-- Can we preserve evidence, uncertainty and review state while moving faster?
 - Can contributors and LLM assistants find the right source-of-truth guidance without reading every documentation file?
+- Can the repository identify which documentation is current guidance, historical material, exploratory material or source-of-truth guidance?
 - Can the public repository stay open while detailed orchestration methods remain protected until intentionally published?
-- Can the repository distinguish source material, evidence extracts, candidate objects, reviewed objects, synthesis and decision-support material?
-- Can locally observed needs later become wider patterns without losing provenance?
-- Can the repository remain Markdown-first and Obsidian-friendly while supporting future data/API use?
+- Can we prevent private prompts, orchestration routines and operating playbooks from being committed publicly by accident?
+- Can we ingest real public or explicitly authorised material without semantic drift once the operating layer is clear?
+- Can we preserve evidence, uncertainty and review state while moving faster?
 
-If a proposed change does not support ingestion readiness, evidence rigour, documentation authority, openness/protection boundaries or immediate public-source ingestion, defer it.
+If a proposed change does not support documentation authority, documentation inventory, openness/protection boundaries or safe future ingestion, defer it.
 
 ## Next review point
 
@@ -152,15 +160,14 @@ Review this cursor after:
 
 1. PR #61 has either merged or been replaced by an equivalent documentation authority map
 2. PR #63 has either merged or been replaced by an equivalent openness/protection boundary
-3. one new public-source ingestion slice has been completed
+3. issue #65 has produced a provisional documentation inventory or been deliberately deferred
+4. issue #66 has defined the private orchestration component boundary or been deliberately deferred
 
 At that point, decide whether the next step should be:
 
-- another ingestion slice
-- a provisional documentation inventory by logical layer and authority category
-- a small docs index/navigation improvement
-- source/evidence template adjustments based on the ingestion slice
-- relationship-type conventions based on real object examples
-- need-pattern conventions based on real object examples
-- Obsidian dashboard improvements
+- one bounded public-source ingestion slice
+- section index pages only
+- a small physical folder experiment
+- guidance reconciliation for one narrow area
+- source/evidence template adjustments
 - safe source-capture automation
