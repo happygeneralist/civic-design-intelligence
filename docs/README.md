@@ -4,6 +4,8 @@ This map helps contributors, reviewers and LLM assistants find the right reposit
 
 It reflects the current documentation audit. It does not resolve known overlaps or contradictions; those need separate human review.
 
+This is a navigation map, not a file-move plan. It classifies the current documents in place.
+
 ## Start here
 
 Read these first when you are new to the repository or choosing what to do next.
@@ -13,6 +15,45 @@ Read these first when you are new to the repository or choosing what to do next.
 - `../CONTRIBUTING.md` - how to add or update material safely.
 - `Roadmap_cursor.md` - current operational focus, active guardrails and what not to overbuild.
 - `Safe_research_ingestion_MVP.md` - minimum safe-ingestion conventions for the current MVP.
+
+## Authority labels
+
+Use these labels to decide how much weight to give a document.
+
+| Label | Meaning |
+|---|---|
+| Source of truth | Controls a decision area unless a human reviewer explicitly supersedes it. |
+| Current operating rule | Describes how contributors, reviewers or LLM assistants should work now. |
+| Supporting guidance | Helps apply a source-of-truth rule, but does not override it. |
+| Concept note | Explores an idea or future model; do not treat it as current instruction by default. |
+| Roadmap direction | Describes current or future sequencing, including what has been deferred. |
+| Worked example | Shows guidance in a bounded domain; do not generalise it automatically. |
+| Historical or migration record | Preserves audit or migration context; do not treat it as current operating guidance by default. |
+| Reference/background | Useful context that may inform work but should not control decisions alone. |
+
+## Provisional Source Of Truth
+
+This table is provisional. It identifies the first document to trust for common decisions while known overlaps are reviewed.
+
+| Decision area | Start with | Authority | Supporting documents |
+|---|---|---|---|
+| Repository purpose and public-source posture | `../README.md` | Source of truth | `Civic_design_intelligence_system.md`, `Source_use_policy.md` |
+| Governance, roles and validation authority | `../GOVERNANCE.md` | Source of truth | `Review_process.md`, `Lifecycle_states.md` |
+| Human contribution workflow | `../CONTRIBUTING.md` | Current operating rule | `Safe_research_ingestion_MVP.md`, `Object_change_logs.md` |
+| Codex start-of-work behaviour | `../AGENTS.md` | Current operating rule | `../llm-instructions.md`, `Codex_repository_automation.md` |
+| LLM operating boundaries | `../llm-instructions.md` | Source of truth | `LLM_safety_model.md`, `LLM_intervention_logging.md` |
+| Current operational focus | `Roadmap_cursor.md` | Current operating rule | `Knowledge_evolution_implementation_roadmap.md` |
+| Source eligibility and public-source use | `Source_use_policy.md` | Source of truth | `Source_capture_workflow.md`, `Secondary_research_ingestion.md` |
+| Evidence standards and contribution safety | `Evidence_standards.md` | Source of truth | `Input_and_evidence_classification.md`, `Research_study_scope.md` |
+| Source-to-evidence ingestion path | `Ingestion_slice_workflow.md` | Current operating rule | `Source_capture_workflow.md`, `Input_and_evidence_classification.md`, `Safe_research_ingestion_MVP.md` |
+| Lifecycle, review status and validation meaning | `Lifecycle_states.md` | Source of truth | `Review_process.md`, `Repository_validation.md` |
+| Naming, IDs and links | `Naming_and_linking_contract.md` | Source of truth | `Repository_validation.md`, `ID_and_link_migration.md` |
+| User-need wording | `User_needs_writing_rules.md` | Source of truth | `User_need_quality_tests.md`, `Needs_hierarchy.md`, `Decision_shaped_user_needs.md` |
+| Template use and maturity | `Templates_and_maturity.md` | Supporting guidance | `../Templates/`, `Repository_validation.md` |
+| Object changelog decisions | `Object_change_logs.md` | Source of truth | `Knowledge_evolution_strategy.md`, `LLM_intervention_logging.md` |
+| Obsidian use and repository navigation | `Obsidian_workflow.md` | Supporting guidance | `Naming_and_linking_contract.md`, `Templates_and_maturity.md` |
+| Strategy and theory | `Civic_design_intelligence_system.md` | Concept note | `Theory_of_change_MVP.md`, `Bridging_civic_design_intelligence_and_civic_ai.md` |
+| Migration history | `../migration/validation-baseline-report.md` | Historical or migration record | `ID_and_link_migration.md`, `Governance_legal_basis.md` |
 
 ## For this question, read this first
 
