@@ -26,20 +26,24 @@ Completed or substantially complete:
 - general templates cleaned so they do not apply SEND defaults unintentionally
 - issue-first workflow guidance added for non-trivial scoped work
 - documentation architecture plan added to reduce docs sprawl and clarify authority before broad file moves
+- PR #64 merged and established the current operating-layer readiness framing before high-volume ingestion resumes
+- issue #66 now has a boundary proposal tying together the prompt/orchestration audit in #68, the specialised user-needs methodology audit in #69 and the public-safe user-needs surface proposal in #70
 
 Active or pending before high-volume ingestion:
 
-- review and merge a provisional documentation authority map so contributors and LLM assistants can find source-of-truth guidance quickly
-- review and merge a draft openness/protection model so detailed LLM prompts, ingestion routines and orchestration playbooks are not accidentally published
-- create a provisional documentation inventory by logical layer, authority category and semantic risk before any folder restructuring
-- define the private orchestration component boundary, including the proposed `design-intelligence-orchestration` component
-- only then start a small public-source ingestion pass using SEND pathway-planning material
+- complete issue #65 by creating a provisional documentation inventory by logical layer, authority category and semantic risk before any folder restructuring
+- use the #66 boundary proposal to guide the public/private split between `civic-design-intelligence` and `design-intelligence-orchestration`
+- replace or tighten high-risk public prompt and workflow surfaces with public-safe summaries
+- create public-safe user-needs writing and quality summaries so the public repo remains intelligible without exposing protected methodology
+- create or use private holding structures in `design-intelligence-orchestration` for protected ontology/navigation logic and advanced user-needs methodology
+- use issue #71 to preserve or triage deferred roadmap detail from the stale backup without re-expanding protected detail in public
+- only then start a small public-source ingestion pass using SEND pathway-planning material, and only where any private method stays private and public outputs remain evidence-linked and reviewable
 - preserve locality, service-area and organisation context as sensemaking context, not as the primary meaning of user needs
 - use public secondary research as traceable source material without turning this repository into a raw document archive
 - create matching source records and selected evidence extracts in this repository for companion archive sources when they are used
 - tighten validation only after the current object patterns have been used in practice
 
-The repository should now move from normalising structure to finishing the minimum operating layer needed for safe ingestion, then using the structure with real research again.
+The repository should now move from normalising structure to finishing the minimum public/private boundary implementation needed for safe ingestion, then using the structure with real research again.
 
 ## Roadmap cursor
 
@@ -69,7 +73,7 @@ Core distinctions:
 - Public secondary sources are source material; selected extracts become evidence objects.
 - The companion secondary-research repository is a source archive, not a competing intelligence repository.
 - Documentation architecture helps people and LLM assistants find the right authority; it is not a reason to delay ingestion indefinitely.
-- The open knowledge model and protected orchestration layer should remain distinct until the openness/licensing model is clearer.
+- The public knowledge model and protected orchestration layer should remain distinct unless there is an explicit publication decision.
 
 First-class objects, especially user needs and civic needs, should remain persistent, traceable and supersedable.
 
@@ -77,7 +81,7 @@ Pain points should remain visible when resolved, dormant or at risk of recurring
 
 ## Stage 2: Establish minimum viable practice
 
-Status: substantially complete for naming, metadata hygiene and PR practice; active for documentation authority, operating-layer separation and ingestion.
+Status: substantially complete for naming, metadata hygiene and PR practice; active for public/private boundary implementation and ingestion readiness.
 
 Minimum viable practice:
 
@@ -93,12 +97,13 @@ Minimum viable practice:
 10. Keep structured source records, evidence extracts and derived knowledge objects in this repository.
 11. Keep raw or lightly processed public secondary research in `happygeneralist/civic-design-secondary-research` where useful.
 12. Use companion `evidence-map.md` files to link public source folders back to structured source, evidence and analysis objects in this repository.
-13. Keep detailed LLM prompts, ingestion routines and orchestration playbooks out of the public repository unless there is an explicit publication decision.
-14. Keep private orchestration material in a separate private component, not in hidden folders inside the public repository.
+13. Keep detailed LLM prompts, ingestion routines, ontology/navigation logic, advanced methodology and orchestration playbooks out of the public repository unless there is an explicit publication decision.
+14. Keep private orchestration material in `happygeneralist/design-intelligence-orchestration`, not in hidden folders inside the public repository.
+15. Keep public governance, source-use policy, object definitions, evidence/review/status meaning and contribution safety public enough for scrutiny and reuse.
 
 ## Stage 3: Stabilise naming, linking and documentation authority
 
-Status: naming guardrails merged; documentation authority mapping and inventory still active.
+Status: naming guardrails and documentation authority are in place enough for the current reset; documentation inventory remains active.
 
 The repository should avoid repeated migrations by making correctness a creation-time habit.
 
@@ -115,57 +120,67 @@ Minimum viable guardrails:
 
 Useful next actions:
 
-1. Merge or replace the provisional documentation authority map.
-2. Complete issue #65 by creating a provisional documentation inventory by logical layer, authority category and semantic risk.
-3. Use the inventory to decide whether section index pages or folders are needed.
-4. Consider folder moves only after navigation/index and inventory work has been tested.
+1. Complete issue #65 by creating a provisional documentation inventory by logical layer, authority category and semantic risk.
+2. Use the inventory to decide whether section index pages or folders are needed.
+3. Consider folder moves only after navigation/index and inventory work has been tested.
+4. Use issue #71 to preserve useful deferred roadmap detail without restoring stale sequencing or protected method detail.
 
 Do not create another broad filename or documentation-folder migration unless validation, Obsidian use or ingestion work reveals a concrete problem.
 
-## Stage 4: Define the private orchestration component
+## Stage 4: Apply the public/private boundary
 
-Status: open.
+Status: boundary proposal posted; implementation planning active.
 
-Issue #66 should define the private orchestration component boundary before detailed prompts or operating playbooks are used for high-volume ingestion.
+Issue #66 now provides the umbrella boundary proposal for the operating relationship between this public repository and `happygeneralist/design-intelligence-orchestration`. It draws on:
 
-Working component name:
+- #68 for prompt and orchestration exposure risk
+- #69 for specialised user-needs methodology exposure risk
+- #70 for the public-safe user-needs methodology surface
 
-```text
-design-intelligence-orchestration
-```
-
-This component should be reusable beyond the current SEND and public-service context. It may support user needs, civic needs, organisational needs, evidence structuring and design-intelligence workflows across public, civic and private-sector settings.
+The private repository already exists. Its related issues cover the protected user-needs ontology boundary and the protected home for advanced user-needs methodology.
 
 The public repository should contain:
 
 - open civic/design intelligence knowledge objects
-- public documentation
-- safe principles and method summaries
+- public documentation needed for intelligibility, auditability, contribution and reuse
+- public governance, source-use policy, object definitions and safety rules
+- evidence, review, lifecycle and status meanings
 - schemas and templates intended for public use
 - source records, selected evidence extracts and reviewed/captured analysis objects
+- public-safe summaries of higher-risk concepts where the public needs to know that the concept exists
 
-The private orchestration component may contain:
-
-- full LLM system instructions
-- ingestion prompts
-- transformation prompts
-- evidence decomposition routines
-- object reconciliation prompts
-- evaluation rubrics
-- assistant orchestration patterns
-- batch-processing methods
-- private operational playbooks
-- workflow checklists for high-volume ingestion
+The private orchestration repository should contain protected material used to operate, scale, navigate or improve the method beyond ordinary public contribution guidance.
 
 Do not assume anything is protected if it is committed to the public repository, even in a hidden folder or ignored path.
 
-## Stage 5: Resume safe research ingestion
+## Stage 5: Public-safe summary work before ingestion
 
-Status: next recommended phase after the minimum documentation-authority, documentation-inventory and private-orchestration boundary work is complete or deliberately deferred.
+Status: next implementation step before any ingestion that depends on protected method.
 
-Use `docs/Safe_research_ingestion_MVP.md`, `docs/Ingestion_slice_workflow.md`, `docs/Input_and_evidence_classification.md`, `docs/Source_capture_workflow.md`, `docs/Secondary_research_ingestion.md`, `docs/User_needs_writing_rules.md`, `docs/Source_use_policy.md` and `docs/Evidence_standards.md` as the immediate public operating guide.
+The next public implementation work should be practical and small:
 
-Start with one bounded public or explicitly authorised SEND pathway-planning source and create only the strongest useful objects first:
+1. Create public-safe summaries for high-risk prompt and workflow files identified through #68 and #70.
+2. Create public-safe user-needs writing and quality summaries from the #69 and #70 boundary work.
+3. Keep the minimum public surface needed for object scrutiny, contribution and reuse.
+4. Avoid expanding detailed user-needs methodology, quality tests, relationship/navigation logic, prompt catalogues or orchestration routines in public.
+5. Leave advanced private method, ontology/navigation work and book/IP-adjacent method development to `design-intelligence-orchestration` or later human/IP review.
+
+The public repo should not become too thin to audit. It should still explain what objects are, how evidence and review states work, what contributors must not overclaim, and how public outputs can be challenged or reused.
+
+## Stage 6: Resume safe research ingestion
+
+Status: blocked where ingestion depends on protected method; otherwise next recommended phase after the minimum boundary work is complete or deliberately deferred.
+
+Ingestion remains blocked for any workflow that depends on:
+
+- advanced user-needs methodology
+- prompt catalogues
+- orchestration routines
+- relationship/navigation logic
+- quality rubrics
+- private ontology
+
+Once the relevant boundary work is complete, start with one bounded public or explicitly authorised SEND pathway-planning source and create only the strongest useful objects first:
 
 - source records
 - selected evidence extracts
@@ -176,26 +191,27 @@ Start with one bounded public or explicitly authorised SEND pathway-planning sou
 - insights
 - themes
 
-The goal is to test whether the repository now supports useful research breakdown without creating naming debt, overclaiming confidence, flattening meaning or forcing immature material into the wrong schema.
+The goal is to test whether the repository now supports useful research breakdown without creating naming debt, overclaiming confidence, flattening meaning, leaking private method or forcing immature material into the wrong schema.
 
-Recommended next ingestion pass:
+Recommended next ingestion pass, once unblocked:
 
 1. Select one bounded public or explicitly authorised source.
-2. Classify input type, evidence voice and overclaiming risk.
-3. Create or confirm the source record before extracting evidence where the input is a public secondary source.
-4. Capture selected evidence notes only where the material is useful and traceable.
-5. Extract candidate needs, behaviours and pain points with conservative metadata.
-6. Link each object back to evidence where possible.
-7. Use `short_name` and filename conventions at creation time.
-8. Preserve service, organisation and locality context where it appears in evidence, but do not encode it into canonical need wording unless it is intrinsic.
-9. If the source exists in `civic-design-secondary-research`, record the source archive reference and update the companion evidence map.
-10. Record meaning changes in object change logs only where meaning changes.
-11. Use the PR summary for administrative cleanup.
-12. Leave uncertain or loose material in `000_Inbox/`.
+2. Use only public-safe guidance in the public repo.
+3. Keep any protected method support private.
+4. Create or confirm the source record before extracting evidence where the input is a public secondary source.
+5. Capture selected evidence notes only where the material is useful and traceable.
+6. Extract candidate needs, behaviours and pain points with conservative metadata.
+7. Link each object back to evidence where possible.
+8. Use `short_name` and filename conventions at creation time.
+9. Preserve service, organisation and locality context where it appears in evidence, but do not encode it into canonical need wording unless it is intrinsic.
+10. If the source exists in `civic-design-secondary-research`, record the source archive reference and update the companion evidence map.
+11. Record meaning changes in object change logs only where meaning changes.
+12. Use the PR summary for administrative cleanup and public-safe disclosure of LLM/private-method assistance.
+13. Leave uncertain or loose material in `000_Inbox/`.
 
-## Stage 6: Model context, locality and pattern sensemaking
+## Stage 7: Model context, locality and pattern sensemaking
 
-Status: direction captured; defer schema until examples exist.
+Status: direction captured; defer schema until examples exist and the public/private boundary is stable.
 
 The repository should support sensemaking over time.
 
@@ -209,9 +225,9 @@ Near-term working rule:
 Capture lived-experience needs directly. Capture service areas, organisations and localities as context or mappings.
 ```
 
-Do not build a full locality, service-area or organisation taxonomy until research examples show the minimum useful structure.
+Do not build a full locality, service-area or organisation taxonomy until research examples show the minimum useful structure and the related boundary decisions are settled.
 
-## Stage 7: Ingest public secondary research cautiously
+## Stage 8: Ingest public secondary research cautiously
 
 Status: direction captured; first companion archive source exists.
 
@@ -233,13 +249,13 @@ The recommended split is:
 
 ```text
 civic-design-secondary-research
-→ raw or lightly processed public source material
-→ source-level documentation
-→ candidate extracts
-→ evidence maps back to structured objects
+-> raw or lightly processed public source material
+-> source-level documentation
+-> candidate extracts
+-> evidence maps back to structured objects
 
 civic-design-intelligence
-→ source records, selected evidence extracts and structured knowledge objects
+-> source records, selected evidence extracts and structured knowledge objects
 ```
 
 A secondary source should not directly become a user need.
@@ -248,17 +264,17 @@ Recommended chain:
 
 ```text
 Ofsted report or secondary source
-→ source record
-→ selected evidence extracts
-→ candidate needs, pain points, behaviours, civic needs and insights
-→ cross-source patterns
+-> source record
+-> selected evidence extracts
+-> candidate needs, pain points, behaviours, civic needs and insights
+-> cross-source patterns
 ```
 
 Secondary evidence should be interpreted conservatively. An inspection finding, literature review or policy report may support a need or pain point, but it should not automatically validate one.
 
-## Stage 8: Openness, licensing and protection
+## Stage 9: Openness, licensing and protection
 
-Status: draft position open for review.
+Status: public principle in place; protection-by-default applies to method-bearing material until later decisions are clearer.
 
 The repository should remain open enough to support civic reuse, scrutiny and adoption. However, the project also needs an intentional boundary between:
 
@@ -266,15 +282,13 @@ The repository should remain open enough to support civic reuse, scrutiny and ad
 - controlled implementation layer
 - protected orchestration layer
 
-Until this model is agreed, avoid committing detailed LLM ingestion prompts, full system instructions, orchestration playbooks, evaluation rubrics or automation recipes to the public repository.
-
 High-level safety guidance and public documentation can remain open where it helps users understand the repository without publishing the full operating method.
 
-This should not block ingestion indefinitely. It should shape what is committed publicly during ingestion and where protected operating material is kept.
+This should not block ingestion indefinitely. It should shape what is committed publicly during ingestion, where protected operating material is kept, and how public outputs are reviewed before commit.
 
-## Stage 9: Update templates lightly
+## Stage 10: Update templates lightly
 
-Status: general template SEND-default cleanup complete; future changes should follow ingestion evidence.
+Status: general template SEND-default cleanup complete; future changes should follow ingestion evidence and boundary decisions.
 
 After one or two ingestion passes, check whether templates need optional fields or prompts for:
 
@@ -288,17 +302,19 @@ source_location:
 
 Do not add complex event structures to every template yet.
 
-Only require fields that are useful now. Optional fields should remain optional until the repository has more examples.
+Only require fields that are useful now. Optional fields should remain optional until the repository has more examples and the public/private boundary is stable.
 
 ## Current sequencing
 
 Near-term sequence:
 
-1. Merge or replace the provisional documentation authority map.
-2. Merge or replace the draft openness/protection model.
-3. Complete issue #65: provisional documentation inventory before folder restructuring.
-4. Complete issue #66: define the private orchestration component boundary.
-5. Decide whether section index pages or folders are needed before ingestion.
-6. Resume ingestion with one bounded public or explicitly authorised source.
+1. Complete issue #65: provisional documentation inventory before folder restructuring.
+2. Use issue #66 as the public/private boundary proposal for implementation planning.
+3. Create public-safe summaries for high-risk prompt and workflow files.
+4. Create public-safe user-needs writing and quality summaries.
+5. Establish the private holding structure in `design-intelligence-orchestration` for protected ontology/navigation logic and advanced user-needs methodology.
+6. Use issue #71 to preserve deferred roadmap detail from the stale backup without reintroducing stale sequencing or protected method detail.
+7. Decide whether section index pages or folders are needed before ingestion.
+8. Resume ingestion with one bounded public or explicitly authorised source only when the relevant method can remain private and the public outputs remain intelligible, auditable and reusable.
 
-The immediate priority is not a perfect repository structure. It is safe enough documentation authority, safe enough operating-layer separation and safe enough traceable ingestion.
+The immediate priority is not a perfect repository structure. It is safe enough documentation authority, safe enough public/private separation and safe enough traceable ingestion.
