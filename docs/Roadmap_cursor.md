@@ -1,6 +1,6 @@
 # Roadmap cursor
 
-Last updated: 2026-07-07
+Last updated: 2026-07-09
 
 This cursor records the current operational focus for the repository.
 
@@ -22,38 +22,41 @@ Recent work has completed or substantially advanced:
 - an openness and protection model for distinguishing open civic knowledge from protected LLM orchestration
 - PR #64, which created the current operating-layer readiness framing before high-volume ingestion resumes
 - issue #66, which now has a boundary proposal tying together the prompt/orchestration audit in #68, the user-needs methodology audit in #69 and the public-safe surface proposal in #70
+- PR #73, which replaced the public LLM research breakdown prompt catalogue with a public-safe summary
+- PR #74, which replaced the public research breakdown workflow with a public-safe summary
+- private orchestration PR #5, which moved the detailed research breakdown prompt catalogue into `design-intelligence-orchestration` as protected draft material
+- private orchestration PR #6, which moved the detailed research breakdown workflow into `design-intelligence-orchestration` as protected draft material
 
-The system should not jump straight from these planning documents into high-volume ingestion. The documentation and operating boundary work is closer to usable, but the public/private split still needs implementation.
+The system should not jump straight from these planning documents into high-volume ingestion. The public/private split is now clearer for prompt and workflow material, but the user-needs method surface still needs a public-safe treatment before ingestion relies on advanced method support.
 
 ## Active focus
 
 The next focus is:
 
 ```text
-Finish the minimum public/private boundary implementation work, then resume small public-source ingestion slices for SEND pathway planning only where the method can stay protected and the public outputs remain auditable.
+Finish the minimum public/private boundary implementation for user-needs methodology, then resume small public-source ingestion slices for SEND pathway planning only where the method can stay protected and the public outputs remain auditable.
 ```
 
 This means:
 
-- use the merged documentation authority and openness/protection work as the current baseline rather than treating PR #61 or PR #63 as pending
-- complete issue #65 by creating a provisional documentation inventory before any folder restructuring
-- use issue #66 as the umbrella boundary decision between this public repository and `happygeneralist/design-intelligence-orchestration`
+- use the merged documentation authority and openness/protection work as the current baseline
+- treat issue #66 as the umbrella boundary decision between this public repository and `happygeneralist/design-intelligence-orchestration`
 - keep basic public governance, source-use policy, object definitions, evidence/review/status meaning and contribution safety public
-- replace or tighten high-risk public prompt, workflow and user-needs methodology surfaces with public-safe summaries
-- create or use private holding structures in `design-intelligence-orchestration` for protected ontology/navigation work and advanced user-needs methodology
+- treat high-risk public prompt and general research-breakdown workflow surfaces as addressed by PRs #73 and #74 unless later audit finds more exposure
+- create public-safe user-needs writing and quality summaries from the #69 and #70 boundary work
+- keep detailed user-needs methodology, quality tests, relationship/navigation logic, prompt catalogues and orchestration routines private unless explicitly published
+- complete issue #65 by creating a provisional documentation inventory before any folder restructuring
 - preserve deferred roadmap detail through issue #71 rather than re-expanding stale or protected material in this public roadmap
 - avoid broad governance work beyond the minimum needed to make ingestion safe
 - resume ingestion only after the operating layer is clear enough to prevent avoidable drift or method exposure
 
 ## Immediate next actions
 
-1. Complete issue #65: create a provisional documentation inventory before folder restructuring.
-2. Treat issue #66 as the current public/private boundary proposal for roadmap purposes, while leaving implementation decisions to follow-up PRs.
-3. Create public-safe summaries for high-risk prompt and workflow files identified through #68 and #70.
-4. Create public-safe user-needs writing and quality summaries from the #69 and #70 boundary work.
-5. Set up the private holding structure in `design-intelligence-orchestration` for protected ontology/navigation logic and advanced user-needs methodology.
-6. Use issue #71 to preserve or triage deferred roadmap detail from the stale backup, without reintroducing protected method into the public roadmap.
-7. Only then select one bounded public or explicitly authorised source for the next ingestion slice.
+1. Create public-safe user-needs writing and quality summaries from the #69 and #70 boundary work.
+2. Preserve any detailed or advanced user-needs method material in `design-intelligence-orchestration` or the Happygeneralist knowledge repo, not in public CDI.
+3. Complete issue #65: create a provisional documentation inventory before folder restructuring.
+4. Use issue #71 to preserve or triage deferred roadmap detail from the stale backup, without reintroducing protected method into the public roadmap.
+5. Only then select one bounded public or explicitly authorised source for the next ingestion slice.
 
 ## Documentation and operating-layer readiness
 
@@ -96,6 +99,8 @@ Start with the current documentation authority guidance and these public-safe so
 - `docs/Source_use_policy.md`
 - `docs/Evidence_standards.md`
 - `docs/Openness_protection_model.md`
+- `docs/LLM_research_breakdown_prompts.md`
+- `docs/Research_breakdown_workflow.md`
 - `docs/Safe_research_ingestion_MVP.md` only to the extent it remains public-safe under #70
 - `docs/Ingestion_slice_workflow.md` only to the extent it remains public-safe under #70
 - `docs/Input_and_evidence_classification.md` only to the extent it remains public-safe under #70
@@ -168,12 +173,10 @@ If a proposed change does not support documentation authority, documentation inv
 
 Review this cursor after:
 
-1. issue #65 has produced a provisional documentation inventory or been deliberately deferred
-2. issue #66 has been accepted as the public/private boundary for the next implementation pass
-3. public-safe summaries have been created or scoped for the highest-risk prompt/workflow files
-4. user-needs writing and quality summary work has been created or scoped
-5. `design-intelligence-orchestration` has enough private holding structure for protected ontology/navigation work and advanced user-needs methodology
-6. issue #71 has preserved or triaged deferred roadmap detail from the stale backup
+1. user-needs writing and quality summary work has been created or deliberately scoped as private
+2. issue #65 has produced a provisional documentation inventory or been deliberately deferred
+3. issue #71 has preserved or triaged deferred roadmap detail from the stale backup
+4. the next bounded ingestion slice has been selected
 
 At that point, decide whether the next step should be:
 
