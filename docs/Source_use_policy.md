@@ -10,6 +10,8 @@ Evidence provenance is managed separately from the existence of a user need, civ
 
 Generic candidate objects may exist without evidence, but they must not be treated as evidence-linked until supported by public or explicitly authorised evidence.
 
+Local or source-specific evidence can support a general or umbrella object where the underlying need, pain, behaviour or civic obligation is not place-specific. The evidence link should make the source scope clear. A single local source may support the existence or local manifestation of an issue, but must not be used on its own to claim national prevalence, severity or consistency.
+
 ## Sources that may be used
 
 Use sources as evidence only when they are:
