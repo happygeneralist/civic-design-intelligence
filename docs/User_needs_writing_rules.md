@@ -222,6 +222,34 @@ Interaction need: I need to filter options by support type, location and entry r
 
 These are connected, but they are not interchangeable.
 
+## Umbrella and reusable needs
+
+Umbrella needs are useful when they reveal a stable pattern across narrower needs, evidence extracts or service contexts. They should help organise the object landscape without becoming so broad that they stop guiding design, policy or service decisions.
+
+Do not make a need local-only just because the first evidence instance comes from a local report. Locality usually belongs on the source, evidence, severity note, service context or implementation condition. Create a local variant only where place materially changes the meaning of the need.
+
+Poor umbrella need:
+
+```text
+Families need communication.
+```
+
+Better reusable need:
+
+```text
+Families need to maintain enough communication with the right people to coordinate support, resolve questions and respond to changing needs while they wait for SEND assessments or services.
+```
+
+The better version is still reusable, but it names the actor, action, pathway moment and value at stake.
+
+When using local evidence for a reusable need:
+
+- keep the user need wording at the highest useful level;
+- link local evidence as a source-specific support, challenge or qualification;
+- do not claim national prevalence, severity or consistency unless comparative evidence supports it;
+- connect narrower needs to umbrella needs where this helps pattern analysis;
+- avoid merging needs where the action, context or value at stake is materially different.
+
 ## Use emotional and social needs carefully
 
 Emotional and social needs are valid in public-service contexts, including SEND.
@@ -258,139 +286,3 @@ I need to understand which options are appropriate for my child.
 ```
 
 points towards interpretation, guidance and personalisation.
-
-When wording changes meaning, treat it as a material change and update the changelog.
-
-For high-sensitivity needs, add:
-
-```markdown
-## Wording rationale
-
-Why this wording was chosen and what alternative wording would imply.
-```
-
-## Good user need pattern
-
-A useful pattern is:
-
-```text
-I need to [action] [object/context] so that [outcome/value].
-```
-
-Example:
-
-```text
-I need to check whether I am eligible for support before I spend time applying.
-```
-
-But do not force every need into this exact structure. Experience, civic and emotional needs may need different phrasing.
-
-## Short names for mapping and design
-
-Use `short_name` as a compact version of the user need for Obsidian Bases, maps, workshops, post-it notes and design artefacts.
-
-The short name should still read as a need, not as a theme label or topic.
-
-Preferred pattern:
-
-```text
-Need to [verb] [object/context]
-```
-
-Good examples:
-
-```text
-Need to determine sailing area
-Need to choose a suitable supplier
-Need to choose matching equipment
-Need to set up navigational equipment
-Need to assess regional travel risk
-Need to choose payment model
-Need to evaluate the service
-```
-
-Short names deliberately strip out some context. This reduces cognitive load when moving needs around in mapping and prioritisation work. The full `need` field remains the canonical, evidence-sensitive formulation.
-
-Leave these out of the short name:
-
-- actor or persona
-- `so that` outcome or value
-- detailed evidence nuance
-- caveats and uncertainty
-- organisational or service goals
-
-Include only enough object or context to distinguish nearby needs.
-
-Be especially careful with cognitive verbs. Do not use short names such as `Need to understand options` by default. Prefer a more action-oriented verb such as `compare`, `choose`, `check`, `determine`, `assess`, `prepare`, `provide`, `secure` or `resolve`.
-
-Cognitive short names are acceptable only when comprehension itself is the real need, such as rights, consent, safety, consequences or informed decision-making.
-
-Example:
-
-```yaml
-id: UN_012
-short_name: Need to plan options early
-need: A parent/carer of a young person with SEND needs to begin planning before key education choices become fixed, so they can make realistic decisions with enough time to act.
-```
-
-Filename:
-
-```text
-UN_012_need_to_plan_options_early.md
-```
-
-## Red flags
-
-Review or rewrite needs that include:
-
-- `I need an app...`
-- `I need a dashboard...`
-- `I need a page...`
-- `I need to know...`
-- `I need to understand...`
-- `I need to comply with...`
-- `The service needs...`
-- `The council needs users to...`
-
-These may still point to something important, but the wording should be checked.
-
-## LLM rules
-
-When drafting user needs, the LLM should:
-
-- prefer action-oriented wording
-- avoid cognitive verbs unless justified
-- create short names using `Need to + verb + object/context` where useful for mapping and Bases
-- keep needs solution-agnostic
-- use JTBD tools where useful for context, progress, pains, gains and strategic opportunity framing
-- avoid importing market-led JTBD assumptions uncritically into public-service contexts, including SEND
-- distinguish user needs from policy requirements and user stories
-- keep policy, service, organisation and locality context outside the canonical wording unless it is intrinsic to the evidenced need
-- set `need_level` where possible
-- preserve emotional and social meaning where relevant
-- mark weak or unlinked needs as assumptions or candidates
-- add a wording rationale when wording is sensitive
-
-The LLM should not:
-
-- convert solution ideas into user needs without reframing them
-- treat policy requirements as user needs
-- rewrite user needs to fit policy, service or design-history artefacts that reference them
-- remove emotional, social or civic meaning just to make a need more task-like
-- materially reword reviewed or validated needs without a changelog and review trail
-
-## Review checklist
-
-Before promoting a user need, check:
-
-- [ ] Is it solution-agnostic?
-- [ ] Is the verb appropriate?
-- [ ] Are cognitive verbs justified?
-- [ ] Is the need scoped at the right level?
-- [ ] Has JTBD language been used appropriately for the context?
-- [ ] Is it distinct from a user story, feature or policy requirement?
-- [ ] Does the wording preserve the person's perspective rather than an institutional, policy or service framing?
-- [ ] Is emotional or social meaning preserved where relevant?
-- [ ] Does the evidence support this wording and level?
-- [ ] Would one word change alter the solution direction?
-- [ ] Is the evidence and review status clear?
