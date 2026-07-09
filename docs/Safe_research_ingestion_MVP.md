@@ -59,6 +59,43 @@ These inputs may be research-derived even when they are not yet linked to specif
 
 Do not copy partially structured inputs directly into canonical folders without ingestion and reconciliation. Use them to generate a full ingestion slice, then check the slice against evidence, source records and existing objects.
 
+## Reusable needs and local evidence
+
+Do not make a user need, civic need, behaviour, pain point or insight local-only just because the first evidence instance comes from a local source.
+
+Many public-service needs are structurally shared across places. For example, families navigating SEND pathways may need to maintain communication, coordination and orientation while waiting for assessments or services. A local inspection report can provide evidence that this need is unmet in one area, without proving that the same pain has the same prevalence or severity elsewhere.
+
+Use this distinction:
+
+```text
+general or umbrella object
+→ supported, challenged or qualified by local evidence instances
+→ strengthened, narrowed, split or superseded through comparison
+```
+
+During ingestion:
+
+- word candidate needs at the highest useful level when the underlying need is not place-specific;
+- attach locality, source and service-context detail to the evidence, source record, severity note or implementation context;
+- create a local variant only where local context materially changes the meaning, risk, priority or response;
+- do not claim national prevalence or severity from a single local source;
+- preserve local evidence as one instance that may later support cross-locality comparison;
+- connect narrower needs or pain points to umbrella needs where that helps reveal patterns without making the umbrella object too abstract.
+
+Avoid vague umbrella needs such as:
+
+```text
+Families need communication.
+```
+
+Prefer wording that describes what the person needs to achieve, preserve, recover or change in context, for example:
+
+```text
+Families need to maintain enough communication with the right people to coordinate support, resolve questions and respond to changing needs while they wait for SEND assessments or services.
+```
+
+This keeps the object reusable without detaching it from the pathway moment, actor, action or value at stake.
+
 ## Default metadata for new objects
 
 Use conservative defaults unless there is a clear reason not to.
