@@ -1,8 +1,8 @@
 # Civic design intelligence system
 
-This repository is an Obsidian-compatible civic design intelligence system for public-service design, policy and decision-support work. The initial worked domain is SEND pathway planning.
+This repository is an Obsidian-compatible civic design intelligence system for public-service design, policy and decision-support work.
 
-The repository is in a public-source-first rebuild. The initial domain remains SEND pathway planning, but active evidence should come only from public, openly licensed or explicitly authorised sources. Most needs, pain points, behaviours, insights and civic questions should be captured at the highest useful level, with local context added where it materially affects interpretation, evidence, delivery or decision-making.
+The repository is in a public-source-first rebuild. The MVP works to get in a few service areas to prove the approach, but active evidence should come only from public, openly licensed or explicitly authorised sources. Most needs, pain points, behaviours, insights and civic questions should be captured at the highest useful level, with local context added where it materially affects interpretation, evidence, delivery or decision-making.
 
 It is intended to help researchers, designers, product/service teams and decision-makers capture anonymised evidence, connect it to user needs, civic needs, behaviours, pain points, insights, value dimensions and solution assessments, and maintain a clear audit trail for how research knowledge develops over time.
 
@@ -116,7 +116,7 @@ The repository distinguishes between:
 
 ## Current MVP focus
 
-The immediate MVP is safe ingestion of publicly available SEND pathway-planning evidence, using the current public-source rebuild as the worked context.
+The immediate MVP is safe ingestion of publicly available evidence, using the current public-source rebuild as the worked context.
 
 Use `docs/Safe_research_ingestion_MVP.md` before breaking research into structured objects. It defines the minimum conventions for creating evidence, behaviours, pain points, user needs, civic needs, insights and themes without making immature knowledge look settled.
 
@@ -158,7 +158,7 @@ See `llm-instructions.md` and `docs/LLM_safety_model.md`.
 ## Key documentation
 
 - `docs/Civic_design_intelligence_system.md` defines the open civic design intelligence vision, contribution model and relationship to design histories.
-- `docs/Safe_research_ingestion_MVP.md` defines the minimum safe-ingestion workflow for the current SEND pathway-planning worked example.
+- `docs/Safe_research_ingestion_MVP.md` defines the minimum safe-ingestion workflow for the current worked example.
 - `docs/Source_use_policy.md` defines the public-source-first evidence policy.
 - `docs/User_needs_writing_rules.md` defines user need wording, including the `short_name` convention.
 - `docs/Object_change_logs.md` defines when object-level changelogs are required and when Git and pull request history are enough.
