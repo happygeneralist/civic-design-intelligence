@@ -1,190 +1,211 @@
 # Roadmap cursor
 
-Last updated: 2026-07-09
+Last updated: 2026-07-13
 
 This cursor records the current operational focus for the repository.
 
-It is intentionally shorter than the full roadmap. Use it to decide what to do next, what to avoid overbuilding, and when the roadmap has moved to a new phase.
+It is intentionally shorter than the full roadmap. Use it to decide what to do next, what to avoid overbuilding and when the roadmap has moved to a new phase.
+
+Where the sequencing in `docs/Knowledge_evolution_implementation_roadmap.md` conflicts with this cursor, use this cursor as the current operating position.
 
 ## Current phase
 
-The repository is in an ingestion-readiness reset before high-volume research ingestion resumes.
+The repository is now in:
 
-The aim is not to keep refining the repository indefinitely. The aim is to finish the minimum operating scaffolding needed so that a larger volume of public or explicitly authorised material can be ingested without avoidable documentation drift, unclear source-of-truth guidance, or accidental publication of protected orchestration methods.
+```text
+learning through bounded ingestion
+```
 
-Recent work has completed or substantially advanced:
+The minimum public/private boundary exists at MVP level. The documentation authority map and provisional inventory exist. One bounded evidence-led Ofsted Essex ingestion route has been planned, run and reviewed.
 
-- whole-system wording so the repository is framed as a reusable design intelligence system, with SEND pathway planning as the initial worked domain
-- public-source clarification for the Ofsted Essex source example
-- removal of SEND defaults from general templates
-- issue-first workflow guidance for non-trivial work
-- a documentation architecture plan for reducing docs sprawl and clarifying authority
-- an openness and protection model for distinguishing open civic knowledge from protected LLM orchestration
-- PR #64, which created the current operating-layer readiness framing before high-volume ingestion resumes
-- issue #66, which now has a boundary proposal tying together the prompt/orchestration audit in #68, the user-needs methodology audit in #69 and the public-safe surface proposal in #70
-- PR #73, which replaced the public LLM research breakdown prompt catalogue with a public-safe summary
-- PR #74, which replaced the public research breakdown workflow with a public-safe summary
-- PR #76, which added a public-safe user-needs quality summary
-- private orchestration PR #5, which moved the detailed research breakdown prompt catalogue into `design-intelligence-orchestration` as protected draft material
-- private orchestration PR #6, which moved the detailed research breakdown workflow into `design-intelligence-orchestration` as protected draft material
-- private orchestration PR #7, which created a protected holding structure for advanced user-needs quality method material
+The repository should not return to a pre-ingestion readiness phase while every governance, ontology, documentation or orchestration question is resolved.
 
-The prompt, workflow and user-needs quality boundary pairs are now in place at MVP level. The public repository has summaries needed for auditability and contribution, while detailed method-bearing material has protected homes in `design-intelligence-orchestration`.
+The current operating loop is:
+
+```text
+bounded ingestion
+-> inspect what becomes difficult, ambiguous or unsafe
+-> capture the issue
+-> make the smallest necessary operating correction
+-> continue with the next bounded slice
+```
+
+Slow, bounded ingestion is the primary way to discover the real requirements for safer and faster ingestion.
+
+## Current repository position
+
+Completed or sufficiently established for continued bounded ingestion:
+
+- whole-system framing, with SEND pathway planning as the initial worked domain rather than the limit of the repository;
+- public-source and evidence-handling guidance;
+- issue-first practice for non-trivial work;
+- documentation authority guidance and a provisional documentation inventory;
+- an MVP public/private boundary between this repository and `happygeneralist/design-intelligence-orchestration`;
+- public-safe summaries for higher-risk prompt, workflow and user-needs quality material;
+- a companion public secondary-research source archive;
+- the first bounded Ofsted Essex communication-while-waiting slice;
+- one source record, five evidence records and a cautious link to an existing pain point;
+- an evidence-to-object fit review that identified partial rather than wholesale support;
+- public non-linear ingestion guidance that supports evidence-led, object-led and model-led entry routes.
+
+The first Ofsted source remains partially ingested. The completed first slice is a worked example, not a universal sequence and not evidence that the operating model is finished.
 
 ## Active focus
 
-The next focus is:
+The current focus is:
 
 ```text
-Finish documentation inventory and deferred-roadmap triage, then select one bounded public-source ingestion slice for SEND pathway planning.
+Continue slow, reviewable ingestion and evolve the operating guidance from repeated examples.
 ```
 
 This means:
 
-- use the merged documentation authority and openness/protection work as the current baseline
-- treat issue #66 as the umbrella boundary decision between this public repository and `happygeneralist/design-intelligence-orchestration`
-- keep basic public governance, source-use policy, object definitions, evidence/review/status meaning and contribution safety public
-- treat high-risk public prompt, general research-breakdown workflow and user-needs quality surfaces as addressed at MVP level unless later audit finds more exposure
-- keep detailed user-needs methodology, quality tests, relationship/navigation logic, prompt catalogues and orchestration routines private unless explicitly published
-- complete issue #65 by creating a provisional documentation inventory before any folder restructuring
-- preserve deferred roadmap detail through issue #71 rather than re-expanding stale or protected material in this public roadmap
-- avoid broad governance work beyond the minimum needed to make ingestion safe
-- resume ingestion only with one bounded public or explicitly authorised source, and only where public outputs remain auditable
+- treat issue #86 as the active workflow-learning umbrella;
+- use issue #87 for public evidence-context-object and non-linear journey guardrails exposed through real ingestion;
+- keep `design-intelligence-orchestration#10` available for concrete protected judgement or review-rubric needs, without making it an ingestion prerequisite;
+- keep `design-intelligence-orchestration#8` ready as a lightweight private roadmap/boundary task, but do not treat it as an ingestion blocker;
+- keep issue #89 as a separate model-led journey-view test rather than allowing it to displace the next evidence-led slice;
+- update public guidance only where an ingestion example exposes a repeated, material or unsafe ambiguity;
+- continue using small issues and PRs so source selection, evidence interpretation and semantic changes remain reviewable.
 
 ## Immediate next actions
 
-1. Complete issue #65: create a provisional documentation inventory before folder restructuring.
-2. Use issue #71 to preserve or triage deferred roadmap detail from the stale backup, without reintroducing protected method into the public roadmap.
-3. Select one bounded public or explicitly authorised source for the next ingestion slice.
-4. Run the ingestion slice conservatively, using public-safe guidance in CDI and keeping any protected method support private.
-5. Update this cursor after the ingestion slice has tested whether the current boundary and documentation authority are sufficient in practice.
+1. Put issue #86 into active work on the portfolio Project.
+2. Keep issue #87 ready as supporting work generated through ingestion.
+3. Run issue #91 as the next bounded Ofsted Essex slice, focused on delays in assessment, EHC plans, provision and support.
+4. Create a slice plan that separates the source's bundled claims and defines stop or shrink conditions.
+5. Create a candidate evidence table before creating or changing knowledge objects.
+6. Create selected evidence records and update the secondary-research evidence map only after the candidate set has been reviewed.
+7. Make object changes only where nearby-object reconciliation shows a sufficiently direct fit.
+8. Route any concrete workflow or modelling difficulty to the existing umbrella issue that owns it, then continue ingestion.
 
-## Documentation and operating-layer readiness
+## Boundary for the next evidence-led slice
 
-Before the next ingestion slice, the repository should have:
+The next slice should use Extract 002 from:
 
-- a usable documentation authority map
-- a provisional inventory of current docs by logical layer, authority category and semantic risk
-- a clear rule that folders or file moves are a separate future PR, not part of the authority-map work
-- a clear public/private boundary for LLM orchestration material and advanced user-needs methodology
-- an agreed private location for detailed prompts, protected methodology, relationship/navigation logic and orchestration routines
-- public summaries that keep the repository intelligible, auditable and reusable without exposing the protected operating method
+```text
+happygeneralist/civic-design-secondary-research
+sources/SRC_001_ofsted_essex_area_send_inspection_jan_2026/extracts.md
+```
 
-This does not require a perfect long-term IA. It requires enough clarity to prevent the next ingestion work from making the public repository messier or exposing material that should remain protected.
+Working slice:
 
-## Current ingestion emphasis once readiness is complete
+```text
+Delays in EHC needs assessments, EHC plans, provision and support
+```
 
-During the next ingestion slice, test whether the repository can connect public-source material, evidence extracts, user needs, behaviours, pain points, civic needs and insights into a coherent problem-space graph.
+The work must distinguish rather than automatically combine:
 
-Pay particular attention to:
+- delays in assessment of needs;
+- poor EHC plan timeliness;
+- waits for appropriate provision;
+- waits for support from some services;
+- inconsistent experiences and outcomes as inspection synthesis;
+- family dissatisfaction as a source-attributed consequence or association.
 
-- source-to-evidence-to-object traceability
-- backward evidence-linking where useful knowledge already exists but provenance needs rebuilding
-- not treating inspection findings, report findings or synthesis as validated user needs
-- using conservative status, confidence and maturity metadata
-- checking candidate objects against neighbouring existing objects before creating new ones
-- preserving emotional, relational, social, civic and experiential meaning where evidence supports it
-- distinguishing service, organisation and locality context from canonical need wording
-- noting relationship types that might later need more precision, without changing the schema now
-- noting whether locally observed needs may later become wider cross-service or cross-locality patterns
-- using the documentation authority map and inventory rather than searching through every documentation file manually
-- keeping any private method used to support the work out of the public commit and PR description
+Do not assume these claims form one pain point, one user need or one causal chain.
 
-Near-term source inputs should remain public or explicitly authorised, for example public Ofsted/CQC Area SEND inspection reports, public Local Government and Social Care Ombudsman decisions, public SEND statutory guidance, public Local Offer pages, public council scrutiny or cabinet papers, public consultation outputs, public charity reports, public parliamentary reports and explicitly published reusable user research.
+Keep neurodevelopmental waits, health-access inequality, EHC plan quality, communication while waiting, escalation and preparation for adulthood outside this slice unless a small amount of context is necessary to interpret the included claims.
 
-## Operating documents for the next work
+## Operating guidance during ingestion
 
-Start with the current documentation authority guidance and these public-safe source-of-truth documents:
+For each bounded slice:
 
-- `docs/Repository_documentation_architecture_plan.md`
-- `docs/Source_use_policy.md`
-- `docs/Evidence_standards.md`
-- `docs/Openness_protection_model.md`
-- `docs/LLM_research_breakdown_prompts.md`
-- `docs/Research_breakdown_workflow.md`
-- `docs/User_needs_writing_rules.md`
-- `docs/User_needs_quality_public_summary.md`
-- `docs/Safe_research_ingestion_MVP.md` only to the extent it remains public-safe under #70
-- `docs/Ingestion_slice_workflow.md` only to the extent it remains public-safe under #70
-- `docs/Input_and_evidence_classification.md` only to the extent it remains public-safe under #70
-- `docs/Source_capture_workflow.md` only to the extent it remains public-safe under #70
-- `docs/Secondary_research_ingestion.md` only to the extent it remains public-safe under #70
+- inspect the selected source material and wider source context needed to interpret it accurately;
+- inspect nearby user needs, civic needs, pain points, behaviours, insights and views before proposing a new object;
+- create a candidate evidence table before structured evidence or semantic object changes;
+- identify what each item supports and does not support;
+- distinguish existence, manifestation, consequence, severity, prevalence, association and causation;
+- preserve service, policy, statutory and administrative mechanisms as context rather than defining enduring needs through them;
+- keep local evidence local while allowing it to support a reusable object cautiously;
+- use conservative states such as `captured`, `candidate`, `draft` and `needs_review`;
+- do not mark anything human reviewed or validated without explicit human instruction;
+- preserve whole artefacts where their relationships carry meaning, but do not force every input through whole-model preservation;
+- keep public outputs independently inspectable without publishing detailed private orchestration method.
+
+## Public and private operating boundary
+
+The public repository should continue to contain:
+
+- open civic and design intelligence knowledge objects;
+- public source, evidence, status, review and contribution guidance;
+- public-safe reasoning needed to inspect source boundaries, evidence claims and object decisions;
+- source records, selected evidence records and conservative analysis objects;
+- reduced public guidance where repeated examples justify it.
+
+The private orchestration repository should continue to contain protected material such as:
+
+- detailed prompts and prompt chains;
+- scoring or diagnostic rubrics;
+- ontology and navigation logic;
+- reusable orchestration routines;
+- tool-specific runbooks and model preferences;
+- protected review methods that are not required to inspect public outputs.
+
+Unfinished private method does not block a bounded public ingestion slice unless that slice genuinely depends on the missing protected capability.
 
 ## Guardrails for the next PRs
 
 For the next few PRs:
 
-- keep PRs small and reviewable
-- use issues for non-trivial work
-- do not start ingestion until the relevant public/private boundary work is complete enough for the method being used
-- do not add detailed LLM ingestion prompts, system instructions, prompt catalogues, orchestration routines, evaluation rubrics, ontology/navigation logic or protected methodology to the public repository
-- do not expand high-risk public files while #66, #70 or the related private-repository boundary issues are unresolved
-- do not create a private/public split inside the public repository and assume it protects sensitive material
-- do not create folders or move documentation files until issue #65 has created a provisional inventory and a human has reviewed the need for moves
-- do not treat public summary work as a reason to make the public repository too thin to audit or reuse
-- do not do another broad filename migration unless validation or Obsidian use reveals a concrete problem
-- do not add strict validator checks before the ingestion workflow has been tested on more examples
-- do not build an API/database layer yet
-- do not build automated cross-repository sync yet
-- do not import large public reports or raw document corpora into this repository
-- do not treat source capture as evidence interpretation
-- do not treat source archive references as proof of validity
-- do not treat synthesis as validation
-- do not enforce typed relationships before real examples justify the minimum useful vocabulary
-- do not create canonical personas or fixed journey maps before the underlying evidence, needs, behaviours, pain points and contexts are mature enough to support them
+- keep PRs small and reviewable;
+- do not combine roadmap correction, candidate evidence, structured evidence and semantic object changes in one PR;
+- do not expand the schema, relationship vocabulary or validator rules from one example;
+- do not create a new object where an existing object is a direct enough fit;
+- do not link evidence to an object as though it supports the whole object when it supports only one aspect;
+- do not turn inspection findings or recommendations directly into validated user or civic needs;
+- do not make national prevalence, severity or causal claims from one local inspection source;
+- do not publish detailed protected orchestration method;
+- do not import large raw research corpora into this repository;
+- do not merge, close, delete, supersede or otherwise finalise work without explicit instruction.
 
-## Things that can wait
+## Things that remain deferred
 
-These are important, but not next:
+These are important, but not prerequisites for the next bounded slices:
 
-- physical documentation folder restructuring
-- full documentation consolidation or merging overlapping guidance
-- strict validator enforcement for all naming and link rules
-- full change-event folder and logging system
-- pain point recurrence fields across all pain points
-- generated journeys or prototypes
-- opportunity pipeline
-- persona or segment modelling
-- API/database implementation
-- cross-government taxonomy expansion
-- full locality, service-area or organisation taxonomy
-- full source ontology for public secondary research
-- automated ingestion of secondary research corpora
-- automated cross-repository source or roadmap sync
-- enforced typed-relationship schema
-- dedicated need-pattern object type
-- formal causal or theory-of-change layer
-- final licensing or commercial model decisions beyond the current draft openness/protection guardrail
-- book/IP positioning beyond protection-by-default for method-bearing material
+- high-volume or automatic ingestion;
+- automated semantic decisions;
+- broad schema expansion;
+- enforced typed relationships;
+- a full mechanism ontology;
+- a full locality, service-area or organisation taxonomy;
+- strict validator enforcement across all objects;
+- physical documentation folder restructuring without a concrete navigation need;
+- full documentation consolidation;
+- automated cross-repository synchronisation;
+- API or database implementation;
+- canonical personas or fixed journey maps;
+- a dedicated need-pattern object type;
+- a formal causal or theory-of-change layer;
+- final licensing or commercial-model decisions beyond the current protection guardrail.
 
 ## Decision rule
 
-When deciding what to do next, prefer work that helps answer:
+When deciding what to do next, prefer work that answers:
 
-- Can contributors and LLM assistants find the right source-of-truth guidance without reading every documentation file?
-- Can the repository identify which documentation is current guidance, historical material, exploratory material or source-of-truth guidance?
-- Can the public repository stay open while detailed orchestration methods remain protected until intentionally published?
-- Can we prevent private prompts, orchestration routines, ontology/navigation logic and operating playbooks from being committed publicly by accident?
-- Can we ingest real public or explicitly authorised material without semantic drift once the operating layer is clear?
-- Can we preserve evidence, uncertainty and review state while moving faster?
-- Can the public repository remain intelligible, auditable and reusable while protected methods live elsewhere?
+- What did the latest bounded ingestion example make difficult, ambiguous or unsafe?
+- Is the problem local to this source or repeated enough to require operating guidance?
+- Can the problem be handled through a note or small correction before adding schema or tooling?
+- Can the next slice continue safely without resolving the wider theory question now?
+- Does the proposed change preserve meaning, provenance, uncertainty and human control?
+- Does it keep the public output auditable while protected method remains private?
 
-If a proposed change does not support documentation authority, documentation inventory, openness/protection boundaries or safe future ingestion, defer it.
+If a proposed change does not help the next bounded slice, correct a demonstrated ingestion problem or protect repository integrity, defer it.
 
 ## Next review point
 
-Review this cursor after:
+Review this cursor after issue #91 has produced:
 
-1. issue #65 has produced a provisional documentation inventory or been deliberately deferred
-2. issue #71 has preserved or triaged deferred roadmap detail from the stale backup
-3. the next bounded ingestion slice has been selected
-4. one bounded ingestion slice has tested the current public/private boundary in practice
+1. an agreed slice plan;
+2. a candidate evidence table;
+3. selected evidence records or an explicit decision to defer them;
+4. a record of any workflow, modelling or protected-method difficulty exposed by the slice.
 
 At that point, decide whether the next step should be:
 
-- another bounded public-source ingestion slice
-- section index pages only
-- a small physical folder experiment
-- guidance reconciliation for one narrow area
-- source/evidence template adjustments
-- safe source-capture automation
+- another bounded slice from the same Ofsted source;
+- a contrasting source;
+- the model-led journey-view test in #89;
+- a small object-maintenance PR;
+- a narrow public-guidance correction;
+- a concrete protected-rubric task in `design-intelligence-orchestration#10`.
