@@ -4,6 +4,13 @@ This changelog records repository-level changes.
 
 Use entry-level changelogs inside individual notes for changes to specific evidence, needs, behaviours, pain points, insights or review notes.
 
+## 2026-11-05
+
+### Added
+
+- Issue #97: four source records and eight captured evidence records from verified Bexley, Blackburn with Darwen, Blackpool and DfE originals, reusing existing Essex evidence.
+- A provisional five-source SEND waiting/support/navigation research view, with claim-level reconciliation, positive cases, limits and an LLM intervention record. Existing research objects and maturity remain unchanged; human review is outstanding.
+
 ## 2026-07-04
 
 ### Changed
