@@ -11,6 +11,13 @@ Use entry-level changelogs inside individual notes for changes to specific evide
 - Issue #97: four source records and eight captured evidence records from verified Bexley, Blackburn with Darwen, Blackpool and DfE originals, reusing existing Essex evidence.
 - A provisional five-source SEND waiting/support/navigation research view, with claim-level reconciliation, positive cases, limits and an LLM intervention record. Existing research objects and maturity remain unchanged; human review is outstanding.
 
+### Changed
+
+- Clarified that evidence-grounded candidate user needs can support exploratory research, policy/service gap hypotheses and provisional solution assessment before human validation, with use-specific limits and checks.
+- Added a provisional bronze/source, silver/evidence and gold/needs-intelligence description without changing object status, evidence-basis or review schemas.
+- Replaced the outdated blanket deferral of source-inventory synchronisation with a bounded, deterministic source-manifest trial following the completed Essex and five-source research examples.
+- Defined pilot #99 as the next evaluation step before scaling agent extraction or choosing a broad versus specialised skill architecture.
+
 ## 2026-07-04
 
 ### Changed
