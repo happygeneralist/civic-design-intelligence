@@ -204,6 +204,22 @@ Use sections such as:
 ## Recommendation
 ```
 
+## Exploratory value from candidate needs
+
+A candidate need can already help people **ask better policy, service and design questions**. Do not wait for every candidate to be validated before making a traceable problem-space comparison. Equally, do not treat a plausible need or an institutional inspection finding as proof of unmet need or policy non-compliance.
+
+For a candidate-driven comparison, distinguish:
+
+- **Need proposition:** the exact actor, action, context, outcome, evidence and limits supporting this candidate formulation.
+- **Policy intent:** what a current policy, entitlement or statutory framework actually commits to, with date and scope verified for this comparison.
+- **Service capability or provision:** what is offered, under which conditions; this is not necessarily what affected people receive.
+- **Experienced outcome:** what direct or mediated evidence establishes about actual experience and consequences.
+- **Analytical gap hypothesis:** where the preceding components appear misaligned or are unknown, with a suggested research or evaluation question.
+
+Record positive, contradictory and contextual evidence alongside apparent failure. A candidate need may identify a valuable question while remaining unsuitable for a definitive claim or consequential recommendation. A more fully evidenced and reviewed need can support stronger uses, but **maturity is a separate dimension from the type of knowledge**.
+
+For the current trial see [SEND candidate-needs pilot #99](https://github.com/happygeneralist/civic-design-intelligence/issues/99). This is public-safe decision-use guidance, not a new scoring system or a protected method specification.
+
 ## Relationship to user needs
 
 Validated user needs linked to experience, civic and capability needs are among the strongest artefacts in the repository.
