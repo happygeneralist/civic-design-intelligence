@@ -1,324 +1,87 @@
 # User need quality tests
 
-This document defines practical quality tests for creating and reviewing user needs.
-
-It should be read alongside:
-
-- `docs/User_needs_writing_rules.md`
-- `docs/Input_and_evidence_classification.md`
-- `docs/Ingestion_slice_workflow.md`
-- `docs/Repository_validation.md`
+These questions support creating and reviewing user needs. Read them with `Needs_semantic_contract.md`, `User_needs_writing_rules.md`, `Needs_hierarchy.md` and `Repository_validation.md`.
 
 ## Purpose
 
-The repository needs to allow early, weak and draft user needs without letting lazy or bundled needs become accepted structure.
+Allow useful early candidates while making meaning, evidence and uncertainty inspectable. Human and machine interpretations can both be wrong. The tests are review aids, not proof of objective correctness. Privacy, truthful attribution, stable identity and authorised human review remain required.
 
-These tests help contributors decide whether a user need is well scoped, action-oriented and useful for public-service design intelligence.
+A coherent broad need can coexist with detailed constituent needs. Evaluate discovery coverage and omissions as well as unsupported claims; neither a small polished list nor a large output count proves quality.
 
-They are not a replacement for human judgement. They are a review aid and a basis for lightweight automated warnings.
+## Test 1: Underlying human progress
 
-## Core test
+What must the person achieve, preserve, recover, avoid or change? Is the statement instead a feature, organisational objective, policy instruction or current service mechanism?
 
-```text
-A good user need should point to a coherent problem-space job that could be addressed by many possible solution options.
-```
+Professional and specific task-level needs can be legitimate. Establish their human purpose rather than rejecting operational specificity automatically.
 
-This has two parts:
+## Test 2: Solution independence and coherence
 
-1. If a need can only be solved by one specific solution, it is probably too narrow or solution-shaped.
-2. If a need points to several unrelated solution classes, it is probably too broad or bundled.
+Could materially different approaches address the need? A statement demanding a dashboard may preselect a response; a need to assess demand does not.
 
-The aim is not to write needs at the exact size of a product feature. The aim is to write needs that are coherent enough to support analysis, prioritisation, value mapping and later solution exploration.
+Do not infer that a need is invalid because only one feasible response is currently known. Equally, **do not require one class of solution to address a coherent higher-level need**. Safety, agency or stable housing can require several kinds of response.
 
-## Test 1: Multiple solution options
+Assess coherence of the required progress at its level, not proximity to one product feature.
 
-Ask:
+## Test 3: Useful decomposition
 
-```text
-Could this need be met in several materially different ways?
-```
+Can constituent progress objectives be fulfilled, studied or challenged independently? If so, propose linked child needs and preserve a useful parent.
 
-A need is too narrow if it preselects one solution.
+A list of comparison criteria can belong to one decision. Planning steps, establishing entitlements and communicating adjustments may be distinct needs. Conjunctions are diagnostic clues, not an automatic splitting rule.
 
-Poor:
+Decomposition should preserve meaning and coverage. It must not turn every existing administrative step into a need, inherit evidence certainty without assessment, or retire the parent merely because children were identified.
 
-```text
-A parent/carer needs a checklist of pathway steps.
-```
+## Test 4: Laddering and relationship meaning
 
-Better:
+What broader need, experience, capability, right or civic obligation might the need contribute to? What supports that relationship, and what alternative interpretation matters?
 
-```text
-A parent/carer needs to plan the next pathway steps, so they can keep decisions and support moving at the right time.
-```
+Multiple higher-level links are permitted. Distinguish containment, contribution, dependency, evidence support, context and normative or legal anchoring. A graph path does not prove causation or fulfilment.
 
-The better version could be supported through guidance, a planning conversation, a checklist, a local offer flow, a caseworker, a school meeting, a digital planning tool or other service interventions.
+## Test 5: Context and scope
 
-## Test 2: Coherent solution vector
+Does a contextual qualifier distinguish the need itself or describe one manifestation? Keep context accessible without forcing every circumstance into the statement.
 
-Ask:
+Reusable wording is not evidence of universal applicability. A different locality does not automatically require a new object. A material change in progress, actor or essential protection may justify a related variant.
 
-```text
-Would one coherent class of support, service, content, interaction or operational capability address this need?
-```
+## Test 6: Need, pain, value and fulfilment
 
-A need is too broad if it combines things that would be solved differently.
+Can the reader distinguish the progress required, barriers, expected benefit, fulfilment conditions and indicators? These may be related without all appearing in the sentence.
 
-Poor:
+Avoiding harm or undue burden may itself be a need. Removing those words is not automatically an improvement. Expected value is not realised value; completed service actions are not sufficient evidence of human need fulfilment.
 
-```text
-A parent/carer needs to check pathway steps, rights and adjustments, so they can act with confidence.
-```
+## Test 7: Agency and responsibility
 
-This bundles different jobs:
+Who experiences the need, who benefits, and who is responsible for enabling it? Does the wording accidentally assign institutional coordination work to a parent or another user?
 
-- planning pathway steps
-- checking rights and entitlements
-- describing or communicating adjustments
+Preserve unresolved responsibility questions and genuine tensions. A parent, child and professional may have distinct related needs rather than one interchangeable formulation.
 
-Each may need different evidence, service responses, content, operational roles or decision support.
+## Test 8: Wording fidelity
 
-Better:
+Keep authentic language, canonical wording, short labels and role-specific views distinguishable. A first-person reformulation is not a participant quote. An audience change must not silently alter the proposition.
 
-```text
-A parent/carer needs to plan the next pathway steps, so they can keep decisions and support moving at the right time.
-```
+Action-oriented wording is useful when it preserves meaning. Comprehension, emotional and relational needs are legitimate; do not replace them mechanically with administrative tasks. Moving from finding information to comparing options or securing support is a meaning change requiring an explicit rationale.
 
-```text
-A parent/carer needs to check which rights and entitlements may apply, so they can ask for, secure or challenge support appropriately.
-```
+## Test 9: Evidence fit
 
-```text
-A parent/carer needs to describe the young person's support needs and adjustments clearly, so education and support settings can understand what needs to be in place.
-```
+What supports each clause or relationship? Distinguish direct, partial, contextual and contradictory evidence from analyst inference and explicit assumption. Keep source voice and scope intact.
 
-## Test 3: Bundling test
+Partial support does not automatically require narrowing or deleting a useful candidate. Retain it as an assumption where appropriate, show the limited support and record what could strengthen or challenge it. Split or reframe when the meaning warrants that decision, not merely to make current evidence look complete.
 
-Ask:
+Do not invent evidence links. A source-led check of passages that produced no needs is also needed to detect omissions and excessive refusal.
 
-```text
-Does the need contain several objects joined by `and`, commas or a broad list?
-```
+## Test 10: Fulfilment and civic compatibility
 
-A list is not always wrong. Some linked objects belong together.
+Are the proposed criteria about the person's circumstances, not only feature delivery? Are context, time, perspective and uncertainty explicit? Can partial, qualitative, ongoing and contested fulfilment be represented?
 
-Potentially acceptable:
-
-```text
-A young person needs to compare travel time, course requirements and available support, so they can choose a realistic option.
-```
-
-Here the listed items are comparison criteria for one job: choosing a realistic option.
-
-Likely bundled:
-
-```text
-A parent/carer needs to check steps, rights and adjustments, so they can act with confidence.
-```
-
-Here the listed items point to different jobs and solution vectors.
-
-## Test 4: Jobs-to-be-Done progress test
-
-Ask:
-
-```text
-Is this one progress arc, or several jobs mashed together?
-```
-
-JTBD framing can help separate the situation, progress and desired outcome.
-
-For example, this is too bundled:
-
-```text
-When planning a pathway, I want to understand steps, rights and adjustments, so I can feel confident.
-```
-
-It contains multiple jobs:
-
-```text
-When a pathway decision is approaching, I want to work out what needs to happen next, so I can keep planning moving.
-```
-
-```text
-When support decisions are being made, I want to check which rights and entitlements apply, so I can ask for or challenge support appropriately.
-```
-
-```text
-When my child moves into a new setting or pathway, I want to communicate their support needs clearly, so they do not have to start again or go unsupported.
-```
-
-## Test 5: Container solution test
-
-Ask:
-
-```text
-Would the same proposed solution only work because it is a container for many different needs?
-```
-
-Examples of container solutions:
-
-- guide
-- toolkit
-- dashboard
-- local offer page
-- checklist pack
-- portal
-- pathway planner
-
-A container can respond to multiple needs, but it does not prove that those needs are one need.
-
-If the only reason a need feels coherent is that one page, guide or service could contain all of it, split the need.
-
-## Test 6: Confidence outcome test
-
-Ask:
-
-```text
-Is confidence the need, or is confidence the outcome of meeting a more specific need?
-```
-
-Confidence is often a valid outcome or value dimension. It is not always the user need.
-
-Poor:
-
-```text
-A parent/carer needs to know they have considered everything, so they can feel confident.
-```
-
-Better:
-
-```text
-A parent/carer needs to confirm which pathway actions are still unresolved, so they can act with confidence rather than constant doubt.
-```
-
-Better, if rights are the real object:
-
-```text
-A parent/carer needs to check which rights and entitlements may apply, so they can ask for, secure or challenge support appropriately.
-```
-
-## Test 7: Cognitive verb test
-
-Ask:
-
-```text
-Is `know`, `understand` or `be aware of` genuinely the thing the person must achieve?
-```
-
-Cognitive verbs often hide a more actionable need.
-
-Prefer verbs such as:
-
-```text
-check
-confirm
-compare
-choose
-decide
-plan
-prepare
-provide
-communicate
-secure
-challenge
-resolve
-track
-```
-
-Cognitive verbs may still be appropriate where comprehension itself is necessary for:
-
-- rights
-- consent
-- safety
-- legal consequences
-- informed decision-making
-- challenge or appeal
-
-Even then, check whether `check`, `confirm`, `decide` or `challenge` is more precise.
-
-## Test 8: Level test
-
-Ask:
-
-```text
-Is this need at one level, or is it mixing experience, journey, task, content and interaction needs?
-```
-
-A higher-level need may sit above several more specific needs.
-
-Example parent need:
-
-```text
-A parent/carer needs guidance through pathway planning, so they can make timely decisions without having to discover every step, right and support route alone.
-```
-
-Possible child needs:
-
-- need to plan next pathway steps
-- need to check rights and entitlements
-- need to describe support needs and adjustments
-- need to compare realistic options
-- need to coordinate next steps without carrying the navigation burden alone
-
-Do not collapse the child needs into the parent need if they have different solution vectors.
-
-## Test 9: Evidence-fit test
-
-Ask:
-
-```text
-Does the evidence support this exact wording and level?
-```
-
-A need may be plausible but still too broad for the available evidence.
-
-If the evidence only supports one part of a bundled need, split the need or narrow it.
-
-If the evidence is weak, keep conservative metadata and make uncertainty visible.
-
-## Test 10: Noise test
-
-Ask:
-
-```text
-Would this need attract too many unrelated evidence links, behaviours, pain points or solution ideas?
-```
-
-If yes, it is probably too broad or bundled.
-
-A noisy need becomes hard to use for:
-
-- evidence review
-- journey mapping
-- opportunity framing
-- service design
-- prioritisation
-- public accountability
+Consider rights, capabilities and institutional obligations with their actual normative or legal basis. An efficiency improvement does not automatically offset a rights concern. Missing anchoring can be recorded without preventing candidate capture; consequential use must expose unresolved limits.
 
 ## Automated warning candidates
 
-The validator should start with warnings, not errors.
+The validator should use warnings for wording patterns such as cognitive verbs, container-solution words and potentially bundled lists. These patterns do not establish that the need is wrong. Structural failures, invented evidence and false claims of human review are different from semantic uncertainty.
 
-Good first automated warnings:
-
-- user need uses cognitive verbs such as `need to know` or `need to understand`
-- user need includes likely container-solution words such as `dashboard`, `portal`, `toolkit`, `checklist`, `guide` or `page`
-- user need includes broad bundled lists such as `steps, rights and adjustments`
-- user need has several `and` joins in the main need statement
-- short name uses cognitive verbs by default
-
-These warnings should prompt review. They should not automatically prove the need is wrong.
+Structural validation does not establish participant recognition, objective truth, fulfilment or legal compliance. A model assessment is not human review.
 
 ## Review outcome options
 
-When a need fails one or more tests, choose one of these actions:
+Possible outcomes include retaining a candidate or assumption, adding qualified evidence, recording a tension, exposing constituent needs, relating a higher-level need, proposing an alternative formulation, investigating overlap, or retaining unclassifiable material in the inbox.
 
-- rewrite the need without changing meaning
-- split the need into several needs
-- create a higher-level parent need and child needs
-- mark the need as needing review
-- leave the material in the inbox
-- supersede the need if it has already shaped the object landscape
-
-If wording changes the solution vector or interpretation, record the change in the object changelog.
+Use supersession when an interpretation is actually replaced; useful parents can remain alongside children. Preserve the original ID, wording and rationale until an authorised change is made. Follow object changelog and LLM-intervention rules for material changes. Expert formulation feedback, participant recognition, applicability, fulfilment and realised value remain separate judgements.
