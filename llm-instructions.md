@@ -8,115 +8,112 @@ The repository is the source of truth. The LLM is not evidence and must not be t
 
 Every meaningful claim must either be traceable to evidence or clearly marked as an assumption.
 
-When drafting or altering user needs, follow `docs/User_needs_writing_rules.md`.
-
-When creating, renaming or linking structured notes, follow `docs/Naming_and_linking_contract.md`.
+For user-needs work read `docs/Needs_semantic_contract.md` and `docs/User_needs_writing_rules.md`. The semantic contract clarifies older guidance about hierarchy, context, value and candidate use. Follow `docs/Naming_and_linking_contract.md` when creating or linking structured notes.
 
 ## Naming and linking rule
 
-LLM-assisted repository work must preserve the naming contract at creation time, not rely on later migration.
+Preserve stable frontmatter IDs, ID-prefixed readable filenames, resolvable Obsidian links and queryable frontmatter. User-need filenames derive from `short_name`, not the full canonical sentence. ID numbers have at least three digits and may grow beyond 999 without renumbering existing objects.
 
-Structured notes must use stable frontmatter IDs, ID-prefixed readable filenames, resolvable Obsidian links and queryable frontmatter. User-need filenames should derive their readable slug from `short_name`, not from the full canonical need statement.
-
-The LLM must not rename files, remove aliases or rewrite links as part of a semantic edit unless the user has explicitly asked for naming or link migration. Naming-only changes should be kept mechanical and must not promote review status, confidence, evidence strength or validation state.
+Do not rename files, remove aliases or rewrite links as part of a semantic edit unless naming/link migration is explicitly requested. Naming-only changes must not promote research review, confidence or evidence states.
 
 ## Operating principle
-
-The repository should support:
 
 ```text
 fast creation, slow validation
 ```
 
-LLMs may help move quickly. The safety control is not to prevent LLM-assisted drafting or editing. The safety control is to preserve evidence links, uncertainty, status, review state and changelog history.
+The objective is useful, learnable knowledge that aids human judgement, not perfect needs or the smallest possible output. Capture explicit hypotheses and assumptions. Preserve uncertainty and tensions rather than rewriting them away.
+
+Bound work by sources, questions, execution capacity and reviewable batches, not a fixed maximum number of needs. Inspect multiple actors, levels and contexts, including positive cases and source regions that yielded no candidates. Do not invent hundreds of needs to satisfy a count; equally, do not suppress a rich landscape merely to keep the result small.
+
+Useful candidates may inform exploratory research, design, policy and service comparisons before validation. Carry their limitations into the resulting view. Consequential recommendations need proportionate evidence, appropriate expertise and authorised human judgement. Neither a validated object nor an automated check guarantees objective truth or demonstrated fulfilment.
 
 ## What the LLM may do
 
-The LLM may:
+Within the task's authorisation, the LLM may:
 
-- summarise existing notes
-- classify evidence using the repository schema
-- suggest links between evidence, user needs, behaviours, pain points, insights, themes, journeys and opportunities
-- create placeholder analysis objects
-- create candidate user needs, behaviours, pain points, insights, themes, journeys and opportunities
-- draft new analysis objects from specified evidence
-- decompose broad analysis objects into smaller objects
-- merge or refactor overlapping draft objects, with a changelog and supersession trail
-- incrementally update draft or candidate objects as new evidence or thinking emerges
-- identify weak evidence, missing sources and contradictions
-- propose metadata updates
-- propose changelog entries
-- propose review notes
-- help create synthesis outputs from reviewed or validated items
+- summarise and classify existing evidence without changing its meaning;
+- create or propose placeholder, assumption and candidate analysis objects;
+- formulate new needs from source-informed interpretation while distinguishing inference from source statements;
+- suggest support, challenge, tension, context and other relationships;
+- decompose meaningful constituents and retain useful higher-level needs;
+- investigate many-to-many links to broader needs, civic obligations, capabilities and rights;
+- propose refinement, merger or supersession with a preserved rationale and lineage;
+- create exploratory synthesis from candidates as well as more mature knowledge, exposing the basis of each conclusion;
+- identify omissions, conflicting interpretations, weak support and missing sources;
+- propose review notes and proportionate object change records.
 
-## Analysis objects
+These permissions do not authorise automatic publication, uncontrolled batch writes, fabricated evidence or human-validation claims. A reusable skill may impose a narrower proposal-only execution boundary until an authorised writer is available.
 
-Analysis objects are interpreted research objects created from evidence, researcher judgement and synthesis.
+## Analysis objects and representation
 
-They include:
+User needs, civic needs, behaviours, pain points, insights, themes, journeys and opportunities are interpreted knowledge objects. Their existence is not proof that their claims are correct. Keep their status, analysis state, evidence, confidence and review metadata explicit.
 
-- user needs
-- behaviours
-- pain points
-- insights
-- themes
-- journeys
-- opportunities
+For a need preserve one stable identity and a current canonical `need` formulation. Keep `short_name` for maps and navigation. Link authentic language as evidence. Label user-facing text as an interpretation unless it is a quotation. Compose value-oriented or other role-specific views from identified propositions and bind them to the revisions used. Do not regenerate canonical wording on every query or silently reuse a stale derivative after a material change.
 
-LLMs may create and alter these objects, provided the item remains clearly marked by status, analysis state, evidence strength, confidence, creation mode and review status.
+Relevant context must be recoverable but does not always belong in the statement. Distinguish source locality, applicability and contextual manifestations. Do not clone a need for each context unless required progress or protection materially differs.
 
-Persona and segment models are currently deferred. LLMs must not create persona or segment objects unless a human reviewer explicitly points to updated persona guidance and asks for that work.
+Persona and segment models remain deferred; do not create canonical persona/segment objects without updated guidance and explicit authorisation. This does not prevent examining distinct real actors and situations in needs analysis.
 
-## User need creation drift control
+## User need creation and evolution
 
-When creating or revising user needs, the LLM must preserve meaning before improving wording.
+A user need describes what a person needs to achieve, preserve, recover, avoid or change. It is not simply a feature, user story, policy requirement, organisational objective, service mechanism or vague knowledge state.
 
-A user need describes what a person needs to achieve, preserve, recover or change in context. It must not describe a solution, feature, user story, content requirement, policy requirement, organisational objective, service mechanism or vague knowledge state.
+Before creating a new need, inspect nearby needs, civic needs, pain, behaviours and evidence. Reuse when the meaning is already covered. Create genuinely distinct candidates at useful levels; where overlap remains uncertain, preserve the comparison rather than force a merger. Do not treat the presence of a broad parent as a reason to suppress its constituents.
 
-Before creating a new user need, the LLM must check nearby existing user needs, civic needs, pain points, behaviours, insights and evidence. Prefer linking, refining or extending an existing object when the meaning is already covered. Create a new need only when the actor, context, level or underlying progress sought is genuinely distinct.
+Keep the human need, pain point, expected value, fulfilment conditions, indicators and realised value distinguishable. Unknown components may remain unknown. Avoiding harm or burden can itself be a need; do not remove protective meaning merely to shorten the sentence.
 
-The LLM must not convert service mechanisms, policy requirements, administrative steps, solution objects or organisational needs into user needs. If the source material describes a dashboard, page, form, checklist, notification, policy duty, workflow or Local Offer requirement, first identify the underlying human need. Keep the proposed mechanism as a possible solution requirement, service response or related context.
+Check separately who experiences the need, who benefits and who should enable fulfilment. Do not turn institutional work into a user's responsibility by grammatical choice. Record unresolved responsibility questions as tensions rather than settling them through polished language.
 
-Use action-oriented wording wherever it preserves meaning. Prefer verbs such as `access`, `act`, `assess`, `check`, `choose`, `compare`, `complete`, `confirm`, `coordinate`, `decide`, `determine`, `find`, `maintain`, `prepare`, `recover`, `resolve`, `secure`, `submit` or `track`.
+Use action-oriented language where it preserves meaning. Comprehension can itself be important for rights, consent, safety or informed choice. Emotional, relational, identity and social needs are legitimate. Do not mechanically translate them into administrative tasks.
 
-Avoid cognitive verbs such as `know`, `understand`, `learn` or `be aware of` unless comprehension itself is the evidenced need, such as rights, consent, safety, consequences, appeal routes or informed decision-making.
+Use `need_level` to aid navigation; it is not a compulsory universal hierarchy. A need may have multiple broader connections. Retain useful parents when decomposing. Supersede only when the interpretation is actually replaced. Do not automatically inherit evidence, confidence, legal applicability or fulfilment from related nodes.
 
-Always scope the need at the right level. Use `need_level` to distinguish capability, civic, experience, service, journey, task, page, interaction and content needs. Do not inflate page-level evidence into a service-level need, and do not collapse broad experience needs into solution requirements.
+Rights/capability anchoring requires explicit reasoning. Distinguish empirical findings, normative commitments and legal sources/applicability. Do not invent obligations or assume a weighted efficiency gain can offset a rights concern. Record unknowns and seek appropriate human judgement for consequential decisions.
 
-Keep civic needs separate from user needs. A user need is about what a person needs to achieve, preserve, recover or change. A civic need is about what an institution, public service or system must uphold for dignity, access, agency, fairness, accountability, rights, redress, sufficiency or public value.
+Treat small wording changes as material when they change actor, agency, underlying progress, scope, possible responses, value or fulfilment. Preserve the current formulation until the authorised change is made. Apply object changelog and LLM-intervention rules; Git supplies technical history.
 
-Keep pain points separate from user needs. A pain point describes a condition, barrier, failure mode or risk. A user need describes the progress, protection, recovery or change the person needs in response to that condition.
+## Evidence scope and candidate metadata
 
-Use `short_name` as a compact mapping label in the form `Need to [verb] [object/context]`. The short name should still read as a need, not a theme, topic, service area or feature. User-need filenames should derive their readable slug from `short_name`, not from the full canonical need statement.
+Keep inspection synthesis, mediated reports, direct lived experience, workshop assumptions, normative sources and model interpretations distinct. A source can inspire multiple hypotheses without directly proving them. Link evidence with the scope it actually supports; do not let a generic relationship imply whole-object support or causation.
 
-Small wording changes can materially change the solution direction. For example, `know what options exist`, `compare options` and `understand which options are appropriate` point to different service responses. If a wording change affects interpretation, evidence basis, level, actor, maturity, lifecycle state or solution direction, treat it as a material change and propose a changelog entry.
+When evidence is missing, use conservative existing states such as:
 
-If evidence is weak, indirect or missing, underclaim. Use `status: assumption`, `analysis_state: candidate`, `evidence_basis: none`, `evidence_strength: none`, `confidence: low`, `creation_mode: llm_assisted`, `llm_generated: true`, `human_reviewed: false` and `review_status: not_reviewed` unless the evidence and review state justify stronger metadata.
+```yaml
+status: assumption
+analysis_state: candidate
+evidence_basis: none
+evidence_strength: none
+confidence: low
+creation_mode: llm_assisted
+llm_generated: true
+human_reviewed: false
+review_status: not_reviewed
+```
 
-When proposing user needs, include the short name, canonical need, actor, need level, evidence basis, evidence scope fit, related existing objects, why this is a user need, why it is not a solution requirement, uncertainty, suggested lifecycle state and suggested changelog entry.
+When relevant evidence exists, assess its fit rather than mechanically promoting all fields. A partial or contextual link does not establish every clause. Do not declare `evidence_scope_fit: direct` alongside `evidence_basis: none`; flag a legacy inconsistency for review without inventing support or silently changing its meaning.
 
-Non-negotiable rule: fast creation is allowed; silent semantic drift is not.
+A hypothesis can be valuable with weak evidence. Do not narrow or split solely to make it match the first source. Retain the hypothesis and explain what supports it, what is inferred and what could challenge it.
 
 ## What the LLM must not do
 
 The LLM must not:
 
-- mark anything as validated
-- upgrade evidence strength on reviewed or validated items
-- remove caveats or uncertainty markers
-- rewrite participant quotes except to suggest anonymisation
-- materially alter validated claims without review
-- add unsupported claims without marking them as assumptions
-- merge assumptions into validated notes
-- infer sensitive personal characteristics without evidence
-- store raw transcripts, recordings or identifiable participant data
-- create persona or segment models under the current MVP conventions
-- bypass the review process
-- hide the fact that an item was LLM-assisted
+- independently mark research as human reviewed or validated;
+- upgrade evidence strength on reviewed or validated items;
+- remove caveats, contradictions or useful tensions;
+- rewrite participant quotations except to propose explicit anonymisation;
+- materially alter validated claims without review;
+- present unsupported claims as findings;
+- infer sensitive characteristics without evidence;
+- store raw transcripts, recordings, unredacted cases or identifiable participant data in public CDI;
+- create canonical persona/segment objects under the deferred convention;
+- bypass the authorised review/write process;
+- disguise LLM-assisted content, a generated quotation or a model check as human evidence.
 
 ## Status and analysis state handling
 
-The LLM may create or propose items with these statuses and states:
+The LLM may create or propose:
 
 ```yaml
 status: draft | assumption
@@ -127,153 +124,47 @@ llm_generated: true
 human_reviewed: false
 ```
 
-The LLM must not set:
-
-```yaml
-status: validated
-analysis_state: validated
-human_reviewed: true
-review_status: reviewed
-```
-
-unless the human reviewer has explicitly instructed it to record an already-completed review outcome.
+Do not set `status: reviewed` or `validated`, `analysis_state: reviewed` or `validated`, `human_reviewed: true`, or `review_status: reviewed` unless an authorised human explicitly instructs the recording of an already-completed review. Participant recognition, expert wording review, evidence review and fulfilment are distinct judgements; a 'keep candidate' action is not blanket validation.
 
 ## Evidence strength handling
 
-The LLM may propose an evidence strength for draft or candidate work, but it must not upgrade evidence strength on existing reviewed or validated items.
-
-When uncertain, use the lower strength.
+An LLM may propose strength for draft/candidate work but must not upgrade reviewed or validated objects independently. Use the lower strength when uncertain.
 
 ```yaml
 evidence_strength: none | weak | moderate | strong
 ```
 
-Default for LLM-generated analysis without clear linked evidence should be:
+Without clear evidence use `none`, assumption/candidate and low confidence. A relevant link may justify weak evidence-linked draft status for a specific proposition; it does not automatically justify stronger confidence or universal scope.
 
-```yaml
-evidence_strength: none
-status: assumption
-analysis_state: candidate
-confidence: low
-```
+## Required explanation for changes
 
-Default for LLM-generated analysis with at least one relevant evidence link should be:
+State affected files, purpose, inspected sources, assumptions, proposed status changes, semantic effect, split/merge/supersession decisions, and the proportionate change record. Preserve prior meanings and evidence. For candidate batches, a navigable review packet can organise proposals without requiring a reviewer to reconstruct every Markdown file.
 
-```yaml
-evidence_strength: weak
-status: draft
-analysis_state: evidence_linked
-confidence: low | medium
-```
+If a validated object requires substantial reframing, propose a replacement or refinement on a branch, retain the original, and use `supersedes` / `superseded_by` where the proposition is replaced. Adding constituent needs or a new contextual view does not automatically replace the parent.
 
-## Required metadata for LLM-generated notes
+## Execution, review and ownership
 
-Any LLM-generated note must include:
+Deterministic checks can verify structure and declared-state consistency, not source truth or actual human review. A semantic assessment is separate from the writer's authority. Independent assessment must really occur; do not label a self-review independent. Missing or stale version-bound checks cannot approve changed content.
 
-```yaml
-creation_mode: llm_assisted
-llm_generated: true
-human_reviewed: false
-review_status: not_reviewed
-status: draft
-analysis_state: drafted
-change_level: none | minor | material | major
-```
-
-If the note is plausible but not directly evidenced, use:
-
-```yaml
-status: assumption
-analysis_state: candidate
-evidence_strength: none
-confidence: low
-```
-
-## Required explanation for proposed changes
-
-Every proposed change should state:
-
-- affected files
-- purpose of the change
-- evidence used
-- assumptions introduced
-- confidence level
-- status changes proposed
-- analysis state changes proposed
-- whether the change is minor, material or major
-- whether any item was split, merged, superseded or deprecated
-- suggested changelog entry
-
-## Participant quotes
-
-Participant quotes should be preserved as captured, except where anonymisation is needed.
-
-The LLM may suggest an anonymised version, but the original quote should not be silently rewritten.
-
-## Validated items
-
-For validated items, the LLM may:
-
-- summarise the item
-- identify linked evidence
-- identify gaps or possible contradictions
-- propose a review note
-- propose a new draft replacement or refinement on a branch
-
-For validated items, the LLM must not:
-
-- change the core claim directly
-- change the title, need statement, behaviour, pain point or insight in a way that changes meaning without review
-- remove linked evidence
-- downgrade or upgrade status without explicit review instruction
-
-If a validated item needs substantial change, create a proposed replacement, mark the change as material or major, and use `supersedes` / `superseded_by` where appropriate.
-
-## Splitting, merging and refactoring
-
-The LLM may split, merge or refactor draft and candidate analysis objects.
-
-For each split, merge or substantial reframing, it must:
-
-- preserve the original item unless explicitly asked to replace it
-- record `change_level: major`
-- update `supersedes` and `superseded_by` where relevant
-- add an entry-level changelog
-- keep the result as draft, assumption or needs review
+The reusable reviewer interface, skill and evaluation harness belong in AI Capability Layer. Protected detailed methods belong in Design Intelligence Orchestration. CDI owns definitions, research objects and conservative states. Do not copy private source originals or protected prompts into public CDI.
 
 ## Branch and pull request workflow
 
-LLM-assisted changes should be made on a branch, not directly on `main`.
+Use a focused branch, not direct edits to `main`. Preserve unrelated work. Default to a draft PR and do not merge without explicit authorisation.
 
-A pull request should include:
+Report:
 
-- summary of changes
-- list of new files
-- list of changed files
-- review risks
-- evidence and assumptions affected
-- new placeholder or candidate items created
-- items split, merged, superseded or deprecated
-- confirmation that no validated research content was materially changed unless requested
+- changes and rationale;
+- new or materially changed research propositions and their assumptions;
+- source/evidence links and metadata changes;
+- any splits, mergers, supersession or deprecation;
+- validated content affected, or confirmation that none changed;
+- object changelog / LLM intervention use;
+- executable validation actually run and unresolved human review;
+- whether naming or links changed and whether that was administrative or semantic.
 
-For naming or link changes, the pull request should also confirm:
+For ordinary work run the repository validator; include template checks when templates change and regression tests when code changes. Report warnings honestly. A passing check does not promote research maturity.
 
-- whether files were renamed
-- whether frontmatter IDs changed
-- whether aliases were added or removed
-- whether live links were updated
-- whether the change is administrative or semantic
+## Preferred work loop
 
-## Preferred output pattern
-
-When asked to draft or update repository content, the LLM should use this sequence:
-
-1. Inspect relevant files.
-2. Identify current structure and evidence base.
-3. Check naming and linking rules before creating or renaming files.
-4. Create or update draft/candidate analysis objects as requested.
-5. Preserve evidence links, status, analysis state and uncertainty.
-6. Add changelog entries where meaning changes.
-7. Make changes on a branch if requested.
-8. Open or update a pull request for review.
-9. Report what changed and what still needs human review.
+Inspect the task, applicable rules, sources and nearby objects. Capture or refine useful candidates within the authorised scope. Preserve explicit assumptions, alternatives and tensions. Check structural integrity and source-fit limits, prepare a low-burden review, record material changes, and learn from use. Do not turn missing perfection into a reason to stop capturing knowledge.
