@@ -197,3 +197,7 @@ The documentation audit identified overlaps and possible contradictions. This ma
 - Persona guidance is intentionally cautious, but the exact boundary between deferred canonical personas and generated/contextual views still needs human review.
 - Some templates may lag newer guidance, especially evidence-kind and source-capture fields.
 - Some legal or migration documents are historical and may not fully reflect the current public-source-first posture.
+
+## Worked research views
+
+- [SEND waiting, support and navigation: five-source comparison](research-views/ISSUE_097_send_waiting_support_navigation.md) — issue #97; provisional, LLM-assisted and needs human review.
