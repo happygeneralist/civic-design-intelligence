@@ -1,172 +1,104 @@
 # Civic design intelligence system
 
-This repository is an Obsidian-compatible civic design intelligence system for public-service design, policy and decision-support work.
+An Obsidian-compatible learning system for public-service research, design, policy and human judgement. SEND is the first substantial domain, not the limit of the model.
 
-The repository is in a public-source-first rebuild. The MVP works to get in a few service areas to prove the approach, but active evidence should come only from public, openly licensed or explicitly authorised sources. Most needs, pain points, behaviours, insights and civic questions should be captured at the highest useful level, with local context added where it materially affects interpretation, evidence, delivery or decision-making.
+CDI maintains **persistent, evolving and contestable knowledge objects**: user needs, civic needs, evidence, pain, behaviours, insights and value relationships. The aim is not perfect statements. It is to make imperfect knowledge reusable, investigate tensions and improve understanding through evidence and practical use.
 
-It is intended to help researchers, designers, product/service teams and decision-makers capture anonymised evidence, connect it to user needs, civic needs, behaviours, pain points, insights, value dimensions and solution assessments, and maintain a clear audit trail for how research knowledge develops over time.
+Services and journeys are possible responses to human needs, not their boundary. Detailed delivery work should stay connected to human experience, capabilities, rights and institutional responsibilities. Those relationships must themselves remain inspectable and challengeable; they are not decorative labels or preference weights that efficiency can automatically override.
 
-The repository is not only for designing good services. It should also provide the human intelligence needed to challenge weak, harmful or solution-led decisions with a defensible evidence base.
+## Start here
 
-## Public-source posture
+- [Needs semantic contract](docs/Needs_semantic_contract.md): current formulations, meaningful decomposition, contexts, value, fulfilment, relationships and civic anchoring.
+- [Roadmap cursor](docs/Roadmap_cursor.md): actual next work and what not to overbuild.
+- [Documentation map](docs/README.md): authority and navigation.
+- [User-needs writing rules](docs/User_needs_writing_rules.md): practical application.
+- [Governance](GOVERNANCE.md), [contribution guide](CONTRIBUTING.md) and [LLM instructions](llm-instructions.md): safe work and human authority.
 
-Civic Design Intelligence treats user needs, civic needs, pain points, behaviours, insights and related design-intelligence objects as reusable civic knowledge objects.
+## Useful knowledge at different levels
 
-These objects are not treated as proprietary to a source organisation merely because they describe needs experienced in a public-service context. They may exist as generic candidate objects where they express a reusable public-service pattern.
+The system supports fast creation and slower, proportionate validation. A clearly labelled assumption or candidate can already help people explore policy coverage, generate design options, discover omissions and plan research. A consequential claim needs the evidence, applicability and human judgement appropriate to that use.
 
-Evidence provenance is managed separately.
+The working bronze/silver/gold language describes knowledge roles, **not confidence or validation**:
 
-A candidate object only becomes evidence-linked when it is supported by public, openly licensed or explicitly authorised sources. Evidence records, source records and research-study records must make provenance clear and must not rely on private employer, client, council, partner or unpublished research material unless permission, consent, ownership and publication constraints are explicit.
+| Role | Owner and content |
+| --- | --- |
+| Bronze | The authorised source archive preserves originals, identity, versions, provenance and restrictions. |
+| Silver | CDI captures selected evidence, source context and bounded interpretation. |
+| Gold | Persistent needs and related civic intelligence support reusable views and decisions; candidates can participate without being certified. |
 
-The repository is public-source-first. Suitable evidence sources may include public inspection reports, Ombudsman decisions, statutory guidance, public consultation outputs, public council papers, openly published user research, charity reports, public datasets and other material that is lawful and appropriate to reuse.
+There is no compulsory linear pipeline. Knowledge can enter provisionally and be reconciled back to sources. Do not invent evidence, complete every field by guessing or require a finished rights/value map before retaining a useful candidate.
 
-Candidate objects without public or authorised evidence remain assumptions or candidates. They must not be treated as reviewed, validated or evidence-linked knowledge until their provenance and evidence basis support that status.
+## Current working position
 
-## Strategic vision
+At the 5 November 2026 checkpoint, the private companion archive holds 331 originals (328 PDFs and three HTML captures). CDI's merged five-source test contains five source/study records and 13 selected evidence records. Those are distinct counts; the full corpus has not yet been analysed.
 
-The repository is part of an emerging **civic design intelligence system**: open knowledge infrastructure for public-service needs, evidence, pain and decisions.
+The next substantive experiment is [SEND pilot #99](https://github.com/happygeneralist/civic-design-intelligence/issues/99), following the bounded source-informed skill/reviewer calibration owned by [AI Capability Layer #39](https://github.com/happygeneralist/ai-capability-layer/issues/39). It tests breadth, decomposition, higher-level connections, contexts, tensions and useful candidate-level analysis—not merely a short list of polished needs. See the roadmap for live sequencing and draft-versus-merged status.
 
-It is designed to become a shared, inspectable and contestable knowledge backbone for public services. Over time, it should help public institutions, third-sector organisations, professionals and members of the public contribute to a better shared understanding of what people need, where services cause harm or friction, and where public outcomes remain unsupported.
+## Stable objects, useful forms
 
-The repository should separate:
+A need has a stable ID and a persisted current working formulation. `short_name` makes maps and comparisons legible. Authentic user language remains evidence; a user-facing reformulation is not an invented participant quotation. Value-oriented and computational views refer to the same objects and relevant revisions rather than changing their meaning for each audience.
 
-- evidence sources and external contributions
-- candidate or submitted knowledge
-- reviewed canonical knowledge objects
-- decision records and design histories that reference those objects
+Needs can connect to multiple contexts, constituent needs, broader needs, capabilities, rights, pains and outcomes. Not every connection is a parent-child hierarchy or causal relationship. Partial support and disagreement must remain visible. There is no fixed small number of needs per report; there is also no quota to manufacture thousands of unsupported synonyms.
 
-External insight should strengthen the system without directly overwriting the canonical layer. Contributions from families, residents, third-sector organisations, advocates, professionals, public reports, inspections and academic studies should be treated as valuable evidence inputs that can support, challenge, refine or supersede existing knowledge objects.
+## Public-source and privacy posture
 
-## Locales and local context
+This repository is public-source-first. Active evidence must come from public, openly licensed or explicitly authorised sources with clear reuse and sensitivity boundaries. A generic candidate can remain an assumption without revealing confidential employer, client, council or participant material.
 
-The system should be able to support localised evidence and decisions without turning every knowledge object into a local-only object.
+The companion `happygeneralist/civic-design-secondary-research` repository is **private** and owns original public-source documents and their acquisition provenance. Some complete originals are held from public redistribution. Do not copy them into public CDI merely because an agent can access the private archive.
 
-Use locale metadata when local context changes how an object should be interpreted, for example because of local policy, operational constraints, demographic context, commissioning arrangements, service configuration or evidence source.
+Evidence records must retain source voice, context and limits. Local evidence can inform a reusable hypothesis without establishing national prevalence, severity or causation. Public availability, institutional authority and fluent model output do not by themselves establish correctness or permission to republish.
 
-Do not localise objects by default. Where a need, pain point, behaviour or insight is likely to apply across places, capture it at the highest useful level and link local evidence to it. Local variants can be created later where evidence shows that the local context materially changes the meaning, risk, priority or response.
+Do not store raw transcripts, recordings, direct participant identifiers, unredacted cases, identifiable sensitive data, unsupported claims presented as validated findings or hidden LLM-generated synthesis.
 
-## What this repository is for
+## Contributions and review
 
-Use this repository to store and work with:
+Families, residents, professionals, advocates, researchers and other contributors can supply evidence, challenge interpretations, identify missing needs and propose refinements. Triage contributions for source, meaning, privacy and safeguarding before changing canonical objects.
 
-- research study summaries
-- anonymised evidence, quotes, observations and data points
-- public, partner or professional contributions after appropriate triage
-- academic, sector, Ombudsman, inspection, policy and operational evidence where relevant
-- user needs
-- civic needs
-- behaviours
-- pain points
-- insights
-- themes
-- journeys
-- value dimensions
-- solution options and assessments
-- review notes
-- synthesis outputs
+Canonical identity does not mean validated truth: candidates can have stable identities too. Human-reviewed and validated states require explicit human authority. Participant recognition, expert wording review, evidence assessment and demonstrated need fulfilment are different judgements.
 
-The repository should support evidence-based service design, reduce duplicated research, make value visible, and make it easier to understand what is known, what is assumed, what is contested, and what still needs validation.
-
-## What this repository is not for
-
-Do not store:
-
-- raw transcripts
-- recordings
-- identifiable participant data
-- special category personal data that has not been anonymised
-- unsupported claims presented as validated findings
-- LLM-generated synthesis without clear status and review metadata
-- politically preferred solution ideas presented as evidence-backed recommendations
-- persona or segment models presented as canonical outputs before the modelling convention is agreed
+Preserve material changes and supersession without erasing prior understanding. A useful broad need can remain when its children are identified. Existing needs should not be bulk-rewritten to make them fit a newly polished framework.
 
 ## Repository structure
 
 ```text
-001_Research_studies/   Research activities and study summaries
-002_Evidence/           Anonymised quotes, observations and data points
-003_User_needs/         User needs, and civic needs during the MVP phase
-004_Behaviours/         Observed or inferred behaviours
-005_Pain_point/         Pain points and barriers
-006_Insights/           Draft, reviewed and validated insights
-007_Themes/             Cross-cutting themes
-008_Personas/           Reserved for future persona or archetype work
-009_Journeys/           Journey maps and journey-stage analysis
-Templates/              Templates for creating structured notes
-docs/                   Supporting documentation and governance material
+000_Inbox/             Loose or unresolved material
+001_Research_studies/  Research activities and source/study records
+002_Evidence/          Permitted evidence with source voice and context
+003_User_needs/        User needs and civic needs in the MVP
+004_Behaviours/        Observed or explicitly inferred behaviours
+005_Pain_point/        Conditions, barriers, burdens, harms and risks
+006_Insights/          Interpreted patterns and explanations
+007_Themes/            Cross-cutting organisation
+008_Personas/          Reserved; canonical persona modelling deferred
+009_Journeys/          Journey analysis and contextual/generated views
+Templates/            Existing record templates
+docs/                 Semantics, operations, research views and reviews
+tools/                Deterministic structural validation
+tests/                Structural regression tests
 ```
 
-Personas and segment models are deferred during the current MVP. They should not be created as canonical repository objects until the modelling approach has been developed, tested and documented.
+Use existing supported types and templates for value dimensions, opportunities and review notes. Solution-assessment views can reference needs; do not introduce an unsupported type or rewrite a need to match a preferred intervention.
 
-## Core principle
+## Ownership
 
-Every meaningful claim should be traceable to evidence, or clearly marked as an assumption.
+CDI owns the knowledge model, research objects, meaning and review state. The source archive owns originals. AI Capability Layer owns reusable skills, review interfaces, adapters and evaluations. Design Intelligence Orchestration owns protected methods. A public participation interface is a separate authorised contribution route, not public access to private research or internal review tooling.
 
-The repository distinguishes between:
+## Working with the repository
 
-- captured evidence
-- submitted or candidate knowledge
-- draft synthesis
-- assumptions
-- reviewed analysis
-- validated findings
-- value dimensions
-- solution options and recommendations
-- deprecated or superseded material
+Use Obsidian links, properties, Bases and generated views to navigate rather than asking a person to read thousands of Markdown files. IDs have at least three digits and can grow without renumbering. Preserve aliases and stable canonical formulations.
 
-## Current MVP focus
+Read `AGENTS.md` before coding or agent writes. Use focused branches and draft PRs. Preserve unrelated work and do not merge automatically. Record research meaning changes in the object changelog and, where required, an LLM intervention log; use Git/PR summaries for administrative edits.
 
-The immediate MVP is safe ingestion of publicly available evidence, using the current public-source rebuild as the worked context.
+Run:
 
-Use `docs/Safe_research_ingestion_MVP.md` before breaking research into structured objects. It defines the minimum conventions for creating evidence, behaviours, pain points, user needs, civic needs, insights and themes without making immature knowledge look settled.
-
-Use `docs/Object_change_logs.md` when changing existing objects. The core rule is:
-
-```text
-If the change affects how the object should be interpreted, used, trusted or acted on, record it.
-
-If the change only affects formatting, metadata or validation hygiene, rely on Git and the pull request summary.
+```bash
+python3 -m unittest discover -s tests -v
+python3 tools/validate_repository.py
+python3 tools/validate_repository.py --include-templates
 ```
 
-## How to use this repository
+The checks verify structure and declared-state consistency. They do not certify source truth, independent review, legal compliance or semantic reliability. Report warnings without rewriting research merely to make them disappear.
 
-1. Capture anonymised evidence in `002_Evidence/`.
-2. Link evidence to studies, sources, actors, journey stages and tags.
-3. Code evidence into user needs, civic needs, behaviours and pain points.
-4. Draft insights from linked evidence.
-5. Connect needs and insights to value dimensions where useful.
-6. Assess solution options against needs, value, evidence, risks and assumptions.
-7. Review assumptions, evidence basis and confidence.
-8. Promote reviewed work to validated status only when the evidence supports it.
-9. Record meaningful object-level changes in entry-level changelogs.
-10. Use `CHANGELOG.md` for repository-level changes.
+## Key references
 
-## Working with Obsidian
-
-This repository is designed to work as an Obsidian vault. Use links, backlinks, properties and Bases to navigate between evidence, needs, behaviours, insights, value dimensions and solution assessments.
-
-Shared Obsidian settings and Bases should support common repository behaviour. Personal workspace state, local plugin state and local-only notes should stay out of shared history.
-
-## Working with LLMs
-
-LLMs may be used to help classify, link, summarise and draft research material, but they must not be treated as evidence.
-
-LLMs must not mark anything as validated, upgrade evidence strength, remove caveats or materially change validated research claims without human review.
-
-See `llm-instructions.md` and `docs/LLM_safety_model.md`.
-
-## Key documentation
-
-- `docs/Civic_design_intelligence_system.md` defines the open civic design intelligence vision, contribution model and relationship to design histories.
-- `docs/Safe_research_ingestion_MVP.md` defines the minimum safe-ingestion workflow for the current worked example.
-- `docs/Source_use_policy.md` defines the public-source-first evidence policy.
-- `docs/User_needs_writing_rules.md` defines user need wording, including the `short_name` convention.
-- `docs/Object_change_logs.md` defines when object-level changelogs are required and when Git and pull request history are enough.
-- `docs/Obsidian_workflow.md` defines the recommended Obsidian workflow.
-- `SCHEMA.md` defines object types, required fields and controlled values.
-- `GOVERNANCE.md` defines repository governance and review responsibilities.
-- `CONTRIBUTING.md` defines how to add and update material safely.
-- `CHANGELOG.md` records repository-level changes.
-- `docs/Evidence_standards.md` defines what counts as evidence.
-- `docs/Review_process.md` defines review and validation steps.
-- `docs/Value_and_decision_evidence.md` defines how value, solution assessment and decision evidence are handled.
+[Schema](SCHEMA.md) · [Lifecycle](docs/Lifecycle_states.md) · [Evidence standards](docs/Evidence_standards.md) · [Source use](docs/Source_use_policy.md) · [Non-linear ingestion](docs/Non_linear_research_ingestion.md) · [Relationship meanings](docs/Relationship_types.md) · [Value and decisions](docs/Value_and_decision_evidence.md) · [Naming and links](docs/Naming_and_linking_contract.md) · [Change logs](docs/Object_change_logs.md) · [Changelog](CHANGELOG.md)
