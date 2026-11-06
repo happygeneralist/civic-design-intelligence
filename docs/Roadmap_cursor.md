@@ -1,211 +1,75 @@
 # Roadmap cursor
 
-Last updated: 2026-07-13
+Last updated: 2026-11-05
 
-This cursor records the current operational focus for the repository.
-
-It is intentionally shorter than the full roadmap. Use it to decide what to do next, what to avoid overbuilding and when the roadmap has moved to a new phase.
-
-Where the sequencing in `docs/Knowledge_evolution_implementation_roadmap.md` conflicts with this cursor, use this cursor as the current operating position.
+This is the current operational position. It supersedes the July single-slice sequencing in this file and the older implementation roadmap, without changing historical research findings. Read `Needs_semantic_contract.md` for the knowledge model and `docs/README.md` for authority boundaries.
 
 ## Current phase
 
-The repository is now in:
-
 ```text
-learning through bounded ingestion
+source-informed needs capability calibration
+-> substantial needs-landscape pilot
+-> evidence-led scaling
 ```
 
-The minimum public/private boundary exists at MVP level. The documentation authority map and provisional inventory exist. One bounded evidence-led Ofsted Essex ingestion route has been planned, run and reviewed.
+The purpose is to develop a useful, evolving population of needs and related civic knowledge, not perfect statements or an ever more elaborate intake system. Human and machine interpretations remain fallible. Stable identity, explicit tensions, provenance and practical use support learning.
 
-The repository should not return to a pre-ingestion readiness phase while every governance, ontology, documentation or orchestration question is resolved.
+## What is already available
 
-The current operating loop is:
+Verified or recorded at the 5 November checkpoint:
 
-```text
-bounded ingestion
--> inspect what becomes difficult, ambiguous or unsafe
--> capture the issue
--> make the smallest necessary operating correction
--> continue with the next bounded slice
-```
+- The private `happygeneralist/civic-design-secondary-research` archive has 331 original documents: 328 PDFs and three HTML captures, including the separate Essex source. Source PRs #12–16 are merged. Public redistribution restrictions remain recorded; private hosting is not a new licence.
+- CDI's Essex fit and delay reviews (PRs #88 and #94) exposed partial support, institutional voice, bundled claims and valid non-creation decisions.
+- CDI PR #98 is merged: five source/study records and 13 selected evidence records in total, with a provisional cross-source view. This was not an exhaustive decomposition of the sources or proof of extraction coverage.
+- The installed experimental User Needs skill and draft AI Capability Layer PR #40 supply a starting capability. Repository edits and installed packages are separate versions; confirm the actual instructions used in an evaluation.
+- CDI PR #100 proposes the reconciled semantic/operating contract and narrow structural checks. Draft changes must be identified by branch/revision until merged.
 
-Slow, bounded ingestion is the primary way to discover the real requirements for safer and faster ingestion.
+These figures describe different objects and checkpoints, not a conversion funnel or a target number of needs.
 
-## Current repository position
+## Next work: existing owners, no parallel platform
 
-Completed or sufficiently established for continued bounded ingestion:
+1. Use AI Capability Layer #39 for a **bounded source-informed calibration and usable review flow**. Start with contrasting authorised UKHO, mailbox or prison/government research examples and the Essex regression cases. Review the actual selected source context, not only isolated sentences. Full analysis of every historic board or Drive document is not a prerequisite.
+2. Test the reusable reviewer interface/configuration in AI Capability Layer: source and candidate together, one focused question, optional notes, skip/resume and durable exact-version feedback. Record what really works and any limitation. A saved XML file is not a deployed reviewer application.
+3. Proceed to CDI #99's 15-source pilot, including four held-out sources, once the bounded calibration and review route are usable. Preserve the established sampling scope unless explicitly revised. Do not add another architecture phase before beginning the actual research.
+4. Evaluate high-coverage candidate discovery, meaningful decomposition, laddering, contextual manifestations, stable role-specific views and tensions. Inspect missed actors/needs and excessive refusal as well as fabricated claims and premature merging.
+5. Demonstrate an exploratory policy/service use of the candidate landscape with actual current sources, without converting a gap hypothesis into a compliance finding.
 
-- whole-system framing, with SEND pathway planning as the initial worked domain rather than the limit of the repository;
-- public-source and evidence-handling guidance;
-- issue-first practice for non-trivial work;
-- documentation authority guidance and a provisional documentation inventory;
-- an MVP public/private boundary between this repository and `happygeneralist/design-intelligence-orchestration`;
-- public-safe summaries for higher-risk prompt, workflow and user-needs quality material;
-- a companion public secondary-research source archive;
-- the first bounded Ofsted Essex communication-while-waiting slice;
-- one source record, five evidence records and a cautious link to an existing pain point;
-- an evidence-to-object fit review that identified partial rather than wholesale support;
-- public non-linear ingestion guidance that supports evidence-led, object-led and model-led entry routes.
+A failed UI or agent route should produce a small concrete repair or an explicit bounded alternative, not indefinite infrastructure work. Do not silently substitute a different worker and report it as the original agent's performance.
 
-The first Ofsted source remains partially ingested. The completed first slice is a worked example, not a universal sequence and not evidence that the operating model is finished.
+## Pilot breadth and boundaries
 
-## Active focus
+Bound acquisition/source scope, execution effort and reviewable batches. **Do not cap how many legitimate candidate needs a source can reveal.** Hundreds of hypotheses or a later corpus of thousands of needs are not inherently a problem. Invented specificity and synonymous inflation are problems; unexplained omission and over-compression are problems too.
 
-The current focus is:
+Distinguish extracted source claims, source-informed need hypotheses, explicit assumptions and higher-level relationship proposals. A report can inspire many hypotheses without directly evidencing all of them. Keep conservative states and clause/relationship-level fit. Candidate capture does not require all rights links, value claims or fulfilment conditions to be complete.
 
-```text
-Continue slow, reviewable ingestion and evolve the operating guidance from repeated examples.
-```
+Parents can remain useful when children are exposed. A need can recur in many contexts and connect to multiple higher-level needs, capabilities and rights. A short map label, canonical formulation and value-oriented view have different purposes; do not change canonical meaning at display time.
 
-This means:
+## Work that belongs elsewhere
 
-- treat issue #86 as the active workflow-learning umbrella;
-- use issue #87 for public evidence-context-object and non-linear journey guardrails exposed through real ingestion;
-- keep `design-intelligence-orchestration#10` available for concrete protected judgement or review-rubric needs, without making it an ingestion prerequisite;
-- keep `design-intelligence-orchestration#8` ready as a lightweight private roadmap/boundary task, but do not treat it as an ingestion blocker;
-- keep issue #89 as a separate model-led journey-view test rather than allowing it to displace the next evidence-led slice;
-- update public guidance only where an ingestion example exposes a repeated, material or unsafe ambiguity;
-- continue using small issues and PRs so source selection, evidence interpretation and semantic changes remain reviewable.
+- Original documents and acquisition provenance: private secondary-research repository.
+- Reusable skill, reviewer interface, adapters and evaluation/runtime controls: AI Capability Layer #39 / PR #40.
+- Protected prompts, detailed methods and rubrics: Design Intelligence Orchestration #10.
+- Machine-specific setup and storage: the appropriate local operating owner.
+- CDI: knowledge definitions, stable objects, public-safe reasoning, evidence/relationship limits and research outputs.
 
-## Immediate next actions
+Keep restricted original files, identifiable participant material and protected methods out of public CDI. A later public contribution interface needs a separate authorised release, not exposure of the internal review service.
 
-1. Put issue #86 into active work on the portfolio Project.
-2. Keep issue #87 ready as supporting work generated through ingestion.
-3. Run issue #91 as the next bounded Ofsted Essex slice, focused on delays in assessment, EHC plans, provision and support.
-4. Create a slice plan that separates the source's bundled claims and defines stop or shrink conditions.
-5. Create a candidate evidence table before creating or changing knowledge objects.
-6. Create selected evidence records and update the secondary-research evidence map only after the candidate set has been reviewed.
-7. Make object changes only where nearby-object reconciliation shows a sufficiently direct fit.
-8. Route any concrete workflow or modelling difficulty to the existing umbrella issue that owns it, then continue ingestion.
+## Lightweight technical work now justified
 
-## Boundary for the next evidence-led slice
+A deterministic source-manifest bridge can make the bronze archive discoverable from CDI without creating 331 fully analysed study records. Distinguish registered, read, extracted, analysed and reviewed. The manual Essex and five-source examples have already satisfied the earlier 'test a few sources first' condition.
 
-The next slice should use Extract 002 from:
+Existing IDs may grow beyond three digits without renumbering old objects. Structural checks should catch collisions, broken links and inconsistent review declarations. Wording warnings remain advisory; they do not establish truth or justify rejection automatically.
 
-```text
-happygeneralist/civic-design-secondary-research
-sources/SRC_001_ofsted_essex_area_send_inspection_jan_2026/extracts.md
-```
+No new mandatory ontology or field migration is required for this pilot. Body sections and existing relation fields can carry fulfilment, contexts and tensions until actual use establishes what needs structured representation.
 
-Working slice:
+## Research changes and remaining questions
 
-```text
-Delays in EHC needs assessments, EHC plans, provision and support
-```
+Do not mass-rewrite existing needs to make the repository look consistent. Preserve their histories and create a focused review where a conflict affects interpretation. UN_015's coordination responsibility and direct-fit/no-basis inconsistency remain review questions, not automatically resolved findings.
 
-The work must distinguish rather than automatically combine:
+Human experience, capabilities and rights must remain visible during detailed delivery work. Distinguish empirical, normative and legal bases; no automatic rights-for-efficiency trade-off or invented universal anchor. A person's recognition or disagreement is valuable feedback, not blanket validation of all relationships.
 
-- delays in assessment of needs;
-- poor EHC plan timeliness;
-- waits for appropriate provision;
-- waits for support from some services;
-- inconsistent experiences and outcomes as inspection synthesis;
-- family dissatisfaction as a source-attributed consequence or association.
+Keep PRs focused by coherent purpose. Administrative rule changes use repository/PR summaries; actual research meaning changes require the appropriate object and LLM intervention record. Do not merge or mark findings reviewed without explicit authority.
 
-Do not assume these claims form one pain point, one user need or one causal chain.
+## Next decision point
 
-Keep neurodevelopmental waits, health-access inequality, EHC plan quality, communication while waiting, escalation and preparation for adulthood outside this slice unless a small amount of context is necessary to interpret the included claims.
-
-## Operating guidance during ingestion
-
-For each bounded slice:
-
-- inspect the selected source material and wider source context needed to interpret it accurately;
-- inspect nearby user needs, civic needs, pain points, behaviours, insights and views before proposing a new object;
-- create a candidate evidence table before structured evidence or semantic object changes;
-- identify what each item supports and does not support;
-- distinguish existence, manifestation, consequence, severity, prevalence, association and causation;
-- preserve service, policy, statutory and administrative mechanisms as context rather than defining enduring needs through them;
-- keep local evidence local while allowing it to support a reusable object cautiously;
-- use conservative states such as `captured`, `candidate`, `draft` and `needs_review`;
-- do not mark anything human reviewed or validated without explicit human instruction;
-- preserve whole artefacts where their relationships carry meaning, but do not force every input through whole-model preservation;
-- keep public outputs independently inspectable without publishing detailed private orchestration method.
-
-## Public and private operating boundary
-
-The public repository should continue to contain:
-
-- open civic and design intelligence knowledge objects;
-- public source, evidence, status, review and contribution guidance;
-- public-safe reasoning needed to inspect source boundaries, evidence claims and object decisions;
-- source records, selected evidence records and conservative analysis objects;
-- reduced public guidance where repeated examples justify it.
-
-The private orchestration repository should continue to contain protected material such as:
-
-- detailed prompts and prompt chains;
-- scoring or diagnostic rubrics;
-- ontology and navigation logic;
-- reusable orchestration routines;
-- tool-specific runbooks and model preferences;
-- protected review methods that are not required to inspect public outputs.
-
-Unfinished private method does not block a bounded public ingestion slice unless that slice genuinely depends on the missing protected capability.
-
-## Guardrails for the next PRs
-
-For the next few PRs:
-
-- keep PRs small and reviewable;
-- do not combine roadmap correction, candidate evidence, structured evidence and semantic object changes in one PR;
-- do not expand the schema, relationship vocabulary or validator rules from one example;
-- do not create a new object where an existing object is a direct enough fit;
-- do not link evidence to an object as though it supports the whole object when it supports only one aspect;
-- do not turn inspection findings or recommendations directly into validated user or civic needs;
-- do not make national prevalence, severity or causal claims from one local inspection source;
-- do not publish detailed protected orchestration method;
-- do not import large raw research corpora into this repository;
-- do not merge, close, delete, supersede or otherwise finalise work without explicit instruction.
-
-## Things that remain deferred
-
-These are important, but not prerequisites for the next bounded slices:
-
-- high-volume or automatic ingestion;
-- automated semantic decisions;
-- broad schema expansion;
-- enforced typed relationships;
-- a full mechanism ontology;
-- a full locality, service-area or organisation taxonomy;
-- strict validator enforcement across all objects;
-- physical documentation folder restructuring without a concrete navigation need;
-- full documentation consolidation;
-- automated cross-repository synchronisation;
-- API or database implementation;
-- canonical personas or fixed journey maps;
-- a dedicated need-pattern object type;
-- a formal causal or theory-of-change layer;
-- final licensing or commercial-model decisions beyond the current protection guardrail.
-
-## Decision rule
-
-When deciding what to do next, prefer work that answers:
-
-- What did the latest bounded ingestion example make difficult, ambiguous or unsafe?
-- Is the problem local to this source or repeated enough to require operating guidance?
-- Can the problem be handled through a note or small correction before adding schema or tooling?
-- Can the next slice continue safely without resolving the wider theory question now?
-- Does the proposed change preserve meaning, provenance, uncertainty and human control?
-- Does it keep the public output auditable while protected method remains private?
-
-If a proposed change does not help the next bounded slice, correct a demonstrated ingestion problem or protect repository integrity, defer it.
-
-## Next review point
-
-Review this cursor after issue #91 has produced:
-
-1. an agreed slice plan;
-2. a candidate evidence table;
-3. selected evidence records or an explicit decision to defer them;
-4. a record of any workflow, modelling or protected-method difficulty exposed by the slice.
-
-At that point, decide whether the next step should be:
-
-- another bounded slice from the same Ofsted source;
-- a contrasting source;
-- the model-led journey-view test in #89;
-- a small object-maintenance PR;
-- a narrow public-guidance correction;
-- a concrete protected-rubric task in `design-intelligence-orchestration#10`.
+After the bounded calibration and 15-source pilot, inspect actual outputs, useful omissions/corrections, review effort and policy/service value. Decide whether to widen source coverage, improve a particular specialist operation or add a narrowly justified integration. Do not use the pilot to prove a predetermined agent architecture.

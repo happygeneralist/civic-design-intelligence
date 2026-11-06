@@ -1,79 +1,61 @@
 # Relationship types
 
-This note captures an emerging convention for graph-ready relationships between structured knowledge objects.
+Read with `Needs_semantic_contract.md` and `Needs_hierarchy.md`.
 
-It is intentionally lightweight. Do not treat this as a required schema until real ingestion examples show which relationship types are useful and stable.
+The repository already uses `related_*`, `parent_needs`, `child_needs` and supersession fields. Keep these for navigation and compatibility. A generic link establishes association, not the truth of a specific claim.
 
-## Purpose
+## Current operating rule
 
-The repository already uses fields such as `related_evidence`, `related_needs`, `related_behaviours`, `related_pain_points`, `related_insights` and `related_themes`.
+Where relationship meaning matters, state it in the object body, a review note or a research view. A plain table is sufficient. No new mandatory frontmatter structure, relationship type or validator migration is introduced here.
 
-Those fields are useful for Obsidian navigation and early research breakdown. As the repository matures, some relationships may need to be more explicit so future queries, dashboards, generated journeys, civic AI tools or policy/design-history references can distinguish different meanings.
+A useful relationship record identifies source and target, the proposition, relevant context, its basis and limitations, supporting/challenging sources and unresolved questions. Use current object IDs. Identify the revision when a view depends on wording that can change.
 
-For example, a pain point may be related to a user need because it blocks the need, evidences the need, results from the need being unmet, or has been addressed by a service response. Those relationships should not all be treated as the same claim.
+## Distinctions to preserve
 
-## Current MVP rule
+| Meaning | Interpretation | Not implied |
+| --- | --- | --- |
+| Constituent / broader need | A meaningful part of, or broader progress encompassing, another need. | Exactly one parent, automatic parent retirement or shared evidence certainty. |
+| Contributes to / enables | May help another need, capability or outcome become possible. | Necessary or sufficient causation. |
+| Depends on | Fulfilment is proposed to require another condition in a specified context. | A universal dependency without evidence. |
+| Supports / contextualises | Evidence supports identified clauses or helps interpret circumstances. | Whole-object direct support. |
+| Challenges / limits | Evidence or an argument qualifies an interpretation. | Automatic deletion of the candidate. |
+| Obstructs / harms | A pain or condition impedes fulfilment or diminishes value. | That removing it alone fulfils the need. |
+| In tension with | Claims, needs, interests or obligations cannot simply be satisfied or interpreted together. | That linguistic refinement resolves the conflict. |
+| Contextual manifestation | The need appears in specified circumstances. | A different identity for every locality or a claim of universal prevalence. |
+| Normative / legal anchoring | Connection to a specified capability framework, commitment or applicable right/obligation. | Legal compliance, identical interests or an efficiency trade-off. |
+| Claimed response | A policy, service or solution says it addresses a need. | Demonstrated fulfilment or realised value. |
+| Supersession | A later proposition replaces an earlier interpretation with lineage retained. | That every decomposition or audience view replaces the object. |
 
-Use existing `related_*` fields during safe ingestion.
+These are meanings to test, not an instruction to create a new ontology or enforce these labels mechanically. Earlier candidate labels such as `evidenced_by`, `supports`, `blocked_by`, `challenged_by`, `local_variant_of`, `addressed_by` and `context_for` can be explained using these distinctions.
 
-When a relationship needs more precision, note it in the object body, PR summary or review notes. Do not add required relationship fields or validator rules yet.
+## Lightweight body example
 
-The goal during the next ingestion passes is to observe which relationship types recur and which are actually useful.
+Use real IDs in actual records; the following is only an explanatory table shape:
 
-## Candidate relationship types
+| From | Relationship claim | To | Basis/context | Limits or tension |
+| --- | --- | --- | --- | --- |
+| Need ID | Proposed contribution | Broader need/capability ID or cited framework | Analyst hypothesis informed by specified evidence | Alternative explanation and missing evidence remain visible. |
 
-Candidate types include:
+Do not manufacture links just to complete this table. Unknown relationships may remain open. The examples here are not research evidence.
 
-| Relationship type | Meaning |
-|---|---|
-| `evidenced_by` | The target evidence directly or contextually supports the object. |
-| `supports` | The source object helps uphold, enable or strengthen the target object. |
-| `blocked_by` | The target object prevents, burdens, delays or undermines the source object. |
-| `challenged_by` | The target evidence or object weakens, contradicts or limits the source object's interpretation. |
-| `supersedes` | The source object replaces an earlier object while preserving lineage. |
-| `local_variant_of` | The source object is a local or context-specific expression of a wider object. |
-| `addressed_by` | A service, policy, solution, intervention or decision-history artefact claims to respond to the object. |
-| `context_for` | The target object provides service, organisation, locality, policy or operational context for interpretation. |
+## Many-to-many, without inherited truth
 
-Do not expand this list unless real examples require it.
+A need can contribute to several higher-level needs; one capability or right can be relevant to many needs. Parents, children, professionals and institutions may have related but distinct propositions. Not every useful connection is a hierarchy edge.
 
-## Possible future structure
+A path through the graph must not automatically propagate evidence, confidence, validation, legal applicability, priority or fulfilment. Distinguish a structural cycle in a claimed hierarchy from a legitimate feedback relationship or tension. Record the interpretation rather than assuming every link can be traversed as proof.
 
-A future optional frontmatter structure might look like this:
+## Tensions are retained knowledge
 
-```yaml
-relationships:
-  - type: evidenced_by
-    target: "[[EVID_000]]"
-    note: Direct evidence for this wording and journey level.
-  - type: blocked_by
-    target: "[[PP_012]]"
-    note: This pain point prevents the need being met in practice.
-```
+Record competing propositions, whose perspectives or interests they represent, source/context, the current working choice if one exists, and what could change it. Differentiate missing evidence from a genuine conflict of needs or obligations. Keep dissent visible after a provisional decision.
 
-This is not required during the current MVP.
+The goal is not a perfectly harmonious graph. It is a model that helps people investigate uncertainty and make more accountable judgements.
 
-## Relationship to existing fields
+## Policy, service and rights boundaries
 
-Do not remove existing `related_*` fields.
+External policy, service, solution and design-history artefacts can reference needs but must not silently determine their canonical wording. A response claim is separate from evidence that the need is met.
 
-They remain useful for quick capture, Obsidian navigation and backwards compatibility.
+Rights and civic obligations are not merely optional preference weights. Identify their normative/legal basis and relevant limits. Do not treat a higher efficiency score as automatic authority to disregard them, or invent a legal conclusion from an abstract capability label.
 
-Typed relationships may later sit alongside them where the relationship meaning matters for analysis, reporting or generated views.
+## Future structured relationships
 
-## User need protection rule
-
-Policy, service, solution and design-history artefacts may reference user needs, but they should not determine or rewrite the canonical wording of user needs.
-
-Use relationship types to show how external artefacts claim to respond to user needs, not to make user needs fit institutional framing.
-
-## When to introduce this formally
-
-Consider formalising typed relationships only after one or more safe-ingestion PRs show:
-
-- repeated ambiguity in generic `related_*` links
-- useful query or dashboard questions that need relationship meaning
-- generated journey or service views that need to distinguish blockage, support, evidence and service response
-- policy, design-history or solution-assessment references that need to point to stable objects without rewriting them
-
-Until then, keep the convention observational and optional.
+Formalise machine-readable relationship records only when the pilot demonstrates which fields and distinctions genuinely improve retrieval or decision support. Preserve existing fields and identifiers. Do not require complete relationship metadata to capture useful candidates, and do not let an absent schema justify hiding consequential relationship assumptions in prose.

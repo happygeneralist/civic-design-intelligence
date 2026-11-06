@@ -1,21 +1,36 @@
 # User needs writing rules
 
-This file gives short, practical rules for drafting, reviewing and refining user needs in the research repository.
+This file gives practical rules for drafting, reviewing and refining user needs in the research repository. Read it with [Needs as evolving knowledge](Needs_semantic_contract.md), which defines the semantic roles and their boundaries.
 
-It is designed for human contributors and LLM-assisted workflows.
+It is designed for human contributors and LLM-assisted workflows. Examples illustrate distinctions; they are not independently validated need statements or exact answers that every agent must reproduce.
 
 ## Core rule
 
-A user need should describe what a person needs to achieve, preserve, recover or change in context.
+A user need should describe what a person needs to achieve, preserve, recover, avoid or change. Its relevant context must be recoverable, but does not have to be embedded in the sentence.
 
-It should not describe:
+It should not simply describe a solution, feature, user story, policy requirement, organisational objective or vague knowledge state. Specific professional or task-level needs are legitimate when they describe human progress rather than merely reproducing the existing system's instructions.
 
-- a solution
-- a feature
-- a user story
-- a policy requirement
-- an organisational objective
-- a vague knowledge state
+The aim is useful, stable and revisable knowledge, not perfect wording. Retain clearly labelled assumptions, competing interpretations and candidate needs. Do not suppress plausible hypotheses merely because direct participant evidence is not yet available, and do not pretend that inference is source evidence.
+
+## One identity and several useful forms
+
+- `id` preserves identity and learning.
+- `short_name` is the compact communicative need label for maps and navigation.
+- `need` is the current canonical working formulation. Persist it; do not regenerate it for each query.
+- Authentic user language remains source evidence, not an invented first-person rendering.
+- A user-facing formulation may support recognition and discussion; label it as an interpretation unless quoted.
+- A value-oriented view can combine the need with pain, expected value and fulfilment conditions, keeping those propositions distinguishable.
+- Structured fields and relationships make the object computable without requiring unnatural language.
+
+Reusable audience views must identify the object and the revisions of the propositions used. A change of audience does not authorise a change of meaning. Use Git references where sufficient rather than inventing mandatory version fields.
+
+## Need, pain, value and fulfilment
+
+A pain point describes an obstruction, burden, harm or risk. Expected value explains why fulfilment matters and for whom. Fulfilment conditions describe what would count as the need being sufficiently met; indicators help assess those conditions. They are not interchangeable.
+
+Do not require all of these in one sentence. Keep them explicitly related in the object body or linked objects. A compact need may include an essential protection or outcome, but should not silently combine several claims into one apparently evidenced proposition. Avoiding harm or undue burden can itself be a legitimate need; do not erase it solely to make the wording shorter.
+
+Check actor, beneficiary and responsibility separately. A person's need does not mean they must perform every action required to meet it. For example, needing support to progress does not establish that a parent should coordinate institutions. Preserve the responsibility question as a tension where unresolved.
 
 ## User needs are not solution requirements
 
@@ -27,262 +42,99 @@ Poor:
 I need a dashboard.
 ```
 
-Better:
+More useful working interpretation:
 
 ```text
-I need timely, trustworthy visibility of service demand so I can make fair and responsive decisions.
+I need to assess service demand so I can make fair and responsive decisions.
 ```
 
-A dashboard may become a solution requirement later, but it should not be treated as the need.
+The evidence must establish whether this is the right action and value. A dashboard may be one possible response, not the need. Do not reverse this rule by declaring that a legitimate higher-level need is invalid because many different solution classes could contribute to it.
 
-## Use action-oriented language
+## Use action-oriented language without erasing experience
 
-Prefer verbs that describe what the user needs to do or achieve.
+Prefer language describing the progress or protection required. Useful verbs include `access`, `check`, `choose`, `compare`, `confirm`, `correct`, `decide`, `find`, `maintain`, `prepare`, `provide`, `recover`, `resolve` and `secure`. The right wording depends on meaning, evidence and level, not a verb whitelist.
 
-Useful verbs include:
+Be careful with `know`, `understand`, `learn` and `be aware of`. They can hide a more actionable need, but comprehension may itself be necessary for safety, rights, consent or an informed choice.
 
 ```text
-access
-apply
-check
-choose
-compare
-confirm
-complete
-correct
-decide
-determine
-find
-maintain
-prepare
-provide
-recover
-resolve
-submit
-track
+I need to check whether I am eligible before spending time applying.
+I need to understand the consequences of choosing this pathway before committing to it.
 ```
 
-The right verb depends on the level of need.
-
-## Be careful with cognitive verbs
-
-Avoid vague cognitive verbs unless understanding, knowledge or awareness is genuinely the thing the user must achieve.
-
-Use cognitive verbs cautiously:
-
-```text
-know
-understand
-learn
-be aware of
-```
-
-These often hide a more actionable need.
-
-Poor:
-
-```text
-I need to know if I am eligible.
-```
-
-Better:
-
-```text
-I need to check whether I am eligible.
-```
-
-Poor:
-
-```text
-I need to understand the form.
-```
-
-Better:
-
-```text
-I need to complete the form accurately so I can apply for support.
-```
-
-Cognitive verbs may be appropriate when comprehension itself is necessary for safety, rights, consent, compliance or informed decision-making.
-
-Appropriate:
-
-```text
-I need to understand the consequences of choosing this pathway before I commit to it.
-```
-
-Appropriate:
-
-```text
-I need to understand my right to appeal so I can challenge a decision safely.
-```
+Do not mechanically replace comprehension or emotional meaning with an administrative action. Changing `know options exist` to `compare options` or `secure an option` changes the proposition, not just its style.
 
 ## Use Jobs to Be Done and user needs together
 
-Jobs to Be Done and user needs can often be used interchangeably as ways of describing what a person is trying to get done, especially when the focus is the user's goal, progress, context and outcome.
+Jobs to Be Done can help examine situations, progress, functional/emotional/social dimensions, pains, desired outcomes and forces around change. It is a method resource, not an authority that overrides this repository's semantics.
 
-JTBD methods are useful because private-sector practice has developed strong tools for strategy, innovation, segmentation, value proposition design and opportunity framing.
+A job map can help discover constituent needs. Do not automatically treat every job step, current workflow action or desired performance metric as a separate user need. Preserve genuine independently meaningful components and retain a useful higher-level need.
 
-Use JTBD tools to strengthen user needs work, especially to understand:
+Public-service contexts may constrain choice and impose statutory, institutional or relational conditions. Do not assume a market in which a person is free to choose competing products or simply leave the service. Services are one possible response alongside policy, community, infrastructure and institutional change.
 
-- the situation that triggers the need
-- the progress the person is trying to make
-- functional, emotional and social dimensions of the need
-- pains, anxieties and barriers
-- desired gains and outcomes
-- forces that push, pull, block or create anxiety around change
-
-In value proposition design and journey mapping, the `job` can often be replaced with the `user need`, provided the context is handled carefully.
-
-For example:
+Illustrative:
 
 ```text
-JTBD job: Check whether I am eligible before applying.
-User need: I need to check whether I am eligible before I spend time applying.
+Need: compare realistic options and protect future choices.
+Possible contextual expression: when planning a post-16 pathway.
+Possible solution: a personalised comparison tool, guidance, brokerage or another response.
 ```
 
-The important difference is contextual, not mechanical.
+The context can be stored separately when it does not define a distinct need.
 
-In constrained public-service contexts, including SEND, people often cannot choose whether they need the service, cannot freely choose between competing solutions, and may be navigating statutory, institutional or relational constraints. Many JTBD tools assume a market context where the aim is to pull a person towards a product or service. Use that logic carefully.
+## Separate user needs from user stories and policy requirements
 
-Do not use JTBD to make the need product-led.
-
-Good use of JTBD:
+A user need expresses underlying progress or protection. A delivery story describes a possible implementation. A policy requirement describes an obligation or service condition. They can be linked without being treated as the same object.
 
 ```text
-When planning a post-16 pathway, I need to compare realistic options so I can make a decision that protects future choices.
+Need: check eligibility before spending time applying.
+Delivery story: use an eligibility checker.
+Policy condition: provide particular identification evidence.
+Possible related need: establish identity without unnecessary repeated disclosure.
 ```
 
-Poor use of JTBD:
+The related need is an interpretation to test, not something automatically proved by the policy condition.
 
-```text
-When planning a post-16 pathway, I want a personalised dashboard so I can compare options.
-```
+Policy, service and design-history references must not determine need wording. Record the response or obligation separately. Do not redefine the need to match what an institution currently provides.
 
-The dashboard may be a solution, but the need is about comparison, decision-making and protecting future choices.
+## Context and scope
 
-## Separate user needs from user stories
+A need may recur across several contexts. Record context, evidence scope, applicability and limitations; put a qualifier in the canonical statement when it is necessary to distinguish meaning, not merely because it appeared in the first source.
 
-A user need describes the underlying problem or outcome.
+Use `need_level` as a navigational description, not a compulsory single ladder. Experience, service, journey and task needs can coexist. A broad need can have multiple constituent needs and multiple higher-level connections. Rights, capabilities, civic obligations and causal contributions are not automatically parents.
 
-A user story describes a possible delivery expression.
+Do not make a need local-only because the first evidence comes from a local report. Equally, reusable wording is not evidence of universal applicability or national prevalence. Keep manifestations, severity and fulfilment assessments contextual.
 
-User need:
+Create a new or related variant when actor, required progress, essential protection or scope materially changes. Do not create a duplicate solely because the locality or wording differs.
 
-```text
-I need to check whether I am eligible before I spend time applying.
-```
+## Decomposition and umbrella needs
 
-User story:
+When a broad need contains independently meaningful needs, expose those parts as linked candidates. Ask whether parts can be fulfilled, challenged or studied separately. Preserve meaningful relational wholes and do not split merely on conjunctions.
 
-```text
-As an applicant, I want to use an eligibility checker so that I can see whether I should apply.
-```
+An umbrella can organise a reusable pattern without replacing its narrower needs. Retain it where useful; decomposition is not automatic supersession. Conversely, do not collapse all communication or support propositions into an unhelpfully broad label.
 
-Both can be useful, but they are not the same object.
+Check nearby objects before creating new ones. Link or reuse when meaning is already covered; preserve unresolved overlap as an explicit comparison rather than forcing a premature merger. No fixed number of needs per source, actor or level is required.
 
-## Separate user needs from policy requirements
+## Human experience, capabilities and rights
 
-Policy and funding requirements may shape the service, but they are not automatically user needs.
+For detailed work, ask what broader human experience, capability, right or civic obligation may be enabled, protected or harmed. Make these relationships visible and challengeable rather than assume every need leads to safety or dignity.
 
-Policy requirement:
+Differentiate empirical findings, normative commitments and legal applicability. A service efficiency score must not automatically offset a rights concern. Unknown anchoring does not block candidate capture; record the gap and investigate it when the intended use requires it.
 
-```text
-Applicants must provide two forms of identification.
-```
+## Emotional and social needs
 
-User need:
-
-```text
-I need to provide the right evidence without making repeated or unnecessary submissions.
-```
-
-## Policy, service and design-history references
-
-Policy documents, service decisions and design histories may reference user needs, but they should not determine the wording of user needs.
-
-A user need should remain grounded in what a person needs to achieve, preserve, recover, decide, access or sustain.
-
-If a policy, service model or operational process responds to a need, capture that response as a related policy, service, solution, decision-history or context object. Do not rewrite the user need to fit the institutional response.
-
-## Scope the need correctly
-
-User needs exist at different levels.
-
-Use `need_level` to avoid collapsing broad needs and detailed needs.
-
-Example:
-
-```text
-Experience need: I need to feel that I have a future.
-Service need: I need joined-up support to plan a realistic pathway.
-Page need: I need to check whether this course is suitable for someone with my support needs.
-Interaction need: I need to filter options by support type, location and entry requirements.
-```
-
-These are connected, but they are not interchangeable.
-
-## Umbrella and reusable needs
-
-Umbrella needs are useful when they reveal a stable pattern across narrower needs, evidence extracts or service contexts. They should help organise the object landscape without becoming so broad that they stop guiding design, policy or service decisions.
-
-Do not make a need local-only just because the first evidence instance comes from a local report. Locality usually belongs on the source, evidence, severity note, service context or implementation condition. Create a local variant only where place materially changes the meaning of the need.
-
-Poor umbrella need:
-
-```text
-Families need communication.
-```
-
-Better reusable need:
-
-```text
-Families need to maintain enough communication with the right people to coordinate support, resolve questions and respond to changing needs while they wait for SEND assessments or services.
-```
-
-The better version is still reusable, but it names the actor, action, pathway moment and value at stake.
-
-When using local evidence for a reusable need:
-
-- keep the user need wording at the highest useful level;
-- link local evidence as a source-specific support, challenge or qualification;
-- do not claim national prevalence, severity or consistency unless comparative evidence supports it;
-- connect narrower needs to umbrella needs where this helps pattern analysis;
-- avoid merging needs where the action, context or value at stake is materially different.
-
-## Use emotional and social needs carefully
-
-Emotional and social needs are valid in public-service contexts, including SEND.
-
-Examples:
+Emotional, relational, social and identity needs are valid. For example:
 
 ```text
 I need to feel safe asking for support without shame or blame.
 I need to maintain my role as a capable parent while navigating the system.
 ```
 
-Do not force these into purely functional task language if doing so removes important meaning.
+Do not strip the protective or relational meaning to fit a functional formula. Participant recognition, disagreement and qualification are valuable contextual feedback, not automatic universal validation or an emotional-intensity target.
 
-## Keep wording stable when it affects direction
+## Meaning changes and tensions
 
-Small wording changes can substantially change the solution vector.
+Keep a current formulation and a short rationale. Material changes to actor, agency, progress, scope, evidence, value, fulfilment or relationships require a visible proposal and appropriate change record. Refining wording need not create a new identity; a genuinely different proposition may require related or successor objects.
 
-For example:
+Record competing interpretations and what would help resolve them. Do not repeatedly rewrite a sentence to hide a real disagreement between actors or an unresolved question about institutional responsibility.
 
-```text
-I need to know what options exist.
-```
-
-points towards information provision.
-
-```text
-I need to compare options.
-```
-
-points towards comparison and decision support.
-
-```text
-I need to understand which options are appropriate for my child.
-```
-
-points towards interpretation, guidance and personalisation.
+Use existing evidence, lifecycle and review fields conservatively. Unknown value, missing direct evidence or incomplete fulfilment conditions can remain unknown. Specificity should support learning, not manufacture apparent certainty.

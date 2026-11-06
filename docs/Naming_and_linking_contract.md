@@ -1,166 +1,71 @@
 # Naming and linking contract
 
-This document defines the repository contract for filenames, IDs, aliases and internal links.
+Use stable IDs for traceability, readable filenames for humans, frontmatter for queryable data and resolvable links for navigation. Read `Needs_semantic_contract.md` for the distinction between an object's identity and its presentations.
 
-It exists to prevent repeated filename migrations and to keep the repository usable in Obsidian, machine-readable for future data layers, and safe for LLM-assisted handling.
+The contract supports Obsidian, GitHub review, future APIs/databases and LLM-assisted handling without repeated filename migrations or silent semantic changes.
 
-## Operating principle
+## Canonical identity and meaning
 
-Use stable IDs for traceability. Use readable filenames for humans. Use frontmatter for data.
+Every structured object has one stable frontmatter `id`, a filename beginning with that ID and canonical meaning in its fields/body. Do not infer the entire meaning from the filename or a short map label.
 
-```text
-stable ID + readable filename + queryable frontmatter + resolvable links
-```
+For user needs, `need` is the persisted current working interpretation and `short_name` is the compact map/navigation affordance. Evidence language, user-facing text, value-oriented views and structured relationships are not independent replacements for that interpretation.
 
-The repository must support four modes at the same time:
+A saved derivative should identify the object and the relevant source revisions, using Git commit/blob references where sufficient. Do not regenerate canonical wording on display or present an older derivative as current after a material change.
 
-- Obsidian use, including graph, backlinks, aliases, Bases and search
-- GitHub review, including readable diffs and clear PR scopes
-- future database or API ingestion, where frontmatter is the source of structured data
-- LLM and AI-assisted handling, where naming patterns reduce ambiguity and accidental rewrites
+## IDs and growth
 
-## Naming contract
-
-Every structured knowledge object must have:
-
-- one stable frontmatter `id`
-- a filename that starts with the same ID
-- a readable slug where the object has a stable short label
-- frontmatter fields that carry the canonical meaning
-- links that resolve by ID, filename or alias
-
-Do not rely on filename wording as the canonical meaning of an object.
-
-The canonical meaning belongs in frontmatter and body content, for example:
-
-- `need` for user needs
-- `short_name` for compact user-need labels
-- `pain_point` for pain points
-- `behaviour` for behaviours
-- `title` for evidence, studies, insights and themes where applicable
-
-## Filename pattern
-
-Use this pattern for structured notes:
+Use an uppercase type prefix, underscore and **at least three ASCII numeric digits**. Three digits are minimum padding, not a maximum corpus size:
 
 ```text
-<ID>_<readable_slug>.md
+UN_001
+UN_999
+UN_1000
+UN_10000
 ```
 
-Examples:
+Existing IDs stay unchanged. Do not repad or renumber the collection as it grows, recycle retired IDs, or create leading-zero variants of an existing identity. Check the full type namespace and pending branches before allocating the next free number; concurrent allocation must be reconciled before merge. Sort numeric suffixes numerically where sequence matters, not as ordinary text.
 
-```text
-UN_001_need_to_identify_matching_options.md
-EVID_000_public_source_extract.md
-RS_000_public_source_record.md
-BEH_001_parent_searches_for_guidance.md
-PP_001_fragmented_university_send_information.md
-INS_001_level_of_aspiration_changes_with_age.md
-TH_001_pathway_planning_confidence.md
-```
+| Object type | Prefix |
+| --- | --- |
+| Research study | RS_ |
+| Evidence | EVID_ |
+| User need | UN_ |
+| Civic need | CN_ |
+| Behaviour | BEH_ |
+| Pain point | PP_ |
+| Insight | INS_ |
+| Theme | TH_ |
+| Journey | JNY_ |
+| Opportunity | OPP_ |
+| Claim | CLM_ |
+| Value dimension | VAL_ |
+| Review note | REV_ |
 
-Bare ID filenames such as `UN_001.md` are valid only as temporary or transitional files. Prefer the readable filename once a stable `short_name` or title exists.
+A prefix convention is not permission to create a new object type or bypass a deferred modelling decision. Use `SCHEMA.md`, templates and current task controls.
 
-## Stable IDs
-
-The ID must not change casually.
-
-IDs are durable handles for:
-
-- Obsidian links
-- relationship fields
-- generated views
-- future data ingestion
-- audit trails
-- LLM lookup and retrieval
-
-Use the existing prefix convention:
-
-| Object type | Prefix | Example |
-|---|---|---|
-| Research study | `RS_` | `RS_001` |
-| Evidence | `EVID_` | `EVID_001` |
-| User need | `UN_` | `UN_001` |
-| Behaviour | `BEH_` | `BEH_001` |
-| Pain point | `PP_` | `PP_001` |
-| Insight | `INS_` | `INS_001` |
-| Theme | `TH_` | `TH_001` |
-| Journey | `JNY_` | `JNY_001` |
-| Opportunity | `OPP_` | `OPP_001` |
-| Claim | `CLM_` | `CLM_001` |
-| Value dimension | `VAL_` | `VAL_001` |
-
-## Slug rules
-
-Readable slugs should be short, stable and derived from the object’s compact label.
+## Filenames and slugs
 
 Use:
 
-- lower case
-- underscores between words
-- plain ASCII characters
-- meaningful action words
-- no punctuation
-- no apostrophes
-- no dates unless the date is part of the object identity
-
-Avoid:
-
-- full sentences
-- vague slugs such as `new_note`, `misc`, `draft`, `template`, `final`
-- slugs based on temporary workshop wording
-- slugs that overclaim review or validation
-- slugs that change every time wording is refined
-
-For user needs, derive the slug from `short_name`, not the full canonical `need` statement.
-
-Example:
-
-```yaml
-id: UN_001
-short_name: Need to identify matching options
-need: A parent/carer needs to identify which pathway options match the young person's needs and aspirations, so they can help them decide their next steps.
-```
-
-Filename:
-
 ```text
+<ID>_<readable_slug>.md
 UN_001_need_to_identify_matching_options.md
+EVID_1000_public_source_extract.md
 ```
 
-## Frontmatter is the data contract
+Bare ID names remain valid for temporary or transitional files. Prefer a readable slug once a useful stable label exists. Slugs use lower-case ASCII words separated by underscores, no punctuation/apostrophes, and no date unless the date is part of the object's identity.
 
-Future API or database ingestion should read frontmatter, not infer meaning from filenames.
+Do not use a full sentence, a vague `new_note`/`final` label or an unearned validation claim. For user needs derive the initial slug from `short_name`, not the full `need`. A later wording refinement is not a reason to rename the file automatically. Preserve identity and links.
 
-Filenames are for:
+## Frontmatter and body
 
-- human readability
-- Obsidian navigation
-- GitHub review
-- search affordance
-- LLM retrieval hints
+Frontmatter holds type, ID, canonical wording, compact labels, lifecycle/evidence/review metadata and existing relationship fields. The body carries evidence fit, interpretation, contexts, tensions, value and other detail not yet formalised in the schema.
 
-Frontmatter is for:
+Future tools must read the actual fields/body rather than assume a filename or graph edge contains a complete semantic claim. Missing relationships and optional fields can remain unknown. Do not invent a new mandatory representation or context field solely for a generated view.
 
-- object type
-- stable ID
-- canonical wording
-- short labels
-- lifecycle state
-- evidence maturity
-- confidence
-- review state
-- relationships
-- generated views
-- future data ingestion
+## Obsidian links
 
-A filename may be useful, but it must never be the only place where meaning exists.
-
-## Obsidian linking rules
-
-Prefer links that remain readable and resilient.
-
-Acceptable link styles:
+Acceptable forms include:
 
 ```markdown
 [[UN_001_need_to_identify_matching_options]]
@@ -168,114 +73,28 @@ Acceptable link styles:
 [[UN_001]]
 ```
 
-Use ID-only links where stability matters more than display wording. Use aliases to keep these links resolvable after filename migrations.
-
-Use display text where the link appears in prose or user-facing synthesis.
-
-Example:
-
-```markdown
-This relates to [[UN_001_need_to_identify_matching_options|Need to identify matching options]].
-```
+Use ID-only links where stability matters. Display text provides the human affordance without changing the referenced object. Keep related fields as resolvable links where appropriate; the relation's meaning may require an accompanying body note.
 
 ## Aliases
 
-Use aliases to preserve navigation from old note names, ID-only links or recently migrated filenames.
+Retain aliases needed for old names, migrated IDs and users' navigation. Aliases support continuity; they are not substitutes for stable frontmatter IDs. Do not remove aliases during the same change that introduces a rename.
 
-Example:
+The current validator resolves object IDs and filenames. Obsidian alias behaviour must not be assumed to be fully checked by that script; inspect actual links when changing alias-dependent navigation.
 
-```yaml
-aliases:
-  - UN_001
-```
+## Creation checks
 
-Aliases should support continuity. They should not become a substitute for a stable filename and frontmatter ID.
+Check the correct folder, object type and prefix; ID uniqueness; matching ID-prefixed filename; appropriate short label; conservative lifecycle/evidence/review state; source provenance or explicit assumption; and relevant nearby objects. Keep LLM assistance visible.
 
-Keep aliases when:
+Use the inbox for material whose identity or classification is unresolved. Do not require an evidence-complete record before keeping a meaningful candidate in an authorised structured location.
 
-- old ID-only links are likely to exist
-- a file has recently been renamed
-- Obsidian users may still search by the old name
-- a migration has not yet updated all live links
+## Rename and semantic-change checks
 
-Remove aliases only after the repository has stabilised and a link check shows they are no longer needed.
+Distinguish administrative filename/link maintenance from a meaning change. Do not combine broad renaming with semantic rewriting unless explicitly authorised. Preserve IDs, aliases, evidence and statuses during a naming-only migration; use Git and the PR summary instead of duplicative object change logs.
 
-## Creation-time checklist
+When meaning changes, follow the object changelog and LLM-intervention rules. Adding a child, context or audience view does not automatically replace the parent. A true split, merger or supersession needs explicit lineage and preservation of the earlier interpretation.
 
-Before adding a new structured note, check:
+## PR reporting
 
-- Does the file live in the correct numbered object folder?
-- Does the filename begin with the frontmatter `id`?
-- Does the ID prefix match the object type?
-- Is the readable slug derived from the compact label, not an unstable sentence?
-- For user needs, is `short_name` present once the need is stable enough to name?
-- Are links written as wikilinks where Obsidian navigation is useful?
-- Are relationship fields using resolvable links?
-- Are lifecycle, evidence and review fields honest and conservative?
-- If this is LLM-assisted, is `llm_generated` and `creation_mode` accurate?
+State which paths, IDs, labels, aliases or links changed, whether the change is administrative or semantic, any effect on review/evidence metadata, and what checks actually ran. Never make a naming change look like human research validation.
 
-## Rename checklist
-
-Before renaming an existing structured note, check:
-
-- Is the rename purely administrative, or does it change interpretation?
-- Does the frontmatter `id` stay the same?
-- Does the filename still begin with the same ID?
-- Does the new slug come from a stable compact label?
-- Should the old filename or ID be added to `aliases`?
-- Are live wikilinks still resolvable?
-- Are relationship fields still resolvable?
-- Does the PR state that no research meaning changed?
-- Does the PR avoid promoting review status, confidence or evidence strength?
-
-Administrative filename migrations usually do not need object-level changelog entries if they do not change research meaning. Use the PR summary and Git history as the audit trail.
-
-## LLM handling rules
-
-When an LLM creates or edits repository objects, it must:
-
-- inspect existing naming conventions before creating new files
-- use the correct ID prefix for the object type
-- make filenames begin with the frontmatter ID
-- derive user-need slugs from `short_name`
-- avoid inventing polished filenames that change the meaning of the object
-- preserve aliases during migration unless explicitly told to remove them
-- avoid broad link rewrites unless the task is specifically a link migration
-- state whether a filename change is administrative or semantic
-- avoid marking objects as reviewed or validated during naming work
-
-If unsure, create the note in `000_Inbox/` or keep it as a draft/candidate rather than forcing it into a canonical structured object too early.
-
-## PR expectations for naming work
-
-A naming or linking PR should state:
-
-- which files were renamed
-- whether IDs changed
-- whether canonical wording changed
-- whether aliases were added or removed
-- whether live links were updated
-- whether any object-level meaning changed
-- whether review state, confidence, evidence strength or lifecycle state changed
-- what validation was run, or why it was not run
-
-Naming-only PRs should be small and mechanical.
-
-## What not to do
-
-Do not:
-
-- create structured notes with missing or mismatched IDs
-- use filename wording as the only source of meaning
-- rename files and rewrite object meaning in the same PR
-- remove aliases during the same PR that introduces a rename
-- use `title` as a substitute for `short_name` on user needs
-- create filenames from vague cognitive verbs if the object has a more direct action label
-- make LLM-assisted objects look human-reviewed
-- force immature notes into canonical object folders when `000_Inbox/` is safer
-
-## Current repository position
-
-The recent migration work has moved the repository close to a stable naming baseline.
-
-The remaining guardrail is procedural: all future structured notes should follow this contract at creation time, so the repository does not need repeated filename clean-up migrations.
+Run the repository validator and relevant regression tests. Larger IDs are supported by the validator; this is an addressability correction, not proof that every future interface or analysis has been benchmarked at 10,000 objects.

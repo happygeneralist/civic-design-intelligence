@@ -4,7 +4,7 @@ This file defines the common structure for notes in the research repository.
 
 The schema is intended to make the repository queryable, reviewable and safe to use with LLM-assisted workflows.
 
-Use `docs/Lifecycle_states.md` for guidance on valid combinations of `status`, `analysis_state` and `review_status`.
+Use `docs/Lifecycle_states.md` for valid combinations of `status`, `analysis_state` and `review_status`. Use `docs/Needs_semantic_contract.md` for the distinction between object identity, formulations, contexts, evidence, value and fulfilment. The contract adds no mandatory fields.
 
 ## General rules
 
@@ -35,19 +35,17 @@ The repository distinguishes between evidence and analysis.
 
 Evidence is captured as close to the source as possible.
 
-Analysis objects are interpreted research objects created from evidence, researcher judgement and synthesis. They include user needs, behaviours, pain points, insights, themes, journeys and opportunities.
+Analysis objects are interpreted research objects created from evidence, researcher judgement and synthesis. They include user needs, civic needs, behaviours, pain points, insights, themes, journeys and opportunities.
 
 Persona and segment models are deferred during the current MVP. The `persona` type remains reserved for future development, but canonical persona objects should not be created until the modelling approach is documented.
 
 The repository should support fast creation and incremental refinement of analysis objects without losing rigour.
 
-The operating principle is:
-
 ```text
 fast creation, slow validation
 ```
 
-LLMs may create, decompose, merge, refactor, link and incrementally update analysis objects, provided the work remains status-controlled, evidence-linked where possible, and recorded in the changelog.
+LLMs may create, decompose, merge, refactor, link and incrementally update analysis objects within task authorisation, provided the work remains status-controlled, evidence-linked where possible, and material changes are recorded. Candidates can already support appropriately qualified exploration; validation is not a prerequisite for all use or a claim of perfect truth.
 
 ## Controlled values
 
@@ -61,7 +59,7 @@ status: captured | draft | assumption | reviewed | validated | deprecated
 - `draft`: synthesis has been drafted but not reviewed.
 - `assumption`: plausible but not directly supported by sufficient evidence.
 - `reviewed`: checked by a human reviewer, but not necessarily validated.
-- `validated`: supported by evidence and approved for use as a reliable finding.
+- `validated`: supported by evidence and approved for a stated scope of use as a reliable finding, still open to challenge.
 - `deprecated`: superseded, withdrawn or no longer recommended for use.
 
 ### `analysis_state`
@@ -71,15 +69,23 @@ analysis_state: captured | placeholder | candidate | drafted | evidence_linked |
 ```
 
 - `captured`: source material or evidence has been captured.
-- `placeholder`: an item exists to hold a possible pattern or object, but it is not yet fully formulated.
-- `candidate`: the item appears useful but needs further analysis, evidence or refinement.
-- `drafted`: the item has been formulated into a usable draft.
-- `evidence_linked`: the item has at least one explicit evidence link, but may still need review.
+- `placeholder`: an item holds a possible pattern or object, not yet fully formulated.
+- `candidate`: useful provisional knowledge needing further analysis, evidence or refinement.
+- `drafted`: formulated into a usable draft.
+- `evidence_linked`: has at least one explicit evidence link, whose scope must still be assessed.
 - `reviewed`: a human has reviewed the item.
-- `validated`: the item is reviewed and sufficiently supported to be treated as reliable.
-- `deprecated`: the item has been superseded, rejected or withdrawn.
+- `validated`: reviewed and sufficiently supported for the stated use.
+- `deprecated`: superseded, rejected or withdrawn.
 
-`analysis_state` is a workflow maturity field. `status` is the epistemic status of the claim.
+`analysis_state` describes development of the analysis. `status` describes the current claim status. Neither implies that a human need has been fulfilled in practice.
+
+### `evidence_basis`
+
+```yaml
+evidence_basis: none | indicative | traceable | substantiated | validated
+```
+
+Use the current evidence/lifecycle guidance. A traceable source is not automatically direct support for every clause or relationship. Do not label a basis validated without explicit human review.
 
 ### `evidence_strength`
 
@@ -92,13 +98,15 @@ evidence_strength: none | weak | moderate | strong
 - `moderate`: multiple relevant evidence items, but with limitations.
 - `strong`: multiple credible evidence items across relevant sources or methods.
 
+These are existing pragmatic categories, not a numerical evidence score or automatic source-count formula.
+
 ### `confidence`
 
 ```yaml
 confidence: low | medium | high
 ```
 
-Confidence is the researcher's current judgement about reliability. It should not be used as a substitute for evidence strength.
+Confidence is the researcher's current judgement about reliability, not a substitute for evidence strength.
 
 ### `creation_mode`
 
@@ -117,6 +125,8 @@ creation_mode: manual | llm_assisted | imported | migrated
 review_status: not_reviewed | needs_review | reviewed | rejected
 ```
 
+Reviewed/validated declarations require consistent `human_reviewed` and review metadata. Structural validation can check declared consistency, not prove that the review actually took place.
+
 ### `change_level`
 
 ```yaml
@@ -125,27 +135,28 @@ change_level: none | minor | material | major
 
 - `none`: no meaningful change recorded.
 - `minor`: spelling, formatting, metadata tidy-up or link correction.
-- `material`: changes the interpretation, wording, evidence links, confidence, status or evidence strength.
+- `material`: changes interpretation, wording, evidence links, confidence, status or evidence strength.
 - `major`: substantially reframes, splits, merges, replaces or deprecates an item, changes validated content or affects published outputs.
 
 ### `need_level`
 
 ```yaml
-need_level: capability | civic | experience | service | journey | task | page | interaction | content | solution_requirement
+need_level: capability | civic | experience | service | journey | task | page | interaction | content
 ```
 
-Use `need_level` to show the scope and hierarchy of a user need or closely related analysis object.
+Use the level to describe scope and aid navigation, not to impose a single universal hierarchy.
 
-- `capability`: broad human-development requirement, such as dignity, agency, affiliation or control.
-- `civic`: institutional obligation, such as dignified access, navigational agency or redressability.
-- `experience`: what the person must be able to experience, preserve or recover before any specific service response.
-- `service`: what a service must enable across an end-to-end service relationship.
-- `journey`: what is needed at a specific journey stage or transition.
-- `task`: what the person must do or understand in a specific task.
-- `page`: what a page or bounded content context must help the person understand or do.
-- `interaction`: what a component, form, filter, prompt or interaction must support.
-- `content`: what a content item, explanation or message must support.
-- `solution_requirement`: what a specific product, policy, process or intervention must do.
+- `capability`: a human-development concern involving real opportunities, agency, affiliation or control.
+- `civic`: institutional obligation, such as dignified access or redressability; keep `type: civic_need` distinct.
+- `experience`: what the person needs to experience, preserve or recover.
+- `service`: progress or protection across a service relationship.
+- `journey`: a particular stage or transition.
+- `task`: meaningful activity or comprehension in a bounded task.
+- `page`: what a bounded content context must help the person accomplish or comprehend.
+- `interaction`: immediate progress or protection an interaction must enable.
+- `content`: what a content item or explanation must help the person accomplish or comprehend.
+
+`solution_requirement` appeared in older examples but is not an allowed user-need level in the existing validator/templates. Keep solution requirements as separately identified response proposals, not as needs. This correction reconciles the documentation with the existing allowed values; it does not migrate research records.
 
 ### `evidence_scope_fit`
 
@@ -153,12 +164,12 @@ Use `need_level` to show the scope and hierarchy of a user need or closely relat
 evidence_scope_fit: direct | partial | contextual | weak
 ```
 
-Use this when evidence supports a need at one level more directly than another.
+- `direct`: evidence directly supports this level and wording.
+- `partial`: supports part, but not the full formulation.
+- `contextual`: helps explain context rather than establishing the need.
+- `weak`: relevant but too indirect to rely on without more work.
 
-- `direct`: evidence directly supports this level and wording of need.
-- `partial`: evidence supports part of the need, but not the full formulation.
-- `contextual`: evidence helps explain context but does not directly prove the need.
-- `weak`: evidence is relevant but too indirect to rely on without more work.
+This optional field should not claim direct fit when `evidence_basis` is none. Leave it unclaimed or record uncertainty in the body until assessed; preserve existing inconsistencies as review findings rather than inventing evidence.
 
 ### Boolean fields
 
@@ -170,12 +181,13 @@ anonymisation_checked: true | false
 
 ## ID conventions
 
-Use stable IDs. Do not renumber existing items just because the order changes.
+Use stable IDs with uppercase prefixes and at least three numeric digits. Three digits are minimum padding, not a cap: `UN_999`, `UN_1000` and `UN_10000` are valid. Do not renumber, repad or recycle existing IDs. Check uniqueness across the type namespace and concurrent work before allocation.
 
 ```text
 RS_001     research study
 EVID_001   evidence item
 UN_001     user need
+CN_001     civic need
 BEH_001    behaviour
 PP_001     pain point
 INS_001    insight
@@ -185,11 +197,14 @@ JNY_001    journey
 OPP_001    opportunity
 REV_001    review note
 CLM_001    claim
+VAL_001    value dimension
 ```
+
+See `docs/Naming_and_linking_contract.md` for readable filenames and links.
 
 ## Common fields for analysis objects
 
-Use these fields across user needs, behaviours, pain points, insights, themes, journeys, opportunities and future persona models where relevant.
+Use these across relevant types:
 
 ```yaml
 type:
@@ -198,6 +213,7 @@ actor:
 journey_stage:
 status:
 analysis_state:
+evidence_basis:
 evidence_strength:
 confidence:
 creation_mode:
@@ -216,11 +232,9 @@ related_themes:
 tags:
 ```
 
-This common structure allows rapid LLM-assisted creation while keeping maturity, evidence, review state and history visible.
+The current validator has a smaller required subset; use the appropriate template rather than treating every explanatory field as newly mandatory.
 
-## Needs hierarchy fields
-
-Use these fields for user needs and closely related objects where useful.
+## Needs relationships and representations
 
 ```yaml
 need_level:
@@ -234,18 +248,15 @@ evidence_scope_fit:
 wording_sensitivity: low | medium | high
 ```
 
-Minimum useful fields for structured user needs:
+Do not force every link to be complete. Multiple parents and other higher-level links are allowed. Do not infer causation, legal applicability or evidence strength from a graph path. Generic related fields are navigational; explain important relation claims, contexts and tensions in the body.
 
-```yaml
-need_level:
-parent_needs:
-```
+The stable ID, canonical `need`, `short_name`, authentic language and role-specific presentations have different functions. The canonical formulation persists until deliberately revised; saved views refer to the revisions used. Context need not be part of the sentence when the underlying need recurs unchanged.
 
-Do not force every need to complete every hierarchy field during loose capture. These fields can be added by an LLM or during review as the repository matures.
-
-See `docs/Needs_hierarchy.md` for guidance.
+Optional body sections may capture contextual manifestations, expected/realised value, fulfilment conditions, indicators, tensions and rights/capability anchors. No new mandatory frontmatter fields are introduced for these.
 
 ## Object types
+
+The following are explanatory shapes; use the actual templates for complete records and select values rather than copying option lists.
 
 ### Research study
 
@@ -266,7 +277,7 @@ related_insights:
 tags:
 ```
 
-A research study describes an activity or source collection. It should not contain raw identifiable data.
+A research study describes an activity or source collection, not raw identifiable data. A source catalogue entry is not automatically a fully analysed study.
 
 ### Evidence
 
@@ -293,7 +304,7 @@ related_insights:
 tags:
 ```
 
-Evidence should preserve the meaning of what was captured. Participant quotes should not be rewritten except to remove or mask identifying information.
+Preserve source meaning and voice. Participant quotations must not be silently rewritten. Classify mediated accounts, inspection conclusions, assumptions and direct experience appropriately.
 
 ### User need
 
@@ -304,7 +315,7 @@ short_name:
 actor:
 journey_stage:
 need:
-need_level: capability | civic | experience | service | journey | task | page | interaction | content | solution_requirement
+need_level: capability | civic | experience | service | journey | task | page | interaction | content
 parent_needs:
 child_needs:
 related_capabilities:
@@ -315,6 +326,7 @@ evidence_scope_fit: direct | partial | contextual | weak
 wording_sensitivity: low | medium | high
 status: draft | assumption | reviewed | validated | deprecated
 analysis_state: placeholder | candidate | drafted | evidence_linked | reviewed | validated | deprecated
+evidence_basis: none | indicative | traceable | substantiated | validated
 evidence_strength: none | weak | moderate | strong
 confidence: low | medium | high
 creation_mode: manual | llm_assisted | imported | migrated
@@ -332,13 +344,11 @@ superseded_by:
 tags:
 ```
 
-A user need should describe what a person needs to achieve, understand, decide, access, feel or recover from. It should not be written as a solution, feature request or organisational objective.
+A need describes what a person needs to achieve, preserve, recover, avoid or change. It does not automatically assign all enabling work to that person. Use `short_name` for mapping and the canonical `need` for the current shared interpretation. Do not collapse experience, journey and detailed needs or force every context into their wording.
 
-Use `short_name` as a compact working label for mapping, workshops, Obsidian Bases and design artefacts. It should preserve the shape of a need without carrying the full actor, evidence nuance or outcome statement. Prefer the pattern `Need to + verb + object/context`, for example `Need to compare realistic options`.
+### Civic need
 
-User needs may be created as placeholders or candidates during rapid research breakdown. They can be incrementally updated as new evidence or thinking emerges, provided the changelog records material changes.
-
-Do not collapse page-level needs, service-level needs and experience-level needs. They operate at different levels and support different decisions.
+Use `Templates/Civic_need_template.md`, prefix `CN_` and `type: civic_need`. The content field is `civic_need`, not `need`. Civic needs express what institutions or systems must uphold; they are not interchangeable with a person's need. Distinguish normative commitments from claims of applicable legal obligations.
 
 ### Behaviour
 
@@ -366,9 +376,7 @@ superseded_by:
 tags:
 ```
 
-A behaviour should describe something a person does, avoids, repeats, compensates for or attempts in context.
-
-Behaviours may be drafted quickly from evidence, but should remain candidates until the pattern has been reviewed and linked to appropriate evidence.
+Describe what a person does, avoids, repeats, compensates for or attempts. Distinguish observed from inferred behaviour.
 
 ### Pain point
 
@@ -396,9 +404,7 @@ superseded_by:
 tags:
 ```
 
-A pain point should describe a barrier, burden, failure, friction, emotional cost or structural problem experienced by an actor.
-
-Pain points may be captured as candidates while breaking down research. They should not be treated as validated until reviewed and evidenced.
+Describe a barrier, burden, risk, harm, friction or structural problem. Resolution of a pain is not necessarily fulfilment of every linked need. Preserve resolved, dormant or recurring conditions through the applicable lifecycle guidance rather than treating them as irrelevant history.
 
 ### Insight
 
@@ -428,7 +434,7 @@ superseded_by:
 tags:
 ```
 
-An insight is a research-backed interpretation that explains why something is happening and why it matters. It should include evidence, interpretation, uncertainty and implications.
+An insight interprets why something may be happening and why it matters. Keep evidence, inference, alternatives and limitations distinct.
 
 ### Theme
 
@@ -455,7 +461,7 @@ superseded_by:
 tags:
 ```
 
-A theme groups related evidence and analysis objects. A theme should not imply validation of all items within it.
+A theme groups related material without validating everything within it.
 
 ### Opportunity
 
@@ -485,7 +491,11 @@ superseded_by:
 tags:
 ```
 
-An opportunity suggests a possible area for design, service or policy intervention. It is not a decision or commitment.
+An opportunity suggests an area to investigate, not a decision or commitment.
+
+### Value dimension
+
+Use `Templates/Value_dimension_template.md`, prefix `VAL_` and `type: value_dimension`. It records what matters when examining value, not a particular solution's score. Expected value, realised value and rights/capability compatibility require distinct reasoning.
 
 ### Review note
 
@@ -504,45 +514,29 @@ change_level:
 tags:
 ```
 
-Review notes should document material decisions, especially when an item is promoted, downgraded, deprecated, split, merged or materially changed.
+Use the complete template and common fields. State what the reviewer actually assessed; wording review does not certify fulfilment or every relationship.
 
 ## Entry-level changelog
 
-Every structured note should include an entry-level changelog section.
+Use `docs/Object_change_logs.md` and `docs/LLM_intervention_logging.md` proportionately. Record material changes to meaning, evidence, metadata, splitting, merger, supersession or review outcomes. Git and PR summaries provide the administrative edit history.
 
 ```markdown
 ## Changelog
 
-- YYYY-MM-DD: Created as LLM-assisted candidate. Status: assumption. Analysis state: candidate. Evidence strength: weak. Review status: not reviewed.
+- YYYY-MM-DD: Created as an LLM-assisted assumption. Analysis state: candidate. Evidence basis and strength: none. Review status: not_reviewed.
 ```
 
-Record material changes to claims, wording, status, analysis state, confidence, evidence strength, evidence links, splitting, merging, supersession and review outcomes.
+## Fast-moving, non-linear knowledge development
 
-## Fast-moving analysis workflow
+Objects can enter as partial knowledge and be linked backwards to evidence. Placeholder, candidate, drafted, evidence-linked and reviewed states are useful distinctions, not a mandatory conversion funnel. Not every useful object needs validation; none should be treated as perfect or universally applicable.
 
-Analysis objects may be created before they are fully reviewed.
+A need may remain valuable without recent editing. Make it visible, connected, scoped and evidence-aware. Deepen it when research or practical use requires it.
 
-This is expected and useful when breaking down research at scale.
+## Decomposition, merging and supersession
 
-Use this progression:
+Expose meaningful constituent needs while retaining a useful parent. Use `parent_needs` and `child_needs` for that relationship. A contextual manifestation or audience view does not automatically require a new identity.
 
-```text
-placeholder -> candidate -> drafted -> evidence_linked -> reviewed -> validated
-```
-
-Not all objects need to reach validation. Some may remain as candidates, assumptions or weak signals until they become important enough to review.
-
-## Needs visibility and tending
-
-Staleness is not the current priority.
-
-A need may remain valuable even if it has not been recently edited. The immediate problem is lack of visibility, not too many needs.
-
-Prioritise making needs visible, connected, scoped and evidence-aware. Tend the repository by linking, pruning, splitting, merging, reviewing or deepening needs when the work requires it.
-
-## Splitting, merging and supersession
-
-When an analysis object is split, merged, replaced or substantially reframed, record the relationship.
+When an interpretation is actually replaced, split into successor objects or merged, preserve the original and explicitly record lineage:
 
 ```yaml
 supersedes:
@@ -552,4 +546,4 @@ superseded_by:
 change_level: major
 ```
 
-Use changelog entries to explain what changed and why.
+The example shows available relationship fields, not an instruction to use both directions on every edit. Explain what changed and why, without promoting research status automatically.

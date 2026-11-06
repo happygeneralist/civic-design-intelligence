@@ -25,6 +25,32 @@ Move from expert-led ingestion to system-supported ingestion, with human review 
 
 The system should help contributors and reviewers get knowledge into the repository without requiring them to understand every object convention, schema decision or previous research judgement.
 
+## Useful knowledge before validation
+
+The aim is to develop a living, reusable population of user needs and related civic knowledge, not to wait until every object is fully reviewed before deriving any value. **An evidence-grounded candidate user need is already a useful knowledge object** when the source, actor, context, wording, limits and review status are visible. Its value and use should deepen as the same persistent object is tested, challenged and refined; do not generate a new need merely because a small wording improvement is proposed.
+
+Different uses require different evidence claims:
+
+- **Capture and exploration:** identify candidates, missing needs, overlaps, positive and negative cases, and research questions, even where evidence is partial.
+- **Provisional comparison:** use candidates to investigate possible gaps between needs, policy intent, service provision, solution concepts and public value. Carry each candidate's evidence scope and uncertainty into the comparison; record apparent gaps as hypotheses, not as demonstrated policy failure or actual user outcomes.
+- **Consequential decisions:** require proportionate source checking, evidence fit, context/applicability review and authorised human judgement before relying on a claim for policy, service, prioritisation, evaluation or public communication. These checks are about the **claim and intended use**, not a requirement that every repository object first become validated.
+
+User needs remain first-class, stable-identity but revisable interpretations. Small changes to actor, action, object, context or outcome can change which responses are appropriate. Review the evidence and nearby existing objects before proposing material wording changes, splits, mergers or supersession; preserve rationale and earlier meaning. The correct result of an extraction or decomposition may be **no new user need**.
+
+### Working knowledge layers (not maturity states)
+
+The terms below are a working description to test with real material, **not** a new schema, approval ladder, three-level confidence scale or assertion that all objects must pass through a linear sequence:
+
+| Layer | Current repository role | Useful output |
+| --- | --- | --- |
+| **Bronze — preserved source material** | `civic-design-secondary-research` owns original documents, source identity, versions, provenance and restrictions. | Reliable source discovery and inspection. |
+| **Silver — selected evidence and bounded interpretation** | CDI holds research/source records, evidence claims, contextual/limiting relationships, contradictions and provisional analysis. | Pattern investigation and explicit evidential boundaries. |
+| **Gold — reusable needs and civic intelligence** | CDI holds persistent user/civic needs and their links to pain, behaviours, outcomes and value; candidates **can participate** without being human validated. | Research planning, provisional policy/service comparisons and increasingly defensible decision support. |
+
+Knowledge role, evidence basis, confidence, lifecycle and human review are **independent dimensions**. These tiers must not imply that a captured source or evidence record is inferior or that a candidate need is certified. An object may enter at a suitable level and be reconciled backwards to evidence when necessary. Use existing CDI fields; do not introduce `bronze`, `silver` or `gold` frontmatter as a substitute for them.
+
+The next substantive test is [candidate-needs pilot #99](https://github.com/happygeneralist/civic-design-intelligence/issues/99), building on the Essex fit review in PR #88, delay claim review in PR #94 and the five-source PR #98. **Test deep specialist operations before building a broad agent router.** Whether need evaluation and decomposition are modes of one skill or distinct reusable skills remains an evaluation question.
+
 ## Three operating modes
 
 ### 1. Expert-assisted ingestion

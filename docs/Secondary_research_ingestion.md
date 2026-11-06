@@ -20,13 +20,13 @@ The structured repository should not become a raw document dump.
 
 ## Companion source archive
 
-The companion public source archive is:
+The companion public-source archive (Git repository currently private) is:
 
 ```text
 happygeneralist/civic-design-secondary-research
 ```
 
-Use that repository for raw or lightly processed public secondary source material. Use this repository for the structured research intelligence derived from those sources.
+Use that restricted repository for raw or lightly processed public secondary source material; it is private because some complete originals are not cleared for public redistribution. Use this repository for the structured research intelligence derived from those sources.
 
 Current first source example in the companion archive:
 
@@ -246,19 +246,20 @@ For the first secondary-research ingestion PR:
 
 The goal is to test the workflow, not to complete the whole SEND evidence base in one PR.
 
-## Future sync possibility
+## Source inventory and cross-repository registration — after first working examples
 
-A future workflow may help keep the roadmap, source inventory or evidence maps in sync across repositories.
+The private companion archive now holds **331 original documents** (328 PDFs and three HTML captures, including Essex), with source-level provenance. CDI's first five-source experiment in PR #98 created/used five rich research-study/source records and 13 selected evidence records. **Archive possession is not the same as CDI analysis.**
 
-Possible later automation:
+The previous instruction to defer all synchronisation until a few manual examples existed has been satisfied by the Essex and cross-source tests. A small deterministic, reviewable **source-manifest bridge** is now reasonable to explore as part of [pilot #99](https://github.com/happygeneralist/civic-design-intelligence/issues/99):
 
-- read source folders from `civic-design-secondary-research`
-- detect source folders without matching source records in this repository
-- detect evidence maps that reference missing or renamed evidence objects
-- update a generated source inventory
-- open a pull request rather than writing directly to `main`
+- enumerate exact original identities, versions/hashes, archive locations, publisher URLs, source classes, scope and restrictions from the authorised private archive;
+- cross-check known CDI source/study records, evidence links and source maps; report unmatched, missing, renamed, duplicated or inconsistent references;
+- make the full bronze source catalogue **discoverable for selection** without creating 331 rich `RS_###` research-study notes or importing the original PDFs into public CDI;
+- use a generated, reproducible registry or report as the starting point; create richer CDI study records **only when needed for evidence or substantial analysis**;
+- preserve access boundaries and distinguish `registered`, `read`, `evidence extracted`, `analysed` and `human reviewed`. A generated catalogue entry must not imply that a report has been interpreted;
+- propose changes through a small draft PR; do not automatically alter research meaning, status or human review state.
 
-Do not build this yet. Test the manual workflow first with a small number of sources.
+This is a **bounded synchronisation trial**, not permission to build a general ingestion platform or make source registration a precondition for candidate-need work.
 
 ## What not to do yet
 

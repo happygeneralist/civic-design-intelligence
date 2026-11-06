@@ -76,7 +76,7 @@ TYPE_PREFIX = {
     "value_dimension": "VAL",
 }
 
-ID_PATTERN = re.compile(r"^[A-Z]+_\d{3}$")
+ID_PATTERN = re.compile(r"^[A-Z]+_[0-9]{3,}$")
 WIKILINK_PATTERN = re.compile(r"\[\[([^\]|#]+)(?:#[^\]|]+)?(?:\|[^\]]+)?\]\]")
 
 COGNITIVE_NEED_PATTERNS = [
@@ -372,7 +372,7 @@ def check_id(note: Note, id_index: Dict[str, List[Path]], include_templates: boo
         findings.append(Finding("error", note.path, "missing `id` value"))
         return findings
     if not ID_PATTERN.match(note_id):
-        findings.append(Finding("error", note.path, f"id `{note_id}` does not match PREFIX_000 format"))
+        findings.append(Finding("error", note.path, f"id `{note_id}` must use an uppercase prefix and at least three numeric digits"))
     expected = TYPE_PREFIX.get(note_type)
     prefix = note_id.split("_", 1)[0] if "_" in note_id else ""
     if expected and prefix != expected:
@@ -438,6 +438,10 @@ def check_lifecycle_rules(note: Note, include_templates: bool, include_docs: boo
         findings.append(Finding("error", note.path, "evidence_basis: validated requires human_reviewed: true"))
     if evidence_basis == "validated" and review_status != "reviewed":
         findings.append(Finding("error", note.path, "evidence_basis: validated requires review_status: reviewed"))
+    if (status == "reviewed" or analysis_state in {"reviewed", "validated"} or review_status == "reviewed") and human_reviewed != "true":
+        findings.append(Finding("error", note.path, "reviewed/validated declarations require human_reviewed: true; automated checks do not establish human review"))
+    if (status == "reviewed" or analysis_state in {"reviewed", "validated"}) and review_status != "reviewed":
+        findings.append(Finding("error", note.path, "reviewed/validated state requires review_status: reviewed"))
     if evidence_strength == "strong" and evidence_basis in {"", "none", "indicative"}:
         findings.append(Finding("warning", note.path, "evidence_strength: strong should usually have traceable, substantiated or validated evidence_basis"))
     return findings
@@ -455,6 +459,9 @@ def check_user_need_quality(note: Note, include_templates: bool, include_docs: b
         return findings
     if scalar(note.frontmatter, "type") != "user_need":
         return findings
+
+    if not is_template(note) and scalar(note.frontmatter, "evidence_scope_fit") == "direct" and scalar(note.frontmatter, "evidence_basis") == "none":
+        findings.append(Finding("warning", note.path, "evidence_scope_fit: direct conflicts with evidence_basis: none; retain the candidate and review the fit claim rather than invent support"))
 
     need = scalar(note.frontmatter, "need")
     short_name = scalar(note.frontmatter, "short_name")

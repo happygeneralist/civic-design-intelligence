@@ -19,5 +19,24 @@ jobs:
         with:
           python-version: '3.x'
 
+      - name: Run deterministic regression tests
+        run: python3 -m unittest discover -s tests -v
+
       - name: Run repository validator
         run: python3 tools/validate_repository.py
+
+      - name: Validate templates
+        run: python3 tools/validate_repository.py --include-templates
+
+      - name: Report audit coverage
+        run: |
+          python3 - <<'PY'
+          import collections
+          import subprocess
+          from pathlib import Path
+          paths = subprocess.check_output(['git', 'ls-files'], text=True).splitlines()
+          counts = collections.Counter(Path(p).suffix or '(no extension)' for p in paths)
+          print('Tracked files:', len(paths))
+          print('File types:', dict(sorted(counts.items())))
+          print('Structural validation is not a semantic or source-research certification.')
+          PY

@@ -17,6 +17,16 @@ Typo fixes and tiny obvious edits do not need an issue. Use an issue when work i
 
 Issues should define the purpose, scope, out of scope items and acceptance criteria for the work. Git remains the technical audit trail for edits; issues are for work definition, sequencing and prioritisation, not edit history.
 
+## Needs and civic intelligence
+
+For discovery, formulation, decomposition, relationship analysis or generated needs views, read `docs/Needs_semantic_contract.md`, `docs/User_needs_writing_rules.md` and the current `docs/Roadmap_cursor.md` before acting. The contract clarifies older guidance that implies small output quotas, one strict needs hierarchy, mandatory context in every sentence or validation before exploratory use.
+
+Build useful, revisable candidate knowledge, not perfect sentences. Bound a run's source scope and execution effort, not the number of needs a source is allowed to reveal. Record tensions, alternatives and omissions. Keep source evidence distinct from inferred hypotheses, and expose higher-level human experience, capabilities and rights without inventing their applicability.
+
+Preserve stable IDs and current formulations. Short labels, user-facing text and value views are role-specific affordances, not opportunities to regenerate a different need on every query. Retain useful parents when decomposing; do not automatically deprecate them. Keep context and pain identifiable without forcing them into the statement.
+
+CDI owns knowledge semantics and objects. AI Capability Layer owns the reusable skill, reviewer interface and execution/evaluation tooling. Do not build a parallel review application here or move private evidence into public CDI. Do not treat an LLM check or a passing validator as independent human validation or legal approval.
+
 ## Branch and pull request workflow
 
 LLM-assisted changes should happen on a branch and be reviewed through a pull request.
@@ -91,4 +101,4 @@ For template work, also run:
 python3 tools/validate_repository.py --include-templates
 ```
 
-Report error and warning counts in the pull request.
+For validator changes, run its regression tests. Report error and warning counts in the pull request. Distinguish tests actually executed from prepared cases, and structural validity from research reliability.
